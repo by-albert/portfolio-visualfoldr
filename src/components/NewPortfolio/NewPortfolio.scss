@@ -19,7 +19,12 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: black; // evita flashes si algo falla
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: background-image 0.8s ease-in-out;
 }
 
 .background-carousel__slide {
@@ -35,25 +40,21 @@
   animation: carouselSteps 16s steps(1, end) infinite;
 }
 
-/* 🔥 4 imágenes → 16s total → 4s cada una */
 
+/* Estilos específicos removidos - usando inline styles desde JSX */
 .background-carousel__slide.slide-1 {
-  background-image: url('/backgrounds/foto-1.jpg');
   animation-delay: 0s;
 }
 
 .background-carousel__slide.slide-2 {
-  background-image: url('/backgrounds/foto-2.jpg');
   animation-delay: 4s;
 }
 
 .background-carousel__slide.slide-3 {
-  background-image: url('/backgrounds/foto-3.jpg');
   animation-delay: 8s;
 }
 
 .background-carousel__slide.slide-4 {
-  background-image: url('/backgrounds/foto-4.jpg'); // CORREGIDO
   animation-delay: 12s;
 }
 
@@ -113,8 +114,8 @@
 
 .top-menu__link:hover,
 .top-menu__link:focus {
-  background: white;
-  color: black;
+  background: #ff009d;
+  color: white;
   transform: translateY(-2px);
 }
 
@@ -131,6 +132,7 @@ body {
 
 p {
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-top: 0.5rem;
+  border-radius: 8px;
 }

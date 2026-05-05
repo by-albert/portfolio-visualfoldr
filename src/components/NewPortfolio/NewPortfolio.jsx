@@ -1,30 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './NewPortfolio.scss';
-import BubbleText from "../BubbleText/BubbleText";
+import BubbleText from "../BubbleText/bubbleText";
+
+const images = [
+  '/backgrounds/foto-1.jpg',
+  '/backgrounds/foto-2.jpg',
+  '/backgrounds/foto-3.jpg',
+  '/backgrounds/foto-4.jpg'
+];
 
 const NewPortfolio = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 4000); // cambia cada 4s
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="new-portfolio">
 
-      {/* Galeria de fotos background */}
-      <div className="background-carousel">
-        <div className="background-carousel__slide slide-1"></div>
-        <div className="background-carousel__slide slide-2"></div>
-        <div className="background-carousel__slide slide-3"></div>
-        <div className="background-carousel__slide slide-4"></div>
-      </div>
+      {/* BACKGROUND DINÁMICO */}
+      <div
+        className="background-carousel"
+        style={{
+          backgroundImage: `url(${images[current]})`
+        }}
+      />
 
-      {/* Inicio página */}
+      {/* CONTENIDO */}
       <div className="content">
         <h1><BubbleText text="VISUALFOLDR" /></h1>
-        <p>2026</p>
+        {/* <p>2026</p> */}
+        
         <nav className="top-menu">
           <ul className="top-menu__list">
-            <li className="top-menu__item"><a href="#presentacion" className="top-menu__link">Quien soy?</a></li>
-            <li className="top-menu__item"><a href="#" className="top-menu__link">Futbol sala</a></li>
-            <li className="top-menu__item"><a href="#" className="top-menu__link">Conciertos</a></li>
-            <li className="top-menu__item"><a href="#" className="top-menu__link">Skate</a></li>
-            <li className="top-menu__item"><a href="#contacto" className="top-menu__link">Contacto</a></li>
+            <li><a href="#presentacion" className="top-menu__link">¿Quién soy?</a></li>
+            <li><a href="#" className="top-menu__link">Galeria</a></li>
+            <li><a href="#" className="top-menu__link">Trabajos</a></li>
+            <li><a href="/#/contacto" target="_blank" rel="noreferrer" className="top-menu__link">Contacto</a></li>
           </ul>
         </nav>
       </div>

@@ -1,15 +1,36 @@
 import React from 'react';
 import './Presentacion.scss';
 
+// URL de imagen (reemplaza con tu foto de perfils)
+import foto from '../../../assets/img/foto-perfil.png';
+
 const Presentacion = () => {
   return (
     <section id="presentacion" className="presentacion">
 
-        <h1>¿Quién soy?</h1>
-        <p>Fotografo, el diseño gráfico y el arte visual. Mi objetivo es capturar momentos únicos y transmitir emociones a través de mis imágenes. Con una formación en diseño gráfico y experiencia en fotografía de eventos, busco constantemente nuevas formas de expresión creativa. Mi trabajo se centra en la combinación de técnicas tradicionales y digitales para crear composiciones visuales impactantes. Estoy abierto a colaboraciones y proyectos que me permitan seguir explorando el mundo del arte visual.</p>
+      <div className="presentacion-container">
+
+        {/* Columna texto */}
+        <div className="presentacion-texto">
+          <h1>¿Quién soy?</h1>
+          <p>Buenas soy Albert, fotógrafo y diseñador web. </p>
+
+          <p>Con la ayuda de mi cámara soy capaz de detener el tiempo y al mismo tiempo
+           las plasmo eb piezas únicas en internet. </p>
+
+          <p>Podéis ver mis trabajos en los siguientes botones:</p>
+          {/* Aquí irá el botón que redirige a mis trabajos */}
+          <button>Ver galeria</button>
+        </div>
+
+        {/* Columna imagen */}
+        <div className="presentacion-img">
+          <img src={foto} alt="Foto de mia de presentación"/>
+        </div>
+
+      </div>
 
     </section>
-      
   );
 };
 

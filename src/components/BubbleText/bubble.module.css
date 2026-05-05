@@ -16,12 +16,12 @@
 /* Lo que tarda las letrass en cambiar de color */
 .hoverText:hover {
   transform: translateY(-10px) scale(1.2);
-  animation: rainbow 0.2s linear infinite;
+  animation: rainbow 0.5s linear infinite;
 }
 
 @keyframes rainbow {
   0% { color: #ffffff; }
-  100% { color: #22ff00; }
+  100% { color: #ff60c2; }
 }
 
 /* 
