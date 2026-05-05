@@ -1,0 +1,55 @@
+.hoverText {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hoverText:hover {
+  transform: translateY(-10px) scale(1.2);
+  color: #ffea00;
+}
+
+.hoverText {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Lo que tarda las letrass en cambiar de color */
+.hoverText:hover {
+  transform: translateY(-10px) scale(1.2);
+  animation: rainbow 0.2s linear infinite;
+}
+
+@keyframes rainbow {
+  0% { color: #ffffff; }
+  100% { color: #22ff00; }
+}
+
+/* 
+.hoverText {
+  transition:
+    0.35s font-weight,
+    0.35s color;
+}
+
+.hoverText:hover {
+  font-weight: 900;
+  color: rgb(238, 242, 255);
+}
+
+.hoverText:hover + .hoverText {
+  font-weight: 500;
+  color: rgb(199, 210, 254);
+}
+
+.hoverText:hover + .hoverText + .hoverText {
+  font-weight: 300;
+}
+
+.hoverText:has(+ .hoverText:hover) {
+  font-weight: 500;
+  color: rgb(199, 210, 254);
+}
+
+.hoverText:has(+ .hoverText + .hoverText:hover) {
+  font-weight: 300;
+} */

@@ -1,0 +1,48 @@
+.footer-contacto {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  padding: 60px 80px;
+  background: #0f0f0f;
+  color: #ffffff;
+
+  align-items: start;
+}
+
+/* Columnas */
+.footer-col h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  
+}
+
+.footer-col p,
+.footer-col a {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+/* Links */
+.footer-col a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.2s ease;
+}
+
+.footer-col a:hover {
+  border-bottom: 1px solid #ffffff;
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-contacto {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 25px;
+    padding: 40px 20px;
+  }
+}
