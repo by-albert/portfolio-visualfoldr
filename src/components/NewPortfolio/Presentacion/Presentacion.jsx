@@ -18,7 +18,7 @@ const Presentacion = () => {
           <p>Con la ayuda de mi cámara soy capaz de detener el tiempo y al mismo tiempo
            las plasmo eb piezas únicas en internet. </p>
 
-          <p>Podéis ver mis trabajos en los siguientes botones:</p>
+          <p>Podéis ver mis trabajos en el siguiente enlace:</p>
           {/* Aquí irá el botón que redirige a mis trabajos */}
           <button>Ver galeria</button>
         </div>

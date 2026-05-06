@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import './NewPortfolio.scss';
+import { Link } from 'react-router-dom';
 import BubbleText from "../BubbleText/bubbleText";
+import foto1 from '../../assets/backgrounds/foto-1.jpg';
+import foto2 from '../../assets/backgrounds/foto-2.jpg';
+import foto3 from '../../assets/backgrounds/foto-3.jpg';
+import foto4 from '../../assets/backgrounds/foto-4.jpg';
 
 const images = [
-  '/backgrounds/foto-1.jpg',
-  '/backgrounds/foto-2.jpg',
-  '/backgrounds/foto-3.jpg',
-  '/backgrounds/foto-4.jpg'
+  foto1,
+  foto2,
+  foto3,
+  foto4
 ];
 
 const NewPortfolio = () => {
@@ -38,10 +43,10 @@ const NewPortfolio = () => {
         
         <nav className="top-menu">
           <ul className="top-menu__list">
-            <li><a href="#presentacion" className="top-menu__link">¿Quién soy?</a></li>
-            <li><a href="#" className="top-menu__link">Galeria</a></li>
+            <li><Link to="/#presentacion" className="top-menu__link">¿Quién soy?</Link></li>
+            <li><Link to="/galeria" className="top-menu__link">Galeria de imágenes</Link></li>
             <li><a href="#" className="top-menu__link">Trabajos</a></li>
-            <li><a href="/#/contacto" target="_blank" rel="noreferrer" className="top-menu__link">Contacto</a></li>
+            <li><Link to="/contacto" className="top-menu__link">Contacto</Link></li>
           </ul>
         </nav>
       </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './Contacto.scss';
+import './FooterContacto.scss';
 
-const Contacto = () => {
+const FooterContacto = () => {
   const [copiado, setCopiado] = useState(false);
 
   const copiarEmail = async () => {
@@ -53,4 +53,4 @@ const Contacto = () => {
   );
 };
 
-export default Contacto;
+export default FooterContacto;
