@@ -7,6 +7,7 @@ import Presentacion from './components/NewPortfolio/Presentacion/Presentacion.js
 import ContactPage from './pages/Contacto/Contacto.jsx';
 import Galeria from './pages/Galeria/Galeria.jsx';
 import Album from './pages/Galeria/Album.jsx';
+import Trabajos from './pages/Trabajos/Trabajos.jsx';
 import FooterContacto from './components/NewPortfolio/FooterContacto/FooterContacto.jsx';
 
 function App() {
@@ -30,6 +31,12 @@ function App() {
           <Route path="/galeria/:tipo" element={
             <>
               <Album />
+              <FooterContacto />
+            </>
+          } />
+          <Route path="/trabajos" element={
+            <>
+              <Trabajos />
               <FooterContacto />
             </>
           } />

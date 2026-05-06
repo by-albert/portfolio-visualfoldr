@@ -9,8 +9,6 @@ const Contacto = () => {
         
         {/* CONTENIDO */}
         <div className="contact-content">
-          <Link to="/" className="back-link">← Inicio</Link>
-          
           <h2>Contacto</h2>
           <p>Disponible para proyectos, colaboraciones y encargos creativos.</p>
 
@@ -56,10 +54,10 @@ const Contacto = () => {
               LinkedIn
             </a>
 
-            <Link to="/" className="contact-button back-button">
-              Inicio
-            </Link>
           </div> */}
+           <Link to="/" className="contact-button back-button">
+              Volver al Inicio
+            </Link>
         </div>
 
         {/* IMAGEN QR*/}

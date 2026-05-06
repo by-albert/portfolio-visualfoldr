@@ -1,7 +1,5 @@
 import React from 'react';
 import './Presentacion.scss';
-
-// URL de imagen (reemplaza con tu foto de perfils)
 import foto from '../../../assets/img/foto-perfil.png';
 
 const Presentacion = () => {
@@ -16,11 +14,12 @@ const Presentacion = () => {
           <p>Buenas soy Albert, fotógrafo y diseñador web. </p>
 
           <p>Con la ayuda de mi cámara soy capaz de detener el tiempo y al mismo tiempo
-           las plasmo eb piezas únicas en internet. </p>
+           las capturar piezas únicas para subirlas a internet. </p>
 
-          <p>Podéis ver mis trabajos en el siguiente enlace:</p>
+          <p>Podéis ver mis trabajos y fotografias en su respectiva sección.</p>
           {/* Aquí irá el botón que redirige a mis trabajos */}
-          <button>Ver galeria</button>
+          {/* <button>Ver trabajos</button>
+          <button>Ver galería</button> */}
         </div>
 
         {/* Columna imagen */}

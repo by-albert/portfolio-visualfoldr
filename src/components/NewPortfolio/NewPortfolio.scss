@@ -109,7 +109,10 @@
   padding: 0.5rem 0.75rem;
   border-radius: 999px;
   background: black;
-  transition: background 0.3s ease, transform 0.3s ease; // MIRAR QUE PASA ESTO?
+  transition: background 0.3s ease, transform 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .top-menu__link:hover,

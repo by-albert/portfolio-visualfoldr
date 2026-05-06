@@ -1,0 +1,124 @@
+.trabajos-page {
+  padding: 6rem 1.5rem;
+  min-height: 100vh;
+  background: #0c0c0f;
+  color: #f5f5f5;
+}
+
+.trabajos-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ff6b6b;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #ff8787;
+}
+
+.trabajos-page h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.trabajos-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #d8d8d8;
+  margin-bottom: 3rem;
+}
+
+.trabajos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.trabajo-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trabajo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.trabajo-image {
+  height: 200px;
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-image {
+  color: #9fa1ad;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.trabajo-content {
+  padding: 1.5rem;
+}
+
+.trabajo-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #f5f5f5;
+}
+
+.trabajo-content p {
+  color: #d8d8d8;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.trabajo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: rgba(255, 107, 107, 0.2);
+  color: #ff6b6b;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .trabajos-page {
+    padding: 4rem 1rem;
+  }
+
+  .trabajos-page h1 {
+    font-size: 2rem;
+  }
+
+  .trabajos-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .trabajo-content {
+    padding: 1rem;
+  }
+}
