@@ -1,0 +1,74 @@
+import { useParams, Link } from 'react-router-dom';
+import './Album.scss';
+
+import futbolsala from '../../../assets/albums/Vincit-01.jpg';
+import foto2 from '../../../assets/backgrounds/foto-2.jpg';
+
+import { albumsData } from '../data/data.js';
+
+const albumsData = {
+  'futbol-sala': {
+    nombre: 'Fútbol Sala',
+    sesiones: [
+      {
+        id: 'sant-joan-vs-martinenc',
+        titulo: 'Sant Joan vs Martinenc',
+        portada: futbolsala
+      },
+      {
+        id: 'hospitalet-vs-barcelona',
+        titulo: 'Hospitalet vs Barcelona',
+        portada: foto2
+      }
+    ]
+  }
+};
+
+const Album = () => {
+  const { tipo } = useParams();
+  const album = albumsData[tipo];
+
+  if (!album) {
+    return (
+      <section className="album-page">
+        <h1>Álbum no encontrado</h1>
+        <Link to="/galeria">← Volver</Link>
+      </section>
+    );
+  }
+
+  return (
+    <section className="album-page">
+      <div className="album-container">
+
+        <div className="album-nav">
+          <Link to="/galeria" className="back-link">← Galería</Link>
+        </div>
+
+        <h1>{album.nombre}</h1>
+
+        <div className="albums-grid">
+          {album.sesiones.map((sesion) => (
+            <Link
+              key={sesion.id}
+              to={`/galeria/${tipo}/${sesion.id}`}
+              className="album-card"
+            >
+              <div
+                className="album-image"
+                style={{ backgroundImage: `url(${sesion.portada})` }}
+              >
+                <div className="album-overlay">
+                  <h2>{sesion.titulo}</h2>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default Album;

@@ -1,27 +1,34 @@
 import { Link } from 'react-router-dom';
 import './Galeria.scss';
-import foto1 from '../../assets/backgrounds/foto-1.jpg';
-import foto2 from '../../assets/backgrounds/foto-2.jpg';
-import foto3 from '../../assets/backgrounds/foto-3.jpg';
+import foto1 from '../../assets/albums/Vincit-01.jpg';   // Futbol sala
+import foto2 from '../../assets/backgrounds/foto-2.jpg'; // Conciertos
+import foto3 from '../../assets/albums/sk8-01.jpg'; // Conciertos
+import flor from '../../assets/albums/flor.jpg'; // Experimental
 
 const albums = [
   {
     id: 'futbol-sala',
     nombre: 'Fútbol Sala',
-    descripcion: 'Momentos intensos y emocionantes del deporte',
+    descripcion: 'Tercera división juvenil.',
     imagen: foto1
   },
   {
     id: 'conciertos',
     nombre: 'Conciertos',
-    descripcion: 'Energía y pasión en cada nota',
+    descripcion: 'Energía y pasión.',
     imagen: foto2
+  },
+    {
+    id: 'skate',
+    nombre: 'Skate',
+    descripcion: 'Momentos de libertad y creatividad',
+    imagen: foto3
   },
   {
     id: 'experimental',
-    nombre: 'Experimental / Amigos',
-    descripcion: 'Exploración creativa y momentos compartidos',
-    imagen: foto3
+    nombre: 'Experimental',
+    descripcion: 'Exploración creativa en desarrollo constante',
+    imagen: flor
   }
 ];
 
