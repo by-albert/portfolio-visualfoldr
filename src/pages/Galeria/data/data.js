@@ -1,18 +1,11 @@
 // IMPORTS DE IMÁGENES
-import futbolsala from '../../../assets/albums/Vincit-01.jpg';
-import skate from '../../../assets/albums/sk8-01.jpg';
-import flor from '../../../assets/albums/flor.jpg';
+import futbolsala from '../../../assets/futbol-sala/Vincit-01.jpg';
+import skate from '../../../assets/skate/sk8-01.jpg';
+import flor from '../../../assets/experimental/flor.jpg';
+import gaviota from '../../../assets/experimental/gaviota.jpg';
 
 import foto2 from '../../../assets/backgrounds/foto-2.jpg';
 import foto4 from '../../../assets/backgrounds/foto-4.jpg';
-
-/*
-  ESTRUCTURA:
-  Galería
-    └── Álbum (categoría)
-          └── Sesión (partido/evento)
-                └── Fotos
-*/
 
 export const albumsData = {
   'futbol-sala': {
@@ -88,10 +81,11 @@ export const albumsData = {
         id: 'creative-1',
         titulo: 'Exploración creativa',
         fecha: '2026',
-        portada: flor,
+        portada: gaviota,
 
         imagenes: [
-          flor
+          flor,
+          gaviota
         ]
       }
     ]

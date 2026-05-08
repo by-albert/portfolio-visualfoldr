@@ -2,9 +2,9 @@ import { useParams, Link } from 'react-router-dom';
 import './Sesion.scss';
 
 // IMPORTS TEMPORALES (luego vendrá de data.js)
-import foto1 from '../../../assets/albums/Vincit-01.jpg';
+import foto1 from '../../../assets/futbol-sala/Vincit-01.jpg';
 import foto2 from '../../../assets/backgrounds/foto-2.jpg';
-import foto3 from '../../../assets/albums/sk8-01.jpg';
+import foto3 from '../../../assets/skate/sk8-01.jpg';
 
 import { albumsData } from '../data/data.js';
 
