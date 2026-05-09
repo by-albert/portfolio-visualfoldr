@@ -48,7 +48,6 @@
 
 .album-card {
   position: relative;
-  aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: 15px;
   text-decoration: none;
@@ -63,7 +62,6 @@
 
 .album-image {
   width: 100%;
-  height: 100%;
   background-size: cover;
   background-position: center 30%;
   position: relative;
