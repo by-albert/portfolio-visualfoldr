@@ -80,7 +80,6 @@ import poblenou11 from '../../../assets/futbol-sala/Poblenou/P9-11.jpg';
 import poblenou12 from '../../../assets/futbol-sala/Poblenou/P9-12.jpg';
 import poblenou13 from '../../../assets/futbol-sala/Poblenou/P9-13.jpg';
 
-
 // POLARIS
 import polaris01 from '../../../assets/futbol-sala/Polaris/Polaris-01.jpg';
 import polaris02 from '../../../assets/futbol-sala/Polaris/Polaris-02.jpg';
@@ -108,7 +107,9 @@ import polaris23 from '../../../assets/futbol-sala/Polaris/Polaris-23.jpg';
 import polaris24 from '../../../assets/futbol-sala/Polaris/Polaris-24.jpg';
 import polaris25 from '../../../assets/futbol-sala/Polaris/Polaris-25.jpg';
 
-// VALLSECA
+// St. ANDREU (per fer)
+
+//VALLSECA
 import vallseca01 from '../../../assets/futbol-sala/Vallseca/Vallseca-01.jpg';
 import vallseca02 from '../../../assets/futbol-sala/Vallseca/Vallseca-02.jpg';
 import vallseca03 from '../../../assets/futbol-sala/Vallseca/Vallseca-03.jpg';
