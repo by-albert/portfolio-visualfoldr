@@ -53,6 +53,7 @@ const Sesion = () => {
 
   return (
     <section className="sesion-page">
+
       <div className="sesion-container">
 
         {/* NAVEGACIÓN */}
@@ -64,7 +65,6 @@ const Sesion = () => {
           >
             ← Galería
 
-            {/* SEPARADOR */}
             <span className="nav-separator">/</span>
 
           </Link>
@@ -78,14 +78,20 @@ const Sesion = () => {
 
         </div>
 
-        {/* TÍTULO */}
-        <h1>{data.titulo}</h1>
+        {/* HEADER */}
+        <div className="sesion-header">
 
-        <p className="sesion-date">
-          {data.fecha}
-        </p>
+          <h1 className="sesion-title">
+            {data.titulo}
+          </h1>
 
-        {/* GRID DE IMÁGENES */}
+          <p className="sesion-date">
+            {data.fecha}
+          </p>
+
+        </div>
+
+        {/* GRID */}
         <div className="sesion-grid">
 
           {data.imagenes.map((img, index) => (
@@ -104,6 +110,7 @@ const Sesion = () => {
         </div>
 
       </div>
+
     </section>
   );
 };
