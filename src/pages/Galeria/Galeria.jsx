@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Galeria.scss';
 
-import foto1 from '../../assets/futbol-sala/Vincit-01.jpg';
+import vincit01 from '../../assets/futbol-sala/Vincit/Vincit-01.jpg';
 import foto2 from '../../assets/backgrounds/foto-2.jpg';
 import foto3 from '../../assets/skate/sk8-01.jpg';
 import flor from '../../assets/experimental/flor.jpg';
@@ -11,7 +11,7 @@ const albums = [
     id: 'futbol-sala',
     nombre: 'Fútbol Sala',
     descripcion: 'Tercera división juvenil.',
-    imagen: foto1
+    imagen: vincit01
   },
   {
     id: 'conciertos',

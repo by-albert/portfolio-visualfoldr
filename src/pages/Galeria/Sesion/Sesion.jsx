@@ -1,31 +1,51 @@
 import { useParams, Link } from 'react-router-dom';
 import './Sesion.scss';
 
-// IMPORTS TEMPORALES (luego vendrá de data.js)
-import foto1 from '../../../assets/futbol-sala/Vincit-01.jpg';
-import foto2 from '../../../assets/backgrounds/foto-2.jpg';
-import foto3 from '../../../assets/skate/sk8-01.jpg';
-
 import { albumsData } from '../data/data.js';
 
-const sesionesData = {
-  'sant-joan-vs-martinenc': {
-    titulo: 'Sant Joan vs Martinenc',
-    fecha: '07/04/2026',
-    imagenes: [foto1, foto2, foto3]
-  }
-};
-
 const Sesion = () => {
-  const { sesion } = useParams();
-  const data = sesionesData[sesion];
+  const { tipo, sesion } = useParams();
 
+  // BUSCAR ÁLBUM
+  const album = albumsData[tipo];
+
+  // SI NO EXISTE EL ÁLBUM
+  if (!album) {
+    return (
+      <section className="sesion-page">
+        <div className="sesion-container">
+
+          <h1>Álbum no encontrado</h1>
+
+          <Link to="/galeria" className="back-link">
+            ← Volver a la galería
+          </Link>
+
+        </div>
+      </section>
+    );
+  }
+
+  // BUSCAR SESIÓN DENTRO DEL ÁLBUM
+  const data = album.sesiones.find(
+    (item) => item.id === sesion
+  );
+
+  // SI NO EXISTE LA SESIÓN
   if (!data) {
     return (
       <section className="sesion-page">
         <div className="sesion-container">
+
           <h1>Sesión no encontrada</h1>
-          <Link to="/galeria" className="back-link">← Volver</Link>
+
+          <Link
+            to={`/galeria/${tipo}`}
+            className="back-link"
+          >
+            ← Volver al álbum
+          </Link>
+
         </div>
       </section>
     );
@@ -35,20 +55,52 @@ const Sesion = () => {
     <section className="sesion-page">
       <div className="sesion-container">
 
+        {/* NAVEGACIÓN */}
         <div className="sesion-nav">
-          <Link to="/galeria" className="back-link">← Galería</Link>
-          <Link to=".." className="back-link">Álbum</Link>
+
+          <Link
+            to="/galeria"
+            className="back-link"
+          >
+            ← Galería
+
+            {/* SEPARADOR */}
+            <span className="nav-separator">/</span>
+
+          </Link>
+
+          <Link
+            to={`/galeria/${tipo}`}
+            className="back-link"
+          >
+            {album.nombre}
+          </Link>
+
         </div>
 
+        {/* TÍTULO */}
         <h1>{data.titulo}</h1>
-        <p className="sesion-date">{data.fecha}</p>
 
+        <p className="sesion-date">
+          {data.fecha}
+        </p>
+
+        {/* GRID DE IMÁGENES */}
         <div className="sesion-grid">
-          {data.imagenes.map((img, i) => (
-            <div key={i} className="sesion-card">
-              <img src={img} alt={`foto-${i}`} loading="lazy" />
+
+          {data.imagenes.map((img, index) => (
+            <div
+              key={index}
+              className="sesion-card"
+            >
+              <img
+                src={img}
+                alt={`${data.titulo}-${index + 1}`}
+                loading="lazy"
+              />
             </div>
           ))}
+
         </div>
 
       </div>
