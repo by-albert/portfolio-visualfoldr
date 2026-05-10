@@ -1,5 +1,56 @@
 // IMPORTS DE IMÁGENES
 // ------------------------------ Imágenes de Futbol Sala ------------------------------ 
+// KOTSKA
+
+// LA SALLE
+import lasalle01 from '../../../assets/futbol-sala/La-Salle/LaSalle-01.jpg';
+import lasalle02 from '../../../assets/futbol-sala/La-Salle/LaSalle-02.jpg';
+import lasalle03 from '../../../assets/futbol-sala/La-Salle/LaSalle-03.jpg';
+import lasalle04 from '../../../assets/futbol-sala/La-Salle/LaSalle-04.jpg';
+import lasalle05 from '../../../assets/futbol-sala/La-Salle/LaSalle-05.jpg';
+import lasalle06 from '../../../assets/futbol-sala/La-Salle/LaSalle-06.jpg';
+import lasalle07 from '../../../assets/futbol-sala/La-Salle/LaSalle-07.jpg';
+import lasalle08 from '../../../assets/futbol-sala/La-Salle/LaSalle-08.jpg';
+import lasalle09 from '../../../assets/futbol-sala/La-Salle/LaSalle-09.jpg';
+import lasalle10 from '../../../assets/futbol-sala/La-Salle/LaSalle-10.jpg';
+import lasalle11 from '../../../assets/futbol-sala/La-Salle/LaSalle-11.jpg';
+import lasalle12 from '../../../assets/futbol-sala/La-Salle/LaSalle-12.jpg';
+import lasalle13 from '../../../assets/futbol-sala/La-Salle/LaSalle-13.jpg';
+import lasalle14 from '../../../assets/futbol-sala/La-Salle/LaSalle-14.jpg';
+import lasalle15 from '../../../assets/futbol-sala/La-Salle/LaSalle-15.jpg';
+import lasalle16 from '../../../assets/futbol-sala/La-Salle/LaSalle-16.jpg';
+import lasalle17 from '../../../assets/futbol-sala/La-Salle/LaSalle-17.jpg';
+import lasalle18 from '../../../assets/futbol-sala/La-Salle/LaSalle-18.jpg';
+
+// MARISTES LES CORTS
+import maristes01 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-01.jpg';
+import maristes02 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-02.jpg';
+import maristes03 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-03.jpg';
+import maristes04 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-04.jpg';
+import maristes05 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-05.jpg';
+import maristes06 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-06.jpg';
+import maristes07 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-07.jpg';
+import maristes08 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-08.jpg';
+import maristes09 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-09.jpg';
+import maristes10 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-10.jpg';
+import maristes11 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-11.jpg';
+import maristes12 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-12.jpg';
+import maristes13 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-13.jpg';
+import maristes14 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-14.jpg';
+import maristes15 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-15.jpg';
+import maristes16 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-16.jpg';
+import maristes17 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-17.jpg';
+import maristes18 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-18.jpg';
+import maristes19 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-19.jpg';
+import maristes20 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-20.jpg';
+import maristes21 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-21.jpg';
+import maristes22 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-22.jpg';
+import maristes23 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-23.jpg';
+import maristes24 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-24.jpg';
+import maristes25 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-25.jpg';
+import maristes26 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-26.jpg';
+import maristes27 from '../../../assets/futbol-sala/Maristes-Les-Corts/Maristes-27.jpg';
+
 // MARTINENC
 import martinenc01 from '../../../assets/futbol-sala/Martinenc/Martinenc-01.jpg';
 import martinenc02 from '../../../assets/futbol-sala/Martinenc/Martinenc-02.jpg';
@@ -197,6 +248,42 @@ export const albumsData = {
         ]
       },
       {
+        id: 'sant-joan-vs-maristas-les-corts',
+        titulo: 'St. Joan vs Maristes Les Corts',
+        fecha: '25/01/2026',
+        portada: maristes04,
+
+        imagenes: [
+          maristes01,
+          maristes02,
+          maristes03,
+          maristes04,
+          maristes05,
+          maristes06,
+          maristes07,
+          maristes08,
+          maristes09,
+          maristes10,
+          maristes11,
+          maristes12,
+          maristes13,
+          maristes14,
+          maristes15,
+          maristes16,
+          maristes17,
+          maristes18,
+          maristes19,
+          maristes20,
+          maristes21,
+          maristes22,
+          maristes23,
+          maristes24,
+          maristes25,
+          maristes26,
+          maristes27,
+        ]
+      },
+      {
         id: 'sant-joan-vs-martinenc',
         titulo: 'St. Joan vs Martinenc',
         fecha: '25/02/2026',
@@ -251,6 +338,33 @@ export const albumsData = {
         ]
       },
       {
+        id: 'sant-joan-vs-la-salle',
+        titulo: 'St. Joan vs La Salle',
+        fecha: '11/01/2026',
+        portada: lasalle01,
+
+        imagenes: [
+          lasalle01,
+          lasalle02,
+          lasalle03,
+          lasalle04,
+          lasalle05,
+          lasalle06,
+          lasalle07,
+          lasalle08,
+          lasalle09,
+          lasalle10,
+          lasalle11,
+          lasalle12,
+          lasalle13,
+          lasalle14,
+          lasalle15,
+          lasalle16,
+          lasalle17,
+          lasalle18,
+        ]
+      },
+      { // AGREGAR MÁS FOTOS
         id: 'sant-joan-vs-vincit',
         titulo: 'St. Joan vs Vincit',
         fecha: '25/01/2026',
