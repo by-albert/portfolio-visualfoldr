@@ -1,6 +1,32 @@
 // IMPORTS DE IMÁGENES
 // ------------------------------ Imágenes de Futbol Sala ------------------------------ 
+// JESÚS MARIA
+import jesusmaria01 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-01.jpg';
+import jesusmaria02 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-02.jpg';
+import jesusmaria03 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-03.jpg';
+import jesusmaria04 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-04.jpg';
+import jesusmaria05 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-05.jpg';
+import jesusmaria06 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-06.jpg';
+import jesusmaria07 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-07.jpg';
+
 // KOTSKA
+import kotska01 from '../../../assets/futbol-sala/Kotska/Kotska-01.jpg';
+import kotska02 from '../../../assets/futbol-sala/Kotska/Kotska-02.jpg';
+import kotska03 from '../../../assets/futbol-sala/Kotska/Kotska-03.jpg';
+import kotska04 from '../../../assets/futbol-sala/Kotska/Kotska-04.jpg';
+import kotska05 from '../../../assets/futbol-sala/Kotska/Kotska-05.jpg';
+import kotska06 from '../../../assets/futbol-sala/Kotska/Kotska-06.jpg';
+import kotska07 from '../../../assets/futbol-sala/Kotska/Kotska-07.jpg';
+import kotska08 from '../../../assets/futbol-sala/Kotska/Kotska-08.jpg';
+import kotska09 from '../../../assets/futbol-sala/Kotska/Kotska-09.jpg';
+import kotska10 from '../../../assets/futbol-sala/Kotska/Kotska-10.jpg';
+import kotska11 from '../../../assets/futbol-sala/Kotska/Kotska-11.jpg';
+import kotska12 from '../../../assets/futbol-sala/Kotska/Kotska-12.jpg';
+import kotska13 from '../../../assets/futbol-sala/Kotska/Kotska-13.jpg';
+import kotska14 from '../../../assets/futbol-sala/Kotska/Kotska-14.jpg';
+import kotska15 from '../../../assets/futbol-sala/Kotska/Kotska-15.jpg';
+import kotska16 from '../../../assets/futbol-sala/Kotska/Kotska-16.jpg';
+import kotska17 from '../../../assets/futbol-sala/Kotska/Kotska-17.jpg';
 
 // LA SALLE
 import lasalle01 from '../../../assets/futbol-sala/La-Salle/LaSalle-01.jpg';
@@ -159,6 +185,7 @@ import polaris24 from '../../../assets/futbol-sala/Polaris/Polaris-24.jpg';
 import polaris25 from '../../../assets/futbol-sala/Polaris/Polaris-25.jpg';
 
 // St. ANDREU (per fer)
+import standreu01 from '../../../assets/futbol-sala/St-Andreu/StAndreu-01.jpg';
 
 //VALLSECA
 import vallseca01 from '../../../assets/futbol-sala/Vallseca/Vallseca-01.jpg';
@@ -318,6 +345,32 @@ export const albumsData = {
         ]
       },
       {
+        id: 'sant-joan-vs-kotska',
+        titulo: 'St. Joan vs Kotska',
+        fecha: '25/02/2026',
+        portada: kotska08,
+
+        imagenes: [
+          kotska01,
+          kotska02,
+          kotska03,
+          kotska04,
+          kotska05,
+          kotska06,
+          kotska07,
+          kotska08,
+          kotska09,
+          kotska10,
+          kotska11,
+          kotska12,
+          kotska13,
+          kotska14,
+          kotska15,
+          kotska16,
+          kotska17,
+        ]
+      },
+      {
         id: 'sant-joan-vs-vallseca',
         titulo: 'St. Joan vs Vallseca',
         fecha: '11/01/2026',
@@ -388,10 +441,10 @@ export const albumsData = {
         id: 'sant-joan-vs-st-Andreu',
         titulo: 'St. Joan vs St. Andreu',
         fecha: '25/01/2026',
-        portada: vincit01,
+        portada: standreu01,
 
         imagenes: [
-          vincit01, // La tengo repe pero es porque me falta pasar las fotos
+          standreu01, // La tengo repe pero es porque me falta pasar las fotos
           
         ]
       },
@@ -427,6 +480,22 @@ export const albumsData = {
           polaris23,
           polaris24,
           polaris25,
+        ]
+      },
+      {
+        id: 'sant-joan-vs-jesus-maria',
+        titulo: 'St. Joan vs Jesus Maria',
+        fecha: '25/02/2026',
+        portada: jesusmaria01,
+
+        imagenes: [
+          jesusmaria01,
+          jesusmaria02,
+          jesusmaria03,
+          jesusmaria04,
+          jesusmaria05,
+          jesusmaria06,
+          jesusmaria07
         ]
       },
       {
