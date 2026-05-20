@@ -1,5 +1,35 @@
 // IMPORTS DE IMÁGENES
 // ------------------------------ Imágenes de Futbol Sala ------------------------------ 
+// CET 10
+import cet10_01 from '../../../assets/futbol-sala/CET10/Cet10_01.jpg';
+import cet10_02 from '../../../assets/futbol-sala/CET10/Cet10_02.jpg';
+import cet10_03 from '../../../assets/futbol-sala/CET10/Cet10_03.jpg';
+import cet10_04 from '../../../assets/futbol-sala/CET10/Cet10_04.jpg';
+import cet10_05 from '../../../assets/futbol-sala/CET10/Cet10_05.jpg';
+import cet10_06 from '../../../assets/futbol-sala/CET10/Cet10_06.jpg';
+import cet10_07 from '../../../assets/futbol-sala/CET10/Cet10_07.jpg';
+import cet10_08 from '../../../assets/futbol-sala/CET10/Cet10_08.jpg';
+import cet10_09 from '../../../assets/futbol-sala/CET10/Cet10_09.jpg';
+import cet10_10 from '../../../assets/futbol-sala/CET10/Cet10_10.jpg';
+import cet10_11 from '../../../assets/futbol-sala/CET10/Cet10_11.jpg';
+import cet10_12 from '../../../assets/futbol-sala/CET10/Cet10_12.jpg';
+import cet10_13 from '../../../assets/futbol-sala/CET10/Cet10_13.jpg';
+import cet10_14 from '../../../assets/futbol-sala/CET10/Cet10_14.jpg';
+import cet10_15 from '../../../assets/futbol-sala/CET10/Cet10_15.jpg';
+import cet10_16 from '../../../assets/futbol-sala/CET10/Cet10_16.jpg';
+import cet10_17 from '../../../assets/futbol-sala/CET10/Cet10_17.jpg';
+import cet10_18 from '../../../assets/futbol-sala/CET10/Cet10_18.jpg';
+import cet10_19 from '../../../assets/futbol-sala/CET10/Cet10_19.jpg';
+import cet10_20 from '../../../assets/futbol-sala/CET10/Cet10_20.jpg';
+import cet10_21 from '../../../assets/futbol-sala/CET10/Cet10_21.jpg';
+import cet10_22 from '../../../assets/futbol-sala/CET10/Cet10_22.jpg';
+import cet10_23 from '../../../assets/futbol-sala/CET10/Cet10_23.jpg';
+import cet10_24 from '../../../assets/futbol-sala/CET10/Cet10_24.jpg';
+import cet10_25 from '../../../assets/futbol-sala/CET10/Cet10_25.jpg';
+import cet10_26 from '../../../assets/futbol-sala/CET10/Cet10_26.jpg';
+import cet10_27 from '../../../assets/futbol-sala/CET10/Cet10_27.jpg';
+import cet10_28 from '../../../assets/futbol-sala/CET10/Cet10_28.jpg';
+
 // JESÚS MARIA
 import jesusmaria01 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-01.jpg';
 import jesusmaria02 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-02.jpg';
@@ -8,6 +38,41 @@ import jesusmaria04 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-04.
 import jesusmaria05 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-05.jpg';
 import jesusmaria06 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-06.jpg';
 import jesusmaria07 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-07.jpg';
+import jesusmaria08 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-08.jpg';
+import jesusmaria09 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-09.jpg';
+import jesusmaria10 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-10.jpg';
+import jesusmaria11 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-11.jpg';
+import jesusmaria12 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-12.jpg'; 
+import jesusmaria13 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-13.jpg';
+import jesusmaria14 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-14.jpg';
+import jesusmaria15 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-15.jpg';
+import jesusmaria16 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-16.jpg';
+import jesusmaria17 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-17.jpg';
+import jesusmaria18 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-18.jpg';
+import jesusmaria19 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-19.jpg';
+import jesusmaria20 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-20.jpg';
+import jesusmaria21 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-21.jpg';
+import jesusmaria22 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-22.jpg';
+import jesusmaria23 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-23.jpg';
+import jesusmaria24 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-24.jpg';
+import jesusmaria25 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-25.jpg';
+import jesusmaria26 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-26.jpg';
+import jesusmaria27 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-27.jpg';
+import jesusmaria28 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-28.jpg';
+import jesusmaria29 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-29.jpg';
+import jesusmaria30 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-30.jpg';
+import jesusmaria31 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-31.jpg';
+import jesusmaria32 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-32.jpg';
+import jesusmaria33 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-33.jpg';
+import jesusmaria34 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-34.jpg';
+import jesusmaria35 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-35.jpg';
+import jesusmaria36 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-36.jpg';
+import jesusmaria37 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-37.jpg';
+import jesusmaria38 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-38.jpg';
+import jesusmaria39 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-39.jpg';
+import jesusmaria40 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-40.jpg';
+import jesusmaria41 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-41.jpg';
+import jesusmaria42 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-42.jpg';
 
 // KOTSKA
 import kotska01 from '../../../assets/futbol-sala/Kotska/Kotska-01.jpg';
@@ -345,6 +410,43 @@ export const albumsData = {
         ]
       },
       {
+        id: 'sant-joan-vs-cet-10',
+        titulo: 'St. Joan vs CET 10',
+        fecha: '25/02/2026',
+        portada: cet10_05,
+
+        imagenes: [
+          cet10_01,
+          cet10_02,
+          cet10_03,
+          cet10_04,
+          cet10_05,
+          cet10_06,
+          cet10_07,
+          cet10_08,
+          cet10_09,
+          cet10_10,
+          cet10_11,
+          cet10_12,
+          cet10_13,
+          cet10_14,
+          cet10_15,
+          cet10_16,
+          cet10_17,
+          cet10_18,
+          cet10_19,
+          cet10_20,
+          cet10_21,
+          cet10_22,
+          cet10_23,
+          cet10_24,
+          cet10_25,
+          cet10_26,
+          cet10_27,
+          cet10_28,
+        ]
+      },
+      {
         id: 'sant-joan-vs-kotska',
         titulo: 'St. Joan vs Kotska',
         fecha: '25/02/2026',
@@ -368,6 +470,57 @@ export const albumsData = {
           kotska15,
           kotska16,
           kotska17,
+        ]
+      },
+      {
+        id: 'sant-joan-vs-jesus-maria',
+        titulo: 'St. Joan vs Jesús Maria',
+        fecha: '25/01/2026',
+        portada: jesusmaria07,
+
+        imagenes: [
+          jesusmaria01,
+          jesusmaria02,
+          jesusmaria03,
+          jesusmaria04,
+          jesusmaria05,
+          jesusmaria06,
+          jesusmaria07,
+          jesusmaria08,
+          jesusmaria09,
+          jesusmaria10,
+          jesusmaria11,
+          jesusmaria12,
+          jesusmaria13,
+          jesusmaria14,
+          jesusmaria15,
+          jesusmaria16,
+          jesusmaria17,
+          jesusmaria18,
+          jesusmaria19,
+          jesusmaria20,
+          jesusmaria21,
+          jesusmaria22,
+          jesusmaria23,
+          jesusmaria24,
+          jesusmaria25,
+          jesusmaria26,
+          jesusmaria27,
+          jesusmaria28,
+          jesusmaria29,
+          jesusmaria30,
+          jesusmaria31,
+          jesusmaria32,
+          jesusmaria33,
+          jesusmaria34,
+          jesusmaria35,
+          jesusmaria36,
+          jesusmaria37,
+          jesusmaria38,
+          jesusmaria39,
+          jesusmaria40,
+          jesusmaria41,
+          jesusmaria42
         ]
       },
       {
@@ -480,22 +633,6 @@ export const albumsData = {
           polaris23,
           polaris24,
           polaris25,
-        ]
-      },
-      {
-        id: 'sant-joan-vs-jesus-maria',
-        titulo: 'St. Joan vs Jesus Maria',
-        fecha: '25/02/2026',
-        portada: jesusmaria01,
-
-        imagenes: [
-          jesusmaria01,
-          jesusmaria02,
-          jesusmaria03,
-          jesusmaria04,
-          jesusmaria05,
-          jesusmaria06,
-          jesusmaria07
         ]
       },
       {
