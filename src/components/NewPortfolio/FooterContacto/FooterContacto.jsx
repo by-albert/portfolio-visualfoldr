@@ -20,7 +20,7 @@ const FooterContacto = () => {
       {/* Columna 1 */}
       <div className="footer-col">
         <h3>Contacto</h3>
-        <p>Llama al: 695453119</p>
+        <p>Núm. telf: +34 695 45 31 19</p>
       </div>
 
       {/* Columna 2 */}

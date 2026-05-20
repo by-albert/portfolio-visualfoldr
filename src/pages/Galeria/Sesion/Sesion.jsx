@@ -63,7 +63,7 @@ const Sesion = () => {
       <div className="sesion-container">
 
         {/* NAVEGACIÓN */}
-        <div className="sesion-nav">
+        <div className="session-nav">
 
           <Link
             to="/galeria"
