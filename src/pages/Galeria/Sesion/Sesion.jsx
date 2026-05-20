@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './Sesion.scss';
 
@@ -5,6 +6,11 @@ import { albumsData } from '../data/data.js';
 
 const Sesion = () => {
   const { tipo, sesion } = useParams();
+
+  // 🔥 SCROLL ARRIBA AUTOMÁTICO
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // BUSCAR ÁLBUM
   const album = albumsData[tipo];

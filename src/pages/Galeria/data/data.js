@@ -249,8 +249,64 @@ import polaris23 from '../../../assets/futbol-sala/Polaris/Polaris-23.jpg';
 import polaris24 from '../../../assets/futbol-sala/Polaris/Polaris-24.jpg';
 import polaris25 from '../../../assets/futbol-sala/Polaris/Polaris-25.jpg';
 
-// St. ANDREU (per fer)
+// St. ANDREU 
 import standreu01 from '../../../assets/futbol-sala/St-Andreu/StAndreu-01.jpg';
+import standreu02 from '../../../assets/futbol-sala/St-Andreu/StAndreu-02.jpg';
+import standreu03 from '../../../assets/futbol-sala/St-Andreu/StAndreu-03.jpg';
+import standreu04 from '../../../assets/futbol-sala/St-Andreu/StAndreu-04.jpg';
+import standreu05 from '../../../assets/futbol-sala/St-Andreu/StAndreu-05.jpg';
+import standreu06 from '../../../assets/futbol-sala/St-Andreu/StAndreu-06.jpg';
+import standreu07 from '../../../assets/futbol-sala/St-Andreu/StAndreu-07.jpg';
+import standreu08 from '../../../assets/futbol-sala/St-Andreu/StAndreu-08.jpg';
+import standreu09 from '../../../assets/futbol-sala/St-Andreu/StAndreu-09.jpg';
+import standreu10 from '../../../assets/futbol-sala/St-Andreu/StAndreu-10.jpg';
+import standreu11 from '../../../assets/futbol-sala/St-Andreu/StAndreu-11.jpg';
+import standreu12 from '../../../assets/futbol-sala/St-Andreu/StAndreu-12.jpg';
+import standreu13 from '../../../assets/futbol-sala/St-Andreu/StAndreu-13.jpg';
+import standreu14 from '../../../assets/futbol-sala/St-Andreu/StAndreu-14.jpg';
+import standreu15 from '../../../assets/futbol-sala/St-Andreu/StAndreu-15.jpg';
+import standreu16 from '../../../assets/futbol-sala/St-Andreu/StAndreu-16.jpg';
+import standreu17 from '../../../assets/futbol-sala/St-Andreu/StAndreu-17.jpg';
+import standreu18 from '../../../assets/futbol-sala/St-Andreu/StAndreu-18.jpg';
+import standreu19 from '../../../assets/futbol-sala/St-Andreu/StAndreu-19.jpg';
+import standreu20 from '../../../assets/futbol-sala/St-Andreu/StAndreu-20.jpg';
+import standreu21 from '../../../assets/futbol-sala/St-Andreu/StAndreu-21.jpg';
+import standreu22 from '../../../assets/futbol-sala/St-Andreu/StAndreu-22.jpg';
+import standreu23 from '../../../assets/futbol-sala/St-Andreu/StAndreu-23.jpg';
+import standreu24 from '../../../assets/futbol-sala/St-Andreu/StAndreu-24.jpg';
+import standreu25 from '../../../assets/futbol-sala/St-Andreu/StAndreu-25.jpg';
+import standreu26 from '../../../assets/futbol-sala/St-Andreu/StAndreu-26.jpg';
+import standreu27 from '../../../assets/futbol-sala/St-Andreu/StAndreu-27.jpg';
+import standreu28 from '../../../assets/futbol-sala/St-Andreu/StAndreu-28.jpg';
+import standreu29 from '../../../assets/futbol-sala/St-Andreu/StAndreu-29.jpg';
+import standreu30 from '../../../assets/futbol-sala/St-Andreu/StAndreu-30.jpg';
+import standreu31 from '../../../assets/futbol-sala/St-Andreu/StAndreu-31.jpg';
+import standreu32 from '../../../assets/futbol-sala/St-Andreu/StAndreu-32.jpg';
+import standreu33 from '../../../assets/futbol-sala/St-Andreu/StAndreu-33.jpg';
+import standreu34 from '../../../assets/futbol-sala/St-Andreu/StAndreu-34.jpg';
+import standreu35 from '../../../assets/futbol-sala/St-Andreu/StAndreu-35.jpg';
+import standreu36 from '../../../assets/futbol-sala/St-Andreu/StAndreu-36.jpg';
+import standreu37 from '../../../assets/futbol-sala/St-Andreu/StAndreu-37.jpg';
+import standreu38 from '../../../assets/futbol-sala/St-Andreu/StAndreu-38.jpg';
+import standreu39 from '../../../assets/futbol-sala/St-Andreu/StAndreu-39.jpg';
+import standreu40 from '../../../assets/futbol-sala/St-Andreu/StAndreu-40.jpg';
+import standreu41 from '../../../assets/futbol-sala/St-Andreu/StAndreu-41.jpg';
+import standreu42 from '../../../assets/futbol-sala/St-Andreu/StAndreu-42.jpg';
+import standreu43 from '../../../assets/futbol-sala/St-Andreu/StAndreu-43.jpg';
+import standreu44 from '../../../assets/futbol-sala/St-Andreu/StAndreu-44.jpg';
+import standreu45 from '../../../assets/futbol-sala/St-Andreu/StAndreu-45.jpg';
+import standreu46 from '../../../assets/futbol-sala/St-Andreu/StAndreu-46.jpg';
+import standreu47 from '../../../assets/futbol-sala/St-Andreu/StAndreu-47.jpg';
+import standreu48 from '../../../assets/futbol-sala/St-Andreu/StAndreu-48.jpg';
+import standreu49 from '../../../assets/futbol-sala/St-Andreu/StAndreu-49.jpg';
+import standreu50 from '../../../assets/futbol-sala/St-Andreu/StAndreu-50.jpg';
+import standreu51 from '../../../assets/futbol-sala/St-Andreu/StAndreu-51.jpg';
+import standreu52 from '../../../assets/futbol-sala/St-Andreu/StAndreu-52.jpg';
+import standreu53 from '../../../assets/futbol-sala/St-Andreu/StAndreu-53.jpg';
+import standreu54 from '../../../assets/futbol-sala/St-Andreu/StAndreu-54.jpg';
+import standreu55 from '../../../assets/futbol-sala/St-Andreu/StAndreu-55.jpg';
+import standreu56 from '../../../assets/futbol-sala/St-Andreu/StAndreu-56.jpg';
+import standreu57 from '../../../assets/futbol-sala/St-Andreu/StAndreu-57.jpg';
 
 //VALLSECA
 import vallseca01 from '../../../assets/futbol-sala/Vallseca/Vallseca-01.jpg';
@@ -292,8 +348,74 @@ import foto4 from '../../../assets/backgrounds/foto-4.jpg';
 export const albumsData = {
   'futbol-sala': {
     nombre: 'Fútbol Sala',
-
     sesiones: [
+      {
+        id: 'sant-joan-vs-st-Andreu',
+        titulo: 'St. Joan vs St. Andreu',
+        fecha: '25/01/2026',
+        portada: standreu29,
+
+        imagenes: [
+          standreu01,
+          standreu02,
+          standreu03,
+          standreu04,
+          standreu05,
+          standreu06,
+          standreu07,
+          standreu08,
+          standreu09,
+          standreu10,
+          standreu11,
+          standreu12,
+          standreu13,
+          standreu14,
+          standreu15,
+          standreu16,
+          standreu17,
+          standreu18,
+          standreu19,
+          standreu20,
+          standreu21,
+          standreu22,
+          standreu23,
+          standreu24,
+          standreu25,
+          standreu26,
+          standreu27,
+          standreu28,
+          standreu29,
+          standreu30,
+          standreu31,
+          standreu32,
+          standreu33,
+          standreu34,
+          standreu35,
+          standreu36,
+          standreu37,
+          standreu38,
+          standreu39,
+          standreu40,
+          standreu41,
+          standreu42,
+          standreu43,
+          standreu44,
+          standreu45,
+          standreu46,
+          standreu47,
+          standreu48,
+          standreu49,
+          standreu50,
+          standreu51,
+          standreu52,
+          standreu53,
+          standreu54,
+          standreu55,
+          standreu56,
+          standreu57,
+          
+        ]
+      },
       {
         id: 'sant-joan-vs-montsant',
         titulo: 'St. Joan vs Montsant',
@@ -587,18 +709,6 @@ export const albumsData = {
           vincit08,
           vincit09,
           vincit10,
-        ]
-      },
-      {
-        // POR HACER --> PONER LAS NUEVAS FOTOS
-        id: 'sant-joan-vs-st-Andreu',
-        titulo: 'St. Joan vs St. Andreu',
-        fecha: '25/01/2026',
-        portada: standreu01,
-
-        imagenes: [
-          standreu01, // La tengo repe pero es porque me falta pasar las fotos
-          
         ]
       },
       {
