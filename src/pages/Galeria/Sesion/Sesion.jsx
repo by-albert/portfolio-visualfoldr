@@ -1,16 +1,34 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './Sesion.scss';
 
 import { albumsData } from '../data/data.js';
 
 const Sesion = () => {
-  const { tipo, sesion } = useParams();
 
-  // 🔥 SCROLL ARRIBA AUTOMÁTICO
+  const { tipo, sesion } = useParams();
+  const [showNav, setShowNav] = useState(false);
+
+  // SCROLL ARRIBA
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+
+  const handleScroll = () => {
+
+    if (window.scrollY > 250) {
+      setShowNav(true);
+    } else {
+      setShowNav(false);
+    }
+
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+
+}, []);
 
   // BUSCAR ÁLBUM
   const album = albumsData[tipo];
@@ -19,20 +37,25 @@ const Sesion = () => {
   if (!album) {
     return (
       <section className="sesion-page">
+
         <div className="sesion-container">
 
           <h1>Álbum no encontrado</h1>
 
-          <Link to="/galeria" className="back-link">
+          <Link
+            to="/galeria"
+            className="back-link"
+          >
             ← Volver a la galería
           </Link>
 
         </div>
+
       </section>
     );
   }
 
-  // BUSCAR SESIÓN DENTRO DEL ÁLBUM
+  // BUSCAR SESIÓN
   const data = album.sesiones.find(
     (item) => item.id === sesion
   );
@@ -41,6 +64,7 @@ const Sesion = () => {
   if (!data) {
     return (
       <section className="sesion-page">
+
         <div className="sesion-container">
 
           <h1>Sesión no encontrada</h1>
@@ -53,6 +77,7 @@ const Sesion = () => {
           </Link>
 
         </div>
+
       </section>
     );
   }
@@ -62,26 +87,19 @@ const Sesion = () => {
 
       <div className="sesion-container">
 
-        {/* NAVEGACIÓN */}
-        <div className="session-nav">
-
-          <Link
-            to="/galeria"
-            className="back-link"
-          >
-            ← Galería
-
-            <span className="nav-separator">/</span>
-
+        {/* NAV */}
+        <div className={`session-nav ${showNav ? 'visible' : ''}`}>
+          
+          <Link to="/galeria" className="back-link">
+          ← Volver
           </Link>
+          
+          {/* SEPARADOR */}
+          <div className="nav-divider"></div>
 
-          <Link
-            to={`/galeria/${tipo}`}
-            className="back-link"
-          >
-            {album.nombre}
+          <Link to={`/galeria/${tipo}`} className="back-link active">
+          Más álbumes de {album.nombre}
           </Link>
-
         </div>
 
         {/* HEADER */}
@@ -101,16 +119,20 @@ const Sesion = () => {
         <div className="sesion-grid">
 
           {data.imagenes.map((img, index) => (
+
             <div
               key={index}
               className="sesion-card"
             >
+
               <img
                 src={img}
                 alt={`${data.titulo}-${index + 1}`}
                 loading="lazy"
               />
+
             </div>
+
           ))}
 
         </div>
