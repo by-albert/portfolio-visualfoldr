@@ -1,23 +1,32 @@
-/* -------------------- LAYOUT GENERAL -------------------- */
+/* ========================= */
+/* LAYOUT GENERAL */
+/* ========================= */
 
 .new-portfolio {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 
   position: relative;
-  height: 100vh;
+
   width: 100%;
+  height: 100vh;
+
   overflow: hidden;
+
+  text-align: center;
+
+  padding: 2rem;
 }
 
-/* -------------------- BACKGROUND CAROUSEL -------------------- */
+/* ========================= */
+/* BACKGROUND */
+/* ========================= */
 
 .background-carousel {
   position: absolute;
   inset: 0;
+
   z-index: 0;
 
   background-size: cover;
@@ -25,107 +34,147 @@
   background-repeat: no-repeat;
 
   transition: background-image 0.8s ease-in-out;
+
+  transform: scale(1.02);
 }
 
-.background-carousel__slide {
+/* OVERLAY OSCURO */
+
+.background-carousel::after {
+  content: "";
+
   position: absolute;
   inset: 0;
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  opacity: 0;
-
-  animation: carouselSteps 16s steps(1, end) infinite;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.35),
+      rgba(0,0,0,0.60)
+    );
 }
 
-
-/* Estilos específicos removidos - usando inline styles desde JSX */
-.background-carousel__slide.slide-1 {
-  animation-delay: 0s;
-}
-
-.background-carousel__slide.slide-2 {
-  animation-delay: 4s;
-}
-
-.background-carousel__slide.slide-3 {
-  animation-delay: 8s;
-}
-
-.background-carousel__slide.slide-4 {
-  animation-delay: 12s;
-}
-
-/* -------------------- ANIMACIÓN -------------------- */
-
-@keyframes carouselSteps {
-  0% { opacity: 1; }
-  24.99% { opacity: 1; }
-
-  25% { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-/* -------------------- CONTENIDO -------------------- */
+/* ========================= */
+/* CONTENIDO */
+/* ========================= */
 
 .content {
   position: relative;
   z-index: 2;
+
+  width: 100%;
+  max-width: 1200px;
 }
 
-.new-portfolio h1 {
-  margin: 0;
-  font-size: 3rem;
-  color: var(--title-color);
-  text-shadow: -10px -1px 0 #000000;
+/* ========================= */
+/* TITULO */
+/* ========================= */
+
+.mobile-title {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 2rem;
 }
 
-/* -------------------- MENÚ SUPERIOR -------------------- */
-
-.top-menu {
-  margin-top: 2rem;
+.title-line {
   display: flex;
   justify-content: center;
-  pointer-events: none;
+
+  width: 100%;
+
+  line-height: 0.9;
+}
+
+/* BubbleText */
+
+.title-line span,
+.title-line div {
+  color: white;
+
+  font-size: clamp(3rem, 7vw, 6rem);
+
+  text-shadow:
+    0 5px 30px rgba(0,0,0,0.45);
+}
+
+/* ========================= */
+/* MENU */
+/* ========================= */
+
+.top-menu {
+  display: flex;
+  justify-content: center;
 }
 
 .top-menu__list {
   display: flex;
-  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
   list-style: none;
-  margin: 0;
+
   padding: 0;
-  pointer-events: auto;
+  margin: 0;
 }
+
+/* ========================= */
+/* BOTONES */
+/* ========================= */
 
 .top-menu__link {
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.9rem;
-  text-decoration: none;
-  padding: 0.5rem 0.75rem;
-  border-radius: 999px;
-  background: black;
-  transition: background 0.3s ease, transform 0.3s ease;
   border: none;
+  outline: none;
+
   cursor: pointer;
-  font-family: inherit;
+
+  padding: 0.9rem 1.4rem;
+
+  border-radius: 999px;
+
+  background: rgba(0,0,0,0.72);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  color: white;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  min-width: 160px;
 }
 
-.top-menu__link:hover,
-.top-menu__link:focus {
-  background: #ff009d;
-  color: white;
+.top-menu__link:hover {
+  background: white;
+
+  color: black;
+
   transform: translateY(-2px);
 }
 
-/* -------------------- GLOBAL -------------------- */
+/* ========================= */
+/* GLOBAL */
+/* ========================= */
 
 body {
-  background: #000000;
+  background: #000;
 }
 
 .app {
@@ -133,9 +182,90 @@ body {
   flex-direction: column;
 }
 
-p {
-  color: #ffffff;
-  font-size: 1.5rem;
-  margin-top: 0.5rem;
-  border-radius: 8px;
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width: 900px) {
+
+  .new-portfolio {
+    padding: 2rem 1.5rem;
+  }
+
+  .title-line span,
+  .title-line div {
+    font-size: clamp(2.5rem, 7vw, 4rem);
+  }
+
+  .top-menu__list {
+    gap: 0.8rem;
+  }
+
+  .top-menu__link {
+    min-width: 145px;
+
+    padding: 0.8rem 1.1rem;
+
+    font-size: 0.82rem;
+  }
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+  .new-portfolio {
+    padding: 1rem;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  /* TITULO */
+
+  .mobile-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .title-line {
+    line-height: 0.82;
+  }
+
+  .title-line span,
+  .title-line div {
+    font-size: clamp(1.9rem, 11vw, 3rem);
+  }
+
+  /* MENU */
+
+  .top-menu {
+    width: 100%;
+
+    margin-top: 1.2rem;
+  }
+
+  .top-menu__list {
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 0.8rem;
+  }
+
+  .top-menu__link {
+    width: 100%;
+
+    min-width: unset;
+
+    padding: 0.95rem 1rem;
+
+    font-size: 0.78rem;
+
+    border-radius: 14px;
+  }
+
 }

@@ -353,7 +353,7 @@ export const albumsData = {
         id: 'sant-joan-vs-st-Andreu',
         titulo: 'St. Joan vs St. Andreu',
         fecha: '25/01/2026',
-        portada: standreu29,
+        portada: standreu44,
 
         imagenes: [
           standreu01,
@@ -572,7 +572,7 @@ export const albumsData = {
         id: 'sant-joan-vs-kotska',
         titulo: 'St. Joan vs Kotska',
         fecha: '25/02/2026',
-        portada: kotska08,
+        portada: kotska05,
 
         imagenes: [
           kotska01,
@@ -598,7 +598,7 @@ export const albumsData = {
         id: 'sant-joan-vs-jesus-maria',
         titulo: 'St. Joan vs Jesús Maria',
         fecha: '25/01/2026',
-        portada: jesusmaria07,
+        portada: jesusmaria36,
 
         imagenes: [
           jesusmaria01,
@@ -649,7 +649,7 @@ export const albumsData = {
         id: 'sant-joan-vs-vallseca',
         titulo: 'St. Joan vs Vallseca',
         fecha: '11/01/2026',
-        portada: vallseca01,
+        portada: vallseca05,
 
         imagenes: [
           vallseca01,
@@ -696,7 +696,7 @@ export const albumsData = {
         id: 'sant-joan-vs-vincit',
         titulo: 'St. Joan vs Vincit',
         fecha: '25/01/2026',
-        portada: vincit01,
+        portada: vincit05,
 
         imagenes: [
           vincit01,
