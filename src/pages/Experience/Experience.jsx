@@ -3,6 +3,7 @@ import './Experience.scss';
 
 import gloriaGrau from '../../assets/img/gloria-grau-ruiz.png';
 import bitsAndAtoms from '../../assets/img/bits-and-atoms.png';
+import dayOffEvents from '../../assets/img/day-off-events.png';
 
 function Experience() {
 
@@ -58,7 +59,26 @@ function Experience() {
     ],
     image: bitsAndAtoms,
     url: 'https://bitsandatoms.ai/'
-  }
+  },
+  {
+    id: 4,
+    title: 'Creador de contenido y desarrollador web - DAY OFF EVENTS',
+    description:
+      'Creé y gestioné contenido para redes sociales orientado a la promoción de eventos corporativos y sociales, adaptando el contenido visual a cada plataforma para mejorar su alcance y visibilidad.',
+
+    technologies: [
+      'Wordpress',
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'Canva',
+      'Trello',
+      'Grok AI',
+      'Suno AI',
+    ],
+    image: dayOffEvents,
+    url: 'https://www.dayoffevents.com/'
+  },
 
 ];
 
