@@ -88,7 +88,7 @@ const NewPortfolio = () => {
                 onClick={() => navigate('/galeria')}
                 className="top-menu__link"
               >
-                Ver galería
+                Galerías
               </button>
             </li>
 
@@ -109,12 +109,23 @@ const NewPortfolio = () => {
                 Contacto
               </button>
             </li>
-
           </ul>
-
         </nav>
 
+        {/* INDICADOR SCROLL */}
+        <div
+          className="scroll-indicator"
+          onClick={() =>
+            document
+              .getElementById('presentacion')
+              ?.scrollIntoView({ behavior: 'smooth' })
+          }
+        >
+          <span></span>
+        </div>
+
       </div>
+
 
     </div>
 
@@ -122,4 +133,4 @@ const NewPortfolio = () => {
 
 };
 
-export default NewPortfolio;
+export default NewPortfolio;  

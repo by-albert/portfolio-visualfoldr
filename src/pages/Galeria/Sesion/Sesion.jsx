@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
 import './Sesion.scss';
 
 import { albumsData } from '../data/data.js';
@@ -7,35 +7,62 @@ import { albumsData } from '../data/data.js';
 const Sesion = () => {
 
   const { tipo, sesion } = useParams();
+
+  const location = useLocation();
+
   const [showNav, setShowNav] = useState(false);
 
-  // SCROLL ARRIBA
+  /* ========================= */
+  /* SCROLL ARRIBA AL ENTRAR */
+  /* ========================= */
+
   useEffect(() => {
 
-  const handleScroll = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
 
-    if (window.scrollY > 250) {
-      setShowNav(true);
-    } else {
-      setShowNav(false);
-    }
+  }, [location.pathname]);
 
-  };
+  /* ========================= */
+  /* NAV SCROLL */
+  /* ========================= */
 
-  window.addEventListener('scroll', handleScroll);
+  useEffect(() => {
 
-  return () => {
-    window.removeEventListener('scroll', handleScroll);
-  };
+    const handleScroll = () => {
 
-}, []);
+      if (window.scrollY > 250) {
+        setShowNav(true);
+      } else {
+        setShowNav(false);
+      }
 
-  // BUSCAR ÁLBUM
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+
+  }, []);
+
+  /* ========================= */
+  /* BUSCAR ÁLBUM */
+  /* ========================= */
+
   const album = albumsData[tipo];
 
-  // SI NO EXISTE EL ÁLBUM
+  /* ========================= */
+  /* SI NO EXISTE EL ÁLBUM */
+  /* ========================= */
+
   if (!album) {
+
     return (
+
       <section className="sesion-page">
 
         <div className="sesion-container">
@@ -52,17 +79,27 @@ const Sesion = () => {
         </div>
 
       </section>
+
     );
+
   }
 
-  // BUSCAR SESIÓN
+  /* ========================= */
+  /* BUSCAR SESIÓN */
+  /* ========================= */
+
   const data = album.sesiones.find(
     (item) => item.id === sesion
   );
 
-  // SI NO EXISTE LA SESIÓN
+  /* ========================= */
+  /* SI NO EXISTE LA SESIÓN */
+  /* ========================= */
+
   if (!data) {
+
     return (
+
       <section className="sesion-page">
 
         <div className="sesion-container">
@@ -79,30 +116,47 @@ const Sesion = () => {
         </div>
 
       </section>
+
     );
+
   }
 
+  /* ========================= */
+  /* RENDER */
+  /* ========================= */
+
   return (
+
     <section className="sesion-page">
 
       <div className="sesion-container">
 
         {/* NAV */}
+
         <div className={`session-nav ${showNav ? 'visible' : ''}`}>
-          
-          <Link to="/galeria" className="back-link">
-          ← Volver
+
+          <Link
+            to="/galeria"
+            className="back-link"
+          >
+            ← Volver
           </Link>
-          
+
           {/* SEPARADOR */}
+
           <div className="nav-divider"></div>
 
-          <Link to={`/galeria/${tipo}`} className="back-link active">
-          Más álbumes de {album.nombre}
+          <Link
+            to={`/galeria/${tipo}`}
+            className="back-link active"
+          >
+            Más álbumes de {album.nombre}
           </Link>
+
         </div>
 
         {/* HEADER */}
+
         <div className="sesion-header">
 
           <h1 className="sesion-title">
@@ -116,6 +170,7 @@ const Sesion = () => {
         </div>
 
         {/* GRID */}
+
         <div className="sesion-grid">
 
           {data.imagenes.map((img, index) => (
@@ -140,7 +195,9 @@ const Sesion = () => {
       </div>
 
     </section>
+
   );
+
 };
 
 export default Sesion;

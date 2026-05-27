@@ -352,7 +352,7 @@ export const albumsData = {
       {
         id: 'sant-joan-vs-st-Andreu',
         titulo: 'St. Joan vs St. Andreu',
-        fecha: '25/01/2026',
+        fecha: '19/05/2026',
         portada: standreu44,
 
         imagenes: [
@@ -419,7 +419,7 @@ export const albumsData = {
       {
         id: 'sant-joan-vs-montsant',
         titulo: 'St. Joan vs Montsant',
-        fecha: '25/01/2026',
+        fecha: '26/04/2026',
         portada: montsant31,
 
         imagenes: [
@@ -464,7 +464,7 @@ export const albumsData = {
       {
         id: 'sant-joan-vs-maristas-les-corts',
         titulo: 'St. Joan vs Maristes Les Corts',
-        fecha: '25/01/2026',
+        fecha: '17/04/2026',
         portada: maristes04,
 
         imagenes: [
@@ -500,7 +500,7 @@ export const albumsData = {
       {
         id: 'sant-joan-vs-martinenc',
         titulo: 'St. Joan vs Martinenc',
-        fecha: '25/02/2026',
+        fecha: '01/03/2026',
         portada: martinenc20,
 
         imagenes: [
@@ -534,7 +534,7 @@ export const albumsData = {
       {
         id: 'sant-joan-vs-cet-10',
         titulo: 'St. Joan vs CET 10',
-        fecha: '25/02/2026',
+        fecha: '13/02/2026',
         portada: cet10_05,
 
         imagenes: [
@@ -571,7 +571,7 @@ export const albumsData = {
       {
         id: 'sant-joan-vs-kotska',
         titulo: 'St. Joan vs Kotska',
-        fecha: '25/02/2026',
+        fecha: '15/03/2026',
         portada: kotska05,
 
         imagenes: [
@@ -597,7 +597,7 @@ export const albumsData = {
       {
         id: 'sant-joan-vs-jesus-maria',
         titulo: 'St. Joan vs Jesús Maria',
-        fecha: '25/01/2026',
+        fecha: '4/03/2026',
         portada: jesusmaria36,
 
         imagenes: [
@@ -668,7 +668,7 @@ export const albumsData = {
       {
         id: 'sant-joan-vs-la-salle',
         titulo: 'St. Joan vs La Salle',
-        fecha: '11/01/2026',
+        fecha: '04/05/2026',
         portada: lasalle01,
 
         imagenes: [
@@ -714,7 +714,7 @@ export const albumsData = {
       {
         id: 'sant-joan-vs-polaris',
         titulo: 'St. Joan vs Polaris',
-        fecha: '25/01/2026',
+        fecha: '29/03/2026',
         portada: polaris16,
 
         imagenes: [
@@ -748,7 +748,7 @@ export const albumsData = {
       {
         id: 'sant-joan-vs-poblenou',
         titulo: 'St. Joan vs Poblenou',
-        fecha: '25/01/2026',
+        fecha: '14/03/2026',
         portada: poblenou04,
 
         imagenes: [
@@ -768,7 +768,7 @@ export const albumsData = {
         ]
       },
       
-    ]// CIERRE DE SESIONES
+    ]
   },
 
   conciertos: {
