@@ -10,7 +10,7 @@ function Formacion() {
 
       title: 'Edición de vídeo y postproducción',
 
-      center: 'Curso técnico',
+      center: 'Curso técnico - Esccola ESPAI',
 
       year: '2025 - 2026',
 
@@ -29,7 +29,7 @@ function Formacion() {
 
       title: 'Desarrollo de Aplicaciones Web (DAW)',
 
-      center: 'CFGS',
+      center: 'CFGS - Institut TIC de Barcelona',
 
       year: '2024 - 2026',
 
@@ -53,7 +53,7 @@ function Formacion() {
 
       title: 'Sistemas Microinformáticos y Redes (SMR)',
 
-      center: 'CFGM',
+      center: 'CFGM - La Salle Barceloneta',
 
       year: '2022 - 2024',
 

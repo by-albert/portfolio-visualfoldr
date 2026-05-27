@@ -1,74 +1,66 @@
 import React from 'react';
 import './Experience.scss';
 
+import gloriaGrau from '../../assets/img/gloria-grau-ruiz.png';
+import bitsAndAtoms from '../../assets/img/bits-and-atoms.png';
+
 function Experience() {
 
   const experiences = [
 
-    // FRONTEND
-    {
-      id: 1,
+  {
+    id: 1,
+    title: 'Exposición Artística - Gloria Grau',
+    description:
+      'Rediseño completo de una página web real para una clienta. Adapté una web antigua mejorando la estructura visual y la experiencia del usuario.',
+    technologies: [
+      'IONOS',
+      'Word',
+      'Figma',
+      'Canva',
+      'HTML',
+      'CSS',
+      'JavaScript'
+    ],
+    image: gloriaGrau,
+    url: 'https://gloriagrauruiz.com/'
+  },
 
-      title: 'Exposición Artística - Gloria Grau',
+  {
+    id: 2,
+    title: 'Bits and Atoms - Admira',
+    description:
+      'Proyecto desarrollado durante mis prácticas en Admira para una startup tecnológica real.',
+    technologies: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'Canva',
+      'Figma',
+      'Trello',
+      'Git y GitHub'
+    ],
+    image: bitsAndAtoms,
+    url: 'https://bitsandatoms.ai/'
+  },
 
-      description:
-        'Rediseño completo de una página web real para una clienta. Adapté una web antigua mejorando la estructura visual y la experiencia del usuario.',
+  {
+    id: 3,
+    title: 'Video Vlog - Bits and Atoms',
+    description:
+      'Vídeo realizado durante mis prácticas mostrando el día a día del proyecto.',
+    technologies: [
+      'DaVinci Resolve',
+      'Insta Studio 360',
+      'BlackMagic Design',
+      'Trello',
+      'Suno AI',
+    ],
+    image: bitsAndAtoms,
+    url: 'https://bitsandatoms.ai/'
+  }
 
-      technologies: [
-        'IONOS',
-        'Word',
-        'Figma',
-        'Canva',
-        'HTML',
-        'CSS',
-        'JavaScript'
-      ],
-
-      url: 'https://gloriagrauruiz.com/'
-    },
-
-    {
-      id: 2,
-
-      title: 'Bits and Atoms - Admira',
-
-      description:
-        'Proyecto desarrollado durante mis prácticas en Admira para una startup tecnológica real. Participé en el diseño y desarrollo de la página web trabajando en equipo.',
-
-      technologies: [
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'Canva',
-        'Figma',
-        'Trello',
-        'Git y GitHub'
-      ],
-
-      url: 'https://bitsandatoms.ai/'
-    },
-
-    // VIDEO
-    {
-      id: 3,
-
-      title: 'Video Vlog - Bits and Atoms',
-
-      description:
-        'Este vídeo nació al mismo tiempo que estaba realizando las prácticas en Admira. Todo salió de la idea de mostrar cómo es el día a día.',
-
-      technologies: [
-        'DaVinci Resolve',
-        'Insta Studio 360',
-        'BlackMagic Design',
-        'Trello',
-        'Suno AI',
-      ],
-
-      url: 'https://bitsandatoms.ai/'
-    }
-
-  ];
+];
 
   return (
 
@@ -100,21 +92,17 @@ function Experience() {
               {/* PLACEHOLDER FUTURO */}
 
               <a
-                href={experience.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="experience-preview"
+              href={experience.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="experience-preview"
               >
-
-                <div className="experience-placeholder">
-
-                  <span>
-                    Próximamente
-                  </span>
-
-                </div>
-
-              </a>
+                <img
+                src={experience.image}
+                alt={experience.title}
+                className="experience-image"
+                />
+                </a>
 
               {/* CONTENIDO */}
 
