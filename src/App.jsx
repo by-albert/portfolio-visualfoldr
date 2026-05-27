@@ -14,7 +14,8 @@ import Galeria from './pages/Galeria/Galeria.jsx';
 import Album from './pages/Galeria/Album/Album.jsx';
 import Sesion from './pages/Galeria/Sesion/Sesion.jsx';
 import Trabajos from './pages/Trabajos/Trabajos.jsx';
-import Experiencie from './pages/Experiencie/Experiencie.jsx';
+import Experience from './pages/Experience/Experience.jsx';
+import Formacion from './pages/Formacion/Formacion.jsx';
 import FooterContacto from './components/NewPortfolio/FooterContacto/FooterContacto.jsx';
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
               <>
                 <NewPortfolio />
                 <Presentacion />
+                <Experience />
+                <Formacion />
                 <FooterContacto />
               </>
             }
@@ -85,7 +88,8 @@ function App() {
             path="/experiencia"
             element={
               <>
-                <Experiencie />
+                <Experience />
+                <Formacion />
                 <FooterContacto />
               </>
             }

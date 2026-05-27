@@ -1,17 +1,18 @@
 import React from 'react';
-import './Experiencie.scss';
+import './Experience.scss';
 
 function Experience() {
 
   const experiences = [
 
+    // FRONTEND
     {
       id: 1,
 
       title: 'Exposición Artística - Gloria Grau',
 
       description:
-        'Primera página web que rediseñé completamente para una clienta. Partiendo de una antigua web y adaptándola para sus necesidades, mejorando la experiencia del usuario.',
+        'Rediseño completo de una página web real para una clienta. Adapté una web antigua mejorando la estructura visual y la experiencia del usuario.',
 
       technologies: [
         'IONOS',
@@ -32,7 +33,7 @@ function Experience() {
       title: 'Bits and Atoms - Admira',
 
       description:
-        'Proyecto realizado en grupo. Tuvimos que crear la página web para una startup emergente en el sector tecnológico.',
+        'Proyecto desarrollado durante mis prácticas en Admira para una startup tecnológica real. Participé en el diseño y desarrollo de la página web trabajando en equipo.',
 
       technologies: [
         'HTML',
@@ -41,13 +42,13 @@ function Experience() {
         'Canva',
         'Figma',
         'Trello',
-        'GitHub',
-        'Git'
+        'Git y GitHub'
       ],
 
       url: 'https://bitsandatoms.ai/'
     },
 
+    // VIDEO
     {
       id: 3,
 
@@ -58,8 +59,10 @@ function Experience() {
 
       technologies: [
         'DaVinci Resolve',
+        'Insta Studio 360',
+        'BlackMagic Design',
         'Trello',
-        'Word'
+        'Suno AI',
       ],
 
       url: 'https://bitsandatoms.ai/'
@@ -76,7 +79,7 @@ function Experience() {
         <div className="experience-header">
 
           <h2>
-            Experiencia
+            Experiencia profesional
           </h2>
 
           <p className="experience-subtitle">

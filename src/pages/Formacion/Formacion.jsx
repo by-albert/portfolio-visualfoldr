@@ -1,0 +1,166 @@
+import React from 'react';
+import './Formacion.scss';
+
+function Formacion() {
+
+  const education = [
+
+    {
+      id: 1,
+
+      title: 'Edición de vídeo y postproducción',
+
+      center: 'Curso técnico',
+
+      year: '2025 - 2026',
+
+      description:
+        'Formación enfocada a la edición de vídeo y contenido audiovisual, aprendiendo procesos de edición, narrativa visual y creación de contenido.',
+
+      skills: [
+        'Premiere Pro CC',
+        'Adobe After Effects',
+        'Ableton Live 12'
+      ]
+    },
+
+    {
+      id: 2,
+
+      title: 'Desarrollo de Aplicaciones Web (DAW)',
+
+      center: 'CFGS',
+
+      year: '2024 - 2026',
+
+      description:
+        'Formación enfocada al desarrollo web frontend y backend, trabajando proyectos reales, bases de datos, diseño responsive y metodologías de trabajo en equipo.',
+
+      skills: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'React',
+        'MySQL',
+        'Git',
+        'GitHub',
+        'Responsive Design'
+      ]
+    },
+
+    {
+      id: 3,
+
+      title: 'Sistemas Microinformáticos y Redes (SMR)',
+
+      center: 'CFGM',
+
+      year: '2022 - 2024',
+
+      description:
+        'Formación enfocada en sistemas informáticos, redes, hardware, mantenimiento de equipos y bases de programación.',
+
+      skills: [
+        'Windows',
+        'Linux',
+        'Redes',
+        'Hardware',
+        'Montaje de equipos',
+        'Ofimática'
+      ]
+    }
+
+  ];
+
+  return (
+
+    <section className="formacion">
+
+      <div className="formacion-container">
+
+        {/* HEADER */}
+
+        <div className="formacion-header">
+
+          <p className="formacion-label">
+            Trayectoria
+          </p>
+
+          <h2 className="formacion-title">
+            Formación y aprendizaje
+          </h2>
+
+          <p className="formacion-subtitle">
+            Mi evolución técnica y creativa a lo largo de estos años.
+          </p>
+
+        </div>
+
+        {/* GRID */}
+
+        <div className="formacion-grid">
+
+          {education.map((item) => (
+
+            <article
+              key={item.id}
+              className="formacion-card"
+            >
+
+              {/* TOP */}
+
+              <div className="formacion-top">
+
+                <div>
+
+                  <p className="formacion-center">
+                    {item.center}
+                  </p>
+
+                  <h3>
+                    {item.title}
+                  </h3>
+
+                </div>
+
+                <span className="formacion-year">
+                  {item.year}
+                </span>
+
+              </div>
+
+              {/* DESCRIPTION */}
+
+              <p className="formacion-description">
+                {item.description}
+              </p>
+
+              {/* SKILLS */}
+
+              <div className="formacion-skills">
+
+                {item.skills.map((skill, index) => (
+
+                  <span key={index}>
+                    {skill}
+                  </span>
+
+                ))}
+
+              </div>
+
+            </article>
+
+          ))}
+
+        </div>
+
+      </div>
+
+    </section>
+
+  );
+
+}
+
+export default Formacion;

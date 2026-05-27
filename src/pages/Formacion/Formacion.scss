@@ -1,0 +1,267 @@
+/* ========================= */
+/* SECTION */
+/* ========================= */
+
+.formacion {
+  padding: 7rem 1.5rem;
+
+  background: #0c0c0f;
+  color: #f5f5f5;
+}
+
+/* ========================= */
+/* CONTAINER */
+/* ========================= */
+
+.formacion-container {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+.formacion-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  margin-bottom: 4rem;
+}
+
+.formacion-label {
+  margin-bottom: 1rem;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: rgba(255,255,255,0.45);
+}
+
+.formacion-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  margin-bottom: 1rem;
+
+  color: #ffffff;
+}
+
+.formacion-subtitle {
+  max-width: 700px;
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+
+  color: rgba(255,255,255,0.65);
+}
+
+/* ========================= */
+/* GRID */
+/* ========================= */
+
+.formacion-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 2rem;
+}
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+.formacion-card {
+  padding: 2rem;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.015)
+    );
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.formacion-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(255,255,255,0.18);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.35);
+}
+
+/* ========================= */
+/* TOP */
+/* ========================= */
+
+.formacion-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 1rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.formacion-center {
+  margin-bottom: 0.6rem;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  color: rgba(255,255,255,0.45);
+}
+
+.formacion-top h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  color: #ffffff;
+}
+
+.formacion-year {
+  padding: 0.55rem 1rem;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.06);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  color: rgba(255,255,255,0.75);
+}
+
+/* ========================= */
+/* DESCRIPTION */
+/* ========================= */
+
+.formacion-description {
+  margin-bottom: 2rem;
+
+  font-size: 1rem;
+  line-height: 1.8;
+
+  color: rgba(255,255,255,0.72);
+}
+
+/* ========================= */
+/* SKILLS */
+/* ========================= */
+
+.formacion-skills {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.8rem;
+}
+
+.formacion-skills span {
+  padding: 0.7rem 1rem;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  color: rgba(255,255,255,0.82);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.formacion-skills span:hover {
+  transform: translateY(-2px);
+
+  background: rgba(255,255,255,0.08);
+
+  border-color: rgba(255,255,255,0.16);
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 1000px) {
+
+  .formacion-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .formacion-title {
+    font-size: 2.5rem;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .formacion {
+    padding: 5rem 1rem;
+  }
+
+  .formacion-title {
+    font-size: 2rem;
+  }
+
+  .formacion-subtitle {
+    font-size: 1rem;
+  }
+
+  .formacion-card {
+    padding: 1.5rem;
+  }
+
+  .formacion-top {
+    flex-direction: column;
+  }
+
+  .formacion-top h3 {
+    font-size: 1.35rem;
+  }
+
+  .formacion-description {
+    font-size: 0.95rem;
+  }
+
+  .formacion-skills span {
+    font-size: 0.82rem;
+  }
+
+}
