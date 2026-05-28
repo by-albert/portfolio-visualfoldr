@@ -1,86 +1,108 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Experience.scss';
 
 import gloriaGrau from '../../assets/img/gloria-grau-ruiz.png';
 import bitsAndAtoms from '../../assets/img/bits-and-atoms.png';
 import dayOffEvents from '../../assets/img/day-off-events.png';
+import contacto from '../../assets/img/contacto-icono.png';
 
 function Experience() {
 
+  const [selectedExperience, setSelectedExperience] = useState(null);
+
   const experiences = [
 
-  {
-    id: 1,
-    title: 'Exposición Artística - Gloria Grau',
-    description:
-      'Rediseño completo de una página web real para una clienta. Adapté una web antigua mejorando la estructura visual y la experiencia del usuario.',
-    technologies: [
-      'IONOS',
-      'Word',
-      'Figma',
-      'Canva',
-      'HTML',
-      'CSS',
-      'JavaScript'
-    ],
-    image: gloriaGrau,
-    url: 'https://gloriagrauruiz.com/'
-  },
+    {
+      id: 1,
+      title: 'Exposición Artística - Gloria Grau',
+      description:
+        'Rediseño completo de una página web real para una clienta. Adapté una web antigua mejorando la estructura visual y la experiencia del usuario.',
+      technologies: [
+        'IONOS',
+        'Word',
+        'Figma',
+        'Canva',
+        'HTML',
+        'CSS',
+        'JavaScript'
+      ],
+      image: gloriaGrau,
+      url: 'https://gloriagrauruiz.com/'
+    },
 
-  {
-    id: 2,
-    title: 'Bits and Atoms - Admira',
-    description:
-      'Proyecto desarrollado durante mis prácticas en Admira para una startup tecnológica real.',
-    technologies: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'Canva',
-      'Figma',
-      'Trello',
-      'Git y GitHub'
-    ],
-    image: bitsAndAtoms,
-    url: 'https://bitsandatoms.ai/'
-  },
+    {
+      id: 2,
+      title: 'Bits and Atoms - Admira',
+      description:
+        'Proyecto desarrollado durante mis prácticas en Admira para una startup tecnológica real.',
+      technologies: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'Canva',
+        'Figma',
+        'Trello',
+        'Git y GitHub'
+      ],
+      image: bitsAndAtoms,
+      url: 'https://bitsandatoms.ai/'
+    },
 
-  {
-    id: 3,
-    title: 'Video Vlog - Bits and Atoms',
-    description:
-      'Vídeo realizado durante mis prácticas mostrando el día a día del proyecto.',
-    technologies: [
-      'DaVinci Resolve',
-      'Insta Studio 360',
-      'BlackMagic Design',
-      'Trello',
-      'Suno AI',
-    ],
-    image: bitsAndAtoms,
-    url: 'https://bitsandatoms.ai/'
-  },
-  {
-    id: 4,
-    title: 'Creador de contenido y desarrollador web - DAY OFF EVENTS',
-    description:
-      'Creé y gestioné contenido para redes sociales orientado a la promoción de eventos corporativos y sociales, adaptando el contenido visual a cada plataforma para mejorar su alcance y visibilidad.',
+    {
+      id: 3,
+      title: 'Video Vlog - Bits and Atoms',
+      description:
+        'Vídeo realizado durante mis prácticas mostrando el día a día del proyecto.',
+      technologies: [
+        'DaVinci Resolve',
+        'Insta Studio 360',
+        'BlackMagic Design',
+        'Trello',
+        'Suno AI',
+      ],
+      image: bitsAndAtoms,
+      url: 'https://bitsandatoms.ai/'
+    },
 
-    technologies: [
-      'Wordpress',
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'Canva',
-      'Trello',
-      'Grok AI',
-      'Suno AI',
-    ],
-    image: dayOffEvents,
-    url: 'https://www.dayoffevents.com/'
-  },
+    {
+      id: 4,
+      title: 'Creador de contenido y desarrollador web - DAY OFF EVENTS',
+      description:
+        'Creé y gestioné contenido para redes sociales orientado a la promoción de eventos corporativos y sociales, adaptando el contenido visual a cada plataforma para mejorar su alcance y visibilidad.',
+      technologies: [
+        'Wordpress',
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'Canva',
+        'Trello',
+        'Grok AI',
+        'Suno AI',
+      ],
+      image: dayOffEvents,
+      url: 'https://www.dayoffevents.com/'
+    },
 
-];
+    {
+      id: 5,
+      title: '¿Eres el siguiente?',
+      description:
+        'Contáctame para cualquier tipo de información. ¡Hagamos que tu imagen cobre vida!',
+      technologies: [
+        'Wordpress',
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'Canva',
+        'Trello',
+        'Grok AI',
+        'Suno AI',
+      ],
+      image: contacto,
+      url: 'https://www.dayoffevents.com/'
+    },
+
+  ];
 
   return (
 
@@ -107,24 +129,18 @@ function Experience() {
             <article
               key={experience.id}
               className="experience-card"
+              onClick={() => setSelectedExperience(experience)}
             >
 
-              {/* PLACEHOLDER FUTURO */}
+              <div className="experience-preview">
 
-              <a
-              href={experience.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="experience-preview"
-              >
                 <img
-                src={experience.image}
-                alt={experience.title}
-                className="experience-image"
+                  src={experience.image}
+                  alt={experience.title}
+                  className="experience-image"
                 />
-                </a>
 
-              {/* CONTENIDO */}
+              </div>
 
               <div className="experience-content">
 
@@ -158,6 +174,70 @@ function Experience() {
 
       </div>
 
+      {selectedExperience && (
+
+        <div
+          className="experience-modal-overlay"
+          onClick={() => setSelectedExperience(null)}
+        >
+
+          <div
+            className="experience-modal"
+            onClick={(e) => e.stopPropagation()}
+          >
+
+            <button
+              className="close-modal"
+              onClick={() => setSelectedExperience(null)}
+            >
+              ✕
+            </button>
+
+            <img
+              src={selectedExperience.image}
+              alt={selectedExperience.title}
+              className="modal-image"
+            />
+
+            <div className="modal-content">
+
+              <h2>
+                {selectedExperience.title}
+              </h2>
+
+              <p>
+                {selectedExperience.description}
+              </p>
+
+              <div className="experience-tech">
+
+                {selectedExperience.technologies.map((tech, index) => (
+
+                  <span key={index}>
+                    {tech}
+                  </span>
+
+                ))}
+
+              </div>
+
+              <a
+                href={selectedExperience.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="modal-link"
+              >
+                Ver proyecto
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      )}
+
     </section>
 
   );
@@ -165,3 +245,4 @@ function Experience() {
 }
 
 export default Experience;
+

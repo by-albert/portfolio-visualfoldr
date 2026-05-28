@@ -8,6 +8,22 @@ function Formacion() {
     {
       id: 1,
 
+      title: 'Fotografía',
+
+      center: 'CFGS - EASD Josep Serra i Abella',
+
+      year: 'Próximamente',
+
+      description:
+        'Ciclo superior de fotografía para aprender técnicas de composición, iluminación y edición fotográfica, desarrollando habilidades creativas y técnicas en el ámbito de la fotografía.',
+
+      skills: [
+        'Próximamente',
+      ]
+    },
+    {
+      id: 2,
+
       title: 'Edición de vídeo y postproducción',
 
       center: 'Curso técnico - Esccola ESPAI',
@@ -25,7 +41,7 @@ function Formacion() {
     },
 
     {
-      id: 2,
+      id: 3,
 
       title: 'Desarrollo de Aplicaciones Web (DAW)',
 
@@ -49,7 +65,7 @@ function Formacion() {
     },
 
     {
-      id: 3,
+      id: 4,
 
       title: 'Sistemas Microinformáticos y Redes (SMR)',
 
@@ -69,7 +85,6 @@ function Formacion() {
         'Ofimática'
       ]
     }
-
   ];
 
   return (
@@ -83,7 +98,7 @@ function Formacion() {
         <div className="formacion-header">
 
           <p className="formacion-label">
-            Trayectoria
+            Trayectoria educativa
           </p>
 
           <h2 className="formacion-title">
