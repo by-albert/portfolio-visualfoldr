@@ -10,7 +10,8 @@ const Sesion = () => {
 
   const location = useLocation();
 
-  const [showNav, setShowNav] = useState(false);
+  const [showNav, setShowNav] = useState(false); // Para mostrar el nav al hacer scroll 
+  const [navCollapsed, setNavCollapsed] = useState(false); // Para ocultar el nav en móviles
 
   /* ========================= */
   /* SCROLL ARRIBA AL ENTRAR */
@@ -132,32 +133,45 @@ const Sesion = () => {
       <div className="sesion-container">
 
         {/* NAV */}
+        <div className={` session-nav ${showNav ? 'visible' : ''} ${navCollapsed ? 'collapsed' : ''}
+        `}
+        >
 
-        <div className={`session-nav ${showNav ? 'visible' : ''}`}>
+  <button
+    className="toggle-nav"
+    onClick={() => setNavCollapsed(true)}
+  >
+    ✕
+  </button>
 
-          
-          
-          <Link
-            to={`/galeria/${tipo}`}
-            className="back-link active"
-          >
-            Más álbumes de {album.nombre}
-          </Link>
+  <Link
+    to={`/galeria/${tipo}`}
+    className="back-link active"
+  >
+    Más de {album.nombre}
+  </Link>
 
+  <div className="nav-divider"></div>
 
-          {/* SEPARADOR */}
+  <Link
+    to="/galeria"
+    className="back-link"
+  >
+    Otros álbumes
+  </Link>
 
-          <div className="nav-divider"></div>
+</div>
 
-          <Link
-            to="/galeria"
-            className="back-link" // MIRAR LOS ESPACIOS QUE LO HE TOCADO ESTO Y SE VE MAL
-          >
-            ← Volver
-          </Link>
+{showNav && navCollapsed && (
 
-          
-        </div>
+  <button
+    className="nav-reopen"
+    onClick={() => setNavCollapsed(false)}
+  >
+    ☰
+  </button>
+
+)}
 
         {/* HEADER */}
 

@@ -48,21 +48,22 @@ function Experience() {
       url: 'https://bitsandatoms.ai/'
     },
 
-    {
-      id: 3,
-      title: 'Video Vlog - Bits and Atoms',
-      description:
-        'Vídeo realizado durante mis prácticas mostrando el día a día del proyecto.',
-      technologies: [
-        'DaVinci Resolve',
-        'Insta Studio 360',
-        'BlackMagic Design',
-        'Trello',
-        'Suno AI',
-      ],
-      image: bitsAndAtoms,
-      url: 'https://bitsandatoms.ai/'
-    },
+    // Adjuntar video de las practicas en Admira
+    // {
+    //   id: 3,
+    //   title: 'Video Vlog - Bits and Atoms',
+    //   description:
+    //     'Vídeo realizado durante mis prácticas mostrando el día a día del proyecto.',
+    //   technologies: [
+    //     'DaVinci Resolve',
+    //     'Insta Studio 360',
+    //     'BlackMagic Design',
+    //     'Trello',
+    //     'Suno AI',
+    //   ],
+    //   image: bitsAndAtoms,
+    //   url: 'https://bitsandatoms.ai/'
+    // },
 
     {
       id: 4,
@@ -89,17 +90,10 @@ function Experience() {
       description:
         'Contáctame para cualquier tipo de información. ¡Hagamos que tu imagen cobre vida!',
       technologies: [
-        'Wordpress',
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'Canva',
-        'Trello',
-        'Grok AI',
-        'Suno AI',
+        // '',
       ],
       image: contacto,
-      url: 'https://www.dayoffevents.com/'
+      // url: ''
     },
 
   ];
