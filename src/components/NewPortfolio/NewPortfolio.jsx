@@ -92,12 +92,24 @@ const NewPortfolio = () => {
               </button>
             </li>
 
-            <li>
+            {/* NO lo elimino (de momento) */}
+            {/* <li>
               <button
                 onClick={() => navigate('/trabajos')}
                 className="top-menu__link"
               >
                 Trabajos
+              </button>
+            </li> */}
+            {/* Sustituyo Trabajo por exp */}
+            <li>
+              <button onClick={() => document.getElementById('trabajos') ?.scrollIntoView({
+                behavior: 'smooth'
+              })
+            }
+            className="top-menu__link"
+            >
+              Experiencia
               </button>
             </li>
 

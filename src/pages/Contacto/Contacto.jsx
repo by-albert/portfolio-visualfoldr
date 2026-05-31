@@ -62,8 +62,8 @@ const Contacto = () => {
 
         {/* IMAGEN QR*/}
         <div className="contact-image">
-          <img src={qr} alt="QR Code cuenta de Instagram"/>
-          <p>ESCANÉAME ;)</p>
+          <img src={qr} alt="Código QR de mi cuenta de Instagram"/>
+          {/* <p>ESCANÉAME ;)</p> */}
         </div>
 
       </div>

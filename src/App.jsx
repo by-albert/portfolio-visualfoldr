@@ -13,7 +13,7 @@ import ContactPage from './pages/Contacto/Contacto.jsx';
 import Galeria from './pages/Galeria/Galeria.jsx';
 import Album from './pages/Galeria/Album/Album.jsx';
 import Sesion from './pages/Galeria/Sesion/Sesion.jsx';
-import Trabajos from './pages/Trabajos/Trabajos.jsx';
+// import Trabajos from './pages/Trabajos/Trabajos.jsx';
 import Experience from './pages/Experience/Experience.jsx';
 import Formacion from './pages/Formacion/Formacion.jsx';
 import FooterContacto from './components/NewPortfolio/FooterContacto/FooterContacto.jsx';
@@ -66,14 +66,14 @@ function App() {
             element={
             <>
             <Sesion />
-          <FooterContacto />
+            <FooterContacto />
           </>
             }
           />  
 
 
           {/* TRABAJOS */}
-          <Route
+          {/* <Route
             path="/trabajos"
             element={
               <>
@@ -81,7 +81,7 @@ function App() {
                 <FooterContacto />
               </>
             }
-          />
+          /> */}
 
           {/* EXPERIENCIA */}
           <Route

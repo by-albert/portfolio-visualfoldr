@@ -135,17 +135,8 @@ const Sesion = () => {
 
         <div className={`session-nav ${showNav ? 'visible' : ''}`}>
 
-          <Link
-            to="/galeria"
-            className="back-link"
-          >
-            ← Volver
-          </Link>
-
-          {/* SEPARADOR */}
-
-          <div className="nav-divider"></div>
-
+          
+          
           <Link
             to={`/galeria/${tipo}`}
             className="back-link active"
@@ -153,6 +144,19 @@ const Sesion = () => {
             Más álbumes de {album.nombre}
           </Link>
 
+
+          {/* SEPARADOR */}
+
+          <div className="nav-divider"></div>
+
+          <Link
+            to="/galeria"
+            className="back-link" // MIRAR LOS ESPACIOS QUE LO HE TOCADO ESTO Y SE VE MAL
+          >
+            ← Volver
+          </Link>
+
+          
         </div>
 
         {/* HEADER */}

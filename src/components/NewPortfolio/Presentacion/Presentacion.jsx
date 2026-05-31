@@ -24,10 +24,13 @@ const Presentacion = () => {
 
         {/* Columna imagen */}
         <div className="presentacion-img">
-          <img src={foto} alt="Foto de mia de presentación"/>
+          <img src={foto} alt="Foto de presentación de Albert"/>
+          
+          <a href="/cv-albert.pdf" target="_blank" rel="noopener noreferrer" className="cv-button">
+            Ver CV
+          </a>
+          </div>
         </div>
-
-      </div>
 
     </section>
   );
