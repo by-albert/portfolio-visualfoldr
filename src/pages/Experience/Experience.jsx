@@ -15,6 +15,7 @@ function Experience() {
     {
       id: 1,
       title: 'Exposición Artística - Gloria Grau',
+      date: '2023',
       description:
         'Rediseño completo de una página web real para una clienta. Adapté una web antigua mejorando la estructura visual y la experiencia del usuario.',
       technologies: [
@@ -33,6 +34,7 @@ function Experience() {
     {
       id: 2,
       title: 'Bits and Atoms - Admira',
+      date: '2024',
       description:
         'Proyecto desarrollado durante mis prácticas en Admira para una startup tecnológica real.',
       technologies: [
@@ -48,26 +50,10 @@ function Experience() {
       url: 'https://bitsandatoms.ai/'
     },
 
-    // Adjuntar video de las practicas en Admira
-    // {
-    //   id: 3,
-    //   title: 'Video Vlog - Bits and Atoms',
-    //   description:
-    //     'Vídeo realizado durante mis prácticas mostrando el día a día del proyecto.',
-    //   technologies: [
-    //     'DaVinci Resolve',
-    //     'Insta Studio 360',
-    //     'BlackMagic Design',
-    //     'Trello',
-    //     'Suno AI',
-    //   ],
-    //   image: bitsAndAtoms,
-    //   url: 'https://bitsandatoms.ai/'
-    // },
-
     {
       id: 4,
       title: 'Creador de contenido y desarrollador web - DAY OFF EVENTS',
+      date: '2025',
       description:
         'Creé y gestioné contenido para redes sociales orientado a la promoción de eventos corporativos y sociales, adaptando el contenido visual a cada plataforma para mejorar su alcance y visibilidad.',
       technologies: [
@@ -78,7 +64,7 @@ function Experience() {
         'Canva',
         'Trello',
         'Grok AI',
-        'Suno AI',
+        'Suno AI'
       ],
       image: dayOffEvents,
       url: 'https://www.dayoffevents.com/'
@@ -87,20 +73,22 @@ function Experience() {
     {
       id: 5,
       title: '¿Eres el siguiente?',
+      date: 'Disponible actualmente',
       description:
         'Contáctame para cualquier tipo de información. ¡Hagamos que tu imagen cobre vida!',
-      technologies: [
-        // '',
-      ],
+      technologies: [],
       image: contacto,
-      // url: ''
-    },
+      isContact: true
+    }
 
   ];
 
   return (
 
-    <section className="experience" id="trabajos">
+    <section
+      className="experience"
+      id="trabajos"
+    >
 
       <div className="experience-container">
 
@@ -111,7 +99,7 @@ function Experience() {
           </h2>
 
           <p className="experience-subtitle">
-            Algunos proyectos y experiencias que he realizado.
+            Algunos proyectos que he realizado a lo largo de mi trayectoria.
           </p>
 
         </div>
@@ -199,6 +187,10 @@ function Experience() {
                 {selectedExperience.title}
               </h2>
 
+              <p className="experience-date">
+                {selectedExperience.date}
+              </p>
+
               <p>
                 {selectedExperience.description}
               </p>
@@ -215,14 +207,41 @@ function Experience() {
 
               </div>
 
-              <a
-                href={selectedExperience.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="modal-link"
-              >
-                Ver proyecto
-              </a>
+              {selectedExperience.isContact ? (
+
+                <button
+                  className="modal-link"
+                  onClick={() => {
+
+                    setSelectedExperience(null);
+
+                    setTimeout(() => {
+
+                      document
+                        .getElementById('contacto')
+                        ?.scrollIntoView({
+                          behavior: 'smooth'
+                        });
+
+                    }, 150);
+
+                  }}
+                >
+                  Contactar
+                </button>
+
+              ) : (
+
+                <a
+                  href={selectedExperience.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="modal-link"
+                >
+                  Ver proyecto
+                </a>
+
+              )}
 
             </div>
 
@@ -239,4 +258,3 @@ function Experience() {
 }
 
 export default Experience;
-
