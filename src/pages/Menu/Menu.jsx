@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import './NewPortfolio.scss';
+import './Menu.scss';
 import { useNavigate } from 'react-router-dom';
 
-import BubbleText from "../../components/BubbleText/bubbleText";
+import BubbleText from "../../components/BubbleText/bubbleText.jsx";
+import Presentacion from '../Presentacion/Presentacion.jsx';
 
 import foto1 from '../../assets/backgrounds/foto-1.jpg';
 import foto2 from '../../assets/backgrounds/foto-2.jpg';
 import foto3 from '../../assets/backgrounds/foto-3.jpg';
 import foto4 from '../../assets/backgrounds/foto-4.jpg';
 
-const images = [foto1, foto2, foto3, foto4];
+// BLOQUE PARA EL BACKGROUND CAROUSEL Y LOS LINKS DE NAVEGACION
 
+const images = [foto1, foto2, foto3, foto4];
 const NewPortfolio = () => {
 
   const [current, setCurrent] = useState(0);
@@ -59,6 +61,8 @@ const NewPortfolio = () => {
           <div className="title-line">
             <BubbleText text="FOLDR" />
           </div>
+
+          <p className = 'subtitle-menu'> © Albert PC </p>
 
         </div>
 

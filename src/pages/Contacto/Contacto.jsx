@@ -3,6 +3,7 @@ import './Contacto.scss';
 import qr from '../../assets/img/visualfoldr_qr.png';
 import { useEffect } from 'react';
 
+// BLOQUE DE CONTACTO GRANDE
 
 const Contacto = () => {
   useEffect(() => {

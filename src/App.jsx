@@ -8,15 +8,15 @@ import {
   useLocation
 } from 'react-router-dom';
 
-import NewPortfolio from './components/NewPortfolio/NewPortfolio.jsx';
-import Presentacion from './components/NewPortfolio/NewPortfolio.jsx';
+import Menu from './pages/Menu/Menu.jsx';
+import Presentacion from './pages/Presentacion/Presentacion.jsx';
 import ContactPage from './pages/Contacto/Contacto.jsx';
 import Galeria from './pages/Galeria/Galeria.jsx';
 import Album from './pages/Galeria/Album/Album.jsx';
 import Sesion from './pages/Galeria/Sesion/Sesion.jsx';
 import Experience from './pages/Experience/Experience.jsx';
 import Formacion from './pages/Formacion/Formacion.jsx';
-import FooterContacto from './pages/FooterContacto/FooterContacto.jsx';
+import FooterContacto from './pages/Menu/FooterContacto/FooterContacto.jsx';
 
 /* ========================= */
 /* SCROLL TO TOP GLOBAL */
@@ -53,7 +53,8 @@ function AppRoutes() {
             path="/"
             element={
               <>
-                <NewPortfolio />
+                <Menu />
+                <Presentacion />
                 <Experience />
                 <Formacion />
                 <FooterContacto />

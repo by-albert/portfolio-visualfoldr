@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './FooterContacto.scss';
 
+// BLOQUE DE CONTACTO EN EL FOOTER 
+// Mirar lo la funcion del copiado
+
 const FooterContacto = () => {
   const [copiado, setCopiado] = useState(false);
 

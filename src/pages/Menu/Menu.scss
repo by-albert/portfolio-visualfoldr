@@ -102,6 +102,73 @@
 }
 
 /* ========================= */
+/* SUBTITLE - Albert Penadés */
+/* ========================= */
+.subtitle-menu {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  position: relative;
+  display: inline-block;
+
+  cursor: default;
+
+  /* animación suave de vida */
+  animation: subtitlePulse 4s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+/* glow suave “premium” */
+.subtitle-menu::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+
+  width: 60%;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
+
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+/* hover más vivo */
+.subtitle-menu:hover {
+  color: #ffb0b0;
+  letter-spacing: 0.35em;
+  transform: translateY(-2px);
+}
+
+.subtitle-menu:hover::after {
+  width: 90%;
+  opacity: 1;
+}
+
+/* animación de “respiración” */
+@keyframes subtitlePulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translateY(0px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+}
+
+/* ========================= */
 /* MENU */
 /* ========================= */
 
