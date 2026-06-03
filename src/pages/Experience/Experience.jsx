@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Experience.scss';
+import { useNavigate } from 'react-router-dom';
 
 import gloriaGrau from '../../assets/img/gloria-grau-ruiz.png';
 import bitsAndAtoms from '../../assets/img/bits-and-atoms.png';
@@ -9,7 +10,7 @@ import contacto from '../../assets/img/contacto-icono.png';
 function Experience() {
 
   const [selectedExperience, setSelectedExperience] = useState(null);
-
+  const navigate = useNavigate();
   const experiences = [
 
     {
@@ -215,15 +216,23 @@ function Experience() {
 
                     setSelectedExperience(null);
 
-                    setTimeout(() => {
+                    {selectedExperience.isContact ? (
+                    <button className="modal-link" onClick={() => { setSelectedExperience(null); navigate('/contacto');}}>
+                      Contactar
+                    </button>
+                    
+                  ) : (
+                  
+                  <a
+                  href={selectedExperience.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="modal-link"
+                  >
+                    Ver proyecto
+                  </a>
 
-                      document
-                        .getElementById('contacto')
-                        ?.scrollIntoView({
-                          behavior: 'smooth'
-                        });
-
-                    }, 150);
+)}
 
                   }}
                 >
