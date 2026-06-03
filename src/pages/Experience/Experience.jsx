@@ -209,20 +209,16 @@ function Experience() {
               </div>
 
               {selectedExperience.isContact ? (
-
                 <button
-                  className="modal-link"
-                  onClick={() => {
-
-                    setSelectedExperience(null);
-
-                    {selectedExperience.isContact ? (
-                    <button className="modal-link" onClick={() => { setSelectedExperience(null); navigate('/contacto');}}>
-                      Contactar
-                    </button>
-                    
+                className="modal-link"
+                onClick={() => {
+                  setSelectedExperience(null);
+                  navigate('/contacto');
+                }}
+                >
+                  Contactar
+                  </button>
                   ) : (
-                  
                   <a
                   href={selectedExperience.url}
                   target="_blank"
@@ -230,28 +226,8 @@ function Experience() {
                   className="modal-link"
                   >
                     Ver proyecto
-                  </a>
-
-)}
-
-                  }}
-                >
-                  Contactar
-                </button>
-
-              ) : (
-
-                <a
-                  href={selectedExperience.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="modal-link"
-                >
-                  Ver proyecto
-                </a>
-
-              )}
-
+                    </a>
+                  )}
             </div>
 
           </div>

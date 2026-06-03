@@ -119,6 +119,63 @@
   justify-content: center;
   
 }
+.qr-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  animation: qrFloat 3s ease-in-out infinite;
+}
+
+/* Animación suave de flotación */
+@keyframes qrFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.qr-wrapper img {
+  display: block;
+  width: 200px;
+  height: auto;
+  border-radius: 14px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Hover imagen */
+.qr-wrapper:hover img {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 15px 40px rgba(255, 107, 107, 0.25);
+}
+
+/* Overlay */
+.qr-hover {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  opacity: 0;
+  transition: all 0.25s ease;
+
+  border-radius: 14px;
+}
+
 
 .contact-image img {
   max-width: 100%;

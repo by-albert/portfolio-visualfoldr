@@ -1,9 +1,16 @@
 import { Link } from 'react-router-dom';
 import './Contacto.scss';
 import qr from '../../assets/img/visualfoldr_qr.png';
+import { useEffect } from 'react';
+
 
 const Contacto = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); 
+  
   return (
+    
     <section id="contacto" className="contact-page">
       <div className="contact-card">
         
@@ -62,9 +69,14 @@ const Contacto = () => {
 
         {/* IMAGEN QR*/}
         <div className="contact-image">
-          <img src={qr} alt="Código QR de mi cuenta de Instagram"/>
-          {/* <p>ESCANÉAME ;)</p> */}
-        </div>
+          <div className="qr-wrapper">
+            <img src={qr} alt="Código QR de mi cuenta de Instagram" />
+            
+            <div className="qr-hover">
+              ESCANÉAME
+              </div>
+            </div>
+          </div>
 
       </div>
     </section>

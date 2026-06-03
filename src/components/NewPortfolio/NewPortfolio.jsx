@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './NewPortfolio.scss';
 import { useNavigate } from 'react-router-dom';
 
-import BubbleText from "../BubbleText/bubbleText";
+import BubbleText from "../../components/BubbleText/bubbleText";
 
 import foto1 from '../../assets/backgrounds/foto-1.jpg';
 import foto2 from '../../assets/backgrounds/foto-2.jpg';

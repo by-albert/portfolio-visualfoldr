@@ -1,26 +1,48 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.scss';
 
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
+  useLocation
 } from 'react-router-dom';
 
 import NewPortfolio from './components/NewPortfolio/NewPortfolio.jsx';
-import Presentacion from './components/NewPortfolio/Presentacion/Presentacion.jsx';
+import Presentacion from './components/NewPortfolio/NewPortfolio.jsx';
 import ContactPage from './pages/Contacto/Contacto.jsx';
 import Galeria from './pages/Galeria/Galeria.jsx';
 import Album from './pages/Galeria/Album/Album.jsx';
 import Sesion from './pages/Galeria/Sesion/Sesion.jsx';
-// import Trabajos from './pages/Trabajos/Trabajos.jsx';
 import Experience from './pages/Experience/Experience.jsx';
 import Formacion from './pages/Formacion/Formacion.jsx';
-import FooterContacto from './components/NewPortfolio/FooterContacto/FooterContacto.jsx';
+import FooterContacto from './pages/FooterContacto/FooterContacto.jsx';
 
-function App() {
+/* ========================= */
+/* SCROLL TO TOP GLOBAL */
+/* ========================= */
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, [pathname]);
+
+  return null;
+}
+
+/* ========================= */
+/* APP */
+/* ========================= */
+
+function AppRoutes() {
   return (
-    <Router>
+    <>
+      <ScrollToTop />
 
       <div className="app">
 
@@ -32,7 +54,6 @@ function App() {
             element={
               <>
                 <NewPortfolio />
-                <Presentacion />
                 <Experience />
                 <Formacion />
                 <FooterContacto />
@@ -61,27 +82,17 @@ function App() {
               </>
             }
           />
+
+          {/* SESIÓN */}
           <Route
             path="/galeria/:tipo/:sesion"
             element={
-            <>
-            <Sesion />
-            <FooterContacto />
-          </>
-            }
-          />  
-
-
-          {/* TRABAJOS */}
-          {/* <Route
-            path="/trabajos"
-            element={
               <>
-                <Trabajos />
+                <Sesion />
                 <FooterContacto />
               </>
             }
-          /> */}
+          />
 
           {/* EXPERIENCIA */}
           <Route
@@ -109,7 +120,18 @@ function App() {
         </Routes>
 
       </div>
+    </>
+  );
+}
 
+/* ========================= */
+/* WRAPPER ROUTER */
+/* ========================= */
+
+function App() {
+  return (
+    <Router>
+      <AppRoutes />
     </Router>
   );
 }
