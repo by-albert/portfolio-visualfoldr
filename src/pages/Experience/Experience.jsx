@@ -73,7 +73,7 @@ function Experience() {
 
     {
       id: 5,
-      title: '¿Eres el siguiente?',
+      title: '¡Se el siguiente!',
       date: 'Disponible actualmente',
       description:
         'Contáctame para cualquier tipo de información. ¡Hagamos que tu imagen cobre vida!',

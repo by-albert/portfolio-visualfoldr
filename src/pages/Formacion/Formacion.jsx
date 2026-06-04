@@ -47,7 +47,7 @@ function Formacion() {
 
       center: 'CFGS - Institut TIC de Barcelona',
 
-      year: '2024 - 2026',
+      year: '2022 - 2025',
 
       description:
         'Formación enfocada al desarrollo web frontend y backend, trabajando proyectos reales, bases de datos, diseño responsive y metodologías de trabajo en equipo.',
@@ -71,7 +71,7 @@ function Formacion() {
 
       center: 'CFGM - La Salle Barceloneta',
 
-      year: '2022 - 2024',
+      year: '2020 - 2022',
 
       description:
         'Formación enfocada en sistemas informáticos, redes, hardware, mantenimiento de equipos y bases de programación.',
