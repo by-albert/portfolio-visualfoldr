@@ -3,30 +3,23 @@ import './Menu.scss';
 import { useNavigate } from 'react-router-dom';
 
 import BubbleText from "../../components/BubbleText/bubbleText.jsx";
-import Presentacion from '../Presentacion/Presentacion.jsx';
 
 import foto1 from '../../assets/backgrounds/foto-1.jpg';
 import foto2 from '../../assets/backgrounds/foto-2.jpg';
 import foto3 from '../../assets/backgrounds/foto-3.jpg';
 import foto4 from '../../assets/backgrounds/foto-4.jpg';
 
-// BLOQUE PARA EL BACKGROUND CAROUSEL Y LOS LINKS DE NAVEGACION
-
 const images = [foto1, foto2, foto3, foto4];
+
 const NewPortfolio = () => {
 
   const [current, setCurrent] = useState(0);
-
   const navigate = useNavigate();
 
   useEffect(() => {
 
     const interval = setInterval(() => {
-
-      setCurrent((prev) =>
-        (prev + 1) % images.length
-      );
-
+      setCurrent((prev) => (prev + 1) % images.length);
     }, 4000);
 
     return () => clearInterval(interval);
@@ -38,7 +31,6 @@ const NewPortfolio = () => {
     <div className="new-portfolio">
 
       {/* BACKGROUND */}
-
       <div
         className="background-carousel"
         style={{
@@ -46,11 +38,8 @@ const NewPortfolio = () => {
         }}
       />
 
-      {/* CONTENIDO */}
-
+      {/* CONTENIDO CENTRAL */}
       <div className="content">
-
-        {/* TITULO */}
 
         <div className="mobile-title">
 
@@ -62,71 +51,11 @@ const NewPortfolio = () => {
             <BubbleText text="FOLDR" />
           </div>
 
-          <p className = 'subtitle-menu'> © Albert PC </p>
+          <p className="subtitle-menu">
+            © Albert Penadés Casajús
+          </p>
 
         </div>
-
-        {/* MENU */}
-
-        <nav className="top-menu">
-
-          <ul className="top-menu__list">
-
-            <li>
-              <button
-                onClick={() =>
-                  document
-                    .getElementById('presentacion')
-                    ?.scrollIntoView({
-                      behavior: 'smooth'
-                    })
-                }
-                className="top-menu__link"
-              >
-                ¿Quién soy?
-              </button>
-            </li>
-
-            <li>
-              <button
-                onClick={() => navigate('/galeria')}
-                className="top-menu__link"
-              >
-                Galerías
-              </button>
-            </li>
-
-            {/* NO lo elimino (de momento) */}
-            {/* <li>
-              <button
-                onClick={() => navigate('/trabajos')}
-                className="top-menu__link"
-              >
-                Trabajos
-              </button>
-            </li> */}
-            {/* Sustituyo Trabajo por exp */}
-            <li>
-              <button onClick={() => document.getElementById('trabajos') ?.scrollIntoView({
-                behavior: 'smooth'
-              })
-            }
-            className="top-menu__link"
-            >
-              Experiencia
-              </button>
-            </li>
-
-            <li>
-              <button
-                onClick={() => navigate('/contacto')}
-                className="top-menu__link"
-              >
-                Contacto
-              </button>
-            </li>
-          </ul>
-        </nav>
 
         {/* INDICADOR SCROLL */}
         <div
@@ -142,6 +71,58 @@ const NewPortfolio = () => {
 
       </div>
 
+      {/* MENU LATERAL DERECHO */}
+      <nav className="top-menu side-menu">
+
+        <ul className="top-menu__list">
+
+          <li>
+            <button
+              onClick={() =>
+                document
+                  .getElementById('presentacion')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }
+              className="top-menu__link"
+            >
+              ¿Quién soy?
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => navigate('/galeria')}
+              className="top-menu__link"
+            >
+              Galerías
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() =>
+                document
+                  .getElementById('trabajos')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }
+              className="top-menu__link"
+            >
+              Experiencia
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => navigate('/contacto')}
+              className="top-menu__link"
+            >
+              Contacto
+            </button>
+          </li>
+
+        </ul>
+
+      </nav>
 
     </div>
 
@@ -149,4 +130,4 @@ const NewPortfolio = () => {
 
 };
 
-export default NewPortfolio;  
+export default NewPortfolio;

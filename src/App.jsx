@@ -55,6 +55,7 @@ function AppRoutes() {
               <>
                 <Menu />
                 <Presentacion />
+                <Galeria/>
                 <Experience />
                 <Formacion />
                 <FooterContacto />

@@ -1,423 +1,478 @@
-/* ========================= */
-/* LAYOUT GENERAL */
-/* ========================= */
+  /* ========================= */
+  /* LAYOUT GENERAL */
+  /* ========================= */
 
-.new-portfolio {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .new-portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  position: relative;
+    position: relative;
 
-  width: 100%;
-  height: 100vh;
+    min-height: 100vh;
 
-  overflow: hidden;
+    overflow: hidden;
 
-  text-align: center;
+    text-align: center;
 
-  padding: 2rem;
-}
+    padding: 2rem;
 
-/* ========================= */
-/* BACKGROUND */
-/* ========================= */
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+  }
 
-.background-carousel {
-  position: absolute;
-  inset: 0;
+  /* ========================= */
+  /* BACKGROUND */
+  /* ========================= */
 
-  z-index: 0;
+  .background-carousel {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    // background-position: center 35%;
+    background-repeat: no-repeat;
+    transform: scale(1.08);
+    z-index: 0;
+  }
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* overlay principal */
+  .background-carousel::after {
+    content: "";
+    position: absolute;
+    inset: 0;
 
-  transition: background-image 0.8s ease-in-out;
+    // background:
+    //   radial-gradient(
+    //     circle at center,
+    //     rgb(228, 0, 0) 0%,
+    //     rgba(221, 255, 179, 0.65) 60%,
+    //     rgba(0, 0, 255, 0.95) 100%
+    //   );
 
-  transform: scale(1.02);
-}
+    z-index: 1;
+  }
 
-/* OVERLAY OSCURO */
+  /* degradado inferior fuerte (esto te faltaba) */
+  .background-carousel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
 
-.background-carousel::after {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
+    background: linear-gradient(
       to bottom,
-      rgba(0,0,0,0.35),
-      rgba(0,0,0,0.60)
+      rgb(208, 204, 204) 0%,
+      rgba(0,0,0,0.25) 40%,
+      rgba(0,0,0,0.75) 75%, // NO TOCAR
+      rgba(12,12,15,1) 100% // NO TOCAR
     );
-}
 
-/* ========================= */
-/* CONTENIDO */
-/* ========================= */
-
-.content {
-  position: relative;
-  z-index: 2;
-
-  width: 100%;
-  max-width: 1200px;
-}
-
-/* ========================= */
-/* TITULO */
-/* ========================= */
-
-.mobile-title {
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-
-  margin-bottom: 2rem;
-}
-
-.title-line {
-  display: flex;
-  justify-content: center;
-
-  width: 100%;
-
-  line-height: 0.9;
-}
-
-/* BubbleText */
-
-.title-line span,
-.title-line div {
-  color: white;
-
-  font-size: clamp(3rem, 7vw, 6rem);
-
-  text-shadow:
-    0 5px 30px rgba(0,0,0,0.45);
-}
-
-/* ========================= */
-/* SUBTITLE - Albert Penadés */
-/* ========================= */
-.subtitle-menu {
-  margin-top: 1rem;
-  font-size: 0.85rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-
-  color: rgba(255, 255, 255, 0.55);
-
-  position: relative;
-  display: inline-block;
-
-  cursor: default;
-
-  /* animación suave de vida */
-  animation: subtitlePulse 4s ease-in-out infinite;
-  transition: all 0.3s ease;
-}
-
-/* glow suave “premium” */
-.subtitle-menu::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: -6px;
-  transform: translateX(-50%);
-
-  width: 60%;
-  height: 1px;
-
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.7),
-    transparent
-  );
-
-  opacity: 0.5;
-  transition: all 0.3s ease;
-}
-
-/* hover más vivo */
-.subtitle-menu:hover {
-  color: #ffb0b0;
-  letter-spacing: 0.35em;
-  transform: translateY(-2px);
-}
-
-.subtitle-menu:hover::after {
-  width: 90%;
-  opacity: 1;
-}
-
-/* animación de “respiración” */
-@keyframes subtitlePulse {
-  0%, 100% {
-    opacity: 0.5;
-    transform: translateY(0px);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(-1px);
-  }
-}
-
-/* ========================= */
-/* MENU */
-/* ========================= */
-
-.top-menu {
-  display: flex;
-  justify-content: center;
-}
-
-.top-menu__list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-
-  gap: 1rem;
-
-  list-style: none;
-
-  padding: 0;
-  margin: 0;
-}
-
-/* ========================= */
-/* BOTONES */
-/* ========================= */
-
-.top-menu__link {
-  border: none;
-  outline: none;
-
-  cursor: pointer;
-
-  padding: 0.9rem 1.4rem;
-
-  border-radius: 999px;
-
-  background: rgba(0,0,0,0.72);
-
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
-  color: white;
-
-  font-size: 0.9rem;
-  font-weight: 600;
-
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease,
-    border-color 0.25s ease;
-
-  border: 1px solid rgba(255,255,255,0.08);
-
-  min-width: 160px;
-}
-
-.top-menu__link:hover {
-  background: white;
-
-  color: black;
-
-  transform: translateY(-2px);
-}
-
-/* ========================= */
-/* GLOBAL */
-/* ========================= */
-
-body {
-  background: #000;
-}
-
-.app {
-  display: flex;
-  flex-direction: column;
-}
-
-/* ========================= */
-/* TABLET */
-/* ========================= */
-
-@media (max-width: 900px) {
-
-  .new-portfolio {
-    padding: 2rem 1.5rem;
+    z-index: 2;
   }
 
-  .title-line span,
-  .title-line div {
-    font-size: clamp(2.5rem, 7vw, 4rem);
+  /* ========================= */
+  /* SOLO MENÚ A LA DERECHA */
+  /* ========================= */
+
+  .side-menu {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
   }
 
-  .top-menu__list {
-    gap: 0.8rem;
+  .side-menu .top-menu__list {
+    flex-direction: column;
+    align-items: flex-end;
   }
 
-  .top-menu__link {
-    min-width: 145px;
-
-    padding: 0.8rem 1.1rem;
-
-    font-size: 0.82rem;
+  .side-menu .top-menu__link {
+    text-align: right;
   }
 
-}
-
-/* ========================= */
-/* MOBILE */
-/* ========================= */
-
-@media (max-width: 600px) {
-
-  .new-portfolio {
-    padding: 1rem;
+  /* opcional: efecto más limpio al estar lateral */
+  .side-menu .top-menu__link:hover {
+    transform: translateX(-6px);
   }
+
+
+
+  /* ========================= */
+  /* CONTENIDO */
+  /* ========================= */
 
   .content {
-    width: 100%;
+    position: relative;
+    z-index: 10;
+
+    // width: 100%;
+    // max-width: 1200px;
+
+    /* clave para legibilidad */
+    padding: 2rem;
+
+    background: rgba(0,0,0,0.15);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
   }
 
+  /* ========================= */
   /* TITULO */
+  /* ========================= */
 
   .mobile-title {
-    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 2rem;
   }
 
   .title-line {
-    line-height: 0.82;
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    line-height: 0.9;
   }
+
+  /* BubbleText */
 
   .title-line span,
   .title-line div {
-    font-size: clamp(1.9rem, 11vw, 3rem);
+    color: white;
+
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    text-shadow:
+      0 5px 30px rgba(0,0,0,0.45);
   }
 
+  /* ========================= */
+  /* SUBTITLE - Albert Penadés */
+  /* ========================= */
+  .subtitle-menu {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    position: relative;
+    display: inline-block;
+
+    cursor: default;
+
+    /* animación suave de vida */
+    animation: subtitlePulse 4s ease-in-out infinite;
+    transition: all 0.3s ease;
+  }
+
+  /* glow suave “premium” */
+  .subtitle-menu::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%);
+
+    width: 60%;
+    height: 1px;
+
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    );
+
+    opacity: 0.5;
+    transition: all 0.3s ease;
+  }
+
+  /* hover más vivo */
+  .subtitle-menu:hover {
+    color: #ffb0b0;
+    letter-spacing: 0.35em;
+    transform: translateY(-2px);
+  }
+
+  .subtitle-menu:hover::after {
+    width: 90%;
+    opacity: 1;
+  }
+
+  /* animación de “respiración” */
+  @keyframes subtitlePulse {
+    0%, 100% {
+      opacity: 0.5;
+      transform: translateY(0px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-1px);
+    }
+  }
+
+  /* ========================= */
   /* MENU */
+  /* ========================= */
 
-  .top-menu {
-    width: 100%;
+  .top-menu__link {
+    background: rgba(0,0,0,0.75);
+    border: 1px solid rgba(255,255,255,0.12);
+  }
 
-    margin-top: 1.2rem;
+  .top-menu__link:hover {
+    background: rgba(255,255,255,0.95);
+    color: #ffffff;
   }
 
   .top-menu__list {
-    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
-    width: 100%;
+    gap: 1rem;
 
-    gap: 0.8rem;
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
   }
+
+  /* ========================= */
+  /* BOTONES */
+  /* ========================= */
 
   .top-menu__link {
-    width: 100%;
+    border: none;
+    outline: none;
 
-    min-width: unset;
+    cursor: pointer;
 
-    padding: 0.95rem 1rem;
+    padding: 0.9rem 1.4rem;
 
-    font-size: 0.78rem;
+    border-radius: 999px;
 
-    border-radius: 14px;
+    background: rgba(0,0,0,0.72);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    color: white;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    transition:
+      transform 0.25s ease,
+      background 0.25s ease,
+      border-color 0.25s ease;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    min-width: 160px;
   }
 
-}
+  .top-menu__link:hover {
+    background: white;
 
-/* ========================= */
-/* SCROLL INDICATOR */
-/* ========================= */
+    color: black;
 
-.scroll-indicator {
-  margin-top: 2.5rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  cursor: pointer;
-
-  animation: fadeIn 1.2s ease;
-}
-
-.scroll-indicator span {
-  width: 22px;
-  height: 22px;
-
-  border-right: 2px solid rgba(255,255,255,0.85);
-  border-bottom: 2px solid rgba(255,255,255,0.85);
-
-  transform: rotate(45deg);
-
-  animation: bounceArrow 2s infinite;
-
-  transition: opacity 0.3s ease;
-}
-
-.scroll-indicator:hover span {
-  opacity: 0.7;
-}
-
-/* ========================= */
-/* ANIMATIONS */
-/* ========================= */
-
-@keyframes bounceArrow {
-
-  0% {
-    transform: rotate(45deg) translate(0, 0);
+    transform: translateY(-2px);
   }
 
-  50% {
-    transform: rotate(45deg) translate(6px, 6px);
+  /* ========================= */
+  /* GLOBAL */
+  /* ========================= */
+
+  body {
+    background: #000;
   }
 
-  100% {
-    transform: rotate(45deg) translate(0, 0);
+  .app {
+    display: flex;
+    flex-direction: column;
   }
 
-}
+  /* ========================= */
+  /* TABLET */
+  /* ========================= */
 
-@keyframes fadeIn {
+  @media (max-width: 900px) {
 
-  from {
-    opacity: 0;
-    transform: translateY(10px);
+    .new-portfolio {
+      padding: 2rem 1.5rem;
+    }
+
+    .title-line span,
+    .title-line div {
+      font-size: clamp(2.5rem, 7vw, 4rem);
+    }
+
+    .top-menu__list {
+      gap: 0.8rem;
+    }
+
+    .top-menu__link {
+      min-width: 145px;
+
+      padding: 0.8rem 1.1rem;
+
+      font-size: 0.82rem;
+    }
+
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  /* ========================= */
+  /* MOBILE */
+  /* ========================= */
+
+  @media (max-width: 600px) {
+
+    .new-portfolio {
+      padding: 1rem;
+    }
+
+    .content {
+      width: 100%;
+    }
+
+    /* TITULO */
+
+    .mobile-title {
+      margin-bottom: 1.5rem;
+    }
+
+    .title-line {
+      line-height: 0.82;
+    }
+
+    .title-line span,
+    .title-line div {
+      font-size: clamp(1.9rem, 11vw, 3rem);
+    }
+
+    /* MENU */
+
+    .top-menu {
+      width: 100%;
+
+      margin-top: 1.2rem;
+    }
+
+    .top-menu__list {
+      flex-direction: column;
+
+      width: 100%;
+
+      gap: 0.8rem;
+    }
+
+    .top-menu__link {
+      width: 100%;
+
+      min-width: unset;
+
+      padding: 0.95rem 1rem;
+
+      font-size: 0.78rem;
+
+      border-radius: 14px;
+    }
+
   }
 
-}
-
-/* ========================= */
-/* MOBILE */
-/* ========================= */
-
-@media (max-width: 600px) {
+  /* ========================= */
+  /* SCROLL INDICATOR */
+  /* ========================= */
 
   .scroll-indicator {
-    margin-top: 1.8rem;
+    margin-top: 2.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    animation: fadeIn 1.2s ease;
   }
 
   .scroll-indicator span {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
+
+    border-right: 2px solid rgba(255,255,255,0.85);
+    border-bottom: 2px solid rgba(255,255,255,0.85);
+
+    transform: rotate(45deg);
+
+    animation: bounceArrow 2s infinite;
+
+    transition: opacity 0.3s ease;
   }
 
-}
+  .scroll-indicator:hover span {
+    opacity: 0.7;
+  }
+
+  /* ========================= */
+  /* ANIMATIONS */
+  /* ========================= */
+
+  @keyframes bounceArrow {
+
+    0% {
+      transform: rotate(45deg) translate(0, 0);
+    }
+
+    50% {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    100% {
+      transform: rotate(45deg) translate(0, 0);
+    }
+
+  }
+
+  @keyframes fadeIn {
+
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+  }
+
+  /* ========================= */
+  /* MOBILE */
+  /* ========================= */
+
+  @media (max-width: 600px) {
+
+    .scroll-indicator {
+      margin-top: 1.8rem;
+    }
+
+    .scroll-indicator span {
+      width: 18px;
+      height: 18px;
+    }
+
+  }
