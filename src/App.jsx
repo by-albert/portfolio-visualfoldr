@@ -19,53 +19,21 @@ import Formacion from './pages/Formacion/Formacion.jsx';
 import FooterContacto from './pages/Menu/FooterContacto/FooterContacto.jsx';
 
 /* ========================= */
-/* SCROLL TO TOP GLOBAL */
+/* SCROLL TO TOP CLEAN */
 /* ========================= */
-
 function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-
-    const shouldScrollToGallery =
-      sessionStorage.getItem('scrollToGaleria');
-
-    if (
-      pathname === '/' &&
-      shouldScrollToGallery
-    ) {
-
-      sessionStorage.removeItem(
-        'scrollToGaleria'
-      );
-
-      setTimeout(() => {
-
-        document
-          .getElementById('galeria')
-          ?.scrollIntoView({
-            behavior: 'smooth'
-          });
-
-      }, 300);
-
-      return;
-    }
-
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-
+    window.scrollTo({ top: 0 });
   }, [pathname]);
 
   return null;
 }
 
 /* ========================= */
-/* APP */
+/* ROUTES */
 /* ========================= */
-
 function AppRoutes() {
   return (
     <>
@@ -75,14 +43,16 @@ function AppRoutes() {
 
         <Routes>
 
-          {/* HOME */}
+          {/* ========================= */}
+          {/* HOME (LANDING) */}
+          {/* ========================= */}
           <Route
             path="/"
             element={
               <>
                 <Menu />
                 <Presentacion />
-                <Galeria/>
+                <Galeria />
                 <Experience />
                 <Formacion />
                 <FooterContacto />
@@ -90,56 +60,56 @@ function AppRoutes() {
             }
           />
 
-          {/* GALERÍA */}
+          {/* ========================= */}
+          {/* GALERÍA (PÁGINA REAL) */}
+          {/* ========================= */}
           <Route
             path="/galeria"
             element={
               <>
+                {/* <Menu /> */}
                 <Galeria />
                 <FooterContacto />
               </>
             }
           />
 
+          {/* ========================= */}
           {/* ÁLBUM */}
+          {/* ========================= */}
           <Route
             path="/galeria/:tipo"
             element={
               <>
+                {/* <Menu /> */}
                 <Album />
                 <FooterContacto />
               </>
             }
           />
 
+          {/* ========================= */}
           {/* SESIÓN */}
+          {/* ========================= */}
           <Route
             path="/galeria/:tipo/:sesion"
             element={
               <>
+                {/* <Menu /> */}
                 <Sesion />
                 <FooterContacto />
               </>
             }
           />
 
-          {/* EXPERIENCIA */}
-          <Route
-            path="/experiencia"
-            element={
-              <>
-                <Experience />
-                <Formacion />
-                <FooterContacto />
-              </>
-            }
-          />
-
-          {/* CONTACTO */}
+          {/* ========================= */}
+          {/* CONTACTO (si lo quieres mantener como ruta) */}
+          {/* ========================= */}
           <Route
             path="/contacto"
             element={
               <>
+                {/* <Menu /> */}
                 <ContactPage />
                 <FooterContacto />
               </>
@@ -154,9 +124,8 @@ function AppRoutes() {
 }
 
 /* ========================= */
-/* WRAPPER ROUTER */
+/* WRAPPER */
 /* ========================= */
-
 function App() {
   return (
     <Router>

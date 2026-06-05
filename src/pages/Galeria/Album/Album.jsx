@@ -9,7 +9,7 @@ const Album = () => {
   const album = albumsData[tipo];
 
   const goToGallery = () => {
-    navigate('/galeria');
+    navigate('/');
   };
 
   if (!album) {

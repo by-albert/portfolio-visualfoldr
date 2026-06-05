@@ -106,7 +106,7 @@ const NewPortfolio = () => {
               })}
               className="side-menu__link"
             >
-              Galerías
+              Galería
             </button>
           </li>
 
