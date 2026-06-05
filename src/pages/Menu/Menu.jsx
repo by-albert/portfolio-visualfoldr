@@ -38,10 +38,18 @@ const NewPortfolio = () => {
         }}
       />
 
-      {/* CONTENIDO CENTRAL */}
+      {/* CONTENIDO PRINCIPAL */}
       <div className="content">
 
-        <div className="mobile-title">
+        {/* TOP TEXT (reservado info futura)
+        <div className="hero-top">
+          <p className="hero-intro">
+            TEXTO DE EJEMPLO / INTRO FUTURA
+          </p>
+        </div> */}
+
+        {/* CENTRO TITULAR */}
+        <div className="hero-center">
 
           <div className="title-line">
             <BubbleText text="VISUAL" />
@@ -51,13 +59,16 @@ const NewPortfolio = () => {
             <BubbleText text="FOLDR" />
           </div>
 
-          <p className="subtitle-menu">
-            © Albert Penadés Casajús
-          </p>
-
         </div>
 
-        {/* INDICADOR SCROLL */}
+        {/* BOTTOM RESERVA FUTURA */}
+        <div className="hero-bottom">
+          <p className="hero-reserved">
+            {/* espacio reservado redes / contacto */}
+          </p>
+        </div>
+
+        {/* SCROLL INDICATOR */}
         <div
           className="scroll-indicator"
           onClick={() =>
@@ -71,19 +82,18 @@ const NewPortfolio = () => {
 
       </div>
 
-      {/* MENU LATERAL DERECHO */}
-      <nav className="top-menu side-menu">
+      {/* MENÚ LATERAL DERECHO (ÚNICO) */}
+      <nav className="side-menu">
 
-        <ul className="top-menu__list">
+        <ul className="side-menu__list">
 
           <li>
             <button
               onClick={() =>
-                document
-                  .getElementById('presentacion')
+                document.getElementById('presentacion')
                   ?.scrollIntoView({ behavior: 'smooth' })
               }
-              className="top-menu__link"
+              className="side-menu__link"
             >
               ¿Quién soy?
             </button>
@@ -92,7 +102,7 @@ const NewPortfolio = () => {
           <li>
             <button
               onClick={() => navigate('/galeria')}
-              className="top-menu__link"
+              className="side-menu__link"
             >
               Galerías
             </button>
@@ -101,11 +111,10 @@ const NewPortfolio = () => {
           <li>
             <button
               onClick={() =>
-                document
-                  .getElementById('trabajos')
+                document.getElementById('trabajos')
                   ?.scrollIntoView({ behavior: 'smooth' })
               }
-              className="top-menu__link"
+              className="side-menu__link"
             >
               Experiencia
             </button>
@@ -114,7 +123,7 @@ const NewPortfolio = () => {
           <li>
             <button
               onClick={() => navigate('/contacto')}
-              className="top-menu__link"
+              className="side-menu__link"
             >
               Contacto
             </button>

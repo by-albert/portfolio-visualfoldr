@@ -1,7 +1,6 @@
-  /* ========================= */
-  /* LAYOUT GENERAL */
-  /* ========================= */
-
+/* ========================= */
+/* LAYOUT GENERAL */
+/* ========================= */
   .new-portfolio {
     display: flex;
     justify-content: center;
@@ -72,14 +71,102 @@
   /* ========================= */
   /* SOLO MENÚ A LA DERECHA */
   /* ========================= */
+.side-menu {
+  position: fixed;
 
-  .side-menu {
-    position: absolute;
-    right: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 20;
-  }
+  top: 50%;
+  right: 3rem;
+
+  transform: translateY(-50%);
+
+  z-index: 999;
+
+  // FONDO DE LA CAJA DE LOS LINKS
+  // background-color: rgb(118, 116, 116);
+}
+
+.side-menu__link {
+  position: relative;
+
+  background: transparent;
+  border: none;
+
+  padding: 1.3rem;
+
+  color: rgba(255,255,255,0.65);
+
+  font-size: 0.9rem;
+  font-weight: 400;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+  transform 0.35s ease,
+  color 0.35s ease,
+  letter-spacing 0.35s ease;
+
+  opacity: 0;
+
+  animation: menuReveal 0.8s ease forwards;
+}
+
+
+.side-menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-menu__list li:nth-child(1) .side-menu__link {
+  animation-delay: 0.2s;
+}
+
+.side-menu__list li:nth-child(2) .side-menu__link {
+  animation-delay: 0.35s;
+}
+
+.side-menu__list li:nth-child(3) .side-menu__link {
+  animation-delay: 0.5s;
+}
+
+.side-menu__list li:nth-child(4) .side-menu__link {
+  animation-delay: 0.65s;
+}
+
+.side-menu__link::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  right: -30px;
+
+  width: 18px;
+  height: 1px;
+
+  background: rgba(255,255,255,0.3);
+
+  transition: all .35s ease;
+}
+
+.side-menu__link:hover {
+  color: white;
+
+  transform:
+    translateX(-10px)
+    scale(1.12);
+
+  letter-spacing: 0.25em;
+
+}
+
+.side-menu__link:hover::before {
+  width: 35px;
+  background: white;
+}
 
   .side-menu .top-menu__list {
     flex-direction: column;
@@ -222,15 +309,15 @@
   /* MENU */
   /* ========================= */
 
-  .top-menu__link {
-    background: rgba(0,0,0,0.75);
-    border: 1px solid rgba(255,255,255,0.12);
-  }
+  // .top-menu__link {
+  //   background: rgba(0,0,0,0.75);
+  //   border: 1px solid rgba(255,255,255,0.12);
+  // }
 
-  .top-menu__link:hover {
-    background: rgba(255,255,255,0.95);
-    color: #ffffff;
-  }
+  // .top-menu__link:hover {
+  //   background: rgba(255,255,255,0.95);
+  //   color: #ffffff;
+  // }
 
   .top-menu__list {
     display: flex;
@@ -476,3 +563,16 @@
     }
 
   }
+
+// FUNXION APARECER EN PANTALLA LINKS
+  @keyframes menuReveal {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
