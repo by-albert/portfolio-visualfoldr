@@ -26,10 +26,37 @@ function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
+
+    const shouldScrollToGallery =
+      sessionStorage.getItem('scrollToGaleria');
+
+    if (
+      pathname === '/' &&
+      shouldScrollToGallery
+    ) {
+
+      sessionStorage.removeItem(
+        'scrollToGaleria'
+      );
+
+      setTimeout(() => {
+
+        document
+          .getElementById('galeria')
+          ?.scrollIntoView({
+            behavior: 'smooth'
+          });
+
+      }, 300);
+
+      return;
+    }
+
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
+
   }, [pathname]);
 
   return null;

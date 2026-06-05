@@ -1,10 +1,12 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import './Album.scss';
 
 import { albumsData } from '../data/data.js';
 
 const Album = () => {
   const { tipo } = useParams();
+  const navigate = useNavigate();
+
   const album = albumsData[tipo];
 
   if (!album) {
@@ -12,9 +14,12 @@ const Album = () => {
       <section className="album-page">
         <h1>Álbum no encontrado</h1>
 
-        <Link to="/galeria">
-          ← Volver
-        </Link>
+        <button
+          className="back-link"
+          onClick={() => navigate('/galeria')}
+        >
+          ← Volver a la galería
+        </button>
       </section>
     );
   }
@@ -23,10 +28,14 @@ const Album = () => {
     <section className="album-page">
       <div className="album-container">
 
+        {/* NAV SUPERIOR */}
         <div className="album-nav">
-          <Link to="/galeria" className="back-link">
+          <button
+            className="back-link"
+            onClick={() => navigate('/galeria')}
+          >
             ← Galería
-          </Link>
+          </button>
         </div>
 
         <h1>{album.nombre}</h1>

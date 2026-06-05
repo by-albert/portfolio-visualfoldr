@@ -101,7 +101,9 @@ const NewPortfolio = () => {
 
           <li>
             <button
-              onClick={() => navigate('/galeria')}
+              onClick={() => document.getElementById('galeria')?.scrollIntoView({
+                behavior: 'smooth'
+              })}
               className="side-menu__link"
             >
               Galerías

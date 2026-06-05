@@ -36,8 +36,7 @@ const albums = [
 const Galeria = () => (
   <section id="galeria" className="galeria-page">
     <div className="galeria-container">
-      <Link to="/" className="back-link">← Inicio</Link>
-      
+     
       <h1>Galería</h1>
       <p className="galeria-subtitle">Explora mis álbumes de fotografía</p>
       
