@@ -9,8 +9,12 @@ const Album = () => {
   const album = albumsData[tipo];
 
   const goToGallery = () => {
-    navigate('/');
-  };
+  navigate('/', {
+    state: {
+      scrollTo: 'galeria'
+    }
+  });
+};
 
   if (!album) {
     return (

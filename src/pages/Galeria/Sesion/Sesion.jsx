@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
-import { useParams, Link, useLocation } from 'react-router-dom';
+import {
+  useParams,
+  Link,
+  useLocation,
+  useNavigate
+} from 'react-router-dom';
 import './Sesion.scss';
 
 import { albumsData } from '../data/data.js';
@@ -9,10 +14,20 @@ const Sesion = () => {
   const { tipo, sesion } = useParams();
 
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const goToGallery = () => {
+    navigate('/', {
+      state: {
+        scrollTo: 'galeria'
+      }
+    });
+  };
 
   const [showNav, setShowNav] = useState(false); // Para mostrar el nav al hacer scroll 
   const [navCollapsed, setNavCollapsed] = useState(false); // Para ocultar el nav en móviles
 
+  
   /* ========================= */
   /* SCROLL ARRIBA AL ENTRAR */
   /* ========================= */
@@ -70,12 +85,9 @@ const Sesion = () => {
 
           <h1>Álbum no encontrado</h1>
 
-          <Link
-            to="/galeria"
-            className="back-link"
-          >
+          <button className="back-link" onClick={goToGallery}>
             ← Volver a la galería
-          </Link>
+          </button>
 
         </div>
 
@@ -153,12 +165,9 @@ const Sesion = () => {
 
   <div className="nav-divider"></div>
 
-  <Link
-    to="/galeria"
-    className="back-link"
-  >
-    Otros álbumes
-  </Link>
+  <button className="back-link" onClick={goToGallery}>
+    Otros álbumes 
+  </button>
 
 </div>
 

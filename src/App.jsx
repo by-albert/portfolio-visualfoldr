@@ -22,11 +22,32 @@ import FooterContacto from './pages/Menu/FooterContacto/FooterContacto.jsx';
 /* SCROLL TO TOP CLEAN */
 /* ========================= */
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0 });
-  }, [pathname]);
+
+    if (location.state?.scrollTo === 'galeria') {
+
+      setTimeout(() => {
+
+        document
+          .getElementById('galeria')
+          ?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+
+      }, 100);
+
+      return;
+    }
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+
+  }, [location]);
 
   return null;
 }
