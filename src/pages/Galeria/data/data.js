@@ -335,7 +335,60 @@ import vincit09 from '../../../assets/futbol-sala/Vincit/Vincit-09.jpg';
 import vincit10 from '../../../assets/futbol-sala/Vincit/Vincit-10.jpg';
 
 // ------------------------------ Imágenes de Skate ------------------------------ 
-import skate from '../../../assets/skate/sk8-01.jpg';
+import skate01 from '../../../assets/skate/sk8-01.jpg';
+import skate02 from '../../../assets/skate/sk8-02.jpg';
+import skate03 from '../../../assets/skate/sk8-03.jpg';
+import skate04 from '../../../assets/skate/sk8-04.jpg';
+import skate05 from '../../../assets/skate/sk8-05.jpg';
+
+// ------------------------------ Imágenes de Concerts ------------------------------ 
+
+// WE DANCE BAND
+import WDB_01 from '../../../assets/concerts/wedance/WDB-01.jpg';
+import WDB_02 from '../../../assets/concerts/wedance/WDB-02.jpg';
+import WDB_03 from '../../../assets/concerts/wedance/WDB-03.jpg';
+import WDB_04 from '../../../assets/concerts/wedance/WDB-04.jpg';
+import WDB_05 from '../../../assets/concerts/wedance/WDB-05.jpg';
+import WDB_06 from '../../../assets/concerts/wedance/WDB-06.jpg';
+import WDB_07 from '../../../assets/concerts/wedance/WDB-07.jpg';
+import WDB_08 from '../../../assets/concerts/wedance/WDB-08.jpg';
+import WDB_09 from '../../../assets/concerts/wedance/WDB-09.jpg';
+import WDB_10 from '../../../assets/concerts/wedance/WDB-10.jpg';
+import WDB_11 from '../../../assets/concerts/wedance/WDB-11.jpg';
+import WDB_12 from '../../../assets/concerts/wedance/WDB-12.jpg';
+import WDB_13 from '../../../assets/concerts/wedance/WDB-13.jpg';
+import WDB_14 from '../../../assets/concerts/wedance/WDB-14.jpg';
+import WDB_15 from '../../../assets/concerts/wedance/WDB-15.jpg';
+import WDB_16 from '../../../assets/concerts/wedance/WDB-16.jpg';
+
+// CORATGE
+import coratge01 from '../../../assets/concerts/coratge/coratge-01.jpg';
+import coratge02 from '../../../assets/concerts/coratge/coratge-02.jpg';
+import coratge03 from '../../../assets/concerts/coratge/coratge-03.jpg';
+import coratge04 from '../../../assets/concerts/coratge/coratge-04.jpg';
+import coratge05 from '../../../assets/concerts/coratge/coratge-05.jpg';
+import coratge06 from '../../../assets/concerts/coratge/coratge-06.jpg';
+import coratge07 from '../../../assets/concerts/coratge/coratge-07.jpg';
+import coratge08 from '../../../assets/concerts/coratge/coratge-08.jpg';
+import coratge09 from '../../../assets/concerts/coratge/coratge-09.jpg';
+import coratge10 from '../../../assets/concerts/coratge/coratge-10.jpg';
+import coratge11 from '../../../assets/concerts/coratge/coratge-11.jpg';
+import coratge12 from '../../../assets/concerts/coratge/coratge-12.jpg';
+import coratge13 from '../../../assets/concerts/coratge/coratge-13.jpg';
+import coratge14 from '../../../assets/concerts/coratge/coratge-14.jpg';
+import coratge15 from '../../../assets/concerts/coratge/coratge-15.jpg';
+import coratge16 from '../../../assets/concerts/coratge/coratge-16.jpg';
+import coratge17 from '../../../assets/concerts/coratge/coratge-17.jpg';
+import coratge18 from '../../../assets/concerts/coratge/coratge-18.jpg';
+import coratge19 from '../../../assets/concerts/coratge/coratge-19.jpg';
+import coratge20 from '../../../assets/concerts/coratge/coratge-20.jpg';
+import coratge21 from '../../../assets/concerts/coratge/coratge-21.jpg';
+import coratge22 from '../../../assets/concerts/coratge/coratge-22.jpg';
+import coratge23 from '../../../assets/concerts/coratge/coratge-23.jpg';
+import coratge24 from '../../../assets/concerts/coratge/coratge-24.jpg';
+import coratge25 from '../../../assets/concerts/coratge/coratge-25.jpg';
+import coratge26 from '../../../assets/concerts/coratge/coratge-26.jpg';
+import coratge27 from '../../../assets/concerts/coratge/coratge-27.jpg';
 
 // ------------------------------ Imágenes de Experimental ------------------------------ 
 import flor from '../../../assets/experimental/flor.jpg';
@@ -778,11 +831,62 @@ export const albumsData = {
       {
         id: 'we-dance-band',
         titulo: 'WE DANCE BAND',
-        fecha: '2026',
+        fecha: '23-04-2026',
         portada: foto2,
 
         imagenes: [
-          foto2
+          WDB_01,
+          WDB_02,
+          WDB_03,
+          WDB_04,
+          WDB_05,
+          WDB_06,
+          WDB_07,
+          WDB_08,
+          WDB_09,
+          WDB_10,
+          WDB_11,
+          WDB_12,
+          WDB_13,
+          WDB_14,
+          WDB_15,
+          WDB_16          
+        ]
+      },
+      {
+        id: 'coratge',
+        titulo: 'CORATGE',
+        fecha: '18-05-2026',
+        portada: coratge01,
+
+        imagenes: [
+          coratge01,
+          coratge02,
+          coratge03,
+          coratge04,
+          coratge05,
+          coratge06,
+          coratge07,
+          coratge08,
+          coratge09,
+          coratge10,
+          coratge11,
+          coratge12,
+          coratge13,
+          coratge14,
+          coratge15,
+          coratge16,
+          coratge17,
+          coratge18,
+          coratge19,
+          coratge20,
+          coratge21,
+          coratge22,
+          coratge23,
+          coratge24,
+          coratge25,
+          coratge26,
+          coratge27
         ]
       }
     ]
@@ -794,12 +898,17 @@ export const albumsData = {
     sesiones: [
       {
         id: 'skate-session-1',
-        titulo: 'Skate Session',
+        titulo: 'Skate',
         fecha: '2026',
-        portada: skate,
+        portada: skate03,
 
         imagenes: [
-          skate
+          skate01,
+          skate02,
+          skate03,
+          skate04,
+          skate05
+
         ]
       }
     ]

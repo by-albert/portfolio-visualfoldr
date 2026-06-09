@@ -3,27 +3,27 @@ import './Galeria.scss';
 
 import vincit01 from '../../assets/futbol-sala/Vincit/Vincit-01.jpg';
 import foto2 from '../../assets/backgrounds/foto-2.jpg';
-import foto3 from '../../assets/skate/sk8-01.jpg';
+import skate05 from '../../assets/skate/sk8-01.jpg';
 import flor from '../../assets/experimental/flor.jpg';
 
 const albums = [
   {
     id: 'futbol-sala',
     nombre: 'Fútbol Sala',
-    descripcion: 'Tercera división juvenil.',
+    descripcion: 'Equipo de tercera división juvenil.',
     imagen: vincit01
   },
   {
     id: 'conciertos',
     nombre: 'Conciertos',
-    descripcion: 'Energía y pasión.',
+    descripcion: 'Conciertos en vivo.',
     imagen: foto2
   },
     {
     id: 'skate',
     nombre: 'Skate',
-    descripcion: 'Momentos de libertad y creatividad',
-    imagen: foto3
+    descripcion: 'Amigos y skate',
+    imagen: skate05
   },
   {
     id: 'experimental',

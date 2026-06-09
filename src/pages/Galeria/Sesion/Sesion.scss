@@ -87,6 +87,10 @@
 
   padding: 0.6rem 0.9rem;
 
+  background: transparent;
+  border: none;
+  outline: none;
+
   color: #f2f2f2;
   text-decoration: none;
 
@@ -100,10 +104,27 @@
 
   white-space: nowrap;
 
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+
   transition:
     background 0.3s ease,
     color 0.3s ease,
     transform 0.2s ease;
+}
+
+.back-link:visited,
+.back-link:active,
+.back-link:focus {
+  color: #f2f2f2;
+}
+
+.back-link:hover {
+  background: rgba(255,255,255,0.08);
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .back-link:visited,

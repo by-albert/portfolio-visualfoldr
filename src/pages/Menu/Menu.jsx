@@ -41,32 +41,23 @@ const NewPortfolio = () => {
       {/* CONTENIDO PRINCIPAL */}
       <div className="content">
 
-        {/* TOP TEXT (reservado info futura)
-        <div className="hero-top">
-          <p className="hero-intro">
-            TEXTO DE EJEMPLO / INTRO FUTURA
-          </p>
-        </div> */}
-
         {/* CENTRO TITULAR */}
         <div className="hero-center">
+          <div className="hero-brand">
+            <BubbleText text="VISUAL FOLDR" />
+            </div>
 
-          <div className="title-line">
-            <BubbleText text="VISUAL" />
+            <p className="hero-slogan">
+              Fotógrafo y desarollador web visual
+            </p>
+
+            <br />
+
+            <p className="subtitle-menu">
+              Albert Penadés Casajús
+            </p>
+
           </div>
-
-          <div className="title-line">
-            <BubbleText text="FOLDR" />
-          </div>
-
-        </div>
-
-        {/* BOTTOM RESERVA FUTURA */}
-        <div className="hero-bottom">
-          <p className="hero-reserved">
-            {/* espacio reservado redes / contacto */}
-          </p>
-        </div>
 
         {/* SCROLL INDICATOR */}
         <div
@@ -80,6 +71,15 @@ const NewPortfolio = () => {
           <span></span>
         </div>
 
+
+        {/* BOTTOM RESERVA FUTURA */}
+        <div className="hero-bottom">
+          <p className="hero-reserved">
+            {/* espacio reservado redes / contacto */}
+          </p>
+        </div>
+
+        
       </div>
 
       {/* MENÚ LATERAL DERECHO (ÚNICO) */}

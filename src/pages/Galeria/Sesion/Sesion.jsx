@@ -16,6 +16,9 @@ const Sesion = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const [showNav, setShowNav] = useState(false);
+  const [navCollapsed, setNavCollapsed] = useState(false);
+
   const goToGallery = () => {
     navigate('/', {
       state: {
@@ -24,95 +27,70 @@ const Sesion = () => {
     });
   };
 
-  const [showNav, setShowNav] = useState(false); // Para mostrar el nav al hacer scroll 
-  const [navCollapsed, setNavCollapsed] = useState(false); // Para ocultar el nav en móviles
-
-  
   /* ========================= */
-  /* SCROLL ARRIBA AL ENTRAR */
+  /* SCROLL TOP */
   /* ========================= */
 
   useEffect(() => {
-
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
-
   }, [location.pathname]);
 
   /* ========================= */
-  /* NAV SCROLL */
+  /* NAV APPEAR */
   /* ========================= */
 
   useEffect(() => {
 
     const handleScroll = () => {
-
-      if (window.scrollY > 250) {
-        setShowNav(true);
-      } else {
-        setShowNav(false);
-      }
-
+      setShowNav(window.scrollY > 250);
     };
 
     window.addEventListener('scroll', handleScroll);
 
-    return () => {
+    return () =>
       window.removeEventListener('scroll', handleScroll);
-    };
 
   }, []);
 
   /* ========================= */
-  /* BUSCAR ÁLBUM */
+  /* DATA */
   /* ========================= */
 
   const album = albumsData[tipo];
 
-  /* ========================= */
-  /* SI NO EXISTE EL ÁLBUM */
-  /* ========================= */
-
   if (!album) {
 
     return (
-
       <section className="sesion-page">
 
         <div className="sesion-container">
 
           <h1>Álbum no encontrado</h1>
 
-          <button className="back-link" onClick={goToGallery}>
+          <button
+            className="back-link"
+            onClick={goToGallery}
+          >
             ← Volver a la galería
           </button>
 
         </div>
 
       </section>
-
     );
 
   }
 
-  /* ========================= */
-  /* BUSCAR SESIÓN */
-  /* ========================= */
-
   const data = album.sesiones.find(
-    (item) => item.id === sesion
+    item => item.id === sesion
   );
-
-  /* ========================= */
-  /* SI NO EXISTE LA SESIÓN */
-  /* ========================= */
 
   if (!data) {
 
     return (
-
       <section className="sesion-page">
 
         <div className="sesion-container">
@@ -129,14 +107,9 @@ const Sesion = () => {
         </div>
 
       </section>
-
     );
 
   }
-
-  /* ========================= */
-  /* RENDER */
-  /* ========================= */
 
   return (
 
@@ -145,42 +118,50 @@ const Sesion = () => {
       <div className="sesion-container">
 
         {/* NAV */}
-        <div className={` session-nav ${showNav ? 'visible' : ''} ${navCollapsed ? 'collapsed' : ''}
-        `}
+
+        <div
+          className={`session-nav ${
+            showNav ? 'visible' : ''
+          } ${
+            navCollapsed ? 'collapsed' : ''
+          }`}
         >
 
-  <button
-    className="toggle-nav"
-    onClick={() => setNavCollapsed(true)}
-  >
-    ✕
-  </button>
+          <button
+            className="toggle-nav"
+            onClick={() => setNavCollapsed(true)}
+          >
+            ✕
+          </button>
 
-  <Link
-    to={`/galeria/${tipo}`}
-    className="back-link active"
-  >
-    Más de '{album.nombre}'
-  </Link>
+          <Link
+            to={`/galeria/${tipo}`}
+            className="back-link"
+          >
+            Más de "{album.nombre}"
+          </Link>
 
-  <div className="nav-divider"></div>
+          <div className="nav-divider"></div>
 
-  <button className="back-link" onClick={goToGallery}>
-    Otros álbumes 
-  </button>
+          <button
+            className="back-link"
+            onClick={goToGallery}
+          >
+            Otros álbumes
+          </button>
 
-</div>
+        </div>
 
-{showNav && navCollapsed && (
+        {showNav && navCollapsed && (
 
-  <button
-    className="nav-reopen"
-    onClick={() => setNavCollapsed(false)}
-  >
-    ☰
-  </button>
+          <button
+            className="nav-reopen"
+            onClick={() => setNavCollapsed(false)}
+          >
+            ☰
+          </button>
 
-)}
+        )}
 
         {/* HEADER */}
 
@@ -196,7 +177,7 @@ const Sesion = () => {
 
         </div>
 
-        {/* GRID */}
+        {/* IMÁGENES */}
 
         <div className="sesion-grid">
 
@@ -206,13 +187,11 @@ const Sesion = () => {
               key={index}
               className="sesion-card"
             >
-
               <img
                 src={img}
                 alt={`${data.titulo}-${index + 1}`}
                 loading="lazy"
               />
-
             </div>
 
           ))}
