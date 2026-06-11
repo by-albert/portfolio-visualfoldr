@@ -832,7 +832,7 @@ export const albumsData = {
         id: 'we-dance-band',
         titulo: 'WE DANCE BAND',
         fecha: '23-04-2026',
-        portada: foto2,
+        portada: WDB_03,
 
         imagenes: [
           WDB_01,
@@ -857,7 +857,7 @@ export const albumsData = {
         id: 'coratge',
         titulo: 'CORATGE',
         fecha: '18-05-2026',
-        portada: coratge01,
+        portada: coratge24,
 
         imagenes: [
           coratge01,
@@ -871,7 +871,7 @@ export const albumsData = {
           coratge09,
           coratge10,
           coratge11,
-          coratge12,
+          coratge12, // FOTOGRAFO
           coratge13,
           coratge14,
           coratge15,
@@ -900,7 +900,7 @@ export const albumsData = {
         id: 'skate-session-1',
         titulo: 'Skate',
         fecha: '2026',
-        portada: skate03,
+        portada: skate01,
 
         imagenes: [
           skate01,

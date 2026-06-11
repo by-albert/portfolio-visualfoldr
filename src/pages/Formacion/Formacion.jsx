@@ -89,7 +89,7 @@ function Formacion() {
 
   return (
 
-    <section className="formacion">
+    <section className="formacion" id='formacion'>
 
       <div className="formacion-container">
 

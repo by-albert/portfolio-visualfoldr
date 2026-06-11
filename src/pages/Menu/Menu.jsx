@@ -14,7 +14,12 @@ const images = [foto1, foto2, foto3, foto4];
 const NewPortfolio = () => {
 
   const [current, setCurrent] = useState(0);
+
   const navigate = useNavigate();
+
+  /* ========================= */
+  /* CAROUSEL */
+  /* ========================= */
 
   useEffect(() => {
 
@@ -25,6 +30,7 @@ const NewPortfolio = () => {
     return () => clearInterval(interval);
 
   }, []);
+
 
   return (
 
@@ -38,26 +44,24 @@ const NewPortfolio = () => {
         }}
       />
 
-      {/* CONTENIDO PRINCIPAL */}
+      {/* CONTENIDO */}
       <div className="content">
 
-        {/* CENTRO TITULAR */}
         <div className="hero-center">
+
           <div className="hero-brand">
             <BubbleText text="VISUAL FOLDR" />
-            </div>
-
-            <p className="hero-slogan">
-              Fotógrafo y desarollador web visual
-            </p>
-
-            <br />
-
-            <p className="subtitle-menu">
-              Albert Penadés Casajús
-            </p>
-
           </div>
+
+          <p className="hero-slogan">
+            Fotógrafo y desarrollador web visual
+          </p>
+
+          <p className="subtitle-menu">
+            Albert Penadés Casajús
+          </p>
+
+        </div>
 
         {/* SCROLL INDICATOR */}
         <div
@@ -71,29 +75,21 @@ const NewPortfolio = () => {
           <span></span>
         </div>
 
-
-        {/* BOTTOM RESERVA FUTURA */}
-        <div className="hero-bottom">
-          <p className="hero-reserved">
-            {/* espacio reservado redes / contacto */}
-          </p>
-        </div>
-
-        
       </div>
 
-      {/* MENÚ LATERAL DERECHO (ÚNICO) */}
+      {/* MENÚ */}
       <nav className="side-menu">
 
         <ul className="side-menu__list">
 
           <li>
             <button
+              className="side-menu__link"
               onClick={() =>
-                document.getElementById('presentacion')
+                document
+                  .getElementById('presentacion')
                   ?.scrollIntoView({ behavior: 'smooth' })
               }
-              className="side-menu__link"
             >
               ¿Quién soy?
             </button>
@@ -101,10 +97,12 @@ const NewPortfolio = () => {
 
           <li>
             <button
-              onClick={() => document.getElementById('galeria')?.scrollIntoView({
-                behavior: 'smooth'
-              })}
               className="side-menu__link"
+              onClick={() =>
+                document
+                  .getElementById('galeria')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }
             >
               Galería
             </button>
@@ -112,11 +110,12 @@ const NewPortfolio = () => {
 
           <li>
             <button
+              className="side-menu__link"
               onClick={() =>
-                document.getElementById('trabajos')
+                document
+                  .getElementById('trabajos')
                   ?.scrollIntoView({ behavior: 'smooth' })
               }
-              className="side-menu__link"
             >
               Experiencia
             </button>
@@ -124,8 +123,21 @@ const NewPortfolio = () => {
 
           <li>
             <button
-              onClick={() => navigate('/contacto')}
               className="side-menu__link"
+              onClick={() =>
+                document
+                  .getElementById('formacion')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }
+            >
+              Formación
+            </button>
+          </li>
+
+          <li>
+            <button
+              className="side-menu__link"
+              onClick={() => navigate('/contacto')}
             >
               Contacto
             </button>

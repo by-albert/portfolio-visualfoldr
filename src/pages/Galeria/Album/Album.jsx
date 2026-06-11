@@ -1,12 +1,25 @@
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import {
+  useParams,
+  Link,
+  useNavigate,
+  Navigate
+} from 'react-router-dom';
+
 import './Album.scss';
 import { albumsData } from '../data/data.js';
 
 const Album = () => {
   const { tipo } = useParams();
   const navigate = useNavigate();
-
   const album = albumsData[tipo];
+  if (album && album.sesiones.length === 1) {
+  return (
+    <Navigate
+      to={`/galeria/${tipo}/${album.sesiones[0].id}`}
+      replace
+    />
+  );
+}
 
   const goToGallery = () => {
   navigate('/', {
