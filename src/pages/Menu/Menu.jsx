@@ -54,7 +54,7 @@ const NewPortfolio = () => {
           </div>
 
           <p className="hero-slogan">
-            Fotógrafo y desarrollador web visual
+            Fotógrafo y desarrollador frontend 
           </p>
 
           <p className="subtitle-menu">

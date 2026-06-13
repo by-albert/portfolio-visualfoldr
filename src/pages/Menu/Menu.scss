@@ -229,7 +229,7 @@
 
   color: white;
 
-  // font-size: clamp(3rem, 7vw, 7rem); // clamp(MÍNIMO, RESPONSIVO, MÁXIMO)
+  // clamp(MÍNIMO, RESPONSIVO, MÁXIMO)
   font-size: clamp(1.8rem, 4.5vw, 47rem); 
 
   font-weight: 800;
@@ -409,6 +409,10 @@
     opacity: 0.7;
   }
 
+  .scroll-section {
+  scroll-margin-top: 110px;
+}
+
   /* ========================= */
   /* ANIMATIONS */
   /* ========================= */
@@ -446,29 +450,59 @@
   /* ========================= */
   /* MOBILE */
   /* ========================= */
+@media (max-width: 768px) {
 
-  @media (max-width: 600px) {
-
-    .hero-brand {
-      font-size: clamp(2.2rem, 10vw, 4rem);
-    }
-    
-    .hero-slogan {
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      padding: 0 1rem;
-    }
-
-    .scroll-indicator {
-      margin-top: 1.8rem;
-    }
-
-    .scroll-indicator span {
-      width: 18px;
-      height: 18px;
-    }
-
+  .new-portfolio {
+    padding-top: 5rem;
   }
+
+  .side-menu {
+    padding: 0.6rem 0.5rem;
+    border-radius: 0px;
+  }
+
+  .side-menu__list {
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+
+  .side-menu__link {
+    padding: 0.55rem 0.7rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+  }
+
+  .side-menu__link::before {
+    display: none;
+  }
+
+  /* TÍTULO MÁS PEQUEÑO EN MÓVIL */
+  .title-line span,
+  .title-line div {
+    font-size: clamp(1.8rem, 9vw, 3rem);
+  }
+
+  .hero-slogan {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+  }
+
+  .subtitle-menu {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+  }
+  .hero-brand {
+  font-size: clamp(1.8rem, 4.5vw, 47rem);
+  }
+
+  .scroll-section {
+    scroll-margin-top: 160px;
+  }
+
+  .bubble-container{
+    font-size: 2.5rem;
+  }
+}
 
 // FUNXION APARECER EN PANTALLA LINKS
   @keyframes menuReveal {

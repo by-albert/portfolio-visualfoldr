@@ -15,7 +15,7 @@ function Formacion() {
       year: 'Próximamente',
 
       description:
-        'Ciclo superior de fotografía para aprender técnicas de composición, iluminación y edición fotográfica, desarrollando habilidades creativas y técnicas en el ámbito de la fotografía.',
+        'Ciclo superior de fotografía para aprender técnicas de composición, iluminación y edición fotográfica, desarrollando habilidades creativas.',
 
       skills: [
         'Próximamente',
@@ -56,11 +56,22 @@ function Formacion() {
         'HTML',
         'CSS',
         'JavaScript',
+        'Java',
+        'Python',
         'React',
+        'UI / UX',
+        'Explorador de navegacion Lighthouse',
+        'Optimización de imágenes',
+        'GIMP',
         'MySQL',
-        'Git',
-        'GitHub',
-        'Responsive Design'
+        'Figma',
+        'Trello',
+        'Arduino',
+        'Git y GitHub',
+        'Responsive Design',
+        'Visual Studio Code',
+        'Pycharm',
+        'Eclipse'
       ]
     },
 
@@ -79,10 +90,14 @@ function Formacion() {
       skills: [
         'Windows',
         'Linux',
-        'Redes',
+        'Virtual Box',
         'Hardware',
-        'Montaje de equipos',
-        'Ofimática'
+        'Cableado estructurado',
+        'Aplicaciones Ofimáticas',
+        'WordPress',
+        'Cisco Packet Tracer',
+        'Inglés técnico',
+        'Formación Orientativa Laboral (FOL)'
       ]
     }
   ];
