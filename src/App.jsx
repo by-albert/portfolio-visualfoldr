@@ -124,7 +124,7 @@ function AppRoutes() {
           />
 
           {/* ========================= */}
-          {/* CONTACTO (si lo quieres mantener como ruta) */}
+          {/* CONTACTO */}
           {/* ========================= */}
           <Route
             path="/contacto"

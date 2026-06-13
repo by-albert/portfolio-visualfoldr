@@ -454,7 +454,7 @@
 
   .experience {
     padding: 4rem 1rem;
-    scroll-margin-top: 50px;
+    scroll-margin-top: 90px;
   }
 
   .experience-grid {
@@ -480,7 +480,37 @@
   .modal-content h2 {
     font-size: 1.6rem;
   }
+  .experience-modal-overlay {
+    align-items: flex-start;
 
+    overflow-y: auto;
+
+    padding: 1rem;
+
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+
+  .experience-modal {
+    max-height: none;
+
+    overflow: visible;
+
+    margin-bottom: 2rem;
+  }
+
+  .modal-image {
+    height: 220px;
+  }
+
+   .close-modal {
+
+    background: black;
+    color: white;
+
+    top: 1rem;
+    z-index: 1000;
+  }
 }
 
 @media (max-width: 500px) {

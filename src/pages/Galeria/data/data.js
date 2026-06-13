@@ -395,8 +395,8 @@ import flor from '../../../assets/experimental/flor.jpg';
 import gaviota from '../../../assets/experimental/gaviota.jpg';
 
 // ------------------------------ Imágenes de Fondo ------------------------------ 
-import foto2 from '../../../assets/backgrounds/foto-2.jpg';
-import foto4 from '../../../assets/backgrounds/foto-4.jpg';
+import foto2 from '../../../assets/backgrounds/desktop/foto-2.jpg';
+import foto4 from '../../../assets/backgrounds/desktop/foto-4.jpg';
 
 export const albumsData = {
   'futbol-sala': {
@@ -897,8 +897,8 @@ export const albumsData = {
 
     sesiones: [
       {
-        id: 'skate-session-1',
-        titulo: 'Skate',
+        id: 'skate-marbella',
+        titulo: 'Skate marbella',
         fecha: '2026',
         portada: skate01,
 
@@ -910,6 +910,16 @@ export const albumsData = {
           skate05
 
         ]
+      },
+    {
+        id: 'skate-macba',
+        titulo: 'Skate street',
+        fecha: '2026',
+        portada: skate01,
+
+        imagenes: [
+          skate01,
+        ]
       }
     ]
   },
@@ -920,13 +930,14 @@ export const albumsData = {
     sesiones: [
       {
         id: 'creative-1',
-        titulo: 'Exploración creativa',
+        titulo: 'Archivos creativos ',
         fecha: '2026',
         portada: gaviota,
 
         imagenes: [
+          gaviota,
           flor,
-          gaviota
+          
         ]
       }
     ]

@@ -4,18 +4,72 @@ import { useNavigate } from 'react-router-dom';
 
 import BubbleText from "../../components/BubbleText/bubbleText.jsx";
 
-import foto1 from '../../assets/backgrounds/foto-1.jpg';
-import foto2 from '../../assets/backgrounds/foto-2.jpg';
-import foto3 from '../../assets/backgrounds/foto-3.jpg';
-import foto4 from '../../assets/backgrounds/foto-4.jpg';
+/* ========================= */
+/* DESKTOP */
+/* ========================= */
 
-const images = [foto1, foto2, foto3, foto4];
+import foto1 from '../../assets/backgrounds/desktop/foto-1.jpg';
+import foto2 from '../../assets/backgrounds/desktop/foto-2.jpg';
+import foto3 from '../../assets/backgrounds/desktop/foto-3.jpg';
+import foto4 from '../../assets/backgrounds/desktop/foto-4.jpg';
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+import fotoMobile1 from '../../assets/backgrounds/mobile/foto-mobile-1.jpg';
+import fotoMobile2 from '../../assets/backgrounds/mobile/foto-mobile-2.jpg';
+import fotoMobile3 from '../../assets/backgrounds/mobile/foto-mobile-3.jpg';
+import fotoMobile4 from '../../assets/backgrounds/mobile/foto-mobile-4.jpg';
+
+const desktopImages = [
+  foto1,
+  foto2,
+  foto3,
+  foto4
+];
+
+const mobileImages = [
+  fotoMobile1,
+  fotoMobile2,
+  fotoMobile3,
+  fotoMobile4
+];
 
 const NewPortfolio = () => {
 
   const [current, setCurrent] = useState(0);
 
+  const [isMobile, setIsMobile] = useState(
+    window.innerWidth <= 768
+  );
+
   const navigate = useNavigate();
+
+  /* ========================= */
+  /* DETECTAR DISPOSITIVO */
+  /* ========================= */
+
+  useEffect(() => {
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () =>
+      window.removeEventListener('resize', handleResize);
+
+  }, []);
+
+  /* ========================= */
+  /* IMÁGENES ACTIVAS */
+  /* ========================= */
+
+  const images = isMobile
+    ? mobileImages
+    : desktopImages;
 
   /* ========================= */
   /* CAROUSEL */
@@ -24,19 +78,23 @@ const NewPortfolio = () => {
   useEffect(() => {
 
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
+
+      setCurrent(prev =>
+        (prev + 1) % images.length
+      );
+
     }, 4000);
 
     return () => clearInterval(interval);
 
-  }, []);
-
+  }, [images.length]);
 
   return (
 
     <div className="new-portfolio">
 
       {/* BACKGROUND */}
+
       <div
         className="background-carousel"
         style={{
@@ -45,6 +103,7 @@ const NewPortfolio = () => {
       />
 
       {/* CONTENIDO */}
+
       <div className="content">
 
         <div className="hero-center">
@@ -54,7 +113,7 @@ const NewPortfolio = () => {
           </div>
 
           <p className="hero-slogan">
-            Fotógrafo y desarrollador frontend 
+            Fotógrafo y desarrollador frontend
           </p>
 
           <p className="subtitle-menu">
@@ -63,13 +122,14 @@ const NewPortfolio = () => {
 
         </div>
 
-        {/* SCROLL INDICATOR */}
         <div
           className="scroll-indicator"
           onClick={() =>
             document
               .getElementById('presentacion')
-              ?.scrollIntoView({ behavior: 'smooth' })
+              ?.scrollIntoView({
+                behavior: 'smooth'
+              })
           }
         >
           <span></span>
@@ -78,6 +138,7 @@ const NewPortfolio = () => {
       </div>
 
       {/* MENÚ */}
+
       <nav className="side-menu">
 
         <ul className="side-menu__list">
@@ -88,7 +149,9 @@ const NewPortfolio = () => {
               onClick={() =>
                 document
                   .getElementById('presentacion')
-                  ?.scrollIntoView({ behavior: 'smooth' })
+                  ?.scrollIntoView({
+                    behavior: 'smooth'
+                  })
               }
             >
               ¿Quién soy?
@@ -101,7 +164,9 @@ const NewPortfolio = () => {
               onClick={() =>
                 document
                   .getElementById('galeria')
-                  ?.scrollIntoView({ behavior: 'smooth' })
+                  ?.scrollIntoView({
+                    behavior: 'smooth'
+                  })
               }
             >
               Galería
@@ -114,7 +179,9 @@ const NewPortfolio = () => {
               onClick={() =>
                 document
                   .getElementById('trabajos')
-                  ?.scrollIntoView({ behavior: 'smooth' })
+                  ?.scrollIntoView({
+                    behavior: 'smooth'
+                  })
               }
             >
               Experiencia
@@ -127,7 +194,9 @@ const NewPortfolio = () => {
               onClick={() =>
                 document
                   .getElementById('formacion')
-                  ?.scrollIntoView({ behavior: 'smooth' })
+                  ?.scrollIntoView({
+                    behavior: 'smooth'
+                  })
               }
             >
               Formación

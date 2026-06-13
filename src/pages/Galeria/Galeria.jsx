@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 import './Galeria.scss';
 
 import vincit01 from '../../assets/futbol-sala/Vincit/Vincit-01.jpg';
-import foto2 from '../../assets/backgrounds/foto-2.jpg';
+import foto2 from '../../assets/backgrounds/desktop/foto-2.jpg';
 import skate05 from '../../assets/skate/sk8-01.jpg';
-import flor from '../../assets/experimental/flor.jpg';
+import gaviota from '../../assets/experimental/gaviota.jpg';
 
 const albums = [
   {
@@ -29,7 +29,7 @@ const albums = [
     id: 'experimental',
     nombre: 'Experimental',
     descripcion: 'Exploración creativa en desarrollo constante',
-    imagen: flor
+    imagen: gaviota
   }
 ];
 

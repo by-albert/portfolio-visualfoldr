@@ -28,7 +28,7 @@
     position: absolute;
     inset: 0;
     background-size: cover;
-    // background-position: center 35%;
+    background-position: center 40%;
     background-repeat: no-repeat;
     transform: scale(1.08);
     z-index: 0;
@@ -502,6 +502,11 @@
   .bubble-container{
     font-size: 2.5rem;
   }
+
+  .background-carousel {
+    background-position: 55% center;
+  }
+
 }
 
 // FUNXION APARECER EN PANTALLA LINKS
