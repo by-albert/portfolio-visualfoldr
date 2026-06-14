@@ -44,25 +44,7 @@ const Contacto = () => {
               </a>
             </div>
           </div>
-
-          {/* <div className="contact-actions">
-            <a 
-              className="contact-button" 
-              href="mailto:apencas03@gmail.com"
-            >
-              Email
-            </a>
-
-            <a 
-              className="contact-link" 
-              href="https://www.linkedin.com/in/albert-pen-cas" 
-              target="_blank" 
-              rel="noreferrer"
-            >
-              LinkedIn
-            </a>
-
-          </div> */}
+          
            <Link to="/" className="contact-button back-button">
               Volver al Inicio
             </Link>
@@ -73,11 +55,8 @@ const Contacto = () => {
           <div className="qr-wrapper">
             <img src={qr} alt="Código QR de mi cuenta de Instagram" />
             
-            <div className="qr-hover">
-              ESCANÉAME
-              </div>
-            </div>
           </div>
+        </div>
 
       </div>
     </section>

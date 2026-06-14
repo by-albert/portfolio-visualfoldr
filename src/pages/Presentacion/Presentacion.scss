@@ -1,8 +1,9 @@
 .presentacion {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  scroll-margin-top: 80px;
 
   padding: 4rem 1.5rem;
 
@@ -17,7 +18,8 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+
+  gap: 9rem;
 
   align-items: center;
 }
@@ -30,7 +32,7 @@
 }
 
 .presentacion-texto p {
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.7;
   margin-bottom: 1rem;
   color: rgba(255, 255, 255, 0.75);
@@ -38,78 +40,62 @@
 
 /* IMAGEN */
 .presentacion-img {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
+  width: 100%;
 }
 
 .presentacion-img img {
   width: 100%;
   display: block;
-  border-radius: 20px;
+  border-radius: 30px;  
 }
 
 /* CONTENEDOR DEL CV */
-
 .presentacion-cv {
-  position: absolute;
-
-  left: 0;
-  bottom: 0;
-
-  width: 100%;
-
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
-
-  padding: 1.2rem;
-
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.85),
-    rgba(0, 0, 0, 0.35),
-    transparent
-  );
-
-  transform: translateY(100%);
-
-  transition: transform 0.35s ease;
+  margin-top: 1rem;
 }
 
-/* APARECE AL HACER HOVER */
+  /* BOTÓN */
+  .cv-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.presentacion-img:hover .presentacion-cv {
-  transform: translateY(0);
-}
+    padding: 0.85rem 1.8rem;
+    padding-top: 3%;
 
-/* BOTÓN */
 
-.cv-button {
-  padding: 0.85rem 1.8rem;
+    border-radius: 500px;
 
-  border-radius: 999px;
+    background: rgba(255, 255, 255, 0.95);
 
-  background: rgba(255, 255, 255, 0.95);
+    color: #0c0c0f;
 
-  color: #0c0c0f;
+    font-weight: 700;
 
-  font-weight: 700;
+    text-decoration: none;
 
-  text-decoration: none;
+    backdrop-filter: blur(10px);
 
-  backdrop-filter: blur(10px);
+    transition:
+      transform 0.25s ease,
+      background 0.25s ease;
+  }
 
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease;
-}
+
 
 .cv-button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  
 
-  background: white;
+    box-shadow:
+    0 10px 25px rgba(255,255,255,0.15);
 }
+
 
 /* ========================= */
 /* TABLET */
@@ -125,37 +111,21 @@
   .presentacion-texto h1 {
     font-size: 2.4rem;
   }
-
+  
   .presentacion-img {
-    display: flex;
-    justify-content: center;
+    max-width: 420px;
+    margin: 0 auto;
   }
-
+  
   .presentacion-img img {
-    max-width: 320px;
+    width: 100%;
   }
-
-  /* CV SIEMPRE VISIBLE */
-
-  .presentacion-cv {
-    transform: translateY(0);
-
-    padding: 1rem;
-
-    background: linear-gradient(
-      to top,
-      rgba(0,0,0,0.9),
-      rgba(0,0,0,0.45),
-      transparent
-    );
-  }
-}
 
 /* ========================= */
 /* MOBILE */
 /* ========================= */
-
 @media (max-width: 600px) {
+
   .presentacion {
     padding: 3rem 1rem;
     scroll-margin-top: 50px;
@@ -169,7 +139,37 @@
     font-size: 0.95rem;
   }
 
-  .presentacion-img img {
-    max-width: 260px;
+  .presentacion-img {
+    overflow: visible;
   }
+
+  .presentacion-img img {
+    max-width: 420px;
+    width: 100%;
+  }
+
+
+  .cv-button {
+
+    width: 220px;
+
+    justify-content: center;
+
+    display: flex;
+
+    margin: 0 auto;
+
+    transform: none !important;
+  }
+
+}
+.presentacion-img {
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.presentacion-img img {
+  width: 100%;
+  display: block;
+}
 }

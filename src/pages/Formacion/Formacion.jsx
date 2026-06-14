@@ -121,7 +121,7 @@ function Formacion() {
           </h2>
 
           <p className="formacion-subtitle">
-            Mi evolución técnica y creativa a lo largo de estos años.
+            Mi evolución a lo largo de estos años.
           </p>
 
         </div>

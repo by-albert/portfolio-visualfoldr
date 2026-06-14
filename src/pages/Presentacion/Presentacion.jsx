@@ -19,15 +19,11 @@ const Presentacion = () => {
           <p>
             Soy Albert, fotógrafo y desarrollador web. Me dedico a crear experiencias visuales
             combinando diseño y tecnología.
+          
           </p>
 
           <p>
-            Trabajo tanto en proyectos web como en fotografía, buscando siempre un equilibrio
-            entre estética y funcionalidad.
-          </p>
-
-          <p>
-            Puedes ver mis proyectos en las secciones de experiencia y galería.
+            Puedes ver mis proyectos en las secciones de experiencia y galería!
           </p>
 
         </div>
@@ -44,7 +40,6 @@ const Presentacion = () => {
             rel="noopener noreferrer"
             className="cv-button"
             >
-              
               Ver CV
             </a>
             
