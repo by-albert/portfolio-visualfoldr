@@ -898,8 +898,8 @@ export const albumsData = {
     sesiones: [
       {
         id: 'skate-marbella',
-        titulo: 'Skate marbella',
-        fecha: '2026',
+        titulo: 'Marbella',
+        fecha: '29-04-2026',
         portada: skate01,
 
         imagenes: [

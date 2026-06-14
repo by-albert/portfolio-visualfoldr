@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import './Galeria.scss';
 
-import vincit01 from '../../assets/futbol-sala/Vincit/Vincit-01.jpg';
-import foto2 from '../../assets/backgrounds/desktop/foto-2.jpg';
+import StAndreu_05 from '../../assets/futbol-sala/St-Andreu/StAndreu-05.jpg';
+import foto1 from '../../assets/backgrounds/desktop/foto-1.jpg';
 import skate05 from '../../assets/skate/sk8-01.jpg';
 import gaviota from '../../assets/experimental/gaviota.jpg';
 
@@ -11,18 +12,18 @@ const albums = [
     id: 'futbol-sala',
     nombre: 'Fútbol Sala',
     descripcion: 'Equipo de tercera división juvenil.',
-    imagen: vincit01
+    imagen: StAndreu_05
   },
   {
     id: 'conciertos',
     nombre: 'Conciertos',
     descripcion: 'Conciertos en vivo.',
-    imagen: foto2
+    imagen: foto1
   },
-    {
+  {
     id: 'skate',
-    nombre: 'Skate',
-    descripcion: 'Amigos y skate',
+    nombre: 'Street',
+    descripcion: 'Skate, BMX y otros deportes extremos!',
     imagen: skate05
   },
   {
@@ -33,36 +34,49 @@ const albums = [
   }
 ];
 
-const Galeria = () => (
-  <section id="galeria" className="galeria-page">
-    <div className="galeria-container">
-     
-      <h1>Galería</h1>
-      <p className="galeria-subtitle">Explora mis álbumes de fotografía</p>
-      
-      <div className="albums-grid">
-        {albums.map((album) => (
-          <Link
-            key={album.id}
-            to={`/galeria/${album.id}`}
-            className="album-card"
-          >
-            <div
-              className="album-image"
-              style={{
-                backgroundImage: `url(${album.imagen})`
-              }}
+const Galeria = () => {
+  const [activeAlbum, setActiveAlbum] = useState(null);
+
+  return (
+    <section id="galeria" className="galeria-page">
+      <div className="galeria-container">
+
+        <h1>Galería</h1>
+        <p className="galeria-subtitle">
+          Explora mis álbumes de fotografía
+        </p>
+
+        <div
+          className={`albums-grid ${activeAlbum ? 'grid-active' : ''}`}
+        >
+          {albums.map((album) => (
+            <Link
+              key={album.id}
+              to={`/galeria/${album.id}`}
+              className={`album-card ${
+                activeAlbum === album.id ? 'active' : ''
+              }`}
+              onMouseEnter={() => setActiveAlbum(album.id)}
+              onMouseLeave={() => setActiveAlbum(null)}
             >
-              <div className="album-overlay">
-                <h2>{album.nombre}</h2>
-                <p>{album.descripcion}</p>
+              <div
+                className="album-image"
+                style={{
+                  backgroundImage: `url(${album.imagen})`
+                }}
+              >
+                <div className="album-overlay">
+                  <h2>{album.nombre}</h2>
+                  <p>{album.descripcion}</p>
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
+        </div>
+
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Galeria;
