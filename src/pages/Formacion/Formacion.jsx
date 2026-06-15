@@ -97,7 +97,7 @@ function Formacion() {
         'WordPress',
         'Cisco Packet Tracer',
         'Inglés técnico',
-        'Formación Orientativa Laboral (FOL)'
+        'Formación Orientativa Laboral (F.O.L)'
       ]
     }
   ];

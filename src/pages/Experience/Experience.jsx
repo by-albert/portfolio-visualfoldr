@@ -20,6 +20,7 @@ function Experience() {
       description:
         'Rediseño completo de una página web real para una clienta. Adapté una web antigua mejorando la estructura visual y la experiencia del usuario.',
       technologies: [
+        'UI / UX',
         'IONOS',
         'Word',
         'Figma',

@@ -467,9 +467,10 @@
   }
 
   .side-menu__link {
-    padding: 0.55rem 0.7rem;
-    font-size: 0.65rem;
-    letter-spacing: 0.08em;
+    padding: 0.8rem 1rem;
+    // font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    color: white;
   }
 
   .side-menu__link::before {
@@ -479,7 +480,7 @@
   /* TÍTULO MÁS PEQUEÑO EN MÓVIL */
   .title-line span,
   .title-line div {
-    font-size: clamp(1.8rem, 9vw, 3rem);
+    font-size: clamp(1.6rem, 9vw, 3rem);
   }
 
   .hero-slogan {
@@ -500,7 +501,8 @@
   }
 
   .bubble-container{
-    font-size: 2.5rem;
+    font-size: 2.4rem;
+    white-space: nowrap;
   }
 
   .background-carousel {
