@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './Menu.scss';
 import { useNavigate } from 'react-router-dom';
 
+
+// PARA LAS LETRAS
 import BubbleText from "../../components/BubbleText/bubbleText.jsx";
 
 /* ========================= */
@@ -137,12 +139,11 @@ const NewPortfolio = () => {
 
       </div>
 
-      {/* MENÚ */}
+      {/* NAVEGADOR */}
 
       <nav className="side-menu">
 
         <ul className="side-menu__list">
-
           <li>
             <button
               className="side-menu__link"

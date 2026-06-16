@@ -22,7 +22,7 @@ const albums = [
   },
   {
     id: 'skate',
-    nombre: 'Street',
+    nombre: 'Skateboarding',
     descripcion: 'Skate, BMX y otros deportes extremos!',
     imagen: skate05
   },
@@ -30,6 +30,12 @@ const albums = [
     id: 'experimental',
     nombre: 'Experimental',
     descripcion: 'Exploración creativa en desarrollo constante',
+    imagen: gaviota
+  },
+  {
+    id: 'moda',
+    nombre: 'Moda',
+    descripcion: 'Prendas de ropas, joyería, y más!',
     imagen: gaviota
   }
 ];

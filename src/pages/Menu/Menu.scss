@@ -42,6 +42,12 @@
   z-index: 1;
 }
 
+.content,
+.side-menu {
+  position: relative;
+  z-index: 2;
+}
+
   /* degradado inferior fuerte (esto te faltaba) */
   .background-carousel::before {
     content: "";

@@ -3,8 +3,9 @@
   color: #f5f5f5;
   // scroll-margin-top: 1%;
 
-  min-height: 100vh;
-  padding: 6rem 2rem;
+  min-height: auto;
+  padding: 6rem 2rem 4rem 2rem;
+  // padding: 6rem 2rem;
 }
 
 .galeria-container {
@@ -32,11 +33,6 @@
 /* GRID */
 /* ========================= */
 
-// .albums-grid {
-//   display: grid;
-//   grid-template-columns: repeat(2, 1fr);
-//   gap: 1.5rem;
-// }
 
 
 .albums-grid {
@@ -50,23 +46,18 @@
 
 .album-card {
   position: relative;
-  transition:
-    transform .5s ease,
-    filter .5s ease,
-    opacity .5s ease,
-    box-shadow .5s ease;
+  transition: transform 0.4s ease;
 }
 
 .grid-active .album-card {
-  transform: scale(.92);
   filter: brightness(.4);
 }
 
 .grid-active .album-card.active {
-  transform: scale(1.08);
+  transform: scale(1.01);
   filter: brightness(1);
 
-  z-index: 20;
+  z-index: 1;
 
   box-shadow:
     0 40px 100px rgba(0,0,0,.6),
@@ -99,6 +90,8 @@
 
 .album-card {
   overflow: visible;
+  text-decoration: none;
+  color: inherit;
 }
 
 /* ========================= */
@@ -123,7 +116,8 @@
 .album-overlay h2 {
   margin: 0 0 0.5rem;
 
-  color: #fff;
+  text-decoration: none;
+  color: white;
 
   font-size: 1.8rem;
   font-weight: 700;
@@ -134,7 +128,7 @@
 
 .album-overlay p {
   margin: 0;
-
+  
   color: rgba(255, 255, 255, 0.75);
 
   font-size: 0.95rem;

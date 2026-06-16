@@ -12,7 +12,7 @@ import Menu from './pages/Menu/Menu.jsx';
 import Presentacion from './pages/Presentacion/Presentacion.jsx';
 import ContactPage from './pages/Contacto/Contacto.jsx';
 import Galeria from './pages/Galeria/Galeria.jsx';
-import Album from './pages/Galeria/Album/Album.jsx';
+// import Album from './pages/Galeria/Album/Album.jsx';
 import Sesion from './pages/Galeria/Sesion/Sesion.jsx';
 import Experience from './pages/Experience/Experience.jsx';
 import Formacion from './pages/Formacion/Formacion.jsx';
@@ -98,31 +98,29 @@ function AppRoutes() {
           {/* ========================= */}
           {/* ÁLBUM */}
           {/* ========================= */}
-          <Route
+          {/* <Route
             path="/galeria/:tipo"
             element={
               <>
-                {/* <Menu /> */}
                 <Album />
                 <FooterContacto />
               </>
             }
-          />
+          /> */}
 
           {/* ========================= */}
           {/* SESIÓN */}
           {/* ========================= */}
           <Route
-            path="/galeria/:tipo/:sesion"
-            element={
-              <>
-                {/* <Menu /> */}
-                <Sesion />
-                <FooterContacto />
-              </>
-            }
-          />
-
+          path="/galeria/:tipo"
+          element={
+          <>
+          <Sesion />
+          <FooterContacto />
+          </>
+        }
+        />
+        
           {/* ========================= */}
           {/* CONTACTO */}
           {/* ========================= */}

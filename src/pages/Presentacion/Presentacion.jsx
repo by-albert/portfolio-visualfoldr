@@ -3,13 +3,12 @@ import './Presentacion.scss';
 
 import foto from '../../assets/img/foto-perfil.png';
 
-
 // BLOQUE DE "QUIEN SOY"
 const Presentacion = () => {
   return (
     <section id="presentacion" className="presentacion">
-
       <div className="presentacion-container">
+        
 
         {/* INFO */}
         <div className="presentacion-texto">
@@ -17,13 +16,12 @@ const Presentacion = () => {
           <h1>¿Quién soy?</h1>
 
           <p>
-            Soy Albert, fotógrafo y desarrollador web. Me dedico a crear experiencias visuales
-            combinando diseño y tecnología.
-          
+            Hola, soy Albert, fotógrafo y desarrollador web. Ayudo a personas, marcas y empresas a mostrar
+            su mejor versión mediante imágenes impactantes y experiencias web modernas.
           </p>
 
           <p>
-            Puedes ver mis proyectos en las secciones de experiencia y galería!
+            Puedes ver mis mútliples proyectos en las secciones de experiencia y galería, échale un vistazo!
           </p>
 
         </div>
