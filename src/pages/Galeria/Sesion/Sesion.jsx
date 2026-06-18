@@ -69,10 +69,40 @@ const Sesion = () => {
     };
   }, []);
 
-  /* ========================= */
-  /* DATA */
-  /* ========================= */
-  const album = albumsData[tipo];
+/* ========================= */
+/* DATA */
+/* ========================= */
+
+const album = albumsData[tipo];
+
+/* ========================= */
+/* NEXT ALBUM */
+/* ========================= */
+
+const albumOrder = [
+  'futbol-sala',
+  'conciertos',
+  'skate',
+  'experimental',
+  'ropa'
+];
+
+const currentAlbumIndex =
+  albumOrder.indexOf(tipo);
+
+const nextAlbumKey =
+  albumOrder[
+    (currentAlbumIndex + 1) %
+    albumOrder.length
+  ];
+
+const nextAlbum =
+  albumsData[nextAlbumKey];
+
+const goToNextAlbum = () => {
+  navigate(`/galeria/${nextAlbumKey}`);
+};
+  
 
   if (!album) {
     return (
@@ -196,19 +226,22 @@ const Sesion = () => {
           >
             ✕
           </button>
-
-          <h3 className="back-link">
-            {album.nombre}
-          </h3>
-
-          <div className="nav-divider"></div>
-
+          
           <button
             className="back-link"
             onClick={goToGallery}
           >
-            Otros álbumes
+            Volver
           </button>
+
+          <div className="nav-divider"></div>
+
+          <button
+          className="back-link next-album-btn"
+          onClick={goToNextAlbum}
+          >
+            {nextAlbum?.nombre} →
+            </button>
         </div>
 
         {showNav && navCollapsed && (
