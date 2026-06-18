@@ -15,9 +15,26 @@ const Sesion = () => {
 
   const [showNav, setShowNav] = useState(false);
   const [navCollapsed, setNavCollapsed] = useState(false);
-
-  // ✅ SOLO UNA VEZ (esto era tu bug principal)
   const [selectedImage, setSelectedImage] = useState(null);
+
+  /* ========================= */
+  /* MOBILE DETECTION */
+  /* ========================= */
+  const [isMobile, setIsMobile] = useState(
+    window.innerWidth <= 768
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const goToGallery = () => {
     navigate('/', {
@@ -46,7 +63,10 @@ const Sesion = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   /* ========================= */
@@ -60,7 +80,10 @@ const Sesion = () => {
         <div className="sesion-container">
           <h1>Álbum no encontrado</h1>
 
-          <button className="back-link" onClick={goToGallery}>
+          <button
+            className="back-link"
+            onClick={goToGallery}
+          >
             ← Volver a la galería
           </button>
         </div>
@@ -68,24 +91,122 @@ const Sesion = () => {
     );
   }
 
+  /* ========================= */
+  /* ALL IMAGES */
+  /* ========================= */
+  const allImages = album.sesiones.flatMap((sesion) =>
+    isMobile && sesion.imagenesMobile
+      ? sesion.imagenesMobile
+      : sesion.imagenes
+  );
+
+  /* ========================= */
+  /* NEXT / PREV */
+  /* ========================= */
+  const nextImage = () => {
+    const currentIndex =
+      allImages.indexOf(selectedImage);
+
+    if (currentIndex < allImages.length - 1) {
+      setSelectedImage(
+        allImages[currentIndex + 1]
+      );
+    }
+  };
+
+  const prevImage = () => {
+    const currentIndex =
+      allImages.indexOf(selectedImage);
+
+    if (currentIndex > 0) {
+      setSelectedImage(
+        allImages[currentIndex - 1]
+      );
+    }
+  };
+
+  /* ========================= */
+  /* MODAL KEYS */
+  /* ========================= */
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!selectedImage) return;
+
+      if (e.key === 'Escape') {
+        setSelectedImage(null);
+      }
+
+      if (e.key === 'ArrowRight') {
+        nextImage();
+      }
+
+      if (e.key === 'ArrowLeft') {
+        prevImage();
+      }
+    };
+
+    window.addEventListener(
+      'keydown',
+      handleKeyDown
+    );
+
+    return () => {
+      window.removeEventListener(
+        'keydown',
+        handleKeyDown
+      );
+    };
+  }, [selectedImage]);
+
+  /* ========================= */
+  /* LOCK BODY SCROLL */
+  /* ========================= */
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow =
+        'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [selectedImage]);
+
   return (
     <section className="sesion-page">
       <div className="sesion-container">
 
         {/* NAV */}
-        <div className={`session-nav ${showNav ? 'visible' : ''} ${navCollapsed ? 'collapsed' : ''}`}>
+        <div
+          className={`session-nav ${
+            showNav ? 'visible' : ''
+          } ${
+            navCollapsed
+              ? 'collapsed'
+              : ''
+          }`}
+        >
           <button
             className="toggle-nav"
-            onClick={() => setNavCollapsed(true)}
+            onClick={() =>
+              setNavCollapsed(true)
+            }
           >
             ✕
           </button>
 
-          <h3 className="back-link">{album.nombre}</h3>
+          <h3 className="back-link">
+            {album.nombre}
+          </h3>
 
           <div className="nav-divider"></div>
 
-          <button className="back-link" onClick={goToGallery}>
+          <button
+            className="back-link"
+            onClick={goToGallery}
+          >
             Otros álbumes
           </button>
         </div>
@@ -93,7 +214,9 @@ const Sesion = () => {
         {showNav && navCollapsed && (
           <button
             className="nav-reopen"
-            onClick={() => setNavCollapsed(false)}
+            onClick={() =>
+              setNavCollapsed(false)
+            }
           >
             ☰
           </button>
@@ -101,13 +224,17 @@ const Sesion = () => {
 
         {/* HEADER */}
         <div className="sesion-header">
-          <h1 className="sesion-title">{album.nombre}</h1>
+          <h1 className="sesion-title">
+            {album.nombre}
+          </h1>
         </div>
 
-        {/* IMÁGENES */}
+        {/* SESIONES */}
         {album.sesiones.map((sesion) => (
-          <div key={sesion.id} className="album-section">
-
+          <div
+            key={sesion.id}
+            className="album-section"
+          >
             <div className="album-section-header">
               <h2>{sesion.titulo}</h2>
               <p>{sesion.fecha}</p>
@@ -115,16 +242,23 @@ const Sesion = () => {
 
             <div className="sesion-grid">
 
-              {sesion.imagenes.map((img, index) => (
-                <div key={index} className="sesion-card">
-
+              {(isMobile &&
+              sesion.imagenesMobile
+                ? sesion.imagenesMobile
+                : sesion.imagenes
+              ).map((img, index) => (
+                <div
+                  key={index}
+                  className="sesion-card"
+                >
                   <img
                     src={img}
                     alt={`${sesion.titulo}-${index + 1}`}
                     loading="lazy"
-                    onClick={() => setSelectedImage(img)}
+                    onClick={() =>
+                      setSelectedImage(img)
+                    }
                   />
-
                 </div>
               ))}
 
@@ -135,28 +269,53 @@ const Sesion = () => {
       </div>
 
       {/* ========================= */}
-      {/* MODAL IMAGEN */}
+      {/* MODAL */}
       {/* ========================= */}
       {selectedImage && (
         <div
           className="image-modal"
-          onClick={() => setSelectedImage(null)}
+          onClick={() =>
+            setSelectedImage(null)
+          }
         >
-
           <button
             className="close-modal"
-            onClick={() => setSelectedImage(null)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setSelectedImage(null);
+            }}
           >
             ✕
+          </button>
+
+          <button
+            className="modal-prev"
+            onClick={(e) => {
+              e.stopPropagation();
+              prevImage();
+            }}
+          >
+            ←
           </button>
 
           <img
             src={selectedImage}
             alt="Imagen ampliada"
             className="modal-image"
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e) =>
+              e.stopPropagation()
+            }
           />
 
+          <button
+            className="modal-next"
+            onClick={(e) => {
+              e.stopPropagation();
+              nextImage();
+            }}
+          >
+            →
+          </button>
         </div>
       )}
     </section>

@@ -291,7 +291,13 @@ export const albumsData = {
           standreu51,
           standreu52,
           standreu57,
-          
+        ],
+        imagenesMobile: [
+          standreu01,
+          standreu09,
+          standreu14,
+          standreu28,
+          standreu57
         ]
       },
       {
