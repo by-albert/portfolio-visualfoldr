@@ -180,7 +180,7 @@ function Experience() {
             <img
               src={selectedExperience.image}
               alt={selectedExperience.title}
-              className="modal-image"
+              className="experience-modal-image"
             />
 
             <div className="modal-content">

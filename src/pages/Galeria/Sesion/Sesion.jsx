@@ -301,7 +301,7 @@ const Sesion = () => {
           <img
             src={selectedImage}
             alt="Imagen ampliada"
-            className="modal-image"
+            className="sesion-modal-image"
             onClick={(e) =>
               e.stopPropagation()
             }
