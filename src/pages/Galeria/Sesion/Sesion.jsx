@@ -84,7 +84,7 @@ const albumOrder = [
   'conciertos',
   'skate',
   'experimental',
-  'ropa'
+  'ropa',
 ];
 
 const currentAlbumIndex =
@@ -108,7 +108,7 @@ const goToNextAlbum = () => {
     return (
       <section className="sesion-page">
         <div className="sesion-container">
-          <h1>Álbum no encontrado</h1>
+          <h1>Álbum no disponible</h1>
 
           <button
             className="back-link"

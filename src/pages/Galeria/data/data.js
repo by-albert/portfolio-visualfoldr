@@ -1,5 +1,6 @@
 // IMPORTS DE IMÁGENES
 // ------------------------------ Imágenes de Futbol Sala ------------------------------ 
+
 // CET 10
 import cet10_01 from '../../../assets/futbol-sala/CET10/Cet10_01.jpg';
 import cet10_02 from '../../../assets/futbol-sala/CET10/Cet10_02.jpg';
@@ -258,11 +259,153 @@ import coratge27 from '../../../assets/concerts/coratge/coratge-27.jpg';
 import flor from '../../../assets/experimental/flor.jpg';
 import gaviota from '../../../assets/experimental/gaviota.jpg';
 
+// PAPA LLEÓ XVI
+import papaXVI_01 from '../../../assets/experimental/papaXVI-01.jpg';
+import papaXVI_02 from '../../../assets/experimental/papaXVI-02.jpg';
+import papaXVI_03 from '../../../assets/experimental/papaXVI-03.jpg';
+import papaXVI_04 from '../../../assets/experimental/papaXVI-04.jpg';
+import papaXVI_05 from '../../../assets/experimental/papaXVI-05.jpg';
+import papaXVI_06 from '../../../assets/experimental/papaXVI-06.jpg';
+import papaXVI_07 from '../../../assets/experimental/papaXVI-07.jpg';
+import papaXVI_08 from '../../../assets/experimental/papaXVI-08.jpg';
+import papaXVI_09 from '../../../assets/experimental/papaXVI-09.jpg';
+import papaXVI_10 from '../../../assets/experimental/papaXVI-10.jpg';
+
+// BARRI DE BCN
+
+
 // ------------------------------ Imágenes de Fondo ------------------------------ 
 import foto2 from '../../../assets/backgrounds/desktop/foto-2.jpg';
 import foto4 from '../../../assets/backgrounds/desktop/foto-4.jpg';
 
 export const albumsData = {
+  conciertos: {
+    nombre: 'Conciertos',
+
+    sesiones: [
+      {
+        id: 'we-dance-band',
+        titulo: 'WE DANCE BAND',
+        fecha: '23-04-2026',
+        portada: WDB_03,
+
+        imagenes: [
+          WDB_01,
+          WDB_02,
+          WDB_03,
+          WDB_04,
+          WDB_05,
+          WDB_06,
+          WDB_07,
+          WDB_08,
+          WDB_09,
+          WDB_10,
+          WDB_11,
+          WDB_12,
+          WDB_13,
+          WDB_14,
+          WDB_15,
+          WDB_16          
+        ]
+      },
+      {
+        id: 'coratge',
+        titulo: 'CORATGE',
+        fecha: '18-05-2026',
+        portada: coratge24,
+
+        imagenes: [
+          coratge01,
+          coratge02,
+          coratge03,
+          coratge04,
+          coratge05,
+          coratge06,
+          coratge07,
+          coratge08,
+          coratge09,
+          coratge10,
+          coratge11,
+          coratge12, // FOTOGRAFO
+          coratge13,
+          coratge14,
+          coratge15,
+          coratge16,
+          coratge17,
+          coratge18,
+          coratge19,
+          coratge20,
+          coratge21,
+          coratge22,
+          coratge23,
+          coratge24,
+          coratge25,
+          coratge26,
+          coratge27
+        ]
+      }
+    ]
+  },
+
+  skate: {
+    nombre: 'Skate',
+
+    sesiones: [
+      {
+        id: 'skate-marbella',
+        titulo: 'Marbella',
+        fecha: '29-04-2026',
+        portada: skate01,
+
+        imagenes: [
+          skate01,
+          skate02,
+          skate03,
+          skate04,
+          skate05
+
+        ]
+      },
+    {
+        id: 'skate-macba',
+        titulo: 'Skate street',
+        fecha: '2026',
+        portada: skate01,
+
+        imagenes: [
+          skate01,
+        ]
+      }
+    ]
+  },
+
+  experimental: {
+    nombre: 'Experimental',
+
+    sesiones: [
+      {
+        id: 'creative-1',
+        titulo: 'Archivos creativos ',
+        fecha: '2026',
+        portada: gaviota,
+
+        imagenes: [
+          gaviota,
+          flor,
+          papaXVI_01,
+          papaXVI_02,
+          papaXVI_03,
+          papaXVI_04,
+          papaXVI_05,
+          papaXVI_06,
+          papaXVI_07,
+          papaXVI_08,
+          papaXVI_09,
+          papaXVI_10,
+        ]
+      }
+    ]
+  },
   'futbol-sala': {
     nombre: 'Fútbol Sala',
     sesiones: [
@@ -557,123 +700,4 @@ export const albumsData = {
       
     ]
   },
-
-  conciertos: {
-    nombre: 'Conciertos',
-
-    sesiones: [
-      {
-        id: 'we-dance-band',
-        titulo: 'WE DANCE BAND',
-        fecha: '23-04-2026',
-        portada: WDB_03,
-
-        imagenes: [
-          WDB_01,
-          WDB_02,
-          WDB_03,
-          WDB_04,
-          WDB_05,
-          WDB_06,
-          WDB_07,
-          WDB_08,
-          WDB_09,
-          WDB_10,
-          WDB_11,
-          WDB_12,
-          WDB_13,
-          WDB_14,
-          WDB_15,
-          WDB_16          
-        ]
-      },
-      {
-        id: 'coratge',
-        titulo: 'CORATGE',
-        fecha: '18-05-2026',
-        portada: coratge24,
-
-        imagenes: [
-          coratge01,
-          coratge02,
-          coratge03,
-          coratge04,
-          coratge05,
-          coratge06,
-          coratge07,
-          coratge08,
-          coratge09,
-          coratge10,
-          coratge11,
-          coratge12, // FOTOGRAFO
-          coratge13,
-          coratge14,
-          coratge15,
-          coratge16,
-          coratge17,
-          coratge18,
-          coratge19,
-          coratge20,
-          coratge21,
-          coratge22,
-          coratge23,
-          coratge24,
-          coratge25,
-          coratge26,
-          coratge27
-        ]
-      }
-    ]
-  },
-
-  skate: {
-    nombre: 'Skate',
-
-    sesiones: [
-      {
-        id: 'skate-marbella',
-        titulo: 'Marbella',
-        fecha: '29-04-2026',
-        portada: skate01,
-
-        imagenes: [
-          skate01,
-          skate02,
-          skate03,
-          skate04,
-          skate05
-
-        ]
-      },
-    {
-        id: 'skate-macba',
-        titulo: 'Skate street',
-        fecha: '2026',
-        portada: skate01,
-
-        imagenes: [
-          skate01,
-        ]
-      }
-    ]
-  },
-
-  experimental: {
-    nombre: 'Experimental',
-
-    sesiones: [
-      {
-        id: 'creative-1',
-        titulo: 'Archivos creativos ',
-        fecha: '2026',
-        portada: gaviota,
-
-        imagenes: [
-          gaviota,
-          flor,
-          
-        ]
-      }
-    ]
-  }
 };
