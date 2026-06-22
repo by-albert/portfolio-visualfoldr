@@ -10,7 +10,24 @@ import contacto from '../../assets/img/contacto-icono.png';
 function Experience() {
 
   const [selectedExperience, setSelectedExperience] = useState(null);
+  const [currentCard, setCurrentCard] = useState(0);
   const navigate = useNavigate();
+  // Cartas para móvil
+  const nextCard = () => {
+      setCurrentCard((prev) =>
+        prev === experiences.length - 1
+          ? 0
+          : prev + 1
+      );
+    };
+
+    const prevCard = () => {
+      setCurrentCard((prev) =>
+        prev === 0
+          ? experiences.length - 1
+          : prev - 1
+      );
+    };
   const experiences = [
 
     {
@@ -106,55 +123,114 @@ function Experience() {
 
         </div>
 
-        <div className="experience-grid">
+<>
+  <div className="experience-grid desktop-grid">
 
-          {experiences.map((experience) => (
+    {experiences.map((experience) => (
 
-            <article
-              key={experience.id}
-              className="experience-card"
-              onClick={() => setSelectedExperience(experience)}
-            >
+      <article
+        key={experience.id}
+        className="experience-card"
+        onClick={() =>
+          setSelectedExperience(experience)
+        }
+      >
 
-              <div className="experience-preview">
+        <div className="experience-preview">
+          <img
+            src={experience.image}
+            alt={experience.title}
+            className="experience-image"
+          />
+        </div>
 
-                <img
-                  src={experience.image}
-                  alt={experience.title}
-                  className="experience-image"
-                />
+        <div className="experience-content">
 
-              </div>
+          <h3>{experience.title}</h3>
 
-              <div className="experience-content">
+          <p>{experience.description}</p>
 
-                <h3>
-                  {experience.title}
-                </h3>
+          <div className="experience-tech">
 
-                <p>
-                  {experience.description}
-                </p>
+            {experience.technologies.map((tech, index) => (
+              <span key={index}>
+                {tech}
+              </span>
+            ))}
 
-                <div className="experience-tech">
+          </div>
 
-                  {experience.technologies.map((tech, index) => (
+        </div>
 
+      </article>
+
+    ))}
+
+  </div>
+
+        <div className="experience-slider">
+
+          <button
+            className="slider-arrow"
+            onClick={prevCard}
+          >
+            ←
+          </button>
+
+          <article
+            className="experience-card"
+            onClick={() =>
+              setSelectedExperience(
+                experiences[currentCard]
+              )
+            }
+          >
+
+            <div className="experience-preview">
+
+              <img
+                src={experiences[currentCard].image}
+                alt={experiences[currentCard].title}
+                className="experience-image"
+              />
+
+            </div>
+
+            <div className="experience-content">
+
+              <h3>
+                {experiences[currentCard].title}
+              </h3>
+
+              <p>
+                {experiences[currentCard].description}
+              </p>
+
+              <div className="experience-tech">
+
+                {experiences[currentCard].technologies.map(
+                  (tech, index) => (
                     <span key={index}>
                       {tech}
                     </span>
-
-                  ))}
-
-                </div>
+                  )
+                )}
 
               </div>
 
-            </article>
+            </div>
 
-          ))}
+          </article>
+
+          <button
+            className="slider-arrow"
+            onClick={nextCard}
+          >
+            →
+          </button>
 
         </div>
+      </>
 
       </div>
 
@@ -237,9 +313,13 @@ function Experience() {
 
       )}
 
+      
+
     </section>
 
+    
   );
+  
 
 }
 

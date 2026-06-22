@@ -250,20 +250,18 @@
 
 .sesion-header {
   padding-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+
+  text-align: center;
 }
 
 .sesion-title {
   font-size: 3rem;
   font-weight: 700;
-
   line-height: 1.1;
 
-  color: #ffffff;
-
-  margin-bottom: 0.5rem;
-
-  word-break: break-word;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .sesion-date {
@@ -282,6 +280,30 @@
   padding-bottom: 6rem;
   column-width: 380px;
   column-gap: 0.8rem;
+}
+
+/* ========================= */
+/* ALBUM */
+/* ========================= */
+.album-section-header {
+  text-align: center;
+
+  max-width: 800px;
+
+  margin: 0 auto 3rem;
+}
+
+.album-section-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+
+  margin-bottom: 0.5rem;
+}
+
+.album-section-header p {
+  color: rgba(255,255,255,0.65);
+
+  font-size: 0.95rem;
 }
 
 /* ========================= */
@@ -459,6 +481,61 @@
   transform:
     translateY(-50%)
     scale(0.95);
+}
+
+// Boton de abajo del todo
+.full-gallery-container {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.full-gallery-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.75rem;
+
+  padding: 1rem 2rem;
+
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.04);
+
+  backdrop-filter: blur(10px);
+
+  color: #ffffff;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.full-gallery-btn:hover {
+  transform: translateY(-4px);
+
+  background: rgba(255,255,255,0.08);
+
+  border-color: rgba(255,255,255,0.3);
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.35);
+}
+
+.full-gallery-btn:active {
+  transform: translateY(-1px);
 }
 
 /* ========================= */
@@ -652,6 +729,26 @@
 
   .modal-next {
     right: 0.75rem;
+  }
+  .sesion-header {
+    padding-top: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  .sesion-title {
+    font-size: 1.8rem;
+
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .album-section-header {
+    max-width: 90%;
+    margin: 0 auto 2rem;
+  }
+
+  .album-section-header h2 {
+    font-size: 1.4rem;
   }
 
 }

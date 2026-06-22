@@ -1,26 +1,41 @@
 import { Link } from 'react-router-dom';
 import './Contacto.scss';
 import qr from '../../assets/img/visualfoldr_qr.png';
+
 import { useEffect } from 'react';
 
-// BLOQUE DE CONTACTO GRANDE
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaEnvelope
+} from 'react-icons/fa';
 
 const Contacto = () => {
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []); 
-  
+  }, []);
+
   return (
-    
-    <section id="contacto" className="contact-page">
+    <section
+      id="contacto"
+      className="contact-page"
+    >
+
       <div className="contact-card">
-        
-        {/* CONTENIDO */}
+
+        {/* DESKTOP */}
         <div className="contact-content">
+
           <h2>Contacto</h2>
-          <p>Disponible para proyectos, colaboraciones y encargos creativos.</p>
+
+          <p>
+            Disponible para proyectos,
+            colaboraciones y encargos creativos.
+          </p>
 
           <div className="contact-details">
+
             <div className="contact-detail">
               <h3>Teléfono</h3>
               <p>(+34) 695 453 119</p>
@@ -28,6 +43,7 @@ const Contacto = () => {
 
             <div className="contact-detail">
               <h3>Email</h3>
+
               <a href="mailto:apencas03@gmail.com">
                 apencas03@gmail.com
               </a>
@@ -35,30 +51,89 @@ const Contacto = () => {
 
             <div className="contact-detail">
               <h3>LinkedIn</h3>
-              <a 
-                href="https://www.linkedin.com/in/albert-pen-cas" 
-                target="_blank" 
+
+              <a
+                href="https://www.linkedin.com/in/albert-pen-cas"
+                target="_blank"
                 rel="noreferrer"
               >
                 linkedin.com/in/albert-pen-cas
               </a>
             </div>
+
           </div>
-          
-           <Link to="/" className="contact-button back-button">
-              Volver al Inicio
-            </Link>
+
         </div>
 
-        {/* IMAGEN QR*/}
+        {/* DESKTOP QR */}
         <div className="contact-image">
+
           <div className="qr-wrapper">
-            <img src={qr} alt="Código QR de mi cuenta de Instagram" />
-            
+            <img
+              src={qr}
+              alt="Código QR Instagram"
+            />
           </div>
+
         </div>
+
+        {/* MOBILE */}
+        <div className="contact-mobile">
+
+          <h2>Contacto</h2>
+
+          <p>
+            Disponible para proyectos,
+            colaboraciones y encargos creativos.
+          </p>
+
+          <div className="mobile-socials">
+
+            <a
+              href="https://www.instagram.com/visualfoldr/"
+              target="_blank"
+              rel="noreferrer"
+              className="social-btn"
+              aria-label="Instagram"
+            >
+              <FaInstagram />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/albert-pen-cas"
+              target="_blank"
+              rel="noreferrer"
+              className="social-btn"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
+
+            <a
+              href="mailto:apencas03@gmail.com"
+              className="social-btn"
+              aria-label="Email"
+            >
+              <FaEnvelope />
+            </a>
+
+          </div>
+
+        </div>
+
+        {/* BOTÓN VOLVER */}
+      <div className="contact-footer">
+
+        <Link
+          to="/"
+          className="contact-button"
+        >
+          Volver al inicio
+        </Link>
 
       </div>
+      </div>
+
     </section>
   );
 };

@@ -205,6 +205,20 @@ import skate02 from '../../../assets/skate/sk8-02.jpg';
 import skate03 from '../../../assets/skate/sk8-03.jpg';
 import skate04 from '../../../assets/skate/sk8-04.jpg';
 import skate05 from '../../../assets/skate/sk8-05.jpg';
+import skate06 from '../../../assets/skate/sk8-06.jpg';
+import skate07 from '../../../assets/skate/sk8-07.jpg';
+import skate08 from '../../../assets/skate/sk8-08.jpg';
+import skate09 from '../../../assets/skate/sk8-09.jpg';
+import skate10 from '../../../assets/skate/sk8-10.jpg';
+import skate11 from '../../../assets/skate/sk8-11.jpg';
+import skate12 from '../../../assets/skate/sk8-12.jpg';
+import skate13 from '../../../assets/skate/sk8-13.jpg';
+import skate14 from '../../../assets/skate/sk8-14.jpg';
+import skate15 from '../../../assets/skate/sk8-15.jpg';
+import skate16 from '../../../assets/skate/sk8-16.jpg';
+import skate17 from '../../../assets/skate/sk8-17.jpg';
+import skate18 from '../../../assets/skate/sk8-18.jpg';
+import skate19 from '../../../assets/skate/sk8-19.jpg';
 
 // ------------------------------ Imágenes de Concerts ------------------------------ 
 
@@ -272,6 +286,9 @@ import papaXVI_09 from '../../../assets/experimental/papaXVI-09.jpg';
 import papaXVI_10 from '../../../assets/experimental/papaXVI-10.jpg';
 
 // BARRI DE BCN
+
+// ------------------------------ MODA ------------------------------ 
+import nologos_01 from '../../../assets/moda/nologos-01.jpg'; 
 
 
 // ------------------------------ Imágenes de Fondo ------------------------------ 
@@ -358,24 +375,36 @@ export const albumsData = {
         portada: skate01,
 
         imagenes: [
+          skate16,
+          skate08,
           skate01,
           skate02,
+          skate19,
           skate03,
+          skate17,
+          skate18,
           skate04,
-          skate05
-
+          skate05,
+          skate07,
+          skate09,
+          skate10,
+          skate11,
+          skate12,
+          skate13,
+          skate14,
+          skate15,
         ]
       },
-    {
-        id: 'skate-macba',
-        titulo: 'Skate street',
-        fecha: '2026',
-        portada: skate01,
+    // {
+    //     id: 'skate-macba',
+    //     titulo: 'Skate street',
+    //     fecha: '2026',
+    //     portada: skate01,
 
-        imagenes: [
-          skate01,
-        ]
-      }
+    //     imagenes: [
+    //       skate01,
+    //     ]
+    //   }
     ]
   },
 
@@ -390,11 +419,10 @@ export const albumsData = {
         portada: gaviota,
 
         imagenes: [
-          gaviota,
-          flor,
-          papaXVI_01,
           papaXVI_02,
-          papaXVI_03,
+          papaXVI_01,
+          gaviota,
+          papaXVI_03, 
           papaXVI_04,
           papaXVI_05,
           papaXVI_06,
@@ -402,6 +430,7 @@ export const albumsData = {
           papaXVI_08,
           papaXVI_09,
           papaXVI_10,
+          // flor,
         ]
       }
     ]
@@ -444,107 +473,6 @@ export const albumsData = {
         ]
       },
       {
-        id: 'sant-joan-vs-montsant',
-        titulo: 'St. Joan vs Montsant',
-        fecha: '26/04/2026',
-        portada: montsant31,
-
-        imagenes: [
-          montsant02,
-          montsant04,
-          montsant05,
-          montsant08,
-          montsant09,
-          montsant10,
-          montsant12,
-          montsant13,
-          montsant14,
-          montsant16,
-          montsant19,
-          montsant21,
-          montsant23,
-          montsant27,
-          montsant29,
-          montsant30,
-          montsant31,
-        ]
-      },
-      {
-        id: 'sant-joan-vs-maristas-les-corts',
-        titulo: 'St. Joan vs Maristes Les Corts',
-        fecha: '17/04/2026',
-        portada: maristes02,
-
-        imagenes: [
-          maristes02,
-          maristes03,
-          maristes05,
-          maristes06,
-          maristes09,
-          maristes11,
-          maristes13,
-          maristes14,
-          maristes15,
-          maristes18,
-          maristes19,
-          maristes20,
-          maristes23,
-          maristes25,
-          maristes26,
-          maristes27,
-        ]
-      },
-      {
-        id: 'sant-joan-vs-martinenc',
-        titulo: 'St. Joan vs Martinenc',
-        fecha: '01/03/2026',
-        portada: martinenc20,
-
-        imagenes: [
-          martinenc01,
-          martinenc03,
-          martinenc04,
-          martinenc05,
-          martinenc06,
-          martinenc08,
-          martinenc09,
-          martinenc10,
-          martinenc11,
-          martinenc12,
-          martinenc13,
-          martinenc15,
-          martinenc17,
-          martinenc18,
-          martinenc19,
-          martinenc20,
-          martinenc21,
-          martinenc22,
-          martinenc24,
-        ]
-      },
-      {
-        id: 'sant-joan-vs-cet-10',
-        titulo: 'St. Joan vs CET 10',
-        fecha: '13/02/2026',
-        portada: cet10_05,
-
-        imagenes: [
-          cet10_01,
-          cet10_02,
-          cet10_03,
-          cet10_04,
-          cet10_05,
-          cet10_07,
-          cet10_08,
-          cet10_15,
-          cet10_17,
-          cet10_20,
-          cet10_21,
-          cet10_24,
-          cet10_26,
-        ]
-      },
-      {
         id: 'sant-joan-vs-kotska',
         titulo: 'St. Joan vs Kotska',
         fecha: '15/03/2026',
@@ -565,139 +493,260 @@ export const albumsData = {
           kotska17,
         ]
       },
-      {
-        id: 'sant-joan-vs-jesus-maria',
-        titulo: 'St. Joan vs Jesús Maria',
-        fecha: '4/03/2026',
-        portada: jesusmaria36,
+      //{
+      //   id: 'sant-joan-vs-vallseca',
+      //   titulo: 'St. Joan vs Vallseca',
+      //   fecha: '11/01/2026',
+      //   portada: vallseca05,
 
-        imagenes: [
-          jesusmaria05,
-          jesusmaria06,
-          jesusmaria07,
-          jesusmaria09,
-          jesusmaria11,
-          jesusmaria12,
-          jesusmaria13,
-          jesusmaria19,
-          jesusmaria22,
-          jesusmaria26,
-          jesusmaria29,
-          jesusmaria30,
-          jesusmaria31,
-          jesusmaria32,
-          jesusmaria35,
-          jesusmaria36,
-          jesusmaria40,
-          jesusmaria42
-        ]
-      },
-      {
-        id: 'sant-joan-vs-vallseca',
-        titulo: 'St. Joan vs Vallseca',
-        fecha: '11/01/2026',
-        portada: vallseca05,
+      //   imagenes: [
+      //     vallseca01,
+      //     vallseca02,
+      //     vallseca03,
+      //     vallseca04,
+      //     vallseca05,
+      //     vallseca06,
+      //     vallseca07,
+      //     vallseca08,
+      //     vallseca09,
+      //     vallseca10,
+      //     vallseca11
+      //   ]
+      // },
+      // {
+      //   id: 'sant-joan-vs-montsant',
+      //   titulo: 'St. Joan vs Montsant',
+      //   fecha: '26/04/2026',
+      //   portada: montsant31,
 
-        imagenes: [
-          vallseca01,
-          vallseca02,
-          vallseca03,
-          vallseca04,
-          vallseca05,
-          vallseca06,
-          vallseca07,
-          vallseca08,
-          vallseca09,
-          vallseca10,
-          vallseca11
-        ]
-      },
-      {
-        id: 'sant-joan-vs-la-salle',
-        titulo: 'St. Joan vs La Salle',
-        fecha: '04/05/2026',
-        portada: lasalle01,
+      //   imagenes: [
+      //     montsant02,
+      //     montsant04,
+      //     montsant05,
+      //     montsant08,
+      //     montsant09,
+      //     montsant10,
+      //     montsant12,
+      //     montsant13,
+      //     montsant14,
+      //     montsant16,
+      //     montsant19,
+      //     montsant21,
+      //     montsant23,
+      //     montsant27,
+      //     montsant29,
+      //     montsant30,
+      //     montsant31,
+      //   ]
+      // },
+      // {
+      //   id: 'sant-joan-vs-maristas-les-corts',
+      //   titulo: 'St. Joan vs Maristes Les Corts',
+      //   fecha: '17/04/2026',
+      //   portada: maristes02,
 
-        imagenes: [
-          lasalle01,
-          lasalle02,
-          lasalle04,
-          lasalle05,
-          lasalle07,
-          lasalle09,
-          lasalle10,
-          lasalle11,
-          lasalle12,
-          lasalle13,
-          lasalle16,
-          lasalle18,
-        ]
-      },
-      { // AGREGAR MÁS FOTOS
-        id: 'sant-joan-vs-vincit',
-        titulo: 'St. Joan vs Vincit',
-        fecha: '25/01/2026',
-        portada: vincit05,
+      //   imagenes: [
+      //     maristes02,
+      //     maristes03,
+      //     maristes05,
+      //     maristes06,
+      //     maristes09,
+      //     maristes11,
+      //     maristes13,
+      //     maristes14,
+      //     maristes15,
+      //     maristes18,
+      //     maristes19,
+      //     maristes20,
+      //     maristes23,
+      //     maristes25,
+      //     maristes26,
+      //     maristes27,
+      //   ]
+      // },
+      // {
+      //   id: 'sant-joan-vs-martinenc',
+      //   titulo: 'St. Joan vs Martinenc',
+      //   fecha: '01/03/2026',
+      //   portada: martinenc20,
 
-        imagenes: [
-          vincit01,
-          vincit02,
-          vincit03,
-          vincit04,
-          vincit05,
-          vincit06,
-          vincit07,
-          vincit08,
-          vincit09,
-          vincit10,
-        ]
-      },
-      {
-        id: 'sant-joan-vs-polaris',
-        titulo: 'St. Joan vs Polaris',
-        fecha: '29/03/2026',
-        portada: polaris02,
+      //   imagenes: [
+      //     martinenc01,
+      //     martinenc03,
+      //     martinenc04,
+      //     martinenc05,
+      //     martinenc06,
+      //     martinenc08,
+      //     martinenc09,
+      //     martinenc10,
+      //     martinenc11,
+      //     martinenc12,
+      //     martinenc13,
+      //     martinenc15,
+      //     martinenc17,
+      //     martinenc18,
+      //     martinenc19,
+      //     martinenc20,
+      //     martinenc21,
+      //     martinenc22,
+      //     martinenc24,
+      //   ]
+      // },
+      // {
+      //   id: 'sant-joan-vs-cet-10',
+      //   titulo: 'St. Joan vs CET 10',
+      //   fecha: '13/02/2026',
+      //   portada: cet10_05,
 
-        imagenes: [
-          polaris02,
-          polaris03,
-          polaris04,
-          polaris07,
-          polaris08,
-          polaris09,
-          polaris12,
-          polaris13,
-          polaris14,
-          polaris18,
-          polaris19,
-          polaris20,
-          polaris24,
-          polaris25,
-        ]
-      },
-      {
-        id: 'sant-joan-vs-poblenou',
-        titulo: 'St. Joan vs Poblenou',
-        fecha: '14/03/2026',
-        portada: poblenou04,
+      //   imagenes: [
+      //     cet10_01,
+      //     cet10_02,
+      //     cet10_03,
+      //     cet10_04,
+      //     cet10_05,
+      //     cet10_07,
+      //     cet10_08,
+      //     cet10_15,
+      //     cet10_17,
+      //     cet10_20,
+      //     cet10_21,
+      //     cet10_24,
+      //     cet10_26,
+      //   ]
+      // },
+      // {
+      //   id: 'sant-joan-vs-jesus-maria',
+      //   titulo: 'St. Joan vs Jesús Maria',
+      //   fecha: '4/03/2026',
+      //   portada: jesusmaria36,
 
-        imagenes: [
-          poblenou01,
-          poblenou02,
-          poblenou03,
-          poblenou04,
-          poblenou05,
-          poblenou06,
-          poblenou07,
-          poblenou08,
-          poblenou09,
-          poblenou10,
-          poblenou11,
-          poblenou12,
-          poblenou13,
-        ]
-      },
+      //   imagenes: [
+      //     jesusmaria05,
+      //     jesusmaria06,
+      //     jesusmaria07,
+      //     jesusmaria09,
+      //     jesusmaria11,
+      //     jesusmaria12,
+      //     jesusmaria13,
+      //     jesusmaria19,
+      //     jesusmaria22,
+      //     jesusmaria26,
+      //     jesusmaria29,
+      //     jesusmaria30,
+      //     jesusmaria31,
+      //     jesusmaria32,
+      //     jesusmaria35,
+      //     jesusmaria36,
+      //     jesusmaria40,
+      //     jesusmaria42
+      //   ]
+      // },
+      // {
+      //   id: 'sant-joan-vs-la-salle',
+      //   titulo: 'St. Joan vs La Salle',
+      //   fecha: '04/05/2026',
+      //   portada: lasalle01,
+
+      //   imagenes: [
+      //     lasalle01,
+      //     lasalle02,
+      //     lasalle04,
+      //     lasalle05,
+      //     lasalle07,
+      //     lasalle09,
+      //     lasalle10,
+      //     lasalle11,
+      //     lasalle12,
+      //     lasalle13,
+      //     lasalle16,
+      //     lasalle18,
+      //   ]
+      // },
+      // {
+      //   id: 'sant-joan-vs-vincit',
+      //   titulo: 'St. Joan vs Vincit',
+      //   fecha: '25/01/2026',
+      //   portada: vincit05,
+
+      //   imagenes: [
+      //     vincit01,
+      //     vincit02,
+      //     vincit03,
+      //     vincit04,
+      //     vincit05,
+      //     vincit06,
+      //     vincit07,
+      //     vincit08,
+      //     vincit09,
+      //     vincit10,
+      //   ]
+      // },
+      // {
+      //   id: 'sant-joan-vs-polaris',
+      //   titulo: 'St. Joan vs Polaris',
+      //   fecha: '29/03/2026',
+      //   portada: polaris02,
+
+      //   imagenes: [
+      //     polaris02,
+      //     polaris03,
+      //     polaris04,
+      //     polaris07,
+      //     polaris08,
+      //     polaris09,
+      //     polaris12,
+      //     polaris13,
+      //     polaris14,
+      //     polaris18,
+      //     polaris19,
+      //     polaris20,
+      //     polaris24,
+      //     polaris25,
+      //   ]
+      // },
+      // {
+      //   id: 'sant-joan-vs-poblenou',
+      //   titulo: 'St. Joan vs Poblenou',
+      //   fecha: '14/03/2026',
+      //   portada: poblenou04,
+
+      //   imagenes: [
+      //     poblenou01,
+      //     poblenou02,
+      //     poblenou03,
+      //     poblenou04,
+      //     poblenou05,
+      //     poblenou06,
+      //     poblenou07,
+      //     poblenou08,
+      //     poblenou09,
+      //     poblenou10,
+      //     poblenou11,
+      //     poblenou12,
+      //     poblenou13,
+      //   ]
+      // },
       
+    ]
+  },
+
+  moda: {
+    nombre: 'Moda',
+
+    sesiones: [
+      {
+        id: 'moda',
+        titulo: 'Colaboraciones con marcas de ropa, modelaje y más!',
+        fecha: '2026',
+        portada: nologos_01,
+
+        imagenes: [
+          nologos_01,
+          // nologos_02,
+          // nologos_03,
+          // nologos_04,
+        ]
+      }
     ]
   },
 };

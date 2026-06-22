@@ -78,13 +78,13 @@ const album = albumsData[tipo];
 /* ========================= */
 /* NEXT ALBUM */
 /* ========================= */
-
+// MODIFICAR: Orden de los botones (si edito o elimino alguna que quede modificado)
 const albumOrder = [
-  'futbol-sala',
   'conciertos',
   'skate',
   'experimental',
-  'ropa',
+  'futbol-sala',
+  // 'moda',
 ];
 
 const currentAlbumIndex =
@@ -294,11 +294,18 @@ const goToNextAlbum = () => {
                   />
                 </div>
               ))}
-
-            </div>
-          </div>
-        ))}
-
+              
+              {/* BOTÓN GALERÍA COMPLETA
+              <div className="full-gallery-container">
+                <button className="full-gallery-btn"
+                onClick={goToGallery}
+                >
+                  Ver galería completa
+                  </button>
+                  </div> */}
+                </div>
+              </div>
+          ))}
       </div>
 
       {/* ========================= */}
@@ -353,6 +360,7 @@ const goToNextAlbum = () => {
       )}
     </section>
   );
+  
 };
 
 export default Sesion;

@@ -215,6 +215,68 @@
 }
 
 /* ========================= */
+/* ACTION BUTTONS */
+/* ========================= */
+
+.formacion-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  margin-top: 4rem;
+}
+
+.formacion-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 180px;
+
+  text-decoration: none;
+
+  padding: 1rem 2rem;
+
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.04);
+
+  backdrop-filter: blur(12px);
+
+  color: #ffffff;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.formacion-btn:hover {
+  transform: translateY(-4px);
+
+  background: rgba(255,255,255,0.08);
+
+  border-color: rgba(255,255,255,0.25);
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.35);
+}
+
+.formacion-btn:active {
+  transform: translateY(-1px);
+}
+
+/* ========================= */
 /* RESPONSIVE */
 /* ========================= */
 

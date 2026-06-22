@@ -1,5 +1,6 @@
 import React from 'react';
 import './Formacion.scss';
+import { Link } from 'react-router-dom';
 
 function Formacion() {
 
@@ -60,7 +61,7 @@ function Formacion() {
         'Python',
         'React',
         'UI / UX',
-        'Explorador de navegacion Lighthouse',
+        'Lighthouse',
         'Optimización de imágenes',
         'GIMP',
         'MySQL',
@@ -96,8 +97,7 @@ function Formacion() {
         'Aplicaciones Ofimáticas',
         'WordPress',
         'Cisco Packet Tracer',
-        'Inglés técnico',
-        'Formación Orientativa Laboral (F.O.L)'
+        'Inglés técnico'  
       ]
     }
   ];
@@ -185,6 +185,29 @@ function Formacion() {
 
         </div>
 
+        {/* ========================= */}
+        {/* ACTIONS */}
+        {/* ========================= */}
+
+        <div className="formacion-actions">
+            <button
+              className="formacion-btn"
+              onClick={() =>
+                document
+                  .getElementById('galeria')
+                  ?.scrollIntoView({
+                    behavior: 'smooth'
+                  })
+              }
+            >
+              Ver galería
+            </button>
+            
+            <Link to="/contacto" className="formacion-btn" >
+             Contactar 
+            </Link>
+
+          </div>
       </div>
 
     </section>

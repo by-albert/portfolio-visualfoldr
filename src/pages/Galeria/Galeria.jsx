@@ -6,14 +6,9 @@ import StAndreu_05 from '../../assets/futbol-sala/St-Andreu/StAndreu-05.jpg';
 import foto1 from '../../assets/backgrounds/desktop/foto-1.jpg';
 import skate05 from '../../assets/skate/sk8-01.jpg';
 import gaviota from '../../assets/experimental/gaviota.jpg';
+import nologos_01 from '../../assets/moda/nologos-01.jpg';
 
 const albums = [
-  {
-    id: 'futbol-sala',
-    nombre: 'Fútbol Sala',
-    descripcion: 'Equipo de tercera división juvenil.',
-    imagen: StAndreu_05
-  },
   {
     id: 'conciertos',
     nombre: 'Conciertos',
@@ -33,11 +28,17 @@ const albums = [
     imagen: gaviota
   },
   {
-    id: 'moda',
-    nombre: 'Moda',
-    descripcion: 'Prendas de ropas, joyería, y más!',
-    imagen: gaviota
-  }
+    id: 'futbol-sala',
+    nombre: 'Fútbol Sala',
+    descripcion: 'Equipo de tercera división juvenil.',
+    imagen: StAndreu_05
+  },
+  // {
+  //   id: 'moda',
+  //   nombre: 'Moda',
+  //   descripcion: 'Colaboraciones y mucho más!',
+  //   imagen: nologos_01
+  // }
 ];
 
 const Galeria = () => {
