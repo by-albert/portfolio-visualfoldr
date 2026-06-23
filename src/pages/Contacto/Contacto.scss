@@ -197,13 +197,6 @@
   border-color: rgba(255,255,255,0.2);
 }
 
-.contact-footer {
-  margin-top: 3rem;
-
-  display: flex;
-  justify-content: center;
-}
-
 .mobile-socials {
   display: none;
 }
@@ -251,6 +244,9 @@
 }
 
 @media (max-width: 768px) {
+  .contact-button {
+  width: 100%;
+}
 
   .contact-content,
   .contact-image {

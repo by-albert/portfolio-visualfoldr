@@ -32,10 +32,15 @@ function Experience() {
 
     {
       id: 1,
-      title: 'Exposición Artística - Gloria Grau',
-      date: '2023',
+      title: 'Exposición de Arte',
+      subtitle:'Gloria Grau Ruiz',
+
+      summary: 'Rediseño de una web artística mejorando UX y accesibilidad.',
+      
+      date: 'Ene. 2023 - May. 2024',
+      
       description:
-        'Rediseño completo de una página web real para una clienta. Adapté una web antigua mejorando la estructura visual y la experiencia del usuario.',
+        'Rediseño completo de una página web artística. Adapté una web antigua con errores de accesibilidad mejorando la estructura visual y la experiencia del usuario.',
       technologies: [
         'UI / UX',
         'IONOS',
@@ -52,10 +57,11 @@ function Experience() {
 
     {
       id: 2,
-      title: 'Bits and Atoms - Admira',
-      date: '2024',
+      title: 'Bits and Atoms',
+      subtitle:'Admira',
+      date: 'Nov. 2024 - Abr. 2025',
       description:
-        'Proyecto desarrollado durante mis prácticas en Admira para una startup tecnológica real.',
+      'Proyecto realizado para una startup tecnológica del sector IoT (Internet of Things), donde colaboré en el desarrollo y soluciones web mejorando en la experiencia digital del producto.',
       technologies: [
         'HTML',
         'CSS',
@@ -63,7 +69,8 @@ function Experience() {
         'Canva',
         'Figma',
         'Trello',
-        'Git y GitHub'
+        'Git',
+        'Github'
       ],
       image: bitsAndAtoms,
       url: 'https://bitsandatoms.ai/'
@@ -71,10 +78,12 @@ function Experience() {
 
     {
       id: 4,
-      title: 'Creador de contenido y desarrollador web - DAY OFF EVENTS',
+      title: 'Community Manager',
+      subtitle:'Day Off Events',
+
       date: '2025',
       description:
-        'Creé y gestioné contenido para redes sociales orientado a la promoción de eventos corporativos y sociales, adaptando el contenido visual a cada plataforma para mejorar su alcance y visibilidad.',
+        'Creé y gestioné contenido para redes sociales promocionando eventos corporativos y sociales. Adaptando el contenido a cada plataforma y mejorar su alcance.',
       technologies: [
         'Wordpress',
         'HTML',
@@ -87,18 +96,18 @@ function Experience() {
       ],
       image: dayOffEvents,
       url: 'https://www.dayoffevents.com/'
-    },
-
-    {
-      id: 5,
-      title: '¡Se el siguiente!',
-      date: 'Disponible actualmente',
-      description:
-        'Contáctame para cualquier tipo de información. ¡Hagamos que tu imagen cobre vida!',
-      technologies: [],
-      image: contacto,
-      isContact: true
     }
+
+    // ,{
+    //   id: 5,
+    //   title: '¡Se el siguiente!',
+    //   date: 'Disponible actualmente',
+    //   description:
+    //     'Contáctame para cualquier tipo de información. ¡Hagamos que tu imagen cobre vida!',
+    //   technologies: [],
+    //   image: contacto,
+    //   isContact: true
+    // }
 
   ];
 
@@ -106,8 +115,7 @@ function Experience() {
 
     <section
       className="experience"
-      id="trabajos"
-    >
+      id="trabajos">
 
       <div className="experience-container">
 
@@ -120,119 +128,146 @@ function Experience() {
           <p className="experience-subtitle">
             Algunos proyectos que he realizado a lo largo de mi trayectoria.
           </p>
-
         </div>
+            <div className="experience-grid desktop-grid">
 
-<>
-  <div className="experience-grid desktop-grid">
+              {experiences.map((experience) => (
 
-    {experiences.map((experience) => (
+                <article
+                  key={experience.id}
+                  className="experience-card"
+                  onClick={() =>
+                    setSelectedExperience(experience)
+                  }
+                >
 
-      <article
-        key={experience.id}
-        className="experience-card"
-        onClick={() =>
-          setSelectedExperience(experience)
-        }
-      >
+                  <div className="experience-preview">
+                    <img
+                      src={experience.image}
+                      alt={`${experience.title} - ${experience.subtitle}`}
+                      className="experience-image"
+                    />
+                  </div>
 
-        <div className="experience-preview">
-          <img
-            src={experience.image}
-            alt={experience.title}
-            className="experience-image"
-          />
-        </div>
+                  <div className="experience-content">
 
-        <div className="experience-content">
+                    <h3>{experience.title}</h3>
+                    
+                    <p className="experience-subtitle-card">
+                      {experience.subtitle}
+                    </p>
+                    
+                    <p className="experience-description-preview">
+                      {experience.description}
+                    </p>
+                    
+                    <div className="experience-tech">
+                      {experience.technologies.map((tech, index) => (
+                        <span key={index}>
+                          {tech}
+                        </span>
+                      ))}
 
-          <h3>{experience.title}</h3>
+                    </div>
 
-          <p>{experience.description}</p>
+                  </div>
 
-          <div className="experience-tech">
+                </article>
 
-            {experience.technologies.map((tech, index) => (
-              <span key={index}>
-                {tech}
-              </span>
-            ))}
 
-          </div>
-
-        </div>
-
-      </article>
-
-    ))}
-
-  </div>
-
-        <div className="experience-slider">
-
-          <button
-            className="slider-arrow"
-            onClick={prevCard}
-          >
-            ←
-          </button>
-
-          <article
-            className="experience-card"
-            onClick={() =>
-              setSelectedExperience(
-                experiences[currentCard]
-              )
-            }
-          >
-
-            <div className="experience-preview">
-
-              <img
-                src={experiences[currentCard].image}
-                alt={experiences[currentCard].title}
-                className="experience-image"
-              />
+              ))}
 
             </div>
 
-            <div className="experience-content">
+          <div className="experience-slider">
 
-              <h3>
-                {experiences[currentCard].title}
-              </h3>
+            <button
+              className="slider-arrow"
+              onClick={prevCard}
+            >
+              ←
+            </button>
 
-              <p>
-                {experiences[currentCard].description}
-              </p>
+            <article
+              className="experience-card"
+              onClick={() =>
+                setSelectedExperience(
+                  experiences[currentCard]
+                )
+              }
+            >
 
-              <div className="experience-tech">
+              <div className="experience-preview">
 
-                {experiences[currentCard].technologies.map(
-                  (tech, index) => (
-                    <span key={index}>
-                      {tech}
-                    </span>
-                  )
-                )}
+                <img
+                  src={experiences[currentCard].image}
+                  alt={experiences[currentCard].title}
+                  className="experience-image"
+                />
 
               </div>
 
-            </div>
+              <div className="experience-content">
 
-          </article>
+                <h3>
+                  {experiences[currentCard].title}
+                </h3>
 
-          <button
-            className="slider-arrow"
-            onClick={nextCard}
-          >
-            →
-          </button>
+                <p>
+                  {experiences[currentCard].description}
+                </p>
 
-        </div>
-      </>
+                <div className="bottom-card">
+                  <div className="slider-hint"> Ver más</div>
+                </div>
 
+                <div className="experience-tech">
+
+                  {experiences[currentCard].technologies.map(
+                    (tech, index) => (
+                      <span key={index}>
+                        {tech}
+                      </span>
+                    )
+                  )}
+
+                </div>
+
+              </div>
+
+            </article>
+
+            <button
+              className="slider-arrow"
+              onClick={nextCard}
+            >
+              →
+            </button>
+
+          </div>
+
+          <div className="slider-dots">
+
+            {experiences.map((_, index) => (
+
+              <button
+                key={index}
+                className={`slider-dot ${
+                  currentCard === index
+                    ? 'active'
+                    : ''
+                }`}
+                onClick={() =>
+                  setCurrentCard(index)
+                }
+                aria-label={`Ir a tarjeta ${index + 1}`}
+              />
+
+            ))}
+
+          </div>
       </div>
+
 
       {selectedExperience && (
 
@@ -313,13 +348,11 @@ function Experience() {
 
       )}
 
-      
 
     </section>
 
-    
   );
-  
+
 
 }
 

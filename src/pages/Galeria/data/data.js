@@ -736,7 +736,7 @@ export const albumsData = {
     sesiones: [
       {
         id: 'moda',
-        titulo: 'Colaboraciones con marcas de ropa, modelaje y más!',
+        titulo: 'Próximamente ;)',
         fecha: '2026',
         portada: nologos_01,
 

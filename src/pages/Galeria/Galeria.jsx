@@ -18,27 +18,27 @@ const albums = [
   {
     id: 'skate',
     nombre: 'Skateboarding',
-    descripcion: 'Skate, BMX y otros deportes extremos!',
+    descripcion: 'Deportes extremos!',
     imagen: skate05
   },
   {
     id: 'experimental',
     nombre: 'Experimental',
-    descripcion: 'Exploración creativa en desarrollo constante',
+    descripcion: 'Exploración creativa en desarrollo constante.',
     imagen: gaviota
   },
   {
     id: 'futbol-sala',
     nombre: 'Fútbol Sala',
-    descripcion: 'Equipo de tercera división juvenil.',
+    descripcion: 'Liga de tercera división juvenil.',
     imagen: StAndreu_05
   },
-  // {
-  //   id: 'moda',
-  //   nombre: 'Moda',
-  //   descripcion: 'Colaboraciones y mucho más!',
-  //   imagen: nologos_01
-  // }
+  {
+    id: 'moda',
+    nombre: 'Moda',
+    descripcion: 'Colaboraciones con marcas.',
+    imagen: nologos_01
+  }
 ];
 
 const Galeria = () => {

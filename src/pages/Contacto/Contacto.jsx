@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import {
   FaInstagram,
   FaLinkedin,
-  FaEnvelope
+  FaBehance
 } from 'react-icons/fa';
 
 const Contacto = () => {
@@ -110,11 +110,13 @@ const Contacto = () => {
             </a>
 
             <a
-              href="mailto:apencas03@gmail.com"
+              href="https://www.behance.net/albertpenads"
+              target="_blank"
+              rel="noreferrer"
               className="social-btn"
-              aria-label="Email"
+              aria-label="Behance"
             >
-              <FaEnvelope />
+              <FaBehance />
             </a>
 
           </div>
