@@ -1,7 +1,7 @@
 import React from 'react';
 import './Presentacion.scss';
 
-import foto from '../../assets/img/foto-perfil.png';
+import foto from '../../assets/img/foto-perfil.webp';
 
 // BLOQUE DE "QUIEN SOY"
 const Presentacion = () => {

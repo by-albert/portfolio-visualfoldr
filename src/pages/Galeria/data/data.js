@@ -37,18 +37,18 @@ import jesusmaria40 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-40.
 import jesusmaria42 from '../../../assets/futbol-sala/Jesus-Maria/JesusMaria-42.jpg';
 
 // KOTSKA
-import kotska02 from '../../../assets/futbol-sala/Kotska/Kotska-02.jpg';
-import kotska03 from '../../../assets/futbol-sala/Kotska/Kotska-03.jpg';
-import kotska04 from '../../../assets/futbol-sala/Kotska/Kotska-04.jpg';
-import kotska05 from '../../../assets/futbol-sala/Kotska/Kotska-05.jpg';
-import kotska08 from '../../../assets/futbol-sala/Kotska/Kotska-08.jpg';
-import kotska09 from '../../../assets/futbol-sala/Kotska/Kotska-09.jpg';
-import kotska10 from '../../../assets/futbol-sala/Kotska/Kotska-10.jpg';
-import kotska11 from '../../../assets/futbol-sala/Kotska/Kotska-11.jpg';
-import kotska12 from '../../../assets/futbol-sala/Kotska/Kotska-12.jpg';
-import kotska13 from '../../../assets/futbol-sala/Kotska/Kotska-13.jpg';
-import kotska15 from '../../../assets/futbol-sala/Kotska/Kotska-15.jpg';
-import kotska17 from '../../../assets/futbol-sala/Kotska/Kotska-17.jpg';
+import kotska02 from '../../../assets/futbol-sala/Kotska/Kotska-02.webp';
+import kotska03 from '../../../assets/futbol-sala/Kotska/Kotska-03.webp';
+import kotska04 from '../../../assets/futbol-sala/Kotska/Kotska-04.webp';
+import kotska05 from '../../../assets/futbol-sala/Kotska/Kotska-05.webp';
+import kotska08 from '../../../assets/futbol-sala/Kotska/Kotska-08.webp';
+import kotska09 from '../../../assets/futbol-sala/Kotska/Kotska-09.webp';
+import kotska10 from '../../../assets/futbol-sala/Kotska/Kotska-10.webp';
+import kotska11 from '../../../assets/futbol-sala/Kotska/Kotska-11.webp';
+import kotska12 from '../../../assets/futbol-sala/Kotska/Kotska-12.webp';
+import kotska13 from '../../../assets/futbol-sala/Kotska/Kotska-13.webp';
+import kotska15 from '../../../assets/futbol-sala/Kotska/Kotska-15.webp';
+import kotska17 from '../../../assets/futbol-sala/Kotska/Kotska-17.webp';
 
 // LA SALLE
 import lasalle01 from '../../../assets/futbol-sala/La-Salle/LaSalle-01.jpg';
@@ -104,23 +104,23 @@ import martinenc22 from '../../../assets/futbol-sala/Martinenc/Martinenc-22.jpg'
 import martinenc24 from '../../../assets/futbol-sala/Martinenc/Martinenc-24.jpg';
 
 // MONTSANT
-import montsant02 from '../../../assets/futbol-sala/Montsant/Montsant-02.jpg';
-import montsant04 from '../../../assets/futbol-sala/Montsant/Montsant-04.jpg';
-import montsant05 from '../../../assets/futbol-sala/Montsant/Montsant-05.jpg';
-import montsant08 from '../../../assets/futbol-sala/Montsant/Montsant-08.jpg';
-import montsant09 from '../../../assets/futbol-sala/Montsant/Montsant-09.jpg';
-import montsant10 from '../../../assets/futbol-sala/Montsant/Montsant-10.jpg';
-import montsant12 from '../../../assets/futbol-sala/Montsant/Montsant-12.jpg';
-import montsant13 from '../../../assets/futbol-sala/Montsant/Montsant-13.jpg';
-import montsant14 from '../../../assets/futbol-sala/Montsant/Montsant-14.jpg';
-import montsant16 from '../../../assets/futbol-sala/Montsant/Montsant-16.jpg';
-import montsant19 from '../../../assets/futbol-sala/Montsant/Montsant-19.jpg';
-import montsant21 from '../../../assets/futbol-sala/Montsant/Montsant-21.jpg';
-import montsant23 from '../../../assets/futbol-sala/Montsant/Montsant-23.jpg';
-import montsant27 from '../../../assets/futbol-sala/Montsant/Montsant-27.jpg';
-import montsant29 from '../../../assets/futbol-sala/Montsant/Montsant-29.jpg';
-import montsant30 from '../../../assets/futbol-sala/Montsant/Montsant-30.jpg';
-import montsant31 from '../../../assets/futbol-sala/Montsant/Montsant-31.jpg';
+import montsant02 from '../../../assets/futbol-sala/Montsant/Montsant-02.webp';
+import montsant04 from '../../../assets/futbol-sala/Montsant/Montsant-04.webp';
+import montsant05 from '../../../assets/futbol-sala/Montsant/Montsant-05.webp';
+import montsant08 from '../../../assets/futbol-sala/Montsant/Montsant-08.webp';
+import montsant09 from '../../../assets/futbol-sala/Montsant/Montsant-09.webp';
+import montsant10 from '../../../assets/futbol-sala/Montsant/Montsant-10.webp';
+import montsant12 from '../../../assets/futbol-sala/Montsant/Montsant-12.webp';
+import montsant13 from '../../../assets/futbol-sala/Montsant/Montsant-13.webp';
+import montsant14 from '../../../assets/futbol-sala/Montsant/Montsant-14.webp';
+import montsant16 from '../../../assets/futbol-sala/Montsant/Montsant-16.webp';
+import montsant19 from '../../../assets/futbol-sala/Montsant/Montsant-19.webp';
+import montsant21 from '../../../assets/futbol-sala/Montsant/Montsant-21.webp';
+import montsant23 from '../../../assets/futbol-sala/Montsant/Montsant-23.webp';
+import montsant27 from '../../../assets/futbol-sala/Montsant/Montsant-27.webp';
+import montsant29 from '../../../assets/futbol-sala/Montsant/Montsant-29.webp';
+import montsant30 from '../../../assets/futbol-sala/Montsant/Montsant-30.webp';
+import montsant31 from '../../../assets/futbol-sala/Montsant/Montsant-31.webp';
 
 // POBLENOU
 import poblenou01 from '../../../assets/futbol-sala/Poblenou/P9-01.jpg';
@@ -154,24 +154,24 @@ import polaris24 from '../../../assets/futbol-sala/Polaris/Polaris-24.jpg';
 import polaris25 from '../../../assets/futbol-sala/Polaris/Polaris-25.jpg';
 
 // St. ANDREU 
-import standreu01 from '../../../assets/futbol-sala/St-Andreu/StAndreu-01.jpg';
-import standreu02 from '../../../assets/futbol-sala/St-Andreu/StAndreu-02.jpg';
-import standreu05 from '../../../assets/futbol-sala/St-Andreu/StAndreu-05.jpg';
-import standreu09 from '../../../assets/futbol-sala/St-Andreu/StAndreu-09.jpg';
-import standreu10 from '../../../assets/futbol-sala/St-Andreu/StAndreu-10.jpg';
-import standreu14 from '../../../assets/futbol-sala/St-Andreu/StAndreu-14.jpg';
-import standreu18 from '../../../assets/futbol-sala/St-Andreu/StAndreu-18.jpg';
-import standreu27 from '../../../assets/futbol-sala/St-Andreu/StAndreu-27.jpg';
-import standreu28 from '../../../assets/futbol-sala/St-Andreu/StAndreu-28.jpg';
-import standreu29 from '../../../assets/futbol-sala/St-Andreu/StAndreu-29.jpg';
-import standreu32 from '../../../assets/futbol-sala/St-Andreu/StAndreu-32.jpg';
-import standreu33 from '../../../assets/futbol-sala/St-Andreu/StAndreu-33.jpg';
-import standreu44 from '../../../assets/futbol-sala/St-Andreu/StAndreu-44.jpg';
-import standreu49 from '../../../assets/futbol-sala/St-Andreu/StAndreu-49.jpg';
-import standreu50 from '../../../assets/futbol-sala/St-Andreu/StAndreu-50.jpg';
-import standreu51 from '../../../assets/futbol-sala/St-Andreu/StAndreu-51.jpg';
-import standreu52 from '../../../assets/futbol-sala/St-Andreu/StAndreu-52.jpg';
-import standreu57 from '../../../assets/futbol-sala/St-Andreu/StAndreu-57.jpg';
+import standreu01 from '../../../assets/futbol-sala/St-Andreu/StAndreu-01.webp';
+import standreu02 from '../../../assets/futbol-sala/St-Andreu/StAndreu-02.webp';
+import standreu05 from '../../../assets/futbol-sala/St-Andreu/StAndreu-05.webp';
+import standreu09 from '../../../assets/futbol-sala/St-Andreu/StAndreu-09.webp';
+import standreu10 from '../../../assets/futbol-sala/St-Andreu/StAndreu-10.webp';
+import standreu14 from '../../../assets/futbol-sala/St-Andreu/StAndreu-14.webp';
+import standreu18 from '../../../assets/futbol-sala/St-Andreu/StAndreu-18.webp';
+import standreu27 from '../../../assets/futbol-sala/St-Andreu/StAndreu-27.webp';
+import standreu28 from '../../../assets/futbol-sala/St-Andreu/StAndreu-28.webp';
+import standreu29 from '../../../assets/futbol-sala/St-Andreu/StAndreu-29.webp';
+import standreu32 from '../../../assets/futbol-sala/St-Andreu/StAndreu-32.webp';
+import standreu33 from '../../../assets/futbol-sala/St-Andreu/StAndreu-33.webp';
+import standreu44 from '../../../assets/futbol-sala/St-Andreu/StAndreu-44.webp';
+import standreu49 from '../../../assets/futbol-sala/St-Andreu/StAndreu-49.webp';
+import standreu50 from '../../../assets/futbol-sala/St-Andreu/StAndreu-50.webp';
+import standreu51 from '../../../assets/futbol-sala/St-Andreu/StAndreu-51.webp';
+import standreu52 from '../../../assets/futbol-sala/St-Andreu/StAndreu-52.webp';
+import standreu57 from '../../../assets/futbol-sala/St-Andreu/StAndreu-57.webp';
 
 //VALLSECA
 import vallseca01 from '../../../assets/futbol-sala/Vallseca/Vallseca-01.jpg';
@@ -200,104 +200,104 @@ import vincit09 from '../../../assets/futbol-sala/Vincit/Vincit-09.jpg';
 import vincit10 from '../../../assets/futbol-sala/Vincit/Vincit-10.jpg';
 
 // ------------------------------ Imágenes de Skate ------------------------------ 
-import skate01 from '../../../assets/skate/sk8-01.jpg';
-import skate02 from '../../../assets/skate/sk8-02.jpg';
-import skate03 from '../../../assets/skate/sk8-03.jpg';
-import skate04 from '../../../assets/skate/sk8-04.jpg';
-import skate05 from '../../../assets/skate/sk8-05.jpg';
-import skate06 from '../../../assets/skate/sk8-06.jpg';
-import skate07 from '../../../assets/skate/sk8-07.jpg';
-import skate08 from '../../../assets/skate/sk8-08.jpg';
-import skate09 from '../../../assets/skate/sk8-09.jpg';
-import skate10 from '../../../assets/skate/sk8-10.jpg';
-import skate11 from '../../../assets/skate/sk8-11.jpg';
-import skate12 from '../../../assets/skate/sk8-12.jpg';
-import skate13 from '../../../assets/skate/sk8-13.jpg';
-import skate14 from '../../../assets/skate/sk8-14.jpg';
-import skate15 from '../../../assets/skate/sk8-15.jpg';
-import skate16 from '../../../assets/skate/sk8-16.jpg';
-import skate17 from '../../../assets/skate/sk8-17.jpg';
-import skate18 from '../../../assets/skate/sk8-18.jpg';
-import skate19 from '../../../assets/skate/sk8-19.jpg';
+import skate01 from '../../../assets/skate/sk8-01.webp';
+import skate02 from '../../../assets/skate/sk8-02.webp';
+import skate03 from '../../../assets/skate/sk8-03.webp';
+import skate04 from '../../../assets/skate/sk8-04.webp';
+import skate05 from '../../../assets/skate/sk8-05.webp';
+import skate06 from '../../../assets/skate/sk8-06.webp';
+import skate07 from '../../../assets/skate/sk8-07.webp';
+import skate08 from '../../../assets/skate/sk8-08.webp';
+import skate09 from '../../../assets/skate/sk8-09.webp';
+import skate10 from '../../../assets/skate/sk8-10.webp';
+import skate11 from '../../../assets/skate/sk8-11.webp';
+import skate12 from '../../../assets/skate/sk8-12.webp';
+import skate13 from '../../../assets/skate/sk8-13.webp';
+import skate14 from '../../../assets/skate/sk8-14.webp';
+import skate15 from '../../../assets/skate/sk8-15.webp';
+import skate16 from '../../../assets/skate/sk8-16.webp';
+import skate17 from '../../../assets/skate/sk8-17.webp';
+import skate18 from '../../../assets/skate/sk8-18.webp';
+import skate19 from '../../../assets/skate/sk8-19.webp';
 
 // ------------------------------ Imágenes de Concerts ------------------------------ 
 
 // WE DANCE BAND
-import WDB_01 from '../../../assets/concerts/wedance/WDB-01.jpg';
-import WDB_02 from '../../../assets/concerts/wedance/WDB-02.jpg';
-import WDB_03 from '../../../assets/concerts/wedance/WDB-03.jpg';
-import WDB_04 from '../../../assets/concerts/wedance/WDB-04.jpg';
-import WDB_05 from '../../../assets/concerts/wedance/WDB-05.jpg';
-import WDB_06 from '../../../assets/concerts/wedance/WDB-06.jpg';
-import WDB_07 from '../../../assets/concerts/wedance/WDB-07.jpg';
-import WDB_08 from '../../../assets/concerts/wedance/WDB-08.jpg';
-import WDB_09 from '../../../assets/concerts/wedance/WDB-09.jpg';
-import WDB_10 from '../../../assets/concerts/wedance/WDB-10.jpg';
-import WDB_11 from '../../../assets/concerts/wedance/WDB-11.jpg';
-import WDB_12 from '../../../assets/concerts/wedance/WDB-12.jpg';
-import WDB_13 from '../../../assets/concerts/wedance/WDB-13.jpg';
-import WDB_14 from '../../../assets/concerts/wedance/WDB-14.jpg';
-import WDB_15 from '../../../assets/concerts/wedance/WDB-15.jpg';
-import WDB_16 from '../../../assets/concerts/wedance/WDB-16.jpg';
+import WDB_01 from '../../../assets/concerts/wedance/WDB-01.webp';
+import WDB_02 from '../../../assets/concerts/wedance/WDB-02.webp';
+import WDB_03 from '../../../assets/concerts/wedance/WDB-03.webp';
+import WDB_04 from '../../../assets/concerts/wedance/WDB-04.webp';
+import WDB_05 from '../../../assets/concerts/wedance/WDB-05.webp';
+import WDB_06 from '../../../assets/concerts/wedance/WDB-06.webp';
+import WDB_07 from '../../../assets/concerts/wedance/WDB-07.webp';
+import WDB_08 from '../../../assets/concerts/wedance/WDB-08.webp';
+import WDB_09 from '../../../assets/concerts/wedance/WDB-09.webp';
+import WDB_10 from '../../../assets/concerts/wedance/WDB-10.webp';
+import WDB_11 from '../../../assets/concerts/wedance/WDB-11.webp';
+import WDB_12 from '../../../assets/concerts/wedance/WDB-12.webp';
+import WDB_13 from '../../../assets/concerts/wedance/WDB-13.webp';
+import WDB_14 from '../../../assets/concerts/wedance/WDB-14.webp';
+import WDB_15 from '../../../assets/concerts/wedance/WDB-15.webp';
+import WDB_16 from '../../../assets/concerts/wedance/WDB-16.webp';
 
 // CORATGE
-import coratge01 from '../../../assets/concerts/coratge/coratge-01.jpg';
-import coratge02 from '../../../assets/concerts/coratge/coratge-02.jpg';
-import coratge03 from '../../../assets/concerts/coratge/coratge-03.jpg';
-import coratge04 from '../../../assets/concerts/coratge/coratge-04.jpg';
-import coratge05 from '../../../assets/concerts/coratge/coratge-05.jpg';
-import coratge06 from '../../../assets/concerts/coratge/coratge-06.jpg';
-import coratge07 from '../../../assets/concerts/coratge/coratge-07.jpg';
-import coratge08 from '../../../assets/concerts/coratge/coratge-08.jpg';
-import coratge09 from '../../../assets/concerts/coratge/coratge-09.jpg';
-import coratge10 from '../../../assets/concerts/coratge/coratge-10.jpg';
-import coratge11 from '../../../assets/concerts/coratge/coratge-11.jpg';
-import coratge12 from '../../../assets/concerts/coratge/coratge-12.jpg';
-import coratge13 from '../../../assets/concerts/coratge/coratge-13.jpg';
-import coratge14 from '../../../assets/concerts/coratge/coratge-14.jpg';
-import coratge15 from '../../../assets/concerts/coratge/coratge-15.jpg';
-import coratge16 from '../../../assets/concerts/coratge/coratge-16.jpg';
-import coratge17 from '../../../assets/concerts/coratge/coratge-17.jpg';
-import coratge18 from '../../../assets/concerts/coratge/coratge-18.jpg';
-import coratge19 from '../../../assets/concerts/coratge/coratge-19.jpg';
-import coratge20 from '../../../assets/concerts/coratge/coratge-20.jpg';
-import coratge21 from '../../../assets/concerts/coratge/coratge-21.jpg';
-import coratge22 from '../../../assets/concerts/coratge/coratge-22.jpg';
-import coratge23 from '../../../assets/concerts/coratge/coratge-23.jpg';
-import coratge24 from '../../../assets/concerts/coratge/coratge-24.jpg';
-import coratge25 from '../../../assets/concerts/coratge/coratge-25.jpg';
-import coratge26 from '../../../assets/concerts/coratge/coratge-26.jpg';
-import coratge27 from '../../../assets/concerts/coratge/coratge-27.jpg';
+import coratge01 from '../../../assets/concerts/coratge/coratge-01.webp';
+import coratge02 from '../../../assets/concerts/coratge/coratge-02.webp';
+import coratge03 from '../../../assets/concerts/coratge/coratge-03.webp';
+import coratge04 from '../../../assets/concerts/coratge/coratge-04.webp';
+import coratge05 from '../../../assets/concerts/coratge/coratge-05.webp';
+import coratge06 from '../../../assets/concerts/coratge/coratge-06.webp';
+import coratge07 from '../../../assets/concerts/coratge/coratge-07.webp';
+import coratge08 from '../../../assets/concerts/coratge/coratge-08.webp';
+import coratge09 from '../../../assets/concerts/coratge/coratge-09.webp';
+import coratge10 from '../../../assets/concerts/coratge/coratge-10.webp';
+import coratge11 from '../../../assets/concerts/coratge/coratge-11.webp';
+import coratge12 from '../../../assets/concerts/coratge/coratge-12.webp';
+import coratge13 from '../../../assets/concerts/coratge/coratge-13.webp';
+import coratge14 from '../../../assets/concerts/coratge/coratge-14.webp';
+import coratge15 from '../../../assets/concerts/coratge/coratge-15.webp';
+import coratge16 from '../../../assets/concerts/coratge/coratge-16.webp';
+import coratge17 from '../../../assets/concerts/coratge/coratge-17.webp';
+import coratge18 from '../../../assets/concerts/coratge/coratge-18.webp';
+import coratge19 from '../../../assets/concerts/coratge/coratge-19.webp';
+import coratge20 from '../../../assets/concerts/coratge/coratge-20.webp';
+import coratge21 from '../../../assets/concerts/coratge/coratge-21.webp';
+import coratge22 from '../../../assets/concerts/coratge/coratge-22.webp';
+import coratge23 from '../../../assets/concerts/coratge/coratge-23.webp';
+import coratge24 from '../../../assets/concerts/coratge/coratge-24.webp';
+import coratge25 from '../../../assets/concerts/coratge/coratge-25.webp';
+import coratge26 from '../../../assets/concerts/coratge/coratge-26.webp';
+import coratge27 from '../../../assets/concerts/coratge/coratge-27.webp';
 
 // ------------------------------ Imágenes de Experimental ------------------------------ 
-import flor from '../../../assets/experimental/flor.jpg';
-import gaviota from '../../../assets/experimental/gaviota.jpg';
+import flor from '../../../assets/experimental/flor.webp';
+import gaviota from '../../../assets/experimental/gaviota.webp';
 
 // PAPA LLEÓ XVI
-import papaXVI_01 from '../../../assets/experimental/papaXVI-01.jpg';
-import papaXVI_02 from '../../../assets/experimental/papaXVI-02.jpg';
-import papaXVI_03 from '../../../assets/experimental/papaXVI-03.jpg';
-import papaXVI_04 from '../../../assets/experimental/papaXVI-04.jpg';
-import papaXVI_05 from '../../../assets/experimental/papaXVI-05.jpg';
-import papaXVI_06 from '../../../assets/experimental/papaXVI-06.jpg';
-import papaXVI_07 from '../../../assets/experimental/papaXVI-07.jpg';
-import papaXVI_08 from '../../../assets/experimental/papaXVI-08.jpg';
-import papaXVI_09 from '../../../assets/experimental/papaXVI-09.jpg';
-import papaXVI_10 from '../../../assets/experimental/papaXVI-10.jpg';
+import papaXVI_01 from '../../../assets/experimental/papaXVI-01.webp';
+import papaXVI_02 from '../../../assets/experimental/papaXVI-02.webp';
+import papaXVI_03 from '../../../assets/experimental/papaXVI-03.webp';
+import papaXVI_04 from '../../../assets/experimental/papaXVI-04.webp';
+import papaXVI_05 from '../../../assets/experimental/papaXVI-05.webp';
+import papaXVI_06 from '../../../assets/experimental/papaXVI-06.webp';
+import papaXVI_07 from '../../../assets/experimental/papaXVI-07.webp';
+import papaXVI_08 from '../../../assets/experimental/papaXVI-08.webp';
+import papaXVI_09 from '../../../assets/experimental/papaXVI-09.webp';
+import papaXVI_10 from '../../../assets/experimental/papaXVI-10.webp';
 
 // BARRI DE BCN
 
 // ------------------------------ MODA ------------------------------ 
-import nologos_01 from '../../../assets/moda/nologos-01.jpg'; 
+import nologos_01 from '../../../assets/moda/nologos-01.webp'; 
 
 
 // ------------------------------ Imágenes de Fondo ------------------------------ 
-import foto2 from '../../../assets/backgrounds/desktop/foto-2.jpg';
-import foto4 from '../../../assets/backgrounds/desktop/foto-4.jpg';
+import foto2 from '../../../assets/backgrounds/desktop/foto-2.webp';
+import foto4 from '../../../assets/backgrounds/desktop/foto-4.webp';
 
 export const albumsData = {
   conciertos: {
-    nombre: 'Conciertos',
+    nombre: 'CONCIERTOS',
 
     sesiones: [
       {
@@ -323,6 +323,13 @@ export const albumsData = {
           WDB_14,
           WDB_15,
           WDB_16          
+        ],
+        imagenesMobile: [
+          WDB_11,
+          WDB_03,
+          WDB_10,
+          WDB_15,
+          WDB_16,
         ]
       },
       {
@@ -359,6 +366,13 @@ export const albumsData = {
           coratge25,
           coratge26,
           coratge27
+        ],
+        imagenesMobile: [
+          coratge01,
+          coratge02,
+          coratge03,
+          coratge19,
+          coratge22,
         ]
       }
     ]
@@ -416,7 +430,7 @@ export const albumsData = {
         id: 'creative-1',
         titulo: 'Archivos creativos ',
         fecha: '2026',
-        portada: gaviota,
+        portada: papaXVI_02,
 
         imagenes: [
           papaXVI_02,
@@ -431,6 +445,17 @@ export const albumsData = {
           papaXVI_09,
           papaXVI_10,
           // flor,
+        ],
+        imagenesMobile: [
+          papaXVI_10,
+          papaXVI_02,
+          papaXVI_03, 
+          papaXVI_04,
+          papaXVI_05,
+          papaXVI_06,
+          papaXVI_07,
+          papaXVI_08,
+          papaXVI_09,
         ]
       }
     ]
@@ -491,6 +516,14 @@ export const albumsData = {
           kotska13,
           kotska15,
           kotska17,
+        ],
+        imagenesMobile: [
+          kotska02,
+          kotska03,
+          kotska04,
+          kotska05,
+          kotska12,
+          kotska13,
         ]
       },
       //{
@@ -513,32 +546,40 @@ export const albumsData = {
       //     vallseca11
       //   ]
       // },
-      // {
-      //   id: 'sant-joan-vs-montsant',
-      //   titulo: 'St. Joan vs Montsant',
-      //   fecha: '26/04/2026',
-      //   portada: montsant31,
-
-      //   imagenes: [
-      //     montsant02,
-      //     montsant04,
-      //     montsant05,
-      //     montsant08,
-      //     montsant09,
-      //     montsant10,
-      //     montsant12,
-      //     montsant13,
-      //     montsant14,
-      //     montsant16,
-      //     montsant19,
-      //     montsant21,
-      //     montsant23,
-      //     montsant27,
-      //     montsant29,
-      //     montsant30,
-      //     montsant31,
-      //   ]
-      // },
+      {
+        id: 'sant-joan-vs-montsant',
+        titulo: 'St. Joan vs Montsant',
+        fecha: '26/04/2026',
+        portada: montsant31,
+        imagenes: [
+          montsant02,
+          montsant04,
+          montsant05,
+          montsant08,
+          montsant09,
+          montsant10,
+          montsant12,
+          montsant13,
+          montsant14,
+          montsant16,
+          montsant19,
+          montsant21,
+          montsant23,
+          montsant27,
+          montsant29,
+          montsant30,
+          montsant31,
+        ],
+        imagenesMobile: [
+          montsant19,
+          montsant23,
+          montsant27,
+          montsant29,
+          montsant16,
+          montsant10,
+          montsant21,
+        ]
+      },
       // {
       //   id: 'sant-joan-vs-maristas-les-corts',
       //   titulo: 'St. Joan vs Maristes Les Corts',

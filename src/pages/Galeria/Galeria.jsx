@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import './Galeria.scss';
 
-import StAndreu_05 from '../../assets/futbol-sala/St-Andreu/StAndreu-05.jpg';
-import foto1 from '../../assets/backgrounds/desktop/foto-1.jpg';
-import skate05 from '../../assets/skate/sk8-01.jpg';
-import gaviota from '../../assets/experimental/gaviota.jpg';
-import nologos_01 from '../../assets/moda/nologos-01.jpg';
+import StAndreu_05 from '../../assets/futbol-sala/St-Andreu/StAndreu-05.webp';
+import foto1 from '../../assets/backgrounds/desktop/foto-1.webp';
+import skate05 from '../../assets/skate/sk8-01.webp';
+import papaXVI from '../../assets/experimental/papaXVI-02.webp';
+import nologos_01 from '../../assets/moda/nologos-01.webp';
 
 const albums = [
   {
@@ -25,7 +25,7 @@ const albums = [
     id: 'experimental',
     nombre: 'Experimental',
     descripcion: 'Exploración creativa en desarrollo constante.',
-    imagen: gaviota
+    imagen: papaXVI    
   },
   {
     id: 'futbol-sala',

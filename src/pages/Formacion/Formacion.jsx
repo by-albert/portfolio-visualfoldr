@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Formacion.scss';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 function Formacion() {
+  const [currentCard, setCurrentCard] = useState(0);
 
+  const nextCard = () => {
+    setCurrentCard((prev) =>
+      prev === education.length - 1
+        ? 0
+        : prev + 1
+    );
+  };
+
+  const prevCard = () => {
+    setCurrentCard((prev) =>
+      prev === 0
+        ? education.length - 1
+        : prev - 1
+    );
+  };
   const education = [
 
     {
@@ -20,6 +36,9 @@ function Formacion() {
 
       skills: [
         'Próximamente',
+      ],
+       mobileSkills: [
+        'Próximamente'
       ]
     },
     {
@@ -35,6 +54,11 @@ function Formacion() {
         'Formación enfocada a la edición de vídeo y contenido audiovisual, aprendiendo procesos de edición, narrativa visual y creación de contenido.',
 
       skills: [
+        'Premiere Pro CC',
+        'Adobe After Effects',
+        'Ableton Live 12'
+      ],
+       mobileSkills: [
         'Premiere Pro CC',
         'Adobe After Effects',
         'Ableton Live 12'
@@ -56,23 +80,32 @@ function Formacion() {
       skills: [
         'HTML',
         'CSS',
-        'JavaScript',
+        'JS',
         'Java',
         'Python',
         'React',
         'UI / UX',
         'Lighthouse',
-        'Optimización de imágenes',
+        // 'Optimización de imágenes',
         'GIMP',
         'MySQL',
         'Figma',
         'Trello',
         'Arduino',
-        'Git y GitHub',
+        'Git',
+        'GitHub',
         'Responsive Design',
         'Visual Studio Code',
-        'Pycharm',
-        'Eclipse'
+        // 'Pycharm',
+        // 'Eclipse'
+      ],
+      mobileSkills: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'React',
+        'MySQL',
+        'Git'
       ]
     },
 
@@ -93,11 +126,21 @@ function Formacion() {
         'Linux',
         'Virtual Box',
         'Hardware',
-        'Cableado estructurado',
+        'Montaje de equipos', 
+        'Mantenimiento de equipos',
         'Aplicaciones Ofimáticas',
         'WordPress',
         'Cisco Packet Tracer',
-        'Inglés técnico'  
+        'Inglés técnico',
+
+      ],
+      mobileSkills: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'React',
+        'MySQL',
+        'Git'
       ]
     }
   ];
@@ -112,100 +155,150 @@ function Formacion() {
 
         <div className="formacion-header">
 
-          <p className="formacion-label">
+          {/* <p className="formacion-label">
             Trayectoria educativa
-          </p>
+          </p> */}
 
           <h2 className="formacion-title">
             Formación y aprendizaje
           </h2>
 
           <p className="formacion-subtitle">
-            Mi evolución a lo largo de estos años.
+            MI EVOLUCIÓN EDUCATIVA A LO LARGO DE LOS AÑOS.
           </p>
 
         </div>
 
-        {/* GRID */}
+          {/* DESKTOP */}
 
-        <div className="formacion-grid">
+          <div className="formacion-grid desktop-grid">
 
-          {education.map((item) => (
+            {education.map((item) => (
 
-            <article
-              key={item.id}
-              className="formacion-card"
+              <article
+                key={item.id}
+                className="formacion-card"
+              >
+
+                <div className="formacion-top">
+
+                  <div>
+
+                    <p className="formacion-center">
+                      {item.center}
+                    </p>
+
+                    <h3>
+                      {item.title}
+                    </h3>
+
+                  </div>
+
+                  <span className="formacion-year">
+                    {item.year}
+                  </span>
+
+                </div>
+
+                <p className="formacion-description">
+                  {item.description}
+                </p>
+
+                <div className="formacion-skills">
+
+                  {item.skills.map((skill, index) => (
+
+                    <span key={index}>
+                      {skill}
+                    </span>
+
+                  ))}
+
+                </div>
+
+              </article>
+
+            ))}
+
+          </div>
+
+          {/* MOBILE */}
+
+          <div className="formacion-slider">
+
+            <button
+              className="slider-arrow"
+              onClick={prevCard}
             >
+              ←
+            </button>
 
-              {/* TOP */}
+            <article className="formacion-card">
 
               <div className="formacion-top">
 
                 <div>
 
                   <p className="formacion-center">
-                    {item.center}
+                    {education[currentCard].center}
                   </p>
 
                   <h3>
-                    {item.title}
+                    {education[currentCard].title}
                   </h3>
 
                 </div>
 
                 <span className="formacion-year">
-                  {item.year}
+                  {education[currentCard].year}
                 </span>
 
               </div>
 
-              {/* DESCRIPTION */}
-
               <p className="formacion-description">
-                {item.description}
+                {education[currentCard].description}
               </p>
-
-              {/* SKILLS */}
 
               <div className="formacion-skills">
 
-                {item.skills.map((skill, index) => (
-
-                  <span key={index}>
-                    {skill}
-                  </span>
-
-                ))}
+                {education[currentCard].mobileSkills.map(
+                  (skill, index) => (
+                    <span key={index}>
+                      {skill}
+                    </span>
+                  )
+                )}
 
               </div>
 
             </article>
 
-          ))}
-
-        </div>
-
-        {/* ========================= */}
-        {/* ACTIONS */}
-        {/* ========================= */}
-
-        <div className="formacion-actions">
             <button
-              className="formacion-btn"
-              onClick={() =>
-                document
-                  .getElementById('galeria')
-                  ?.scrollIntoView({
-                    behavior: 'smooth'
-                  })
-              }
+              className="slider-arrow"
+              onClick={nextCard}
             >
-              Ver galería
+              →
             </button>
-            
-            <Link to="/contacto" className="formacion-btn" >
-             Contactar 
-            </Link>
+
+          </div>
+
+          <div className="slider-dots">
+
+            {education.map((_, index) => (
+
+              <button
+                key={index}
+                className={`slider-dot ${
+                  currentCard === index
+                    ? 'active'
+                    : ''
+                }`}
+                onClick={() =>
+                  setCurrentCard(index)
+                }
+              />
+
+            ))}
 
           </div>
       </div>

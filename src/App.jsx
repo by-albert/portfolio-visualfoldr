@@ -130,7 +130,7 @@ function AppRoutes() {
               <>
                 {/* <Menu /> */}
                 <ContactPage />
-                <FooterContacto />
+                {/* <FooterContacto /> */}
               </>
             }
           />

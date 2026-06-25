@@ -277,6 +277,105 @@
 }
 
 /* ========================= */
+/* MOBILE SLIDER */
+/* ========================= */
+
+.formacion-slider {
+  display: none;
+}
+
+.slider-dots {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .desktop-grid {
+    display: none;
+  }
+
+  .formacion-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: .25rem;
+
+    width: 100%;
+  }
+
+  .formacion-slider .formacion-card {
+    flex: 1;
+    max-width: 380px;
+  }
+
+  .slider-arrow {
+
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-size: 1.3rem;
+
+    cursor: pointer;
+  }
+
+  .formacion-slider .formacion-skills {
+
+    margin-top: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: .5rem;
+  }
+
+  .slider-dots {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: .55rem;
+
+    margin-top: 1.25rem;
+  }
+
+  .slider-dot {
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: rgba(255,255,255,0.25);
+
+    cursor: pointer;
+  }
+
+  .slider-dot.active {
+
+    background: white;
+
+    transform: scale(1.35);
+  }
+
+}
+
+/* ========================= */
 /* RESPONSIVE */
 /* ========================= */
 

@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import './Experience.scss';
 import { useNavigate } from 'react-router-dom';
 
-import gloriaGrau from '../../assets/img/gloria-grau-ruiz.png';
-import bitsAndAtoms from '../../assets/img/bits-and-atoms.png';
-import dayOffEvents from '../../assets/img/day-off-events.png';
-import contacto from '../../assets/img/contacto-icono.png';
+import gloriaGrau from '../../assets/img/gloria-grau-ruiz.webp';
+import bitsAndAtoms from '../../assets/img/bits-and-atoms.webp';
+import dayOffEvents from '../../assets/img/day-off-events.webp';
+// import contacto from '../../assets/img/contacto-icono.webp';
 
 function Experience() {
 
@@ -81,7 +81,7 @@ function Experience() {
       title: 'Community Manager',
       subtitle:'Day Off Events',
 
-      date: '2025',
+      date: 'Enero. 2026 - Abr. 2026',
       description:
         'Creé y gestioné contenido para redes sociales promocionando eventos corporativos y sociales. Adaptando el contenido a cada plataforma y mejorar su alcance.',
       technologies: [
@@ -126,7 +126,7 @@ function Experience() {
           </h2>
 
           <p className="experience-subtitle">
-            Algunos proyectos que he realizado a lo largo de mi trayectoria.
+            ALGUNOS PROYECTOS QUE HE REALIZADO HASTA EL DÍA DE HOY
           </p>
         </div>
             <div className="experience-grid desktop-grid">

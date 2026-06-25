@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
 import './Contacto.scss';
-import qr from '../../assets/img/visualfoldr_qr.png';
+import qr from '../../assets/img/visualfoldr_qr.webp';
 
 import { useEffect } from 'react';
 
 import {
   FaInstagram,
   FaLinkedin,
-  FaBehance
+  FaBehance,
+  FaPhone,
+  FaEnvelope
 } from 'react-icons/fa';
 
 const Contacto = () => {
@@ -30,8 +32,7 @@ const Contacto = () => {
           <h2>Contacto</h2>
 
           <p>
-            Disponible para proyectos,
-            colaboraciones y encargos creativos.
+            Disponible para proyectos, colaboraciones.
           </p>
 
           <div className="contact-details">
@@ -84,7 +85,8 @@ const Contacto = () => {
 
           <p>
             Disponible para proyectos,
-            colaboraciones y encargos creativos.
+            colaboraciones y más.
+            <br />
           </p>
 
           <div className="mobile-socials">
@@ -109,7 +111,8 @@ const Contacto = () => {
               <FaLinkedin />
             </a>
 
-            <a
+            {/* MÁS ADELANTE */}
+            {/* <a
               href="https://www.behance.net/albertpenads"
               target="_blank"
               rel="noreferrer"
@@ -117,6 +120,22 @@ const Contacto = () => {
               aria-label="Behance"
             >
               <FaBehance />
+            </a> */}
+
+            <a
+              href="mailto:apencas03@gmail.com"
+              className="social-btn"
+              aria-label="Email"
+             >
+              <FaEnvelope />
+            </a>
+
+            <a
+              href="tel:+34695453119"
+              className="social-btn"
+              aria-label="Teléfono"
+            >
+              <FaPhone />
             </a>
 
           </div>
