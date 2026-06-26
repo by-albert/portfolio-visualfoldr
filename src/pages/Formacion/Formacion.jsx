@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Formacion.scss';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Formacion() {
   const [currentCard, setCurrentCard] = useState(0);
@@ -105,7 +105,9 @@ function Formacion() {
         'JavaScript',
         'React',
         'MySQL',
-        'Git'
+        'Git',
+        'GitHub',
+
       ]
     },
 
@@ -135,12 +137,12 @@ function Formacion() {
 
       ],
       mobileSkills: [
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'React',
-        'MySQL',
-        'Git'
+        'Windows',
+        'Linux',
+        'Wordpress',
+        'Ingles Técnico',
+        'VirtualBox',
+        'Cisco Packet Tracer'
       ]
     }
   ];
@@ -299,6 +301,22 @@ function Formacion() {
               />
 
             ))}
+
+          </div>
+          <div className="formacion-actions">
+
+            <button
+              className="formacion-btn"
+              onClick={() =>
+                document
+                  .getElementById('galeria')
+                  ?.scrollIntoView({
+                    behavior: 'smooth'
+                  })
+              }
+            >
+              Ver galería
+            </button>
 
           </div>
       </div>

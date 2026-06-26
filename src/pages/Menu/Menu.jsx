@@ -78,18 +78,18 @@ const NewPortfolio = () => {
   /* ========================= */
 
   useEffect(() => {
+    const start = setTimeout(() => {
 
-    const interval = setInterval(() => {
+        const interval = setInterval(() => {
+            setCurrent(prev => (prev + 1) % images.length);
+        },4000);
 
-      setCurrent(prev =>
-        (prev + 1) % images.length
-      );
+        return () => clearInterval(interval);
 
-    }, 4000);
+    },2500);
 
-    return () => clearInterval(interval);
-
-  }, [images.length]);
+    return () => clearTimeout(start);
+  },[]);
 
   return (
 
@@ -97,12 +97,12 @@ const NewPortfolio = () => {
 
       {/* BACKGROUND */}
 
-      <div
-        className="background-carousel"
-        style={{
-          backgroundImage: `url(${images[current]})`
-        }}
-      />
+      <img
+          className="background-carousel"
+          src={images[current]}
+          alt=""
+          fetchPriority="high"
+        />
 
       {/* CONTENIDO */}
 

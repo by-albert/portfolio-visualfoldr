@@ -27,53 +27,80 @@ const Contacto = () => {
       <div className="contact-card">
 
         {/* DESKTOP */}
-        <div className="contact-content">
+          <div className="contact-content">
 
-          <h2>Contacto</h2>
+            <span className="contact-tag">
+              Disponible para trabajar
+            </span>
 
-          <p>
-            Disponible para proyectos, colaboraciones.
-          </p>
+            <h2>
+              ¿Empezamos?
+            </h2>
 
-          <div className="contact-details">
+            <p className="contact-intro">
+              Estoy disponible para proyectos de desarrollo web,
+              fotografía, edición de vídeo y colaboraciones
+              creativas.
+            </p>
 
-            <div className="contact-detail">
-              <h3>Teléfono</h3>
-              <p>(+34) 695 453 119</p>
-            </div>
+            <div className="contact-actions">
 
-            <div className="contact-detail">
-              <h3>Email</h3>
-
-              <a href="mailto:apencas03@gmail.com">
-                apencas03@gmail.com
+              <a
+                href="mailto:apencas03@gmail.com"
+                className="contact-action"
+              >
+                <FaEnvelope />
+                <div>
+                  <span>Email</span>
+                  <strong>apencas03@gmail.com</strong>
+                </div>
               </a>
-            </div>
 
-            <div className="contact-detail">
-              <h3>LinkedIn</h3>
+              <a
+                href="tel:+34695453119"
+                className="contact-action"
+              >
+                <FaPhone />
+                <div>
+                  <span>Teléfono</span>
+                  <strong>+34 695 453 119</strong>
+                </div>
+              </a>
 
               <a
                 href="https://www.linkedin.com/in/albert-pen-cas"
                 target="_blank"
                 rel="noreferrer"
+                className="contact-action"
               >
-                linkedin.com/in/albert-pen-cas
+                <FaLinkedin />
+                <div>
+                  <span>LinkedIn</span>
+                  <strong>Albert Penadés Casajús</strong>
+                </div>
               </a>
+
             </div>
 
           </div>
 
-        </div>
-
         {/* DESKTOP QR */}
         <div className="contact-image">
-
-          <div className="qr-wrapper">
+          <div className="qr-card">
             <img
               src={qr}
               alt="Código QR Instagram"
             />
+
+            <h3>
+              Instagram
+            </h3>
+
+            <p>
+              Escanea el QR para ver mi trabajo
+              fotográfico.
+            </p>
+
           </div>
 
         </div>
