@@ -6,7 +6,15 @@ import {
 } from 'react-router-dom';
 
 import './Sesion.scss';
-import { albumsData } from '../data/data.js';
+import { albumsData } from '../data/index.js'; // Este es el nuevo
+
+// import { conciertos } from '../data/conciertos.js';
+// import { skate } from '../data/skate.js';
+// import { experimental } from '../data/experimental.js';
+// import { futbolSala } from '../data/futbolsala.js';
+// import { moda } from '../data/moda.js';
+
+// Antiguo: import { albumsData } from '../data/data.js';
 
 const Sesion = () => {
   const { tipo } = useParams();
@@ -341,6 +349,7 @@ const goToNextAlbum = () => {
           <img
             src={selectedImage}
             alt="Imagen ampliada"
+            loading = 'lazy'
             className="sesion-modal-image"
             onClick={(e) =>
               e.stopPropagation()

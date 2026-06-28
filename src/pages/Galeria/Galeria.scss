@@ -69,6 +69,7 @@
 /* ========================= */
 .album-image {
   position: relative;
+  overflow: hidden;
 
   width: 100%;
   height: 100%;
@@ -88,6 +89,14 @@
   filter: brightness(1.15);
 }
 
+// Para la optimización
+.album-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .album-card {
   overflow: visible;
   text-decoration: none;
@@ -95,53 +104,65 @@
 }
 
 /* ========================= */
-/* OVERLAY */
+/* TÍTULO ÁLBUM */
 /* ========================= */
+.album-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-.album-overlay {
-  width: 100%;
-  padding: 1.5rem;
+  padding: 1.25rem;
+
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.95) 0%,
-    rgba(0, 0, 0, 0.6) 45%,
-    transparent 100%
+    rgba(0, 0, 0, .9),
+    rgba(0, 0, 0, .45),
+    transparent
   );
-}
 
-.album-card:hover .album-overlay {
-  padding-bottom: 2.5rem;
-}
+  color: #fff;
 
-.album-overlay h2 {
-  margin: 0 0 0.5rem;
-
-  text-decoration: none;
-  color: white;
-
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
+  letter-spacing: 1px;
 
-  transform: translateY(0);
-  transition: transform 0.4s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  z-index: 2;
 }
 
-.album-overlay p {
-  margin: 0;
+// .album-overlay h2 {
+//   margin: 0 0 0.5rem;
+
+//   text-decoration: none;
+//   color: white;
+
+//   font-size: 1.8rem;
+//   font-weight: 700;
+
+//   transform: translateY(0);
+//   transition: transform 0.4s ease;
+// }
+
+// .album-overlay p {
+//   margin: 0;
   
-  color: rgba(255, 255, 255, 0.75);
+//   color: rgba(255, 255, 255, 0.75);
 
-  font-size: 0.95rem;
-  line-height: 1.5;
+//   font-size: 0.95rem;
+//   line-height: 1.5;
 
-  transform: translateY(0);
-  transition: transform 0.4s ease;
-}
+//   transform: translateY(0);
+//   transition: transform 0.4s ease;
+// }
 
-.album-card:hover .album-overlay h2,
-.album-card:hover .album-overlay p {
-  transform: translateY(-4px);
-}
+// .album-card:hover .album-overlay h2,
+// .album-card:hover .album-overlay p {
+//   transform: translateY(-4px);
+// }
 
 
 // GALERIA GRID de dentro

@@ -10,32 +10,32 @@ import BubbleText from "../../components/BubbleText/bubbleText.jsx";
 /* DESKTOP */
 /* ========================= */
 
-import foto1 from '../../assets/backgrounds/desktop/foto-1.webp';
-import foto2 from '../../assets/backgrounds/desktop/foto-2.webp';
-import foto3 from '../../assets/backgrounds/desktop/foto-3.webp';
-import foto4 from '../../assets/backgrounds/desktop/foto-4.webp';
+// import foto1 from '../../assets/backgrounds/desktop/foto-1.webp';
+// import foto2 from '../../assets/backgrounds/desktop/foto-2.webp';
+// import foto3 from '../../assets/backgrounds/desktop/foto-3.webp';
+// import foto4 from '../../assets/backgrounds/desktop/foto-4.webp';
 
 /* ========================= */
 /* MOBILE */
 /* ========================= */
 
-import fotoMobile1 from '../../assets/backgrounds/mobile/foto-mobile-1.webp';
-import fotoMobile2 from '../../assets/backgrounds/mobile/foto-mobile-2.webp';
-import fotoMobile3 from '../../assets/backgrounds/mobile/foto-mobile-3.webp';
-import fotoMobile4 from '../../assets/backgrounds/mobile/foto-mobile-4.webp';
+// import fotoMobile1 from '../../assets/backgrounds/mobile/foto-mobile-1.webp';
+// import fotoMobile2 from '../../assets/backgrounds/mobile/foto-mobile-2.webp';
+// import fotoMobile3 from '../../assets/backgrounds/mobile/foto-mobile-3.webp';
+// import fotoMobile4 from '../../assets/backgrounds/mobile/foto-mobile-4.webp';
 
 const desktopImages = [
-  foto1,
-  foto2,
-  foto3,
-  foto4
+  '/backgrounds/desktop/foto-1.webp',
+  '/backgrounds/desktop/foto-2.webp',
+  '/backgrounds/desktop/foto-3.webp',
+  '/backgrounds/desktop/foto-4.webp',
 ];
 
 const mobileImages = [
-  fotoMobile1,
-  fotoMobile2,
-  fotoMobile3,
-  fotoMobile4
+  '/backgrounds/mobile/foto-mobile-1.webp',
+  '/backgrounds/mobile/foto-mobile-2.webp',
+  '/backgrounds/mobile/foto-mobile-3.webp',
+  '/backgrounds/mobile/foto-mobile-4.webp',
 ];
 
 const NewPortfolio = () => {
@@ -78,18 +78,19 @@ const NewPortfolio = () => {
   /* ========================= */
 
   useEffect(() => {
-    const start = setTimeout(() => {
+  let interval;
 
-        const interval = setInterval(() => {
-            setCurrent(prev => (prev + 1) % images.length);
-        },4000);
+  const timeout = setTimeout(() => {
+    interval = setInterval(() => {
+      setCurrent(prev => (prev + 1) % images.length);
+    }, 4000);
+  }, 2500);
 
-        return () => clearInterval(interval);
-
-    },2500);
-
-    return () => clearTimeout(start);
-  },[]);
+  return () => {
+    clearTimeout(timeout);
+    if (interval) clearInterval(interval);
+  };
+}, [images.length]);
 
   return (
 

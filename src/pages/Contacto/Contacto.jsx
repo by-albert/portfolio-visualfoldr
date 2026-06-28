@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Contacto.scss';
-import qr from '../../assets/img/visualfoldr_qr.webp';
+// import qr from '../../assets/img/visualfoldr_qr.webp';
 
 import { useEffect } from 'react';
 
@@ -13,6 +13,8 @@ import {
 } from 'react-icons/fa';
 
 const Contacto = () => {
+
+  const qr = '/img/visualfoldr_qr.webp';
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -90,6 +92,7 @@ const Contacto = () => {
             <img
               src={qr}
               alt="Código QR Instagram"
+              loading = 'lazy'
             />
 
             <h3>

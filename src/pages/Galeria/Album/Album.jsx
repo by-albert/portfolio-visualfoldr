@@ -6,7 +6,9 @@ import {
 } from 'react-router-dom';
 
 import './Album.scss';
-import { albumsData } from '../data/data.js';
+// import { albumsData } from '../data/data.js';
+// Optimización codigo
+import { albumsData } from '../data';
 
 const Album = () => {
   const { tipo } = useParams();

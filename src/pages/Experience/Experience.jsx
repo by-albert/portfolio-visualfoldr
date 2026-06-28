@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './Experience.scss';
 import { useNavigate } from 'react-router-dom';
 
-import gloriaGrau from '../../assets/img/gloria-grau-ruiz.webp';
-import bitsAndAtoms from '../../assets/img/bits-and-atoms.webp';
-import dayOffEvents from '../../assets/img/day-off-events.webp';
+// import gloriaGrau from '../../assets/img/gloria-grau-ruiz.webp';
+// import bitsAndAtoms from '../../assets/img/bits-and-atoms.webp';
+// import dayOffEvents from '../../assets/img/day-off-events.webp';
 // import contacto from '../../assets/img/contacto-icono.webp';
 
 function Experience() {
@@ -51,7 +51,7 @@ function Experience() {
         'CSS',
         'JavaScript'
       ],
-      image: gloriaGrau,
+      image: '/img/gloria-grau-ruiz.webp',
       url: 'https://gloriagrauruiz.com/'
     },
 
@@ -72,7 +72,7 @@ function Experience() {
         'Git',
         'Github'
       ],
-      image: bitsAndAtoms,
+      image: '/img/bits-and-atoms.webp',
       url: 'https://bitsandatoms.ai/'
     },
 
@@ -94,7 +94,7 @@ function Experience() {
         'Grok AI',
         'Suno AI'
       ],
-      image: dayOffEvents,
+      image: '/img/day-off-events.webp',
       url: 'https://www.dayoffevents.com/'
     }
 
@@ -145,6 +145,7 @@ function Experience() {
                     <img
                       src={experience.image}
                       alt={`${experience.title} - ${experience.subtitle}`}
+                      loading = 'lazy'
                       className="experience-image"
                     />
                   </div>
@@ -202,6 +203,7 @@ function Experience() {
                 <img
                   src={experiences[currentCard].image}
                   alt={experiences[currentCard].title}
+                  loading = 'lazy'
                   className="experience-image"
                 />
 

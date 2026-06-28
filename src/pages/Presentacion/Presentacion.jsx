@@ -1,7 +1,7 @@
 import React from 'react';
 import './Presentacion.scss';
 
-import foto from '../../assets/img/foto-perfil.webp';
+// import foto from '../../assets/img/foto-perfil.webp';
 
 // BLOQUE DE "QUIEN SOY"
 const Presentacion = () => {
@@ -29,7 +29,11 @@ const Presentacion = () => {
         {/* IMAGEN */}
         <div className="presentacion-img">
           
-          <img src={foto} alt="Foto de presentación"/>
+          <img
+            src="/img/foto-perfil.webp"
+            alt="Foto de presentación"
+            loading="lazy"
+          />
           
           <div className="presentacion-cv">
             

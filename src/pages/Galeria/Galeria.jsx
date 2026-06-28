@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import './Galeria.scss';
 
-import StAndreu_05 from '../../assets/futbol-sala/St-Andreu/StAndreu-05.webp';
-import foto1 from '../../assets/backgrounds/desktop/foto-1.webp';
-import skate05 from '../../assets/skate/sk8-01.webp';
-import papaXVI from '../../assets/experimental/papaXVI-02.webp';
-import nologos_01 from '../../assets/moda/nologos-01.webp';
+import StAndreu_05 from '/futbol-sala/St-Andreu/StAndreu-05.webp';
+import foto1 from '/backgrounds/desktop/foto-1.webp';
+import skate05 from '/skate/sk8-01.webp';
+import papaXVI from '/experimental/papaXVI-02.webp';
+import nologos_01 from '/moda/nologos-01.webp';
 
 const albums = [
   {
@@ -25,7 +25,7 @@ const albums = [
     id: 'experimental',
     nombre: 'Experimental',
     descripcion: 'Exploración creativa en desarrollo constante.',
-    imagen: papaXVI    
+    imagen: papaXVI
   },
   {
     id: 'futbol-sala',
@@ -66,16 +66,21 @@ const Galeria = () => {
               onMouseEnter={() => setActiveAlbum(album.id)}
               onMouseLeave={() => setActiveAlbum(null)}
             >
-              <div
-                className="album-image"
-                style={{
-                  backgroundImage: `url(${album.imagen})`
-                }}
-              >
-                <div className="album-overlay">
-                  <h2>{album.nombre}</h2>
-                  <p>{album.descripcion}</p>
+              <div className="album-image">
+                <img
+                    src={album.imagen}
+                    alt={album.nombre}
+                    loading="lazy"
+                    decoding="async"
+                />
+                <div className="album-title">
+                    <span>{album.nombre}</span>
                 </div>
+
+                  <div className="album-overlay">
+                    <h2>{album.nombre}</h2>
+                    <p>{album.descripcion}</p>
+                  </div>
               </div>
             </Link>
           ))}
