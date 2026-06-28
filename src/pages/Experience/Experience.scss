@@ -148,12 +148,13 @@
   color: rgba(255,255,255,0.8);
 
   display: -webkit-box;
-    line-clamp: 3;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-  overflow: hidden;
-}
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
 
+  overflow: hidden;
+  white-space: normal;
+}
 
 /* ========================= */
 /* CONTENT */
@@ -499,7 +500,6 @@
 
   color: rgba(255,255,255,0.65);
 
-  text-transform: uppercase;
   letter-spacing: 1px;
 
   animation: hintFloat 2s ease-in-out infinite;
@@ -567,9 +567,14 @@
   font-size: 1.4rem;
 }
 
-.experience-content p {
-  font-size: 1rem;
-  line-height: 1.8;
+// CAMBIO
+// .experience-content p {
+//   font-size: 1rem;
+//   line-height: 1.8;
+// }
+
+.experience-content p:not(.experience-subtitle-card) {
+  margin-bottom: 1.5rem;
 }
 
   .experience-content {

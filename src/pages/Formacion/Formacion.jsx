@@ -166,7 +166,7 @@ function Formacion() {
           </h2>
 
           <p className="formacion-subtitle">
-            MI EVOLUCIÓN EDUCATIVA A LO LARGO DE LOS AÑOS.
+            Mi evolución educativa a lo largo de los años.
           </p>
 
         </div>

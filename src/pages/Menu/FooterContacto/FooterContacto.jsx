@@ -126,7 +126,7 @@ const FooterContacto = () => {
       </div>
 
       <div className="footer-copy">
-        © 2026 Albert Penadés · visualFoldr
+        © Visualfoldr 2026 - Albert Penadés 
       </div>
 
     </footer>

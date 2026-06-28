@@ -16,12 +16,10 @@ const Presentacion = () => {
           <h1>¿Quién soy?</h1>
 
           <p>
-            Hola, soy Albert, fotógrafo y desarrollador web. Ayudo a personas, marcas y empresas a mostrar
-            su mejor versión mediante imágenes impactantes y experiencias web modernas.
-          </p>
-
-          <p>
-            Puedes ver mis mútliples proyectos en las secciones de experiencia y galería, échale un vistazo!
+            Soy Albert, fotógrafo y desarrollador web. 
+            <br />
+            Ayudo a marcas y empresas a mostrar
+            su mejor versión mediante fotografías impactantes y experiencias web modernas.
           </p>
 
         </div>

@@ -7,11 +7,10 @@ const experimental = {
       titulo: 'Archivos creativos',
       fecha: '2026',
 
-      portada: '/experimental/papaXVI-02.webp',
+      portada: '/experimental/papaXVI-07.webp',
 
       imagenes: [
         '/experimental/papaXVI-02.webp',
-        '/experimental/papaXVI-01.webp',
         '/experimental/gaviota.webp',
         '/experimental/papaXVI-03.webp',
         '/experimental/papaXVI-04.webp',
@@ -21,7 +20,6 @@ const experimental = {
         '/experimental/papaXVI-08.webp',
         '/experimental/papaXVI-09.webp',
         '/experimental/papaXVI-10.webp',
-        '/experimental/flor.webp',
       ],
 
       imagenesMobile: [
