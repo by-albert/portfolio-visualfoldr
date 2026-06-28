@@ -6,27 +6,9 @@ import { useNavigate } from 'react-router-dom';
 // PARA LAS LETRAS
 import BubbleText from "../../components/BubbleText/bubbleText.jsx";
 
-/* ========================= */
-/* DESKTOP */
-/* ========================= */
-
-// import foto1 from '../../assets/backgrounds/desktop/foto-1.webp';
-// import foto2 from '../../assets/backgrounds/desktop/foto-2.webp';
-// import foto3 from '../../assets/backgrounds/desktop/foto-3.webp';
-// import foto4 from '../../assets/backgrounds/desktop/foto-4.webp';
-
-/* ========================= */
-/* MOBILE */
-/* ========================= */
-
-// import fotoMobile1 from '../../assets/backgrounds/mobile/foto-mobile-1.webp';
-// import fotoMobile2 from '../../assets/backgrounds/mobile/foto-mobile-2.webp';
-// import fotoMobile3 from '../../assets/backgrounds/mobile/foto-mobile-3.webp';
-// import fotoMobile4 from '../../assets/backgrounds/mobile/foto-mobile-4.webp';
-
 const desktopImages = [
   '/backgrounds/desktop/foto-1.webp',
-  '/backgrounds/desktop/foto-2.webp',
+  // '/backgrounds/desktop/foto-2.webp',
   '/backgrounds/desktop/foto-3.webp',
   '/backgrounds/desktop/foto-4.webp',
 ];
