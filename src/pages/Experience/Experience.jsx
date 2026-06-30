@@ -75,7 +75,7 @@ function Experience() {
       },
 
       {
-        id: 4,
+        id: 3,
         title: 'Community Manager',
         subtitle:'Day Off Events',
         summary: 'Gestioné contenido para redes sociales orientado a fiestas corporativas realizadas con IA de vídeo.',
@@ -94,6 +94,70 @@ function Experience() {
         ],
         image: '/img/day-off-events.webp',
         url: 'https://www.dayoffevents.com/'
+      },
+      {
+        id: 4,
+        title: 'WE DANCE BAND',
+        subtitle:'Fotógrafo concierto en directo',
+        summary: 'Concierto para una cover en las fiestas de la Eixample.',
+        date: 'Abril 2026',
+        description:
+        'Fiesta.',
+        technologies: [
+          'Sony A6400',
+          'LightRoom Classic',
+          'Pic-Time'
+        ],
+        image: '/concerts/wedance/WDB-05.webp',
+        url: 'https://visualfoldr.pic-time.com/tJlAuSNLpyI3n'
+      },
+      {
+        id: 5,
+        title: 'Reportero de evento',
+        subtitle:'Fotógrafo partido solidario',
+        summary: 'Partido solidario de fútbol sala dónde 15 equipos se enfrentarán.',
+        date: 'Mayo 2026',
+        description:
+        'Realicé un reportaje fotográfico para un evento de fútbol sala en el que participaron 15 equipos. Durante el evento me encargué de capturar todos los partidos que se disputaban. Al mismo tiempo iba reforzando mi capacidad para reaccionar con rapidez, anticiparme a cada jugada y entregar un trabajo de calidad en un entorno de ritmo constante.',
+        technologies: [
+          'Sony A6400',
+          'LightRoom Classic',
+          'Pic-Time'
+        ],
+        image: '/img/partido_solidario.webp',
+        url: 'https://visualfoldr.pic-time.com/z7aIKLxFXYGtI'
+      },
+      {
+        id: 6,
+        title: 'Coratge',
+        subtitle:'Fótógrafo de concierto',
+        summary: 'Concierto para celebrar la 10ª edición del grupo de rock catalana.',
+        date: 'Junio 2026',
+        description:
+        'Tuve la oportunidad de realizar un reportaje fotográfico para un grupo de música durante el lanzamiento de su nuevo en directo. Me encargué de documentar la actuación, capturando los momentos más representativos del concierto, la interacción entre los integrantes de la banda y la conexión con el público, creando un reportaje visual que transmitiera la energía y la personalidad del evento.',
+        technologies: [
+          'Sony A6400',
+          'LightRoom Classic',
+          'Pic-Time'
+        ],
+        image: '/concerts/coratge/coratge-03.webp',
+        url: 'https://visualfoldr.pic-time.com/client/coratge-fotos-concert'
+      },
+      {
+        id: 7,
+        title: 'NOLOGOS',
+        subtitle:'Moda',
+        summary: 'Sesión de fotos para una marca de ropa para el mundial 2026.',
+        date: 'Mayo 2026',
+        description:
+        'Tuve la oportunidad de realizar un reportaje fotográfico para un grupo de música durante el lanzamiento de su nuevo en directo. Me encargué de documentar la actuación, capturando los momentos más representativos del concierto, la interacción entre los integrantes de la banda y la conexión con el público, creando un reportaje visual que transmitiera la energía y la personalidad del evento.',
+        technologies: [
+          'Sony A6400',
+          'LightRoom Classic',
+          'Pic-Time'
+        ],
+        image: '/moda/nologos-01.webp',
+        url: ''
       }
     ];
     
