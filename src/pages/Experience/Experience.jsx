@@ -115,7 +115,7 @@ function Experience() {
       {
         id: 5,
         title: 'WE DANCE BAND',
-        subtitle:'Fotógrafo concierto en directo',
+        subtitle:'Fotógrafo concierto',
         summary: 'Cobertura fotográfica de un concierto de una banda celebrado durante las fiestas de la Eixample en Barcelona.',
         date: 'Abril 2026',
         description:
