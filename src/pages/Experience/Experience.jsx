@@ -67,7 +67,8 @@ function Experience() {
           'Figma',
           'Trello',
           'Git',
-          'Github'
+          'Github',
+          'Arduino'
         ],
         image: '/img/bits-and-atoms.webp',
         
@@ -97,22 +98,6 @@ function Experience() {
       },
       {
         id: 4,
-        title: 'WE DANCE BAND',
-        subtitle:'Fotógrafo concierto en directo',
-        summary: 'Concierto para una cover en las fiestas de la Eixample.',
-        date: 'Abril 2026',
-        description:
-        'Fiesta.',
-        technologies: [
-          'Sony A6400',
-          'LightRoom Classic',
-          'Pic-Time'
-        ],
-        image: '/concerts/wedance/WDB-05.webp',
-        url: 'https://visualfoldr.pic-time.com/tJlAuSNLpyI3n'
-      },
-      {
-        id: 5,
         title: 'Reportero de evento',
         subtitle:'Fotógrafo partido solidario',
         summary: 'Partido solidario de fútbol sala dónde 15 equipos se enfrentarán.',
@@ -122,10 +107,27 @@ function Experience() {
         technologies: [
           'Sony A6400',
           'LightRoom Classic',
-          'Pic-Time'
+          'Pic-Time',
         ],
         image: '/img/partido_solidario.webp',
         url: 'https://visualfoldr.pic-time.com/z7aIKLxFXYGtI'
+      },
+      {
+        id: 5,
+        title: 'WE DANCE BAND',
+        subtitle:'Fotógrafo concierto en directo',
+        summary: 'Cobertura fotográfica de un concierto de una banda celebrado durante las fiestas de la Eixample en Barcelona.',
+        date: 'Abril 2026',
+        description:
+        'Cobertura fotográfica de un concierto de una banda tributo celebrado durante las Fiestas de la Eixample, capturando la energía del directo, la conexión con el público y los momentos más representativos de la actuación.',
+        technologies: [
+          'Sony A6400',
+          'LightRoom Classic',
+          'Pic-Time',
+          'Instagram'
+        ],
+        image: '/concerts/wedance/WDB-05.webp',
+        url: 'https://visualfoldr.pic-time.com/tJlAuSNLpyI3n'
       },
       {
         id: 6,
@@ -138,23 +140,25 @@ function Experience() {
         technologies: [
           'Sony A6400',
           'LightRoom Classic',
-          'Pic-Time'
+          'Pic-Time',
+          'Instagram'
         ],
         image: '/concerts/coratge/coratge-03.webp',
         url: 'https://visualfoldr.pic-time.com/client/coratge-fotos-concert'
       },
       {
         id: 7,
-        title: 'NOLOGOS',
-        subtitle:'Moda',
-        summary: 'Sesión de fotos para una marca de ropa para el mundial 2026.',
+        title: 'NOLOGOS ⭐⭐⭐⭐',
+        subtitle:'Sessión de fotos de moda',
+        summary: 'Sesión fotográfica de estilo streetwear para un marca de ropa inspirado en el mundial de fútbol Epaña.',
         date: 'Mayo 2026',
         description:
-        'Tuve la oportunidad de realizar un reportaje fotográfico para un grupo de música durante el lanzamiento de su nuevo en directo. Me encargué de documentar la actuación, capturando los momentos más representativos del concierto, la interacción entre los integrantes de la banda y la conexión con el público, creando un reportaje visual que transmitiera la energía y la personalidad del evento.',
+        'Sesión fotográfica de estilo streetwear realizada para la presentación de una colección inspirada en la Copa Mundial de Fútbol de 2026, combinando moda urbana, identidad visual y una estética contemporánea al aire libre.',
         technologies: [
           'Sony A6400',
           'LightRoom Classic',
-          'Pic-Time'
+          'Pic-Time',
+          'Instagram'
         ],
         image: '/moda/nologos-01.webp',
         url: ''
