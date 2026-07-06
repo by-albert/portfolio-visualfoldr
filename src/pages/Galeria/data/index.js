@@ -9,5 +9,5 @@ export const albumsData = {
   skate,
   experimental,
   'futbol-sala': futbolSala,
-  // moda,
+  moda,
 };

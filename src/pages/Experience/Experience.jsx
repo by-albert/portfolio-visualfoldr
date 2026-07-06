@@ -161,7 +161,7 @@ function Experience() {
           'Instagram'
         ],
         image: '/moda/nologos-01.webp',
-        url: ''
+        url: 'https://visualfoldr.pic-time.com/TgchnvGRE9eE8'
       }
     ];
     

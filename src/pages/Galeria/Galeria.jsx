@@ -6,7 +6,7 @@ import StAndreu_05 from '/futbol-sala/St-Andreu/StAndreu-05.webp';
 import foto1 from '/backgrounds/desktop/foto-1.webp';
 import skate05 from '/skate/sk8-16.webp';
 import papaXVI from '/experimental/papaXVI-07.webp';
-import nologos_01 from '/moda/nologos-01.webp';
+import nologos_01 from '/moda/nologos-37.webp';
 
 const albums = [
   {
