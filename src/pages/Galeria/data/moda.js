@@ -80,8 +80,6 @@ const moda = {
         '/moda/nologos-28.webp',
         '/moda/nologos-53.webp',
         '/moda/nologos-60.webp',
-        
-        
       ]
     }
   ]

@@ -2,30 +2,13 @@ import React, { useState } from 'react';
 import './Experience.scss';
 import { useNavigate } from 'react-router-dom';
 
-function Experience() {
 
+function Experience() {
+  
+  const [sortOrder, setSortOrder] = useState("recent");
   const [selectedExperience, setSelectedExperience] = useState(null);
   const [currentCard, setCurrentCard] = useState(0);
-  const navigate = useNavigate();
-  // Cartas para móvil
-  const nextCard = () => {
-      setCurrentCard((prev) =>
-        prev === experiences.length - 1
-          ? 0
-          : prev + 1
-      );
-    };
-
-    const prevCard = () => {
-      setCurrentCard((prev) =>
-        prev === 0
-          ? experiences.length - 1
-          : prev - 1
-      );
-    };
-
-    // NUEVO
-    
+  const navigate = useNavigate();   
 
     // ANTIGUO
     const experiences = [
@@ -98,9 +81,9 @@ function Experience() {
       },
       {
         id: 4,
-        title: 'Reportero de evento',
-        subtitle:'Fotógrafo partido solidario',
-        summary: 'Partido solidario de fútbol sala dónde 15 equipos se enfrentarán.',
+        title: 'Reportero de fútbol sala',
+        subtitle:'Fotógrafo de partido solidario',
+        summary: 'Partido solidario de fútbol sala dónde 15 equipos de exalumnos se enfrentarán entre ellos.',
         date: 'Mayo 2026',
         description:
         'Realicé un reportaje fotográfico para un evento de fútbol sala en el que participaron 15 equipos. Durante el evento me encargué de capturar todos los partidos que se disputaban. Al mismo tiempo iba reforzando mi capacidad para reaccionar con rapidez, anticiparme a cada jugada y entregar un trabajo de calidad en un entorno de ritmo constante.',
@@ -115,7 +98,7 @@ function Experience() {
       {
         id: 5,
         title: 'WE DANCE BAND',
-        subtitle:'Fotógrafo concierto',
+        subtitle:'Fotógrafo de concierto',
         summary: 'Cobertura fotográfica de un concierto de una banda celebrado durante las fiestas de la Eixample en Barcelona.',
         date: 'Abril 2026',
         description:
@@ -132,7 +115,7 @@ function Experience() {
       {
         id: 6,
         title: 'Coratge',
-        subtitle:'Fótógrafo de concierto',
+        subtitle:'Fotógrafo de concierto',
         summary: 'Concierto para celebrar la 10ª edición del grupo de rock catalana.',
         date: 'Junio 2026',
         description:
@@ -150,7 +133,7 @@ function Experience() {
         id: 7,
         title: 'NOLOGOS ⭐⭐⭐⭐',
         subtitle:'Sessión de fotos de moda',
-        summary: 'Sesión fotográfica de estilo streetwear para un marca de ropa inspirado en el mundial de fútbol Epaña.',
+        summary: 'Sesión fotográfica al aire libre, estilo streetwear para un marca de ropa inspirado en el mundial de fútbol Epaña.',
         date: 'Mayo 2026',
         description:
         'Sesión fotográfica de estilo streetwear realizada para la presentación de una colección inspirada en la Copa Mundial de Fútbol de 2026, combinando moda urbana, identidad visual y una estética contemporánea al aire libre.',
@@ -160,10 +143,53 @@ function Experience() {
           'Pic-Time',
           'Instagram'
         ],
-        image: '/moda/nologos-01.webp',
+        image: '/moda/nologos-38.webp',
+        url: 'https://visualfoldr.pic-time.com/TgchnvGRE9eE8'
+      },
+      {
+        id: 8,
+        title: 'NOLOGOS ⭐⭐⭐⭐',
+        subtitle:'Sessión de fotos de moda',
+        summary: 'Sesión fotográfica al aire libre, estilo streetwear para un marca de ropa inspirado en el mundial de fútbol Epaña.',
+        date: 'Mayo 2026',
+        description:
+        'Sesión fotográfica de estilo streetwear realizada para la presentación de una colección inspirada en la Copa Mundial de Fútbol de 2026, combinando moda urbana, identidad visual y una estética contemporánea al aire libre.',
+        technologies: [
+          'Sony A6400',
+          'LightRoom Classic',
+          'Pic-Time',
+          'Instagram'
+        ],
+        image: '/moda/nologos-38.webp',
         url: 'https://visualfoldr.pic-time.com/TgchnvGRE9eE8'
       }
     ];
+
+    
+  // Cartas para móvil
+      const nextCard = () => {
+      setCurrentCard((prev) =>
+        prev === sortedExperiences.length - 1
+          ? 0
+          : prev + 1
+      );
+    };
+
+    const prevCard = () => {
+      setCurrentCard((prev) =>
+        prev === 0
+          ? sortedExperiences.length - 1
+          : prev - 1
+      );
+    };
+
+    const sortedExperiences =
+    [...experiences].sort((a,b)=>{
+        if(sortOrder==="recent")
+            return b.id-a.id;
+
+        return a.id-b.id;
+    });
     
     return (
       <section
@@ -182,9 +208,40 @@ function Experience() {
               Proyectos realizados hasta el día de hoy.
             </p>
           </div>
+          <div className="experience-filter">
+              <button
+                  className={
+                      sortOrder === "recent"
+                      ? "active"
+                      : ""
+                  }
+                  onClick={()=>{
+                      setSortOrder("recent");
+                      setCurrentCard(0);
+                  }}
+              >
+                  Más reciente
+              </button>
+
+              <button
+                  className={
+                      sortOrder === "oldest"
+                      ? "active"
+                      : ""
+                  }
+                  onClick={()=>{
+                      setSortOrder("oldest");
+                      setCurrentCard(0);
+                  }}
+              >
+                  Más antiguo
+              </button>
+
+          </div>
+              
               <div className="experience-grid desktop-grid">
 
-                {experiences.map((experience) => (
+                {sortedExperiences.map((experience) => (
 
                   <article
                     key={experience.id}
@@ -210,11 +267,15 @@ function Experience() {
                       <p className="experience-subtitle-card">
                         {experience.subtitle}
                       </p>
+
+                      <p className="experience-subtitle-card">
+                        {experience.date}
+                      </p>
                       
                       <p className="experience-description-preview">
                         {experience.summary}
                       </p>
-                      
+
                       <div className="experience-tech">
                         {experience.technologies.map((tech, index) => (
                           <span key={index}>
@@ -254,8 +315,8 @@ function Experience() {
                 <div className="experience-preview">
 
                   <img
-                    src={experiences[currentCard].image}
-                    alt={experiences[currentCard].title}
+                    src={sortedExperiences[currentCard].image}
+                    alt={sortedExperiences[currentCard].title}
                     loading = 'lazy'
                     className="experience-image"
                   />
@@ -265,15 +326,15 @@ function Experience() {
                 <div className="experience-content">
 
                   <h3>
-                    {experiences[currentCard].title}
+                    {sortedExperiences[currentCard].title}
                   </h3>
 
                   <p className="experience-subtitle-card">
-                    {experiences[currentCard].subtitle}
+                    {sortedExperiences[currentCard].subtitle}
                   </p>
 
                   <p className="experience-description-preview">
-                    {experiences[currentCard].summary}
+                    {sortedExperiences[currentCard].summary}
                   </p>
 
                   <div className="bottom-card">
@@ -282,7 +343,7 @@ function Experience() {
 
                   <div className="experience-tech">
 
-                    {experiences[currentCard].technologies.map(
+                    {sortedExperiences[currentCard].technologies.map(
                       (tech, index) => (
                         <span key={index}>
                           {tech}
@@ -307,7 +368,7 @@ function Experience() {
 
             <div className="slider-dots">
 
-              {experiences.map((_, index) => (
+              {sortedExperiences.map((_, index) => (
 
                 <button
                   key={index}
