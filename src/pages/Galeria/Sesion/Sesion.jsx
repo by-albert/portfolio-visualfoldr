@@ -80,11 +80,11 @@ const album = albumsData[tipo];
 /* ========================= */
 // MODIFICAR: Orden de los botones (si edito o elimino alguna que quede modificado)
 const albumOrder = [
+  'moda',
   'conciertos',
   'skate',
   'experimental',
   'futbol-sala',
-  // 'moda',
 ];
 
 const currentAlbumIndex =

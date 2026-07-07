@@ -6,9 +6,15 @@ import StAndreu_05 from '/futbol-sala/St-Andreu/StAndreu-05.webp';
 import foto1 from '/backgrounds/desktop/foto-1.webp';
 import skate05 from '/skate/sk8-16.webp';
 import papaXVI from '/experimental/papaXVI-07.webp';
-import nologos_01 from '/moda/nologos-37.webp';
+import nologos_01 from '/moda/NOLOGOS/MUNDIAL_ESP/nologos-37.webp';
 
 const albums = [
+  {
+    id: 'moda',
+    nombre: 'Moda',
+    descripcion: 'Colaboraciones con marcas.',
+    imagen: nologos_01
+  },
   {
     id: 'conciertos',
     nombre: 'Conciertos',
@@ -33,12 +39,7 @@ const albums = [
     descripcion: 'Liga de tercera división juvenil.',
     imagen: StAndreu_05
   },
-  {
-    id: 'moda',
-    nombre: 'Moda',
-    descripcion: 'Colaboraciones con marcas.',
-    imagen: nologos_01
-  }
+  
 ];
 
 const Galeria = () => {

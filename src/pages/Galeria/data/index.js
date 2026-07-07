@@ -5,9 +5,9 @@ import futbolSala from './futbolsala';
 import moda from './moda';
 
 export const albumsData = {
+  moda,
   conciertos,
   skate,
   experimental,
   'futbol-sala': futbolSala,
-  moda,
 };
