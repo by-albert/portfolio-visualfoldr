@@ -46,6 +46,10 @@ const conciertos = {
         '/concerts/wedance/WDB-13.webp',
         '/concerts/wedance/WDB-14.webp',
       ],
+      instagram: {
+        usuario: '@wedanceband',
+        url: 'https://instagram.com/wedanceband'
+      },
     },
 
     {
@@ -96,6 +100,10 @@ const conciertos = {
         '/concerts/coratge/coratge-25.webp',
         '/concerts/coratge/coratge-26.webp',
       ],
+      instagram: {
+        usuario: '@coratge',
+        url: 'https://instagram.com/coratge.oi'
+      },
     },
   ],
 };

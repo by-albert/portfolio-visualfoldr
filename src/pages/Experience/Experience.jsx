@@ -310,7 +310,7 @@ function Experience() {
                 className="experience-card"
                 onClick={() =>
                   setSelectedExperience(
-                    experiences[currentCard]
+                    sortedExperiences[currentCard]
                   )
                 }
               >

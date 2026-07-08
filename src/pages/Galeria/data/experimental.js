@@ -34,6 +34,10 @@ const experimental = {
         '/experimental/papaXVI-02.webp',
         '/experimental/papaXVI-01.webp',
       ],
+      instagram: {
+        usuario: '@visualfoldr',
+        url: 'https://instagram.com/visualfoldr'
+      },
     },
   ],
 };

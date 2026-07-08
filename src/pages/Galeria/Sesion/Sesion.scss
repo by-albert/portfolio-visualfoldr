@@ -302,10 +302,57 @@
 
 .album-section-header p {
   color: rgba(255,255,255,0.65);
-
+  padding-bottom: 4%;
   font-size: 0.95rem;
 }
 
+.album-info p{
+  color:#cfcfcf;
+}
+
+.album-social{
+  width:fit-content;
+
+  padding:.7rem 1rem;
+
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:999px;
+
+  color:white;
+  text-decoration:none;
+
+  transition:.3s;
+}
+
+.album-social:hover{
+  background:white;
+  color:black;
+}
+
+.album-social {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+
+  margin-top: .8rem;
+
+  color: white;
+  text-decoration: none;
+
+  font-size: .95rem;
+  font-weight: 500;
+
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+.album-social svg {
+  font-size: 1.25rem;
+}
+
+.album-social:hover {
+  opacity: .8;
+  transform: translateY(-2px);
+}
 /* ========================= */
 /* CARD */
 /* ========================= */
@@ -749,6 +796,10 @@
 
   .album-section-header h2 {
     font-size: 1.4rem;
+  }
+
+  .album-section-header P {
+    padding-bottom: 8%;
   }
 
 }

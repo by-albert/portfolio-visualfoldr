@@ -242,7 +242,12 @@ const futbolSala = {
         '/futbol-sala/St-Andreu/StAndreu-03.webp',
         '/futbol-sala/St-Andreu/StAndreu-04.webp',
         '/futbol-sala/St-Andreu/StAndreu-05.webp',
-      ]
+      ],
+
+      instagram: {
+        usuario: '@sj_juvenil',
+        url: 'https://instagram.com/sj_juvenil'
+      },
     },
 
     {

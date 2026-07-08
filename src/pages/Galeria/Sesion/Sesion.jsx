@@ -5,6 +5,8 @@ import {
   useNavigate
 } from 'react-router-dom';
 
+import { FaInstagram } from "react-icons/fa";
+
 import './Sesion.scss';
 import { albumsData } from '../data/index.js';
 
@@ -270,7 +272,20 @@ const goToNextAlbum = () => {
           >
             <div className="album-section-header">
               <h2>{sesion.titulo}</h2>
+
               <p>{sesion.fecha}</p>
+
+              {sesion.instagram && (
+                <a
+                    href={sesion.instagram.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="album-social"
+                   >
+                    <FaInstagram />
+                    <span>{sesion.instagram.usuario}</span>
+                </a>
+              )}
             </div>
 
             <div className="sesion-grid">
