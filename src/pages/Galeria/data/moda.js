@@ -7,9 +7,9 @@ const moda = {
     {
       id: '1',
       titulo: 'NOLOGOS',
-      fecha: 'Mundial de España 2026',
+      fecha: 'Insprirado en el Mundial, España 2026',
 
-      portada:'/moda/nologos_02.webp',
+      portada:'/moda/MUNDIAL_ESP/nologos_37.webp',
 
       imagenes: [
         '/moda/NOLOGOS/MUNDIAL_ESP/nologos-04.webp',

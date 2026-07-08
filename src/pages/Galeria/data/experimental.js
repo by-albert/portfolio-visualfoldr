@@ -5,7 +5,7 @@ const experimental = {
     {
       id: 'creative-1',
       titulo: 'Archivos creativos',
-      fecha: '2026',
+      fecha: 'Papa Lleó XVI a Barcelona',
 
       portada: '/experimental/papaXVI-07.webp',
 

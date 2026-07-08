@@ -132,7 +132,7 @@ function Experience() {
       {
         id: 7,
         title: 'NOLOGOS ⭐⭐⭐⭐',
-        subtitle:'Sessión de fotos de moda',
+        subtitle:'Sessión de fotos',
         summary: 'Sesión fotográfica al aire libre, estilo streetwear para un marca de ropa inspirado en el mundial de fútbol Epaña.',
         date: 'Mayo 2026',
         description:
@@ -143,25 +143,28 @@ function Experience() {
           'Pic-Time',
           'Instagram'
         ],
-        image: '/moda/nologos-38.webp',
+        image: '/moda/NOLOGOS/MUNDIAL_ESP/nologos-38.webp',
         url: 'https://visualfoldr.pic-time.com/TgchnvGRE9eE8'
       },
       {
         id: 8,
         title: 'NOLOGOS ⭐⭐⭐⭐',
-        subtitle:'Sessión de fotos de moda',
-        summary: 'Sesión fotográfica al aire libre, estilo streetwear para un marca de ropa inspirado en el mundial de fútbol Epaña.',
-        date: 'Mayo 2026',
+        subtitle:'Sessión de fotos',
+        summary: 'Sesión fotográfica en un estudio profesional.',
+        date: 'Julio 2026',
         description:
         'Sesión fotográfica de estilo streetwear realizada para la presentación de una colección inspirada en la Copa Mundial de Fútbol de 2026, combinando moda urbana, identidad visual y una estética contemporánea al aire libre.',
         technologies: [
           'Sony A6400',
           'LightRoom Classic',
           'Pic-Time',
-          'Instagram'
+          'Instagram',
+          'Focos de estudio',
+          'Reflectores',
+          'Difusores'
         ],
-        image: '/moda/nologos-38.webp',
-        url: 'https://visualfoldr.pic-time.com/TgchnvGRE9eE8'
+        image: '/moda/NOLOGOS/SUMMER/NOLOGOS_S60.webp',
+        url: ''
       }
     ];
 
