@@ -2,11 +2,12 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import './Galeria.scss';
 
-import StAndreu_05 from '/futbol-sala/St-Andreu/StAndreu-05.webp';
 import foto1 from '/backgrounds/desktop/foto-1.webp';
 import skate05 from '/skate/sk8-16.webp';
 import papaXVI from '/experimental/papaXVI-07.webp';
 import nologos_01 from '/moda/NOLOGOS/MUNDIAL_ESP/nologos-37.webp';
+import StColoma from '/futbol-sala/StColoma/StColoma-24.webp';
+
 
 const albums = [
   {
@@ -37,7 +38,7 @@ const albums = [
     id: 'futbol-sala',
     nombre: 'Fútbol Sala',
     descripcion: 'Liga de tercera división juvenil.',
-    imagen: StAndreu_05
+    imagen: StColoma
   },
   
 ];

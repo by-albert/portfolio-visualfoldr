@@ -40,9 +40,9 @@ const Contacto = () => {
             </h2>
 
             <p className="contact-intro">
-              Estoy disponible para proyectos de desarrollo web,
-              fotografía, edición de vídeo y colaboraciones
-              creativas.
+              ¿Te imaginas cómo sería dar vida a tu proyecto?
+              <br />             
+              ¡Pongámonos en contacto y empecemos cuanto antes!
             </p>
 
             <div className="contact-actions">
