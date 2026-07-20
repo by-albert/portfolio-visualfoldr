@@ -84,9 +84,9 @@ const album = albumsData[tipo];
 const albumOrder = [
   'moda',
   'conciertos',
+  'futbol-sala',
   'skate',
   'experimental',
-  'futbol-sala',
 ];
 
 const currentAlbumIndex =

@@ -32,14 +32,13 @@
 /* GRID */
 /* ========================= */
 
-
-
 .albums-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 390px));
+  grid-template-columns: repeat(3, minmax(0, 320px));
   justify-content: center;
   gap: 1.8rem;
 }
+
 /* ========================= */
 /* CARD */
 /* ========================= */

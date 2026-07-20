@@ -4,7 +4,7 @@ import './Galeria.scss';
 
 import foto1 from '/backgrounds/desktop/foto-1.webp';
 import skate05 from '/skate/sk8-16.webp';
-import papaXVI from '/experimental/papaXVI-07.webp';
+import papaXVI from '/experimental/papaXVI-02.webp';
 import nologos_01 from '/moda/NOLOGOS/MUNDIAL_ESP/nologos-37.webp';
 import StColoma from '/futbol-sala/StColoma/StColoma-24.webp';
 
@@ -23,6 +23,12 @@ const albums = [
     imagen: foto1
   },
   {
+    id: 'futbol-sala',
+    nombre: 'Fútbol Sala',
+    descripcion: 'Liga de tercera división juvenil.',
+    imagen: StColoma
+  },
+  {
     id: 'skate',
     nombre: 'Skateboarding',
     descripcion: 'Deportes extremos!',
@@ -33,14 +39,7 @@ const albums = [
     nombre: 'Experimental',
     descripcion: 'Exploración creativa en desarrollo constante.',
     imagen: papaXVI
-  },
-  {
-    id: 'futbol-sala',
-    nombre: 'Fútbol Sala',
-    descripcion: 'Liga de tercera división juvenil.',
-    imagen: StColoma
-  },
-  
+  }  
 ];
 
 const Galeria = () => {
