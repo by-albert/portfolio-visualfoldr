@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import './Galeria.scss';
+import PortfolioCTA from '../../components/PortfolioCTA/PortfolioCTA.jsx';
 
 import foto1 from '/backgrounds/desktop/foto-1.webp';
 import skate05 from '/skate/sk8-16.webp';
@@ -46,6 +47,7 @@ const Galeria = () => {
   const [activeAlbum, setActiveAlbum] = useState(null);
 
   return (
+    <>
     <section id="galeria" className="galeria-page">
       <div className="galeria-container">
 
@@ -61,27 +63,24 @@ const Galeria = () => {
             <Link
               key={album.id}
               to={`/galeria/${album.id}`}
-              className={`album-card ${
-                activeAlbum === album.id ? 'active' : ''
-              }`}
+              className={`album-card ${activeAlbum === album.id ? 'active' : ''}`}
               onMouseEnter={() => setActiveAlbum(album.id)}
               onMouseLeave={() => setActiveAlbum(null)}
             >
               <div className="album-image">
                 <img
-                    src={album.imagen}
-                    alt={album.nombre}
-                    loading="lazy"
-                    decoding="async"
-                />
+                  src={album.imagen}
+                  alt={album.nombre}
+                  loading="lazy"
+                  decoding="async" />
                 <div className="album-title">
-                    <span>{album.nombre}</span>
+                  <span>{album.nombre}</span>
                 </div>
 
-                  <div className="album-overlay">
-                    <h2>{album.nombre}</h2>
-                    <p>{album.descripcion}</p>
-                  </div>
+                <div className="album-overlay">
+                  <h2>{album.nombre}</h2>
+                  <p>{album.descripcion}</p>
+                </div>
               </div>
             </Link>
           ))}
@@ -89,7 +88,8 @@ const Galeria = () => {
 
       </div>
     </section>
-  );
-};
 
+    <PortfolioCTA variant = "large" />
+  </>);
+};
 export default Galeria;

@@ -303,7 +303,7 @@ function Formacion() {
             ))}
 
           </div>
-          <div className="formacion-actions">
+          {/* <div className="formacion-actions">
 
             <button
               className="formacion-btn"
@@ -318,7 +318,7 @@ function Formacion() {
               Ver galería
             </button>
 
-          </div>
+          </div> */}
       </div>
 
     </section>

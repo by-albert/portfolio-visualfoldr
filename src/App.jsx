@@ -17,6 +17,7 @@ import Sesion from './pages/Galeria/Sesion/Sesion.jsx';
 import Experience from './pages/Experience/Experience.jsx';
 import Formacion from './pages/Formacion/Formacion.jsx';
 import FooterContacto from './pages/Menu/FooterContacto/FooterContacto.jsx';
+import PortfolioVisual from "./pages/PortfolioVisual/PortfolioVisual";
 
 /* ========================= */
 /* SCROLL TO TOP CLEAN */
@@ -80,6 +81,19 @@ function AppRoutes() {
               </>
             }
           />
+            {/* ========================= */}
+            {/* PORTFOLIO VISUAL */}
+            {/* ========================= */}
+
+            <Route
+              path="/portfolio"
+              element={
+                <>
+                  <PortfolioVisual />
+                </>
+              }
+            />
+
 
           {/* ========================= */}
           {/* GALERÍA (PÁGINA REAL) */}
@@ -94,23 +108,6 @@ function AppRoutes() {
               </>
             }
           />
-
-          {/* ========================= */}
-          {/* ÁLBUM */}
-          {/* ========================= */}
-          {/* <Route
-            path="/galeria/:tipo"
-            element={
-              <>
-                <Album />
-                <FooterContacto />
-              </>
-            }
-          /> */}
-
-          {/* ========================= */}
-          {/* SESIÓN */}
-          {/* ========================= */}
           <Route
           path="/galeria/:tipo"
           element={

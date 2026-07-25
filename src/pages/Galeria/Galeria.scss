@@ -137,36 +137,143 @@
   z-index: 2;
 }
 
-// .album-overlay h2 {
-//   margin: 0 0 0.5rem;
+// // SECTION PORTAFOLIO PHOTO
+// .portfolio-hero{
 
-//   text-decoration: none;
-//   color: white;
-
-//   font-size: 1.8rem;
-//   font-weight: 700;
-
-//   transform: translateY(0);
-//   transition: transform 0.4s ease;
+//     margin: 3rem;
 // }
 
-// .album-overlay p {
-//   margin: 0;
-  
-//   color: rgba(255, 255, 255, 0.75);
+// .portfolio-hero-card{
 
-//   font-size: 0.95rem;
-//   line-height: 1.5;
+//     position:relative;
 
-//   transform: translateY(0);
-//   transition: transform 0.4s ease;
+//     display:flex;
+
+//     align-items:center;
+
+//     justify-content:center;
+
+//     overflow:hidden;
+
+//     min-height:580px;
+
+//     border-radius:28px;
+
+//     text-decoration:none;
+
+//     // border:1px solid rgba(255,255,255,.08);
+
+//     transition:
+//         transform .45s ease,
+//         border-color .45s ease,
+//         box-shadow .45s ease;
 // }
 
-// .album-card:hover .album-overlay h2,
-// .album-card:hover .album-overlay p {
-//   transform: translateY(-4px);
+// .portfolio-hero-card:hover{
+
+//     transform:translateY(-8px);
+
+//     border-color:rgba(255,255,255,.18);
+
+//     box-shadow:0 25px 70px rgba(0,0,0,.45);
 // }
 
+// .portfolio-background{
+
+//     position:absolute;
+
+//     inset:0;
+
+//     width:100%;
+//     height:100%;
+
+//     object-fit:cover;
+
+//     transition:transform .8s ease;
+// }
+
+// .portfolio-hero-card:hover .portfolio-background{
+
+//     transform:scale(1.08);
+// }
+
+// .portfolio-overlay{
+
+//     position:absolute;
+
+//     inset:0;
+
+//     background:
+//     linear-gradient(
+//         rgba(0,0,0,.30),
+//         rgba(0,0,0,.75)
+//     );
+
+//     z-index:1;
+// }
+
+// .portfolio-content{
+
+//     position:relative;
+
+//     z-index:2;
+
+//     max-width:720px;
+
+//     padding:4rem;
+
+//     text-align:center;
+// }
+
+// .portfolio-tag{
+//   display:inline-block;
+//   margin-bottom:1rem;
+//   color:#ffffff;
+//   letter-spacing:3px;
+//   font-size:.8rem;
+//   opacity:.8;
+// }
+
+// .portfolio-content h2{
+//   font-size:3rem;
+//   color:white;
+//   margin-bottom:1.5rem;
+// }
+
+// .portfolio-content p{
+//   color:rgba(255,255,255,.85);
+//   line-height:1.8;
+//   font-size:1.15rem;
+//   margin-bottom:2.5rem;
+// }
+
+// .portfolio-button{
+// display:inline-flex;
+
+//     align-items:center;
+//     justify-content:center;
+
+//     padding:1rem 2rem;
+
+//     border-radius:999px;
+
+//     background:white;
+
+//     color:black;
+
+//     font-weight:600;
+
+//     animation: floatButton 2.6s ease-in-out infinite;
+
+//     transition:
+//         transform .3s ease,
+//         background .3s ease;
+// }
+
+// .portfolio-hero-card:hover .portfolio-button{
+
+//     transform:translateY(-3px);
+// }
 
 // GALERIA GRID de dentro
 .gallery-grid {
@@ -181,6 +288,19 @@
   margin-bottom: 1rem;
   border-radius: 12px;
 }
+
+// @keyframes floatButton {
+
+//     0%,
+//     100%{
+//         transform: translateY(0);
+//     }
+
+//     50%{
+//         transform: translateY(-15px);
+//     }
+
+// }
 
 /* ========================= */
 /* RESPONSIVE */
@@ -209,4 +329,24 @@
   .album-overlay p {
     font-size: 0.9rem;
   }
+
+  .portfolio-hero-card{
+
+        min-height:460px;
+    }
+
+    .portfolio-content{
+
+        padding:2rem;
+    }
+
+    .portfolio-content h2{
+
+        font-size:2.3rem;
+    }
+
+    .portfolio-content p{
+
+        font-size:1rem;
+    }
 }

@@ -5,10 +5,12 @@ import {
   useNavigate
 } from 'react-router-dom';
 
-import { FaInstagram } from "react-icons/fa";
+import './Sesion.scss'
 
-import './Sesion.scss';
+import { FaInstagram } from "react-icons/fa";
 import { albumsData } from '../data/index.js';
+
+import PortfolioCTA from "../../../components/PortfolioCTA/PortfolioCTA";
 
 const Sesion = () => {
   const { tipo } = useParams();
@@ -289,7 +291,6 @@ const goToNextAlbum = () => {
             </div>
 
             <div className="sesion-grid">
-
               {(isMobile &&
               sesion.imagenesMobile
                 ? sesion.imagenesMobile
@@ -309,18 +310,11 @@ const goToNextAlbum = () => {
                   />
                 </div>
               ))}
-              
-              {/* BOTÓN GALERÍA COMPLETA
-              <div className="full-gallery-container">
-                <button className="full-gallery-btn"
-                onClick={goToGallery}
-                >
-                  Ver galería completa
-                  </button>
-                  </div> */}
                 </div>
               </div>
           ))}
+        {/* CTA Portafolio (más visual*/}
+         <PortfolioCTA variant = "small" />
       </div>
 
       {/* ========================= */}
