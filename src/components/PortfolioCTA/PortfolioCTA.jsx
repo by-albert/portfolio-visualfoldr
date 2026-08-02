@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const PortfolioCTA = ({ variant = "album" }) => {
 
+  // PORTAFOLIO CAJA
   return (
     <section className={`portfolio-hero ${variant}`}>
 
