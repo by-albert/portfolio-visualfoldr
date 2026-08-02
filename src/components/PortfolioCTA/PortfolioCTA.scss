@@ -15,6 +15,75 @@
   margin: 4rem 0 2rem;
 }
 
+/* ===== COMPACT CTA ===== */
+
+.portfolio-hero.compact {
+
+  margin: 4rem 0;
+
+}
+
+.portfolio-hero.compact .portfolio-hero-card {
+
+  min-height:190px;
+
+}
+
+/* ========================= */
+/* COMPACT CONTENT */
+/* ========================= */
+
+
+.portfolio-hero.compact .portfolio-content {
+
+  padding: 1.5rem;
+
+}
+
+
+.portfolio-hero.compact .portfolio-tag {
+
+  font-size:.7rem;
+
+  margin-bottom:.5rem;
+
+}
+
+
+.portfolio-hero.compact h2 {
+
+  font-size:1.8rem;
+
+  margin-bottom:.5rem;
+
+}
+
+
+.portfolio-hero.compact p {
+
+  font-size:.95rem;
+
+  margin-bottom:1rem;
+
+  line-height:1.4;
+
+}
+
+
+.portfolio-hero.compact .portfolio-button {
+
+  padding:.65rem 1.5rem;
+
+  font-size:.85rem;
+
+}
+
+.portfolio-hero.compact .portfolio-background {
+
+  object-position:center 45%;
+
+}
+
 /* ========================= */
 /* CARD */
 /* ========================= */
@@ -213,6 +282,51 @@
   50% {
     transform: translateY(-15px);
   }
+}
+
+/* COMPACT MOBILE */
+
+.portfolio-hero.compact {
+
+  margin:2.5rem -1rem 0;
+
+}
+
+
+.portfolio-hero.compact .portfolio-hero-card {
+
+  min-height:160px;
+
+  border-radius:0;
+
+}
+
+
+.portfolio-hero.compact .portfolio-content {
+
+  padding:1rem;
+
+}
+
+
+.portfolio-hero.compact h2 {
+
+  font-size:1.3rem;
+
+}
+
+
+.portfolio-hero.compact p {
+
+  display:none;
+
+}
+
+
+.portfolio-hero.compact .portfolio-button {
+
+  padding:.55rem 1.1rem;
+
 }
 
 /* ========================= */

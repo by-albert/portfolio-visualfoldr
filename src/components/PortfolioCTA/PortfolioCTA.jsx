@@ -2,7 +2,7 @@ import './PortfolioCTA.scss';
 import { Link } from "react-router-dom";
 
 
-const PortfolioCTA = ({ variant = "album" }) => {
+const PortfolioCTA = ({ variant = "compact" }) => {
 
   // PORTAFOLIO CAJA
   return (

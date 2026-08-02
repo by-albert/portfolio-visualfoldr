@@ -1,95 +1,307 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import './Galeria.scss';
-import PortfolioCTA from '../../components/PortfolioCTA/PortfolioCTA.jsx';
+import "./Galeria.scss";
 
-import foto1 from '/backgrounds/desktop/foto-1.webp';
-import skate05 from '/skate/sk8-16.webp';
-import papaXVI from '/experimental/papaXVI-02.webp';
-import nologos_01 from '/moda/NOLOGOS/MUNDIAL_ESP/nologos-37.webp';
-import StColoma from '/futbol-sala/StColoma/StColoma-24.webp';
+import PortfolioCTA from "../../components/PortfolioCTA/PortfolioCTA";
+import useReveal from "../../components/hooks/useReveal";
 
 
-const albums = [
+// =========================
+// DATA
+// =========================
+
+const gallerySections = [
   {
-    id: 'moda',
-    nombre: 'Moda',
-    descripcion: 'Colaboraciones con marcas.',
-    imagen: nologos_01
+    categoria: "Moda",
+
+    sesiones: [
+
+      {
+        titulo: "NOLOGOS",
+
+        imagenes: [
+          "/moda/NOLOGOS/MUNDIAL_ESP/nologos-37.webp",
+          "/moda/NOLOGOS/MUNDIAL_ESP/nologos-43.webp",
+          "/moda/NOLOGOS/MUNDIAL_ESP/nologos-02.webp",
+          "/moda/NOLOGOS/MUNDIAL_ESP/nologos-34.webp",
+
+          // VERANO
+          "/moda/NOLOGOS/SUMMER/NOLOGOS_S01.webp",
+          "/moda/NOLOGOS/SUMMER/NOLOGOS_S19.webp",
+          "/moda/NOLOGOS/SUMMER/NOLOGOS_S27.webp",
+          "/moda/NOLOGOS/SUMMER/NOLOGOS_S29.webp",
+
+        ],
+      },
+
+    ],
+  }, 
+  {
+    categoria: "Conciertos",
+
+    sesiones: [
+
+      {
+        titulo: "Coratge",
+
+        imagenes: [
+          "/concerts/coratge/coratge-04.webp",
+          "/concerts/coratge/coratge-02.webp",
+          "/concerts/coratge/coratge-24.webp",
+          "/concerts/coratge/coratge-08.webp",
+        ],
+      },
+
+
+      {
+        titulo: "WE DANCE BAND",
+
+        imagenes: [
+          "/concerts/wedance/WDB-08.webp",
+          "/concerts/wedance/WDB-12.webp",
+          "/concerts/wedance/WDB-03.webp",
+          "/concerts/wedance/WDB-04.webp",
+        ],
+      },
+
+    ],
   },
   {
-    id: 'conciertos',
-    nombre: 'Conciertos',
-    descripcion: 'Conciertos en vivo.',
-    imagen: foto1
-  },
-  {
-    id: 'futbol-sala',
-    nombre: 'Fútbol Sala',
-    descripcion: 'Liga de tercera división juvenil.',
-    imagen: StColoma
-  },
-  {
-    id: 'skate',
-    nombre: 'Skateboarding',
-    descripcion: 'Deportes extremos!',
-    imagen: skate05
-  },
-  {
-    id: 'experimental',
-    nombre: 'Experimental',
-    descripcion: 'Exploración creativa en desarrollo constante.',
-    imagen: papaXVI
-  }  
+    categoria: "Deportes",
+
+    sesiones: [
+
+      {
+        titulo: "Industries Santa Coloma vs Valdepeñas",
+
+        imagenes: [
+          "/futbol-sala/StColoma/StColoma-24.webp",
+          "/futbol-sala/StColoma/StColoma-19.webp",
+          "/futbol-sala/StColoma/StColoma-22.webp",
+          "/futbol-sala/StColoma/StColoma-15.webp",
+        ],
+      },
+
+      {
+        titulo: "St Joan - Tercera división Juvenil",
+
+        imagenes: [
+          "/futbol-sala/St-Andreu/StAndreu-09.webp",
+          "/futbol-sala/Poblenou/P9-06.jpg",
+          "/futbol-sala/Martinenc/Martinenc-05.jpg",
+          "/futbol-sala/Kotska/Kotska-02.webp",
+        ],
+      }
+
+    ],
+  }
+
 ];
 
-const Galeria = () => {
-  const [activeAlbum, setActiveAlbum] = useState(null);
+
+
+// =========================
+// REVEAL COMPONENT
+// =========================
+
+function RevealSection({
+  children,
+  className = ""
+}) {
+
+  const [ref, visible] = useReveal();
+
 
   return (
+
+    <div
+
+      ref={ref}
+
+      className={`
+        ${className}
+        ${visible ? "show" : ""}
+      `}
+
+    >
+
+      {children}
+
+    </div>
+
+  );
+
+}
+
+
+
+// =========================
+// COMPONENT
+// =========================
+
+function Galeria() {
+
+
+  const [
+    headerRef,
+    headerVisible
+
+  ] = useReveal();
+
+
+
+  return (
+
     <>
-    <section id="galeria" className="galeria-page">
-      <div className="galeria-container">
 
-        <h1>Galería</h1>
-        <p className="galeria-subtitle">
-          Explora mis álbumes de fotografía
-        </p>
 
-        <div
-          className={`albums-grid ${activeAlbum ? 'grid-active' : ''}`}
-        >
-          {albums.map((album) => (
-            <Link
-              key={album.id}
-              to={`/galeria/${album.id}`}
-              className={`album-card ${activeAlbum === album.id ? 'active' : ''}`}
-              onMouseEnter={() => setActiveAlbum(album.id)}
-              onMouseLeave={() => setActiveAlbum(null)}
-            >
-              <div className="album-image">
-                <img
-                  src={album.imagen}
-                  alt={album.nombre}
-                  loading="lazy"
-                  decoding="async" />
-                <div className="album-title">
-                  <span>{album.nombre}</span>
-                </div>
+      <section
+        id="galeria"
+        className="galeria-page"
+      >
 
-                <div className="album-overlay">
-                  <h2>{album.nombre}</h2>
-                  <p>{album.descripcion}</p>
-                </div>
-              </div>
-            </Link>
-          ))}
+
+        <div className="galeria-container">
+
+
+
+          {/* HEADER */}
+
+          <div
+
+            ref={headerRef}
+
+            className={`
+              gallery-header
+              ${headerVisible ? "show" : ""}
+            `}
+
+          >
+
+            <h1>
+              Galería
+            </h1>
+
+
+            <p className="galeria-subtitle">
+
+              Explora algunos de mis proyectos fotográficos
+
+            </p>
+
+
+          </div>
+
+
+
+
+
+          {/* CATEGORIAS */}
+
+
+          {
+            gallerySections.map((section)=>(
+
+
+              <RevealSection
+
+                key={section.categoria}
+
+                className="gallery-category"
+
+              >
+
+
+                <h2>
+
+                  {section.categoria}
+
+                </h2>
+
+
+
+
+
+                {
+                  section.sesiones.map((sesion)=>(
+
+
+                    <RevealSection
+
+                      key={sesion.titulo}
+
+                      className="gallery-session"
+
+                    >
+
+
+                      <h3>
+
+                        {sesion.titulo}
+
+                      </h3>
+
+
+
+
+
+                      <div className="gallery-grid">
+
+
+                        {
+                          sesion.imagenes.map(
+                            (img,index)=>(
+
+
+                              <div
+
+                                key={index}
+
+                                className="gallery-item"
+
+                              >
+
+                                <img
+
+                                  src={img}
+
+                                  alt={sesion.titulo}
+
+                                  loading="lazy"
+
+                                />
+
+                              </div>
+
+
+                            )
+                          )
+                        }
+
+
+                      </div>
+
+
+
+                    </RevealSection>
+
+
+                  ))
+                }
+
+              </RevealSection>
+
+            ))
+          }
         </div>
+        <h2> Si te has quedado con ganas de más ve mi álbum completo!</h2>
+        {/* PORTFOLIO (hacerlo tamaño botoncito)  */}        
+        <PortfolioCTA variant="compact"/>
+      </section>
+    </>
 
-      </div>
-    </section>
+  );
 
-    <PortfolioCTA variant = "large" />
-  </>);
-};
+}
+
+
+
 export default Galeria;
