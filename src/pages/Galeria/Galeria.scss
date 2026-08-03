@@ -6,12 +6,12 @@
   background: #0c0c0f;
   color: #f5f5f5;
 
-  padding: 7rem 2rem;
+  padding: 3rem;
 }
 
 .galeria-container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -401,6 +401,12 @@
 }
 
 
+// Galeria completa
+.galeria-footer{
+  width:100%;
+  height:100%;
+}
+
 
 @keyframes imageReveal {
 
@@ -468,6 +474,11 @@
 
     margin-bottom:2rem;
 
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+
   }
 
   .gallery-session{
@@ -481,6 +492,10 @@
     font-size:1.15rem;
 
     margin-bottom:1rem;
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
   }
 

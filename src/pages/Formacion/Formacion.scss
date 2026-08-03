@@ -1,376 +1,174 @@
 /* ========================= */
-/* SECTION */
+/* FORMACION */
 /* ========================= */
 
-.formacion {
-  padding: 6rem 1.5rem;
+.formacion{
 
-  background: #0c0c0f;
-  color: #f5f5f5;
+  background:#0c0c0f;
+
+  color:#fff;
+
+  padding:7rem 2rem;
+
 }
 
-/* ========================= */
-/* CONTAINER */
-/* ========================= */
+.formacion-container{
 
-.formacion-container {
-  width: 100%;
-  max-width: 1400px;
+  max-width:1400px;
 
-  margin: 0 auto;
+  margin:auto;
+
 }
 
 /* ========================= */
 /* HEADER */
 /* ========================= */
 
-.formacion-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.formacion-header{
 
-  text-align: center;
+  text-align:center;
 
-  margin-bottom: 4rem;
+  margin-bottom:5rem;
+
 }
 
-.formacion-label {
-  margin-bottom: 1rem;
+.formacion-title{
 
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size:clamp(2.6rem,5vw,4rem);
 
-  letter-spacing: 0.15em;
+  margin-bottom:1rem;
 
-  color: rgba(255,255,255,0.45);
 }
 
-.formacion-title {
-  font-size: 3.2rem;
-  font-weight: 700;
+.formacion-subtitle{
 
-  line-height: 1.05;
+  max-width:700px;
 
-  margin-bottom: 1rem;
+  margin:auto;
 
-  color: #ffffff;
-}
+  color:rgba(255,255,255,.65);
 
-.formacion-subtitle {
-  max-width: 700px;
+  line-height:1.8;
 
-  font-size: 1.05rem;
-  line-height: 1.7;
-
-  color: rgba(255,255,255,0.65);
 }
 
 /* ========================= */
 /* GRID */
 /* ========================= */
 
-.formacion-grid {
-  display: grid;
+.formacion-grid{
 
-  grid-template-columns: repeat(2, 1fr);
+  display:grid;
 
-  gap: 2rem;
+  grid-template-columns:repeat(2,1fr);
+
+  gap:2rem;
+
 }
 
 /* ========================= */
 /* CARD */
 /* ========================= */
 
-.formacion-card {
-  padding: 2rem;
+.formacion-card{
 
-  border-radius: 28px;
+  background:#171717;
 
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255,255,255,0.04),
-      rgba(255,255,255,0.015)
-    );
+  border:1px solid rgba(255,255,255,.06);
 
-  border: 1px solid rgba(255,255,255,0.08);
+  border-radius:22px;
 
-  backdrop-filter: blur(12px);
+  padding:2rem;
 
-  transition:
-    transform 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
+  transition:.35s;
+
 }
 
-.formacion-card:hover {
-  transform: translateY(-6px);
+.formacion-card:hover{
 
-  border-color: rgba(255,255,255,0.18);
+  transform:translateY(-6px);
 
-  box-shadow:
-    0 25px 60px rgba(0,0,0,0.35);
+  border-color:rgba(255,255,255,.12);
+
 }
 
 /* ========================= */
-/* TOP */
-/* ========================= */
 
-.formacion-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+.formacion-top{
 
-  gap: 1rem;
+  display:flex;
 
-  margin-bottom: 1.5rem;
+  justify-content:space-between;
+
+  align-items:flex-start;
+
+  gap:2rem;
+
+  margin-bottom:1.5rem;
+
 }
 
-.formacion-center {
-  margin-bottom: 0.6rem;
+.formacion-center{
 
-  font-size: 0.9rem;
-  font-weight: 500;
+  color:#8d8d8d;
 
-  color: rgba(255,255,255,0.45);
+  margin-bottom:.5rem;
+
+  font-size:.9rem;
+
 }
 
-.formacion-top h3 {
-  font-size: 1.6rem;
-  font-weight: 700;
+.formacion-top h3{
 
-  line-height: 1.2;
+  font-size:1.5rem;
 
-  color: #ffffff;
+  line-height:1.3;
+
 }
 
-.formacion-year {
-  padding: 0.55rem 1rem;
+.formacion-year{
 
-  border-radius: 999px;
+  color:white;
 
-  background: rgba(255,255,255,0.06);
+  white-space:nowrap;
 
-  border: 1px solid rgba(255,255,255,0.08);
+  font-weight:600;
 
-  font-size: 0.85rem;
-  font-weight: 600;
-
-  white-space: nowrap;
-
-  color: rgba(255,255,255,0.75);
 }
 
 /* ========================= */
-/* DESCRIPTION */
-/* ========================= */
 
-.formacion-description {
-  margin-bottom: 2rem;
+.formacion-description{
 
-  font-size: 1rem;
-  line-height: 1.8;
+  color:#c9c9c9;
 
-  color: rgba(255,255,255,0.72);
+  line-height:1.8;
+
+  margin-bottom:2rem;
+
 }
 
 /* ========================= */
-/* SKILLS */
-/* ========================= */
 
-.formacion-skills {
-  display: flex;
-  flex-wrap: wrap;
+.formacion-skills{
 
-  gap: 0.8rem;
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:.7rem;
+
 }
 
-.formacion-skills span {
-  padding: 0.7rem 1rem;
+.formacion-skills span{
 
-  border-radius: 999px;
+  padding:.55rem .95rem;
 
-  background: rgba(255,255,255,0.05);
+  border-radius:999px;
 
-  border: 1px solid rgba(255,255,255,0.08);
+  background:#262626;
 
-  font-size: 0.9rem;
-  font-weight: 500;
-
-  color: rgba(255,255,255,0.82);
-
-  transition:
-    background 0.3s ease,
-    border-color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.formacion-skills span:hover {
-  transform: translateY(-2px);
-
-  background: rgba(255,255,255,0.08);
-
-  border-color: rgba(255,255,255,0.16);
-}
-
-/* ========================= */
-/* ACTION BUTTONS */
-/* ========================= */
-
-.formacion-actions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-
-  gap: 1rem;
-
-  margin-top: 4rem;
-}
-
-.formacion-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  
-  min-width: 180px;
-
-  text-decoration: none;
-
-  padding: 1rem 2rem;
-
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 999px;
-
-  background: rgba(255,255,255,0.04);
-
-  backdrop-filter: blur(12px);
-
-  color: #ffffff;
-
-  font-size: 0.95rem;
-  font-weight: 600;
-
-  cursor: pointer;
-
-  transition:
-    transform 0.35s ease,
-    background 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-.formacion-btn:hover {
-  transform: translateY(-4px);
-
-  background: rgba(255,255,255,0.08);
-
-  border-color: rgba(255,255,255,0.25);
-
-  box-shadow:
-    0 15px 40px rgba(0,0,0,0.35);
-}
-
-.formacion-btn:active {
-  transform: translateY(-1px);
-}
-
-/* ========================= */
-/* MOBILE SLIDER */
-/* ========================= */
-
-.formacion-slider {
-  display: none;
-}
-
-.slider-dots {
-  display: none;
-}
-
-@media (max-width: 768px) {
-
-  .desktop-grid {
-    display: none;
-  }
-
-  .formacion-slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: .25rem;
-
-    width: 100%;
-  }
-
-  .formacion-slider .formacion-card {
-    flex: 1;
-    max-width: 380px;
-  }
-
-  .slider-arrow {
-
-    width: 34px;
-    height: 34px;
-
-    flex-shrink: 0;
-
-    border: none;
-    border-radius: 50%;
-
-    background: rgba(255,255,255,0.08);
-
-    border: 1px solid rgba(255,255,255,0.08);
-
-    color: white;
-
-    font-size: 1.3rem;
-
-    cursor: pointer;
-  }
-
-  .formacion-slider .formacion-skills {
-
-    margin-top: 1rem;
-
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: .5rem;
-  }
-
-  .slider-dots {
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    gap: .55rem;
-
-    margin-top: 1.25rem;
-  }
-
-  .slider-dot {
-
-    width: 10px;
-    height: 10px;
-
-    border-radius: 50%;
-
-    border: none;
-
-    background: rgba(255,255,255,0.25);
-
-    cursor: pointer;
-  }
-
-  .slider-dot.active {
-
-    background: white;
-
-    transform: scale(1.35);
-  }
+  font-size:.88rem;
 
 }
 
@@ -378,52 +176,70 @@
 /* RESPONSIVE */
 /* ========================= */
 
-@media (max-width: 1000px) {
+@media(max-width:900px){
 
-  .formacion-grid {
-    grid-template-columns: 1fr;
-  }
+  .formacion-grid{
 
-  .formacion-title {
-    font-size: 2.5rem;
+    grid-template-columns:1fr;
+
   }
 
 }
 
-@media (max-width: 650px) {
+@media(max-width:768px){
 
-  .formacion {
-    padding: 5rem 1rem;
-    scroll-margin-top: 50px;
+  .formacion{
+
+    padding:5rem 1.2rem;
 
   }
 
-  .formacion-title {
-    font-size: 2rem;
+  .formacion-header{
+
+    margin-bottom:3rem;
+
   }
 
-  .formacion-subtitle {
-    font-size: 1rem;
+  .formacion-top{
+
+    flex-direction:column;
+
+    gap:1rem;
+
   }
 
-  .formacion-card {
-    padding: 1.5rem;
+  .formacion-year{
+
+    font-size:.95rem;
+
   }
 
-  .formacion-top {
-    flex-direction: column;
+  .formacion-top h3{
+
+    font-size:1.35rem;
+
   }
 
-  .formacion-top h3 {
-    font-size: 1.35rem;
+  .formacion-description{
+
+    font-size:.95rem;
+
+    line-height:1.7;
+
   }
 
-  .formacion-description {
-    font-size: 0.95rem;
+  .formacion-skills{
+
+    gap:.55rem;
+
   }
 
-  .formacion-skills span {
-    font-size: 0.82rem;
+  .formacion-skills span{
+
+    font-size:.82rem;
+
+    padding:.45rem .8rem;
+
   }
 
-}
+} 

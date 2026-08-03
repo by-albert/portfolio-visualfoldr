@@ -15,7 +15,7 @@ const projects = [
     image: "/skate/sk8-01.webp"
   },
   {
-    title: "ST COLOMA",
+    title: "STA COLOMA",
     category: "Fútbol Sala",
     year: "2026",
     image: "/futbol-sala/StColoma/StColoma-06.webp"

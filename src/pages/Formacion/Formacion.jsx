@@ -1,165 +1,94 @@
-import React, { useState } from 'react';
-import './Formacion.scss';
-import { Link } from 'react-router-dom';
+import "./Formacion.scss";
 
 function Formacion() {
-  const [currentCard, setCurrentCard] = useState(0);
 
-  const nextCard = () => {
-    setCurrentCard((prev) =>
-      prev === education.length - 1
-        ? 0
-        : prev + 1
-    );
-  };
-
-  const prevCard = () => {
-    setCurrentCard((prev) =>
-      prev === 0
-        ? education.length - 1
-        : prev - 1
-    );
-  };
   const education = [
 
     {
       id: 1,
-
-      title: 'Fotografía',
-
-      center: 'CFGS - EASD Josep Serra i Abella',
-
-      year: 'Próximamente',
-
+      title: "Fotografía",
+      center: "CFGS - EASD Josep Serra i Abella",
+      year: "Próximamente",
       description:
-        'Ciclo superior de fotografía para aprender técnicas de composición, iluminación y edición fotográfica, desarrollando habilidades creativas.',
-
+        "Ciclo superior de fotografía para aprender técnicas de composición, iluminación y edición fotográfica, desarrollando habilidades creativas.",
       skills: [
-        'Próximamente',
-      ],
-       mobileSkills: [
-        'Próximamente'
+        "Próximamente"
       ]
     },
+
     {
       id: 2,
-
-      title: 'Edición de vídeo y postproducción',
-
-      center: 'Curso técnico - Esccola ESPAI',
-
-      year: '2025 - 2026',
-
+      title: "Edición de vídeo y postproducción",
+      center: "Curso técnico - Escola ESPAI",
+      year: "2025 - 2026",
       description:
-        'Formación enfocada a la edición de vídeo y contenido audiovisual, aprendiendo procesos de edición, narrativa visual y creación de contenido.',
-
+        "Formación enfocada a la edición de vídeo y contenido audiovisual, aprendiendo procesos de edición, narrativa visual y creación de contenido.",
       skills: [
-        'Premiere Pro CC',
-        'Adobe After Effects',
-        'Ableton Live 12'
-      ],
-       mobileSkills: [
-        'Premiere Pro CC',
-        'Adobe After Effects',
-        'Ableton Live 12'
+        "Premiere Pro CC",
+        "Adobe After Effects",
+        "Ableton Live 12"
       ]
     },
 
     {
       id: 3,
-
-      title: 'Desarrollo de Aplicaciones Web (DAW)',
-
-      center: 'CFGS - Institut TIC de Barcelona',
-
-      year: '2022 - 2025',
-
+      title: "Desarrollo de Aplicaciones Web (DAW)",
+      center: "CFGS - Institut TIC de Barcelona",
+      year: "2022 - 2025",
       description:
-        'Formación enfocada al desarrollo web frontend y backend, trabajando proyectos reales, bases de datos, diseño responsive y metodologías de trabajo en equipo.',
-
+        "Formación enfocada al desarrollo web frontend y backend, trabajando proyectos reales, bases de datos, diseño responsive y metodologías de trabajo en equipo.",
       skills: [
-        'HTML',
-        'CSS',
-        'JS',
-        'Java',
-        'Python',
-        'React',
-        'UI / UX',
-        'Lighthouse',
-        // 'Optimización de imágenes',
-        'GIMP',
-        'MySQL',
-        'Figma',
-        'Trello',
-        'Arduino',
-        'Git',
-        'GitHub',
-        'Responsive Design',
-        'Visual Studio Code',
-        // 'Pycharm',
-        // 'Eclipse'
-      ],
-      mobileSkills: [
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'React',
-        'MySQL',
-        'Git',
-        'GitHub',
-
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Python",
+        "Java",
+        "MySQL",
+        "Git",
+        "GitHub",
+        "Responsive Design",
+        "Figma",
+        "Lighthouse",
+        "Visual Studio Code",
+        "Trello",
+        "Arduino",
+        "GIMP"
       ]
     },
 
     {
       id: 4,
-
-      title: 'Sistemas Microinformáticos y Redes (SMR)',
-
-      center: 'CFGM - La Salle Barceloneta',
-
-      year: '2020 - 2022',
-
+      title: "Sistemas Microinformáticos y Redes (SMR)",
+      center: "CFGM - La Salle Barceloneta",
+      year: "2020 - 2022",
       description:
-        'Formación enfocada en sistemas informáticos, redes, hardware, mantenimiento de equipos y bases de programación.',
-
+        "Formación enfocada en sistemas informáticos, redes, hardware, mantenimiento de equipos y bases de programación.",
       skills: [
-        'Windows',
-        'Linux',
-        'Virtual Box',
-        'Hardware',
-        'Montaje de equipos', 
-        'Mantenimiento de equipos',
-        'Aplicaciones Ofimáticas',
-        'WordPress',
-        'Cisco Packet Tracer',
-        'Inglés técnico',
-
-      ],
-      mobileSkills: [
-        'Windows',
-        'Linux',
-        'Wordpress',
-        'Ingles Técnico',
-        'VirtualBox',
-        'Cisco Packet Tracer'
+        "Windows",
+        "Linux",
+        "VirtualBox",
+        "Hardware",
+        "Montaje de equipos",
+        "Mantenimiento",
+        "WordPress",
+        "Cisco Packet Tracer",
+        "Inglés Técnico"
       ]
     }
+
   ];
 
   return (
 
-    <section className="formacion" id='formacion'>
+    <section
+      className="formacion"
+      id="formacion"
+    >
 
       <div className="formacion-container">
 
-        {/* HEADER */}
-
         <div className="formacion-header">
-
-          {/* <p className="formacion-label">
-            Trayectoria educativa
-          </p> */}
 
           <h2 className="formacion-title">
             Formación y aprendizaje
@@ -171,154 +100,57 @@ function Formacion() {
 
         </div>
 
-          {/* DESKTOP */}
+        <div className="formacion-grid">
 
-          <div className="formacion-grid desktop-grid">
+          {education.map((item) => (
 
-            {education.map((item) => (
-
-              <article
-                key={item.id}
-                className="formacion-card"
-              >
-
-                <div className="formacion-top">
-
-                  <div>
-
-                    <p className="formacion-center">
-                      {item.center}
-                    </p>
-
-                    <h3>
-                      {item.title}
-                    </h3>
-
-                  </div>
-
-                  <span className="formacion-year">
-                    {item.year}
-                  </span>
-
-                </div>
-
-                <p className="formacion-description">
-                  {item.description}
-                </p>
-
-                <div className="formacion-skills">
-
-                  {item.skills.map((skill, index) => (
-
-                    <span key={index}>
-                      {skill}
-                    </span>
-
-                  ))}
-
-                </div>
-
-              </article>
-
-            ))}
-
-          </div>
-
-          {/* MOBILE */}
-
-          <div className="formacion-slider">
-
-            <button
-              className="slider-arrow"
-              onClick={prevCard}
+            <article
+              key={item.id}
+              className="formacion-card"
             >
-              ←
-            </button>
-
-            <article className="formacion-card">
 
               <div className="formacion-top">
 
                 <div>
 
                   <p className="formacion-center">
-                    {education[currentCard].center}
+                    {item.center}
                   </p>
 
                   <h3>
-                    {education[currentCard].title}
+                    {item.title}
                   </h3>
 
                 </div>
 
                 <span className="formacion-year">
-                  {education[currentCard].year}
+                  {item.year}
                 </span>
 
               </div>
 
               <p className="formacion-description">
-                {education[currentCard].description}
+                {item.description}
               </p>
 
               <div className="formacion-skills">
 
-                {education[currentCard].mobileSkills.map(
-                  (skill, index) => (
-                    <span key={index}>
-                      {skill}
-                    </span>
-                  )
-                )}
+                {item.skills.map((skill, index) => (
+
+                  <span key={index}>
+                    {skill}
+                  </span>
+
+                ))}
 
               </div>
 
             </article>
 
-            <button
-              className="slider-arrow"
-              onClick={nextCard}
-            >
-              →
-            </button>
+          ))}
 
-          </div>
+        </div>
 
-          <div className="slider-dots">
-
-            {education.map((_, index) => (
-
-              <button
-                key={index}
-                className={`slider-dot ${
-                  currentCard === index
-                    ? 'active'
-                    : ''
-                }`}
-                onClick={() =>
-                  setCurrentCard(index)
-                }
-              />
-
-            ))}
-
-          </div>
-          {/* <div className="formacion-actions">
-
-            <button
-              className="formacion-btn"
-              onClick={() =>
-                document
-                  .getElementById('galeria')
-                  ?.scrollIntoView({
-                    behavior: 'smooth'
-                  })
-              }
-            >
-              Ver galería
-            </button>
-
-          </div> */}
       </div>
 
     </section>

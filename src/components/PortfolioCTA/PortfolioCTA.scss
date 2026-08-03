@@ -2,9 +2,10 @@
 /* PORTFOLIO CTA */
 /* ========================= */
 
-.portfolio-hero {
-  width: 100%;
-  margin: 3rem 0;
+.portfolio-hero{
+  
+  width:100%;
+
 }
 
 .portfolio-hero.large {
@@ -234,30 +235,459 @@
 }
 
 /* ========================= */
-/* BUTTON */
+/* BUTTON sustituido */
+/* ========================= */
+.portfolio-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:.6rem;
+
+    height:100%;
+}
+
+.portfolio-overlay{
+
+    background:linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.72)
+    );
+}
+
+.portfolio-tag{
+
+    letter-spacing:4px;
+
+    font-size:.72rem;
+
+    opacity:.75;
+}
+
+.portfolio-content h2{
+
+    margin:0;
+
+    font-size:2rem;
+
+    font-weight:700;
+}
+
+.portfolio-arrow{
+
+    margin-top:.5rem;
+
+    color:white;
+
+    font-weight:500;
+
+    opacity:.75;
+
+    transition:
+        transform .35s ease,
+        opacity .35s ease;
+
+}
+
+.portfolio-hero-card:hover .portfolio-arrow{
+
+    transform:translateX(8px);
+
+    opacity:1;
+
+}
+
+.portfolio-hero-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent 20%,
+        rgba(255,255,255,.08) 50%,
+        transparent 80%
+    );
+
+    transform:translateX(-100%);
+
+    transition:transform .8s ease;
+
+    z-index:2;
+
+}
+
+.portfolio-hero-card:hover::before{
+
+    transform:translateX(100%);
+
+}
+
+.portfolio-hero.small .portfolio-button {
+  padding: .9rem 1.6rem;
+  font-size: .95rem;
+}
+
+.portfolio-hero-card:hover .portfolio-button {
+  transform: translateY(-3px);
+}
+
+/* ========================= */
+/* ANIMATION */
 /* ========================= */
 
-.portfolio-button {
-  display: inline-flex;
+@keyframes floatButton {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
 
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* ========================= */
+/* PORTFOLIO CTA */
+/* ========================= */
+
+.portfolio-hero{
+  
+  width:100%;
+
+}
+
+.portfolio-hero.large {
+  margin: 5rem 0;
+}
+
+.portfolio-hero.small {
+  margin: 4rem 0 2rem;
+}
+
+/* ===== COMPACT CTA ===== */
+
+.portfolio-hero.compact {
+
+  margin: 4rem 0;
+
+}
+
+.portfolio-hero.compact .portfolio-hero-card {
+
+  min-height:190px;
+
+}
+
+/* ========================= */
+/* COMPACT CONTENT */
+/* ========================= */
+
+
+.portfolio-hero.compact .portfolio-content {
+
+  padding: 1.5rem;
+
+}
+
+
+.portfolio-hero.compact .portfolio-tag {
+
+  font-size:.7rem;
+
+  margin-bottom:.5rem;
+
+}
+
+
+.portfolio-hero.compact h2 {
+
+  font-size:1.8rem;
+
+  margin-bottom:.5rem;
+
+}
+
+
+.portfolio-hero.compact p {
+
+  font-size:.95rem;
+
+  margin-bottom:1rem;
+
+  line-height:1.4;
+
+}
+
+
+.portfolio-hero.compact .portfolio-button {
+
+  padding:.65rem 1.5rem;
+
+  font-size:.85rem;
+
+}
+
+.portfolio-hero.compact .portfolio-background {
+
+  object-position:center 45%;
+
+}
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+.portfolio-hero-card {
+  position: relative;
+
+  display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 1rem 2rem;
+  overflow: hidden;
 
-  border-radius: 999px;
+  width: 100%;
 
-  background: white;
+  border-radius: 28px;
 
-  color: black;
-
-  font-weight: 600;
-
-  animation: floatButton 2.6s ease-in-out infinite;
+  text-decoration: none;
 
   transition:
-    transform .3s ease,
-    background .3s ease;
+    transform .45s ease,
+    border-color .45s ease,
+    box-shadow .45s ease;
+}
+
+/* ===== HOME ===== */
+
+.portfolio-hero.large .portfolio-hero-card {
+  min-height: 580px;
+}
+
+/* ===== ÁLBUMES ===== */
+
+.portfolio-hero.small .portfolio-hero-card {
+  min-height: 380px;
+}
+
+.portfolio-hero-card:hover {
+  border-color: rgba(255,255,255,.18);
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.45);
+}
+
+/* ========================= */
+/* BACKGROUND */
+/* ========================= */
+
+.portfolio-background {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform .8s ease;
+}
+
+.portfolio-hero-card:hover .portfolio-background {
+  transform: scale(1.08);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    rgba(0,0,0,.30),
+    rgba(0,0,0,.75)
+  );
+
+  z-index: 1;
+}
+
+/* ========================= */
+/* CONTENT */
+/* ========================= */
+
+.portfolio-content {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+
+  max-width: 720px;
+}
+
+/* HOME */
+
+.portfolio-hero.large .portfolio-content {
+  padding: 4rem;
+}
+
+.portfolio-hero.large h2 {
+  font-size: 3rem;
+}
+
+.portfolio-hero.large p {
+  font-size: 1.15rem;
+}
+
+/* ÁLBUM */
+
+.portfolio-hero.small .portfolio-content {
+  padding: 2.5rem;
+}
+
+.portfolio-hero.small h2 {
+  font-size: 2rem;
+}
+
+.portfolio-hero.small p {
+  font-size: 1rem;
+}
+
+/* ========================= */
+/* TEXT */
+/* ========================= */
+
+.portfolio-tag {
+  display: inline-block;
+
+  margin-bottom: 1rem;
+
+  color: white;
+
+  letter-spacing: 3px;
+
+  font-size: .8rem;
+
+  opacity: .8;
+}
+
+.portfolio-content h2 {
+  color: white;
+
+  margin-bottom: 1.5rem;
+}
+
+.portfolio-content p {
+  color: rgba(255,255,255,.85);
+
+  line-height: 1.8;
+
+  margin-bottom: 2.5rem;
+}
+
+/* ========================= */
+/* BUTTON sustituido */
+/* ========================= */
+.portfolio-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:.6rem;
+
+    height:100%;
+}
+
+.portfolio-overlay{
+
+    background:linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.72)
+    );
+}
+
+.portfolio-tag{
+
+    letter-spacing:4px;
+
+    font-size:.72rem;
+
+    opacity:.75;
+}
+
+.portfolio-content h2{
+
+    margin:0;
+
+    font-size:2rem;
+
+    font-weight:700;
+}
+
+.portfolio-arrow{
+
+    margin-top:.5rem;
+
+    color:white;
+
+    font-weight:500;
+
+    opacity:.75;
+
+    transition:
+        transform .35s ease,
+        opacity .35s ease;
+
+}
+
+.portfolio-hero-card:hover .portfolio-arrow{
+
+    transform:translateX(8px);
+
+    opacity:1;
+
+}
+
+.portfolio-hero-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent 20%,
+        rgba(255,255,255,.08) 50%,
+        transparent 80%
+    );
+
+    transform:translateX(-100%);
+
+    transition:transform .8s ease;
+
+    z-index:2;
+
+}
+
+.portfolio-hero-card:hover::before{
+
+    transform:translateX(100%);
+
 }
 
 .portfolio-hero.small .portfolio-button {
@@ -287,13 +717,14 @@
 /* COMPACT MOBILE */
 
 .portfolio-hero.compact {
+  min-height:160px;
 
   margin:2.5rem -1rem 0;
 
 }
 
 
-.portfolio-hero.compact .portfolio-hero-card {
+  .portfolio-hero-card {
 
   min-height:160px;
 
@@ -302,7 +733,7 @@
 }
 
 
-.portfolio-hero.compact .portfolio-content {
+.portfolio-content {
 
   padding:1rem;
 
@@ -329,6 +760,23 @@
 
 }
 
+.main-content {
+  flex: 1;
+  margin-left: 240px;
+  margin-bottom: 150px;
+  padding: 40px;
+}
+
+.portfolio-hero {
+    width: 100%;
+    margin-inline: auto;
+}
+
+.portfolio-hero-card {
+    width: 100%;
+    margin-inline: auto;
+} 
+
 /* ========================= */
 /* RESPONSIVE */
 /* ========================= */
@@ -354,8 +802,11 @@
     padding:1.5rem;
   }
 
-   .portfolio-hero {
-    margin: 3rem -1rem 0;
+  .portfolio-hero{
+    width:100vw;
+    margin-left:calc(50% - 50vw);
+    margin-right:calc(50% - 50vw);
+    margin-top:3rem;
   }
 
   .portfolio-hero-card {
@@ -376,5 +827,10 @@
   .portfolio-hero.small .portfolio-button{
     padding:.75rem 1.3rem;
     font-size:.9rem;
+  }
+
+  .main-content {
+    margin: 0;
+    padding: 20px;
   }
 }

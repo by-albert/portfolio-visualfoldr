@@ -40,28 +40,15 @@ const gallerySections = [
     sesiones: [
 
       {
-        titulo: "Coratge",
+        titulo: "Coratge y  We Dance Band",
 
         imagenes: [
-          "/concerts/coratge/coratge-04.webp",
           "/concerts/coratge/coratge-02.webp",
           "/concerts/coratge/coratge-24.webp",
-          "/concerts/coratge/coratge-08.webp",
-        ],
-      },
-
-
-      {
-        titulo: "WE DANCE BAND",
-
-        imagenes: [
           "/concerts/wedance/WDB-08.webp",
-          "/concerts/wedance/WDB-12.webp",
-          "/concerts/wedance/WDB-03.webp",
-          "/concerts/wedance/WDB-04.webp",
+          "/concerts/wedance/WDB-09.webp",
         ],
       },
-
     ],
   },
   {
@@ -70,7 +57,7 @@ const gallerySections = [
     sesiones: [
 
       {
-        titulo: "Industries Santa Coloma vs Valdepeñas",
+        titulo: "Santa Coloma vs Valdepeñas",
 
         imagenes: [
           "/futbol-sala/StColoma/StColoma-24.webp",
@@ -81,7 +68,7 @@ const gallerySections = [
       },
 
       {
-        titulo: "St Joan - Tercera división Juvenil",
+        titulo: "Maristas Sant Joan",
 
         imagenes: [
           "/futbol-sala/St-Andreu/StAndreu-09.webp",
@@ -291,10 +278,12 @@ function Galeria() {
 
             ))
           }
+          
         </div>
-        <h2> Si te has quedado con ganas de más ve mi álbum completo!</h2>
-        {/* PORTFOLIO (hacerlo tamaño botoncito)  */}        
-        <PortfolioCTA variant="compact"/>
+        <div className="galeria-footer">
+            {/* PORTFOLIO (hacerlo tamaño botoncito)  */}        
+            <PortfolioCTA variant="compact"/>
+          </div>
       </section>
     </>
 

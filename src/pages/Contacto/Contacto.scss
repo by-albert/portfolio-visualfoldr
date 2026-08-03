@@ -68,7 +68,7 @@
 
   background: rgba(255, 255, 255, 0.1);
 
-  border-color: #ff4da6;
+  border-color: #ffb401;
 
 
   box-shadow:
@@ -273,7 +273,7 @@
 
   border-radius:999px;
 
-  background:#ff4da6;
+  background:#1d4b10;
 
   color:white;
 
@@ -318,14 +318,14 @@
 .contact-action:hover{
   transform:translateX(8px);
 
-  border-color:#ff4da6;
+  border-color:#ffb401;
 
   background:rgba(255,255,255,.08);
 }
 
 .contact-action svg{
   font-size:1.6rem;
-  color:#ff4da6;
+  color:#ffb401;
 }
 
 .contact-action span{
@@ -405,8 +405,8 @@
 
     border-radius: 18px;
 
-    background: rgba(255, 77, 166, 0.08);
-    border: 1px solid rgba(255, 77, 166, 0.25);
+    background: #ffb401;
+    border: 1px solid #ffb401;
 
     color: white;
 
@@ -417,12 +417,12 @@
 
   .social-btn svg {
     font-size: 1.8rem;
-    color: #ff4da6;
+    color: white //rgba(255, 196, 77, 0.25);
   }
 
   .social-btn:hover {
     transform: translateY(-4px) scale(1.03);
-    border-color: #ff4da6;
+    border-color: #ffb401;
     background: rgba(255, 77, 166, 0.12);
   }
 
@@ -437,6 +437,6 @@
 
   .contact-button {
     width: 100%;
-    border: 1px solid rgba(255, 77, 166, 0.25);
+    border: 1px solid #ffb401;
   }
 }

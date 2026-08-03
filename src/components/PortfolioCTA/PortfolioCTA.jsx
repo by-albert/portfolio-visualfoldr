@@ -16,7 +16,7 @@ const PortfolioCTA = ({ variant = "compact" }) => {
         <div className="portfolio-overlay" />
 
         <img
-          src="/experimental/gaviota.webp"
+          src="/skate/sk8-17.webp"
           alt="Portfolio VisualFoldr"
           className="portfolio-background"
         />
@@ -28,16 +28,12 @@ const PortfolioCTA = ({ variant = "compact" }) => {
           </span>
 
           <h2>
-            Portafolio fotográfico
+            Portafolio completo
           </h2>
 
-          <p>
-            Descubre todas las sesiones y proyectos personales.
-          </p>
-
-          <div className="portfolio-button">
-            Explorar portfolio
-          </div>
+          <span className="portfolio-arrow">
+            Explorar →
+          </span>
 
         </div>
 
