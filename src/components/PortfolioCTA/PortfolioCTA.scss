@@ -493,15 +493,18 @@
 
 .portfolio-background {
   position: absolute;
-  inset: 0;
 
   width: 100%;
-  height: 100%;
+  height:130%;
 
   object-fit: cover;
 
   transition: transform .8s ease;
+  
+  position:absolute;
+  inset:-15% 0;
 }
+
 
 .portfolio-hero-card:hover .portfolio-background {
   transform: scale(1.08);
