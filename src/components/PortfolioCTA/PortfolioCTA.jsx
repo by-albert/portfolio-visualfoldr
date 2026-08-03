@@ -28,7 +28,7 @@ const PortfolioCTA = ({ variant = "compact" }) => {
           </span>
 
           <h2>
-            Portafolio completo
+            Portafolio fotográfico completo
           </h2>
 
           <span className="portfolio-arrow">
