@@ -1,155 +1,136 @@
 import './PortfolioVisual.scss';
 
-
-const projects = [
+const categories = [
   {
-    title: "NOLOGOS",
-    category: "Moda",
-    year: "2026",
-    image: "/experimental/gaviota.webp"
+    title: 'MODA',
+    description: 'Editorial · Campañas · Producto',
+    image: '/moda/NOLOGOS/MUNDIAL_ESP/nologos-38.webp',
+    path: '/galeria/moda',
   },
   {
-    title: "MARBELLA",
-    category: "Skate",
-    year: "2026",
-    image: "/skate/sk8-01.webp"
+    title: 'SKATE',
+    description: 'Deporte · Calle · Movimiento',
+    image: '/skate/sk8-19.webp',
+    path: '/galeria/skate',
   },
   {
-    title: "STA COLOMA",
-    category: "Fútbol Sala",
-    year: "2026",
-    image: "/futbol-sala/StColoma/StColoma-06.webp"
-  }
+    title: 'CONCIERTOS',
+    description: 'Música · Directo · Escena',
+    image: '/concerts/coratge/coratge-01.webp',
+    path: '/galeria/conciertos',
+  },
+  {
+    title: 'FÚTBOL SALA',
+    description: 'Deporte · Acción · Competición',
+    image: '/futbol-sala/StColoma/StColoma-24.webp',
+    path: '/galeria/futbol-sala',
+  },
+  {
+    title: 'EXPERIMENTAL',
+    description: 'Conceptual · Personal · Visual',
+    image: '/experimental/gaviota.webp',
+    path: '/galeria/experimental',
+  },
 ];
 
-
 const VisualPortfolio = () => {
-
-
   return (
     <main className="visual-portfolio">
 
+      {/* HEADER */}
 
-      {/* HERO */}
+      <header className="visual-portfolio-header">
 
-      <section className="visual-hero">
-
-        <p>
+        <span className="portfolio-label">
           VISUALFOLDR
-        </p>
+        </span>
 
         <h1>
-          No hago fotos.
-          <br />
-          Construyo historias visuales.
+          PORTFOLIO
         </h1>
 
-
-      </section>
-
-
-
-      {/* FEATURE IMAGE */}
-
-      <section className="visual-feature">
-
-        <img
-          src="/experimental/gaviota.webp"
-          alt=""
-        />
-
-      </section>
-
-
-
-      {/* INTRO */}
-
-      <section className="visual-intro">
-
-        <h2>
-          Una colección de momentos,
-          personas y lugares.
-        </h2>
-
         <p>
-          Cada proyecto tiene una historia,
-          una identidad y una forma diferente
-          de mirar el mundo.
+          Una selección de proyectos,
+          historias y fotografías.
         </p>
 
-      </section>
+      </header>
 
 
+      {/* CATEGORÍAS */}
 
-      {/* PROJECTS */}
+      <section className="portfolio-categories">
 
+        {categories.map((category, index) => (
 
-      <section className="visual-projects">
+          <a
+            href={category.path}
+            className="portfolio-category"
+            key={category.title}
+          >
 
+            {/* IMAGEN */}
 
-        {
-          projects.map((project,index)=>(
-
-            <article
-              className="visual-project"
-              key={index}
-            >
-
+            <div className="portfolio-category-image">
 
               <img
-                src={project.image}
-                alt={project.title}
+                src={category.image}
+                alt={category.title}
+                loading={index === 0 ? 'eager' : 'lazy'}
               />
 
+            </div>
 
-              <div className="project-info">
 
+            {/* INFORMACIÓN */}
 
-                <span>
-                  {project.category}
+            <div className="portfolio-category-info">
+
+              <span className="portfolio-category-number">
+                0{index + 1}
+              </span>
+
+              <div>
+
+                <span className="portfolio-category-description">
+                  {category.description}
                 </span>
 
-
-                <h3>
-                  {project.title}
-                </h3>
-
-
-                <p>
-                  {project.year}
-                </p>
-
+                <h2>
+                  {category.title}
+                </h2>
 
               </div>
 
+              <span className="portfolio-category-arrow">
+                →
+              </span>
 
-            </article>
+            </div>
 
-          ))
-        }
+          </a>
 
-
-      </section>
-
-
-
-      {/* END */}
-
-      <section className="visual-end">
-
-        <h2>
-          ¿Creamos algo juntos?
-        </h2>
-
-        <button>
-          Contactar
-        </button>
+        ))}
 
       </section>
+
+
+      {/* FOOTER */}
+
+      <footer className="visual-portfolio-footer">
+
+        <span>
+          VISUALFOLDR
+        </span>
+
+        <p>
+          Fotografía · Dirección visual · Contenido
+        </p>
+
+      </footer>
 
     </main>
   );
 };
-
 
 export default VisualPortfolio;

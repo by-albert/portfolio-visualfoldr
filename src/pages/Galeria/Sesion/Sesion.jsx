@@ -10,7 +10,6 @@ import './Sesion.scss'
 import { FaInstagram } from "react-icons/fa";
 import { albumsData } from '../data/index.js';
 
-import PortfolioCTA from "../../../components/PortfolioCTA/PortfolioCTA";
 
 const Sesion = () => {
   const { tipo } = useParams();
@@ -313,8 +312,6 @@ const goToNextAlbum = () => {
                 </div>
               </div>
           ))}
-        {/* CTA Portafolio (más visual*/}
-         <PortfolioCTA variant = "small" />
       </div>
 
       {/* ========================= */}
