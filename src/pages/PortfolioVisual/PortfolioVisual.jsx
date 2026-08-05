@@ -1,5 +1,13 @@
 import './PortfolioVisual.scss';
 
+import { Link } from 'react-router-dom';
+import { useLayoutEffect, useRef } from 'react';
+
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 const categories = [
   {
     title: 'MODA',
@@ -55,6 +63,23 @@ const VisualPortfolio = () => {
         </p>
 
       </header>
+
+     <section className="portfolio-back">
+
+        <Link to="/" className="portfolio-back-button">
+
+          <span className="portfolio-back-arrow">
+            ←
+          </span>
+
+          <span>
+            Volver
+          </span>
+
+        </Link>
+
+      </section>
+
 
 
       {/* CATEGORÍAS */}

@@ -178,8 +178,12 @@ function Galeria() {
           </div>
 
 
+           <div className="galeria-footer">
+            <PortfolioCTA variant="compact"/>
+          </div>
 
-
+          <br/>
+          <br/>
 
           {/* CATEGORIAS */}
 
@@ -280,10 +284,6 @@ function Galeria() {
           }
           
         </div>
-        <div className="galeria-footer">
-            {/* PORTFOLIO (hacerlo tamaño botoncito)  */}        
-            <PortfolioCTA variant="compact"/>
-          </div>
       </section>
     </>
 
