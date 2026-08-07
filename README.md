@@ -25,7 +25,7 @@ Es un proyecto personal que combina:
 
 Mi objetivo es crear imágenes con **impacto visual**, cuidando tanto la captura como la edición y la forma en la que el proyecto final se presenta.
 
-> **VISUALFOLDR — Fotografía con intención.**
+> **VISUALFOLDR — Fotografía con una intención.**
 
 ---
 
