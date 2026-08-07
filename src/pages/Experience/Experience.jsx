@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Experience.scss';
 import { useNavigate } from 'react-router-dom';
+
 
 
 function Experience() {
@@ -9,8 +10,30 @@ function Experience() {
   const [selectedExperience, setSelectedExperience] = useState(null);
   const [currentCard, setCurrentCard] = useState(0);
   const navigate = useNavigate();   
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
-    // ANTIGUO
+  useEffect(() => {
+
+  const handleScroll = () => {
+    setShowScrollTop(window.scrollY > 500);
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+  }, []);
+
+  const scrollToTop = () => {
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+
+};
+
     const experiences = [
       {
         id: 1,
@@ -241,6 +264,15 @@ function Experience() {
               </button>
 
           </div>
+          {showScrollTop && (
+              <button
+                className="scroll-top"
+                onClick={scrollToTop}
+                aria-label="Volver arriba"
+              >
+                ↑
+              </button>
+            )}
               
               <div className="experience-grid desktop-grid">
 
