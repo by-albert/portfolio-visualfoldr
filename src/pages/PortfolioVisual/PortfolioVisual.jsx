@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const categories = [
   {
     title: 'MODA',
-    description: 'Editorial · Campañas · Producto',
+    description: 'Editorial · Campañas · Producto', 
     image: '/moda/NOLOGOS/MUNDIAL_ESP/nologos-38.webp',
     path: '/galeria/moda',
   },

@@ -19,6 +19,7 @@ const Sesion = () => {
   const [showNav, setShowNav] = useState(false);
   const [navCollapsed, setNavCollapsed] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [loadedImages, setLoadedImages] = useState({});
 
   /* ========================= */
   /* MOBILE DETECTION */
@@ -40,11 +41,12 @@ const Sesion = () => {
   }, []);
 
   const goToGallery = () => {
-    navigate('/', {
-      state: {
-        scrollTo: 'galeria'
-      }
-    });
+    // navigate('/', {
+    //   state: {
+    //     scrollTo: 'galeria'
+    //   }
+    // });
+    navigate('/portfolio'); 
   };
 
   /* ========================= */
@@ -303,6 +305,13 @@ const goToNextAlbum = () => {
                     src={img}
                     alt={`${sesion.titulo}-${index + 1}`}
                     loading="lazy"
+                    className={loadedImages[img] ? 'image-loaded' : 'image-loading'}
+                    onLoad={() => {
+                      setLoadedImages(prev => ({
+                        ...prev,
+                        [img]: true
+                      }));
+                    }}
                     onClick={() =>
                       setSelectedImage(img)
                     }
