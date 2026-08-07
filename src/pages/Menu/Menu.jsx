@@ -8,9 +8,10 @@ import BubbleText from "../../components/BubbleText/bubbleText.jsx";
 
 const desktopImages = [
   '/backgrounds/desktop/foto-1.webp',
-  // '/backgrounds/desktop/foto-2.webp',
   '/backgrounds/desktop/foto-3.webp',
   '/backgrounds/desktop/foto-4.webp',
+  '/backgrounds/desktop/coratge-01.webp',
+  '/backgrounds/desktop/coratge-16.webp'
 ];
 
 const mobileImages = [

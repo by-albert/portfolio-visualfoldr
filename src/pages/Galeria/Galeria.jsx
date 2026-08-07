@@ -177,14 +177,6 @@ function Galeria() {
 
           </div>
 
-
-           <div className="galeria-footer">
-            <PortfolioCTA variant="compact"/>
-          </div>
-
-          <br/>
-          <br/>
-
           {/* CATEGORIAS */}
 
 
@@ -270,6 +262,9 @@ function Galeria() {
 
                       </div>
 
+                      <div className="galeria-footer">
+                        <PortfolioCTA variant="compact"/>
+                        </div>
 
 
                     </RevealSection>
@@ -290,7 +285,5 @@ function Galeria() {
   );
 
 }
-
-
 
 export default Galeria;
