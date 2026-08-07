@@ -117,9 +117,9 @@ No necesitas tenerlo todo definido.
 
 Podemos hablar sobre el proyecto, estudiar qué necesitas y desarrollar una propuesta visual adaptada a él.
 
-📩 **Contacto:** [Añadir email]
+📩 **Contacto:** apencas03@gmail.com
 
-📱 **Instagram:** [Añadir Instagram]
+📱 **Instagram:** @visualfoldr
 
 ---
 
@@ -236,7 +236,7 @@ Uno de los objetivos es documentar el proceso real de crecimiento como fotógraf
 
 # 🎥 YouTube
 
-También estoy desarrollando un canal de YouTube relacionado con fotografía y creación de contenido.
+También estoy desarrollando un canal de YouTube relacionado con fotografía y creación de contenido (con el mismo alias, visualfoldr). 
 
 El contenido busca mostrar experiencias reales como fotógrafo, incluyendo:
 
