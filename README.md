@@ -303,26 +303,31 @@ La navegación principal está organizada siguiendo una estructura sencilla:
 
 ```text
 Portfolio
-│
+├─ Landing Page
+├─ Presentación
+├─ Galeria de imágenes
 ├── Moda
-│   ├── Sesión
-│   └── Fotografías
-│
+|  ├── Sesión
+|  └── Fotografías
+|        
 ├── Conciertos
-│   ├── Sesión
-│   └── Fotografías
-│
-├── Fútbol sala
-│   ├── Sesión
-│   └── Fotografías
-│
+|  ├── Sesión
+|  └── Fotografías
+|        
+|── Fútbol sala
+|  ├── Sesión
+|  └── Fotografías
+|        
 ├── Skate
-│   ├── Sesión
-│   └── Fotografías
-│
-└── Experimental
-    ├── Sesión
-    └── Fotografías
+|  ├── Sesión
+|  └── Fotografías
+|        
+|── Experimental
+|  ├── Sesión
+|  └── Fotografías
+├── Proyectos realizados
+├── Formación educativa
+├── Contacto
 ```
 
 Esta estructura permite añadir nuevos proyectos sin tener que modificar completamente la arquitectura del portfolio.
